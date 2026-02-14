@@ -1,8 +1,12 @@
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
+import CredentialsSection from "@/components/CredentialsSection";
 import PainPoints from "@/components/PainPoints";
-import Testimonials from "@/components/Testimonials";
 import Services from "@/components/Services";
+import MethodologySection from "@/components/MethodologySection";
+import CPDSection from "@/components/CPDSection";
+import Testimonials from "@/components/Testimonials";
+import CoachSection from "@/components/CoachSection";
 import FitSection from "@/components/FitSection";
 import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
@@ -13,9 +17,13 @@ const Index = () => {
     <main className="bg-background text-foreground min-h-screen">
       <Navbar />
       <HeroSection />
+      <CredentialsSection />
       <PainPoints />
       <Services />
+      <MethodologySection />
+      <CPDSection />
       <Testimonials />
+      <CoachSection />
       <FitSection />
       <FAQSection />
       <CTASection />

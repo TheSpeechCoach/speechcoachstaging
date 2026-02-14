@@ -15,8 +15,16 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="max-w-3xl"
+          className="max-w-4xl"
         >
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="font-body text-sm tracking-[0.3em] uppercase text-primary mb-8"
+          >
+            Inspire • Engage • Influence
+          </motion.p>
           <h1 className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-[0.95] tracking-tight mb-8">
             Find your{" "}
             <span className="italic text-gradient-gold">voice</span>,
@@ -28,9 +36,9 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="font-body text-lg md:text-xl text-muted-foreground max-w-lg mb-10"
+            className="font-body text-lg md:text-xl text-muted-foreground max-w-xl mb-10"
           >
-            …with expert speech coaching that transforms nervous speakers into confident communicators.
+            …with over 30 years of expert speech coaching that transforms nervous speakers into confident, compelling communicators.
           </motion.p>
           <motion.a
             href="#cta"

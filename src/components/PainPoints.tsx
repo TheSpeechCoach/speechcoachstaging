@@ -6,22 +6,22 @@ const painPoints = [
     rest: "and your message gets lost in the nerves?",
   },
   {
-    bold: "Big pitch or keynote coming up",
-    rest: "and you're not sure how to prepare?",
+    bold: "Big keynote or pitch coming up",
+    rest: "and you're not sure how to prepare or deliver with impact?",
   },
   {
     bold: "Your ideas are strong",
-    rest: "but you struggle to communicate them with impact?",
+    rest: "but you struggle to communicate them with clarity and authority?",
   },
   {
-    bold: "Want to lead with authority",
-    rest: "but your voice doesn't command the room?",
+    bold: "Want to command the room",
+    rest: "but your voice, pace, or body language lets you down?",
   },
 ];
 
 const PainPoints = () => {
   return (
-    <section id="pain-points" className="py-24 md:py-32">
+    <section id="about" className="py-24 md:py-32">
       <div className="container mx-auto px-6">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
@@ -64,8 +64,8 @@ const PainPoints = () => {
             <br className="hidden md:block" />
             <span className="italic">get a different outcome.</span>
           </h3>
-          <p className="font-body text-muted-foreground max-w-md mx-auto mb-8">
-            We work directly with you to unlock your authentic speaking voice.
+          <p className="font-body text-muted-foreground max-w-lg mx-auto mb-8">
+            We work directly with executives, founders, leaders, and professionals whose work depends on clear expression, confident delivery, and authentic presence.
           </p>
           <a
             href="#cta"
