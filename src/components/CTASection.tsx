@@ -1,8 +1,9 @@
 import { motion } from "framer-motion";
+import { Phone } from "lucide-react";
 
 const CTASection = () => {
   return (
-    <section id="cta" className="py-24 md:py-32 bg-card">
+    <section id="cta" className="py-24 md:py-32">
       <div className="container mx-auto px-6 text-center">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
@@ -23,18 +24,31 @@ const CTASection = () => {
           transition={{ duration: 0.6, delay: 0.15 }}
           className="font-body text-muted-foreground text-lg max-w-md mx-auto mb-10"
         >
-          Book a free discovery call and let's find out how we can help you speak with confidence and impact.
+          London-based. Global reach. Book a discovery call and let's find out how we can help you communicate with clarity, composure, and impact.
         </motion.p>
-        <motion.a
-          href="mailto:hello@thespeech.coach"
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="inline-block bg-primary text-primary-foreground hover:opacity-90 transition-opacity px-10 py-4 rounded-full font-body text-sm tracking-wide glow-gold"
+          className="flex flex-col sm:flex-row items-center justify-center gap-4"
         >
-          Book Your Free Call
-        </motion.a>
+          <a
+            href="https://www.thespeech.coach/book-now/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-primary text-primary-foreground hover:opacity-90 transition-opacity px-10 py-4 rounded-full font-body text-sm tracking-wide glow-gold"
+          >
+            Book Now
+          </a>
+          <a
+            href="tel:+442071646769"
+            className="inline-flex items-center gap-2 border border-border text-foreground hover:border-primary/50 transition-colors px-8 py-4 rounded-full font-body text-sm"
+          >
+            <Phone className="w-4 h-4" />
+            +44 (0)207 164 6769
+          </a>
+        </motion.div>
       </div>
     </section>
   );

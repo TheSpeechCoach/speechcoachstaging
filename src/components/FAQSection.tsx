@@ -9,29 +9,33 @@ import { motion } from "framer-motion";
 const faqs = [
   {
     q: "How do your coaching sessions work?",
-    a: "Sessions are conducted one-on-one, either in person or via video call. Each session is 60–90 minutes, tailored to your specific goals and upcoming speaking engagements.",
+    a: "Sessions are conducted one-on-one or in group settings, either in person at our London headquarters or via video call. Each session is tailored to your specific goals, whether preparing for a keynote, refining vocal tone, or improving on-camera communication. Online coaching is available Monday to Friday, 24 hours a day, across time zones.",
+  },
+  {
+    q: "Who do you typically work with?",
+    a: "Our clients include executives, founders, leaders, media professionals, public figures, content creators, actors, and social media influencers — individuals whose work depends on clear expression, confident delivery, and authentic presence.",
   },
   {
     q: "How quickly will I see results?",
-    a: "Most clients notice a significant shift in confidence and delivery within 3–4 sessions. For event-specific coaching, we can compress this into an intensive programme.",
+    a: "We would expect to see measurable improvement in clarity, confidence, and delivery within the first few sessions. For event-specific coaching, we can compress this into an intensive programme designed around your timeline.",
   },
   {
     q: "What makes your coaching different?",
-    a: "We focus on authentic communication, not performance tricks. Our approach combines vocal technique, storytelling frameworks, and presence training — all tailored to your natural style.",
+    a: "Our approach integrates the science of speech and voice with the discipline of performance, combining over 30 years of professional experience with evidence-informed techniques from communication science, performance training, and clinical voice practice.",
   },
   {
-    q: "Do you work with teams or just individuals?",
-    a: "Both. We offer individual coaching and bespoke group workshops for teams looking to elevate their collective communication skills.",
+    q: "Do you offer accredited courses?",
+    a: "Yes. Our Public Speaking workshops and programmes are accredited by the CPD Certification Service. All accredited courses meet globally recognised standards for professional development and deliver transformative, measurable outcomes.",
   },
   {
-    q: "What's the investment?",
-    a: "Coaching packages are individually scoped based on your goals and timeline. Get in touch for a conversation about what would work best for you.",
+    q: "Can you work with my team?",
+    a: "Absolutely. We offer bespoke group workshops for organisations and leadership teams. These can be delivered in person at our London HQ, on-site at your offices, or online.",
   },
 ];
 
 const FAQSection = () => {
   return (
-    <section id="faq" className="py-24 md:py-32">
+    <section id="faq" className="py-24 md:py-32 bg-card">
       <div className="container mx-auto px-6 max-w-3xl">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
@@ -57,7 +61,7 @@ const FAQSection = () => {
 
         <Accordion type="single" collapsible className="space-y-3">
           {faqs.map((faq, i) => (
-            <AccordionItem key={i} value={`faq-${i}`} className="border border-border rounded-lg px-6 bg-card">
+            <AccordionItem key={i} value={`faq-${i}`} className="border border-border rounded-lg px-6 bg-background">
               <AccordionTrigger className="font-body text-foreground text-left hover:no-underline py-5">
                 {faq.q}
               </AccordionTrigger>
