@@ -1,39 +1,48 @@
 import { motion } from "framer-motion";
 
-const credentials = [
-  { label: "Featured in", name: "Men's Health" },
-  { label: "Coaching Members of", name: "Forbes 30 Under 30" },
-  { label: "Coaching Actors on", name: "Netflix" },
-  { label: "Coaching Creators on", name: "YouTube" },
-  { label: "Coaching Speakers on", name: "TED" },
+const logoBase = "https://www.thespeech.coach/staging26/wp-content/uploads/2026/04";
+const logos = [
+  `${logoBase}/9.png`,
+  `${logoBase}/10-1.png`,
+  `${logoBase}/11-1.png`,
+  `${logoBase}/12-1.png`,
+  `${logoBase}/1-1.png`,
+  `${logoBase}/2-1.png`,
+  `${logoBase}/3-1.png`,
+  `${logoBase}/4-1.png`,
+  `${logoBase}/5-1.png`,
+  `${logoBase}/6-1.png`,
+  `${logoBase}/7-1.png`,
+  `${logoBase}/8-1.png`,
 ];
 
 const CredentialsSection = () => {
+  // duplicate for seamless marquee
+  const loop = [...logos, ...logos];
   return (
-    <section className="py-16 md:py-24 border-t border-border">
+    <section className="py-16 md:py-24 border-t border-border overflow-hidden">
       <div className="container mx-auto px-6">
-        <motion.p
+        <motion.h2
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="font-body text-sm text-muted-foreground text-center mb-10 tracking-wide uppercase"
+          className="font-display text-2xl md:text-3xl font-semibold text-center mb-12"
         >
-          Trusted by leaders across industries
-        </motion.p>
-        <div className="flex flex-wrap justify-center items-center gap-x-12 gap-y-8">
-          {credentials.map((c, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: i * 0.08 }}
-              className="text-center"
-            >
-              <p className="font-body text-xs text-muted-foreground uppercase tracking-wider mb-1">{c.label}</p>
-              <p className="font-display text-lg md:text-xl font-semibold text-foreground">{c.name}</p>
-            </motion.div>
+          Trusted by
+        </motion.h2>
+      </div>
+      <div className="relative w-full">
+        <div className="flex gap-16 animate-[marquee_40s_linear_infinite] w-max">
+          {loop.map((src, i) => (
+            <div key={i} className="flex items-center justify-center h-16 md:h-20 px-4 shrink-0">
+              <img
+                src={src}
+                alt="Client logo"
+                className="max-h-full w-auto object-contain opacity-80 hover:opacity-100 transition-opacity"
+                loading="lazy"
+              />
+            </div>
           ))}
         </div>
       </div>
