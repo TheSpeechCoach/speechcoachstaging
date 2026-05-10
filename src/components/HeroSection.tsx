@@ -1,13 +1,12 @@
 import { motion } from "framer-motion";
-import heroImage from "@/assets/hero-image.jpg";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
-      {/* Background image */}
-      <div className="absolute inset-0">
-        <img src={heroImage} alt="Speaker on stage with golden spotlights" className="w-full h-full object-cover opacity-30" />
-        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/90 to-background/50" />
+    <section className="relative min-h-screen flex items-center overflow-hidden bg-background">
+      {/* Subtle radial gold glow */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-1/3 -right-40 w-[600px] h-[600px] rounded-full bg-primary/10 blur-[120px]" />
+        <div className="absolute bottom-0 -left-40 w-[500px] h-[500px] rounded-full bg-primary/5 blur-[120px]" />
       </div>
 
       <div className="container relative z-10 mx-auto px-6 pt-32 pb-20">
@@ -15,7 +14,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="max-w-4xl"
+          className="max-w-5xl"
         >
           <motion.p
             initial={{ opacity: 0 }}
@@ -25,12 +24,12 @@ const HeroSection = () => {
           >
             Inspire • Engage • Influence
           </motion.p>
-          <h1 className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-[0.95] tracking-tight mb-8">
+          <h1 className="font-display font-bold text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-[1.05] tracking-tight mb-8">
             Find your{" "}
-            <span className="italic text-gradient-gold">voice</span>,
+            <span className="italic text-gradient-gold font-bold">voice</span>,
             <br />
             own the{" "}
-            <span className="font-bold italic">room</span>
+            <span className="italic font-extrabold">room</span>
           </h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -45,9 +44,9 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
-            className="inline-block border border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all px-8 py-3 rounded-full font-body text-sm tracking-wide"
+            className="inline-block bg-primary text-primary-foreground hover:opacity-90 transition-opacity px-8 py-3 rounded-full font-body text-sm tracking-wide glow-gold"
           >
-            Let's talk about you
+            Let's talk about you...
           </motion.a>
         </motion.div>
       </div>
