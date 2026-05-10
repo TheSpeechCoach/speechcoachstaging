@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Check, ArrowRight } from "lucide-react";
 import SiteNav from "./SiteNav";
 import SiteFooter from "./SiteFooter";
+import StickyMobileCTA from "./StickyMobileCTA";
 
 export interface ContentBlock {
   heading: string;
@@ -197,6 +198,7 @@ const ServicePage = ({
       </section>
 
       <SiteFooter />
+      <StickyMobileCTA />
     </main>
   );
 };

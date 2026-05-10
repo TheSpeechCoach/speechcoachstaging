@@ -11,6 +11,7 @@ import CoachSection from "@/components/CoachSection";
 import FitSection from "@/components/FitSection";
 import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
+import SeoKeywords from "@/components/SeoKeywords";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -41,6 +42,7 @@ const Index = () => {
       />
       <FAQSection />
       <CTASection />
+      <SeoKeywords />
       <Footer />
     </main>
   );
