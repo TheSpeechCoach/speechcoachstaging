@@ -1,32 +1,31 @@
 import { Helmet } from "react-helmet-async";
+import { ReactNode } from "react";
 import { motion } from "framer-motion";
 import { Check, ArrowRight } from "lucide-react";
-import { Link } from "react-router-dom";
 import SiteNav from "./SiteNav";
 import SiteFooter from "./SiteFooter";
 import StickyMobileCTA from "./StickyMobileCTA";
 
-export interface ExtraSection {
+export interface ContentBlock {
   heading: string;
-  content: string;
+  intro?: string;
+  items: string[];
 }
 
 interface ServicePageProps {
-  seoTitle: string;
-  seoDescription: string;
-  canonicalPath: string;
-  tagline: string;
-  headline: string;
-  headlineAccent: string;
+  metaTitle: string;
+  metaDescription: string;
+  h1: ReactNode;
   subheading: string;
   intro: string;
   problemsHeading?: string;
   problems: string[];
-  workHeading?: string;
-  workItems: string[];
-  extraSections?: ExtraSection[];
-  closingHeading: string;
-  closingBody: string;
+  workOnHeading?: string;
+  workOn: string[];
+  extraBlocks?: ContentBlock[];
+  closingHeading?: string;
+  closing: string;
+  ctaLabel?: string;
 }
 
 const fadeUp = {
@@ -36,49 +35,26 @@ const fadeUp = {
   transition: { duration: 0.6, ease: "easeOut" as const },
 };
 
-const seoLinks = [
-  { to: "/public-speaking-coaching", label: "Public Speaking Coaching" },
-  { to: "/elocution-voice-coaching", label: "Elocution Lessons" },
-  { to: "/accent-coaching", label: "Accent Coaching" },
-  { to: "/executive-corporate-coaching", label: "Executive Speech Coach" },
-  { to: "/presentation-skills-coaching", label: "Presentation Skills" },
-  { to: "/communication-coaching", label: "Communication Coach" },
-  { to: "/online-coaching", label: "Online Speech Coach" },
-  { to: "/speech-coaching-children", label: "Speech Coaching for Children" },
-  { to: "/team-workshops", label: "Team Workshops" },
-];
-
 const ServicePage = ({
-  seoTitle,
-  seoDescription,
-  canonicalPath,
-  tagline,
-  headline,
-  headlineAccent,
+  metaTitle,
+  metaDescription,
+  h1,
   subheading,
   intro,
-  problemsHeading = "Does this sound like you?",
+  problemsHeading = "Does this sound familiar?",
   problems,
-  workHeading = "What we work on",
-  workItems,
-  extraSections = [],
-  closingHeading,
-  closingBody,
+  workOnHeading = "What we work on",
+  workOn,
+  extraBlocks = [],
+  closingHeading = "Ready to take the next step?",
+  closing,
+  ctaLabel = "Book Your Free Consultation",
 }: ServicePageProps) => {
-  const canonical = `https://www.thespeech.coach${canonicalPath}`;
   return (
     <main className="bg-background text-foreground min-h-screen">
       <Helmet>
-        <title>{seoTitle}</title>
-        <meta name="description" content={seoDescription} />
-        <link rel="canonical" href={canonical} />
-        <meta property="og:title" content={seoTitle} />
-        <meta property="og:description" content={seoDescription} />
-        <meta property="og:url" content={canonical} />
-        <meta property="og:type" content="website" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={seoTitle} />
-        <meta name="twitter:description" content={seoDescription} />
+        <title>{metaTitle}</title>
+        <meta name="description" content={metaDescription} />
       </Helmet>
 
       <SiteNav />
@@ -89,19 +65,11 @@ const ServicePage = ({
           <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[700px] h-[700px] rounded-full bg-primary/10 blur-3xl" />
         </div>
         <div className="container mx-auto max-w-4xl relative text-center">
-          <motion.p
-            {...fadeUp}
-            className="font-body uppercase tracking-[0.2em] text-xs text-primary mb-6"
-          >
-            {tagline}
-          </motion.p>
           <motion.h1
             {...fadeUp}
-            transition={{ duration: 0.6, delay: 0.05, ease: "easeOut" }}
             className="font-display text-4xl md:text-6xl font-bold leading-tight tracking-tight mb-6"
           >
-            {headline}{" "}
-            <span className="italic text-gradient-gold">{headlineAccent}</span>
+            {h1}
           </motion.h1>
           <motion.p
             {...fadeUp}
@@ -116,7 +84,7 @@ const ServicePage = ({
             href="mailto:info@thespeech.coach"
             className="inline-flex items-center gap-2 bg-primary text-primary-foreground hover:bg-primary/90 transition-all px-8 py-4 rounded-full font-body text-sm font-medium glow-gold"
           >
-            Book Your Free Consultation
+            {ctaLabel}
             <ArrowRight className="w-4 h-4" />
           </motion.a>
         </div>
@@ -157,10 +125,10 @@ const ServicePage = ({
       <section className="py-20 px-6">
         <div className="container mx-auto max-w-4xl">
           <motion.h2 {...fadeUp} className="font-display text-3xl md:text-5xl font-bold mb-12 text-center">
-            {workHeading}
+            {workOnHeading}
           </motion.h2>
           <ul className="grid md:grid-cols-2 gap-5">
-            {workItems.map((w, i) => (
+            {workOn.map((w, i) => (
               <motion.li
                 key={i}
                 {...fadeUp}
@@ -175,16 +143,33 @@ const ServicePage = ({
         </div>
       </section>
 
-      {/* Extra sections */}
-      {extraSections.map((s, i) => (
+      {/* Extra blocks */}
+      {extraBlocks.map((block, i) => (
         <section key={i} className="py-16 px-6 border-t border-border">
-          <div className="container mx-auto max-w-3xl">
+          <div className="container mx-auto max-w-4xl">
             <motion.h2 {...fadeUp} className="font-display text-2xl md:text-4xl font-bold mb-6">
-              {s.heading}
+              {block.heading}
             </motion.h2>
-            <motion.p {...fadeUp} className="font-body text-lg text-muted-foreground leading-relaxed">
-              {s.content}
-            </motion.p>
+            {block.intro && (
+              <motion.p {...fadeUp} className="font-body text-lg text-muted-foreground mb-8">
+                {block.intro}
+              </motion.p>
+            )}
+            {block.items.length > 0 && (
+              <ul className="grid md:grid-cols-2 gap-4">
+                {block.items.map((item, j) => (
+                  <motion.li
+                    key={j}
+                    {...fadeUp}
+                    transition={{ duration: 0.5, delay: j * 0.04, ease: "easeOut" }}
+                    className="flex gap-3 items-start"
+                  >
+                    <Check className="w-5 h-5 text-primary mt-1 shrink-0" />
+                    <span className="font-body text-foreground/90">{item}</span>
+                  </motion.li>
+                ))}
+              </ul>
+            )}
           </div>
         </section>
       ))}
@@ -199,42 +184,16 @@ const ServicePage = ({
             {closingHeading}
           </motion.h2>
           <motion.p {...fadeUp} className="font-body text-lg text-muted-foreground mb-10">
-            {closingBody}
+            {closing}
           </motion.p>
           <motion.a
             {...fadeUp}
             href="mailto:info@thespeech.coach"
             className="inline-flex items-center gap-2 bg-primary text-primary-foreground hover:bg-primary/90 transition-all px-8 py-4 rounded-full font-body text-sm font-medium glow-gold"
           >
-            Book Your Free Consultation
+            {ctaLabel}
             <ArrowRight className="w-4 h-4" />
           </motion.a>
-          <p className="font-body text-sm text-muted-foreground mt-6">
-            Or call us:{" "}
-            <a href="tel:+442071646769" className="text-primary hover:underline">
-              +44 (0)207 164 6769
-            </a>
-          </p>
-        </div>
-      </section>
-
-      {/* SEO keyword links */}
-      <section className="py-16 px-6 border-t border-border bg-card/30">
-        <div className="container mx-auto max-w-5xl">
-          <p className="font-body uppercase tracking-[0.2em] text-xs text-primary text-center mb-8">
-            Explore More Services
-          </p>
-          <div className="flex flex-wrap justify-center gap-x-6 gap-y-3">
-            {seoLinks.map((link) => (
-              <Link
-                key={link.to}
-                to={link.to}
-                className="font-body text-sm text-foreground/80 hover:text-primary transition-colors"
-              >
-                {link.label}
-              </Link>
-            ))}
-          </div>
         </div>
       </section>
 
