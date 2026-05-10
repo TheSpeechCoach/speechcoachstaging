@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import SiteNav from "@/components/SiteNav";
 import SiteFooter from "@/components/SiteFooter";
+import StickyMobileCTA from "@/components/StickyMobileCTA";
 import {
   Accordion,
   AccordionContent,
@@ -119,6 +120,7 @@ const Pricing = () => (
     </section>
 
     <SiteFooter />
+    <StickyMobileCTA />
   </main>
 );
 
