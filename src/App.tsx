@@ -2,9 +2,20 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
+import PublicSpeaking from "./pages/PublicSpeaking";
+import ElocutionVoice from "./pages/ElocutionVoice";
+import AccentCoaching from "./pages/AccentCoaching";
+import ExecutiveCorporate from "./pages/ExecutiveCorporate";
+import PresentationSkills from "./pages/PresentationSkills";
+import CommunicationCoaching from "./pages/CommunicationCoaching";
+import OnlineCoaching from "./pages/OnlineCoaching";
+import TeamWorkshops from "./pages/TeamWorkshops";
+import ChildrensCoaching from "./pages/ChildrensCoaching";
+import Pricing from "./pages/Pricing";
+import ThankYou from "./pages/ThankYou";
 
 const queryClient = new QueryClient();
 
@@ -13,13 +24,22 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Index />} />
+        <Route path="/public-speaking-coaching" element={<PublicSpeaking />} />
+        <Route path="/elocution-voice-coaching" element={<ElocutionVoice />} />
+        <Route path="/accent-coaching" element={<AccentCoaching />} />
+        <Route path="/executive-corporate-coaching" element={<ExecutiveCorporate />} />
+        <Route path="/presentation-skills-coaching" element={<PresentationSkills />} />
+        <Route path="/communication-coaching" element={<CommunicationCoaching />} />
+        <Route path="/online-coaching" element={<OnlineCoaching />} />
+        <Route path="/team-workshops" element={<TeamWorkshops />} />
+        <Route path="/speech-coaching-children" element={<ChildrensCoaching />} />
+        <Route path="/pricing" element={<Pricing />} />
+        <Route path="/thank-you" element={<ThankYou />} />
+        {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+        <Route path="*" element={<NotFound />} />
+      </Routes>
     </TooltipProvider>
   </QueryClientProvider>
 );
