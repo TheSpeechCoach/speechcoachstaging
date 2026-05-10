@@ -120,6 +120,7 @@ const Pricing = () => (
     </section>
 
     <SiteFooter />
+    <StickyMobileCTA />
   </main>
 );
 
