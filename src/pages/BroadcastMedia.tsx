@@ -27,7 +27,7 @@ const BroadcastMedia = () => (
       "Delivery for radio and podcast — intimacy, warmth and conversational ease",
       "Media interview preparation — handling difficult questions under pressure",
       "Autocue and script reading — sounding natural, not scripted",
-      "Microphone technique — proximity, volume and breath control",
+      "Microphone technique — mic proximity, volume and breath control",
       "Developing your on-air personality without losing your authenticity",
       "Live broadcast confidence — performing under pressure in real time",
     ]}
