@@ -13,6 +13,7 @@ const services = [
   { to: "/online-coaching", label: "Online Coaching" },
   { to: "/team-workshops", label: "Team Workshops" },
   { to: "/speech-coaching-children", label: "Children" },
+  { to: "/broadcast-media-coaching", label: "Broadcast & Media" },
 ];
 
 const SiteNav = () => {
