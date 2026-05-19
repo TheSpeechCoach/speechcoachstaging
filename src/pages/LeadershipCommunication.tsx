@@ -8,9 +8,11 @@ const LeadershipCommunication = () => (
       <>
         Lost the Town Hall. Lost the Culture.{" "}
         <span className="italic text-gradient-gold">Lost the Trust.</span>
+      <br />
+      <span className="italic text-gradient-gold">Now you're here.</span>
       </>
     }
-    subheading="Now you're here. Coaching for leaders whose communication needs to build culture — not just deliver information."
+    subheading="Coaching for leaders whose communication needs to build culture — not just deliver information."
     intro="Leadership communication is different from public speaking. It's not about impressing an audience — it's about moving one. The best leaders don't just inform their organisations, they energise them. Whether it's a town hall, an all-hands, a difficult team conversation or a culture-building message, how you communicate shapes how people feel about working for you."
     problems={[
       "Internal communications feel flat, scripted or not landing",

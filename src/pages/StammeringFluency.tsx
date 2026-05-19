@@ -8,9 +8,11 @@ const StammeringFluency = () => (
       <>
         Lost Mid-sentence. Lost Mid-thought.{" "}
         <span className="italic text-gradient-gold">Lost Mid-room.</span>
+      <br />
+      <span className="italic text-gradient-gold">Now you're here.</span>
       </>
     }
-    subheading="Now you're here. Expert fluency coaching for adults who are done letting their stammer control the conversation."
+    subheading="Expert fluency coaching for adults who are done letting their stammer control the conversation."
     intro="Stammering is not a lack of intelligence, knowledge or ability — it is a communication challenge. And like all communication challenges, it responds to the right coaching. This isn't about curing a stammer. It's about developing the confidence, technique and self-possession to speak on your own terms."
     problems={[
       "Stammer holds you back in meetings, presentations or conversations",

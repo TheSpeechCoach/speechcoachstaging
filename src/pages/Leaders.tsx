@@ -8,9 +8,11 @@ const Leaders = () => (
       <>
         Lost the Authority. Lost the Team.{" "}
         <span className="italic text-gradient-gold">Lost the Room.</span>
+      <br />
+      <span className="italic text-gradient-gold">Now you're here.</span>
       </>
     }
-    subheading="Now you're here. Speech and communication coaching for leaders who need to own every room they walk into."
+    subheading="Speech and communication coaching for leaders who need to own every room they walk into."
     intro="Leadership is a communication challenge as much as a strategic one. The most effective leaders have the ability to land their ideas. Whether addressing a board, leading a town hall or managing up, how you communicate determines whether you lead or just occupy a title."
     problems={[
       "You have the title but struggle to project the authority that comes with it",

@@ -8,9 +8,11 @@ const Charities = () => (
       <>
         Lost the Donor. Lost the Room.{" "}
         <span className="italic text-gradient-gold">Lost the Cause.</span>
+      <br />
+      <span className="italic text-gradient-gold">Now you're here.</span>
       </>
     }
-    subheading="Now you're here. Communication coaching for non-profit leaders who know why it matters — and need others to feel it."
+    subheading="Communication coaching for non-profit leaders who know why it matters — and need others to feel it."
     intro="Charity communication fails not because the cause is weak but because the emotional transfer doesn't happen. Facts don't move people — stories do. Whether you're addressing trustees, speaking at a fundraising dinner or presenting to grant bodies, your ability to land the emotional weight of your cause drives action."
     problems={[
       "Present to donors or major funders and need to inspire action",

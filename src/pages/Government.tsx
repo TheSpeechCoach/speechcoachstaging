@@ -8,9 +8,11 @@ const Government = () => (
       <>
         Lost the Chamber. Lost the Cameras.{" "}
         <span className="italic text-gradient-gold">Lost the Public.</span>
+      <br />
+      <span className="italic text-gradient-gold">Now you're here.</span>
       </>
     }
-    subheading="Now you're here. Speech coaching for politicians and officials who need to communicate with conviction — under scrutiny."
+    subheading="Speech coaching for politicians and officials who need to communicate with conviction — under scrutiny."
     intro="Political communication has never been more demanding or more visible. Speeches, select committees, media appearances — the ability to speak with clarity and authority in every format is essential. Whether you're an MP, a minister or a civil servant, communication is your primary instrument."
     problems={[
       "Preparing a speech for the House or a public event",

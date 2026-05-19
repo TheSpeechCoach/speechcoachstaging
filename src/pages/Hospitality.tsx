@@ -8,9 +8,11 @@ const Hospitality = () => (
       <>
         Lost with the Board. Lost the Investment Case.{" "}
         <span className="italic text-gradient-gold">Lost the Room.</span>
+      <br />
+      <span className="italic text-gradient-gold">Now you're here.</span>
       </>
     }
-    subheading="Now you're here. Speech coaching for hospitality leaders who run the room — and need to own the boardroom."
+    subheading="Speech coaching for hospitality leaders who run the room — and need to own the boardroom."
     intro="Hospitality is the industry of communication. But the skills that make an exceptional operator are different from what's required when presenting to ownership groups, investment boards or brand leadership. This coaching bridges that gap."
     problems={[
       "Presenting to owners or investors for the first time",
