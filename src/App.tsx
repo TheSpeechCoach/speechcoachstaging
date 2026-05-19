@@ -29,6 +29,9 @@ import VoiceCoaching from "./pages/VoiceCoaching";
 import LeadershipCommunication from "./pages/LeadershipCommunication";
 import KeynoteConference from "./pages/KeynoteConference";
 import PitchCoaching from "./pages/PitchCoaching";
+import Negotiations from "./pages/Negotiations";
+import SalesPresentation from "./pages/SalesPresentation";
+import MediaTraining from "./pages/MediaTraining";
 import Pricing from "./pages/Pricing";
 import ThankYou from "./pages/ThankYou";
 
