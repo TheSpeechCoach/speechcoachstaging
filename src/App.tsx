@@ -29,6 +29,9 @@ import VoiceCoaching from "./pages/VoiceCoaching";
 import LeadershipCommunication from "./pages/LeadershipCommunication";
 import KeynoteConference from "./pages/KeynoteConference";
 import PitchCoaching from "./pages/PitchCoaching";
+import Negotiations from "./pages/Negotiations";
+import SalesPresentation from "./pages/SalesPresentation";
+import MediaTraining from "./pages/MediaTraining";
 import Pricing from "./pages/Pricing";
 import ThankYou from "./pages/ThankYou";
 
@@ -65,6 +68,9 @@ const App = () => (
         <Route path="/leadership-communication-coaching" element={<LeadershipCommunication />} />
         <Route path="/keynote-conference-coaching" element={<KeynoteConference />} />
         <Route path="/pitch-coaching" element={<PitchCoaching />} />
+        <Route path="/negotiation-coaching" element={<Negotiations />} />
+        <Route path="/sales-presentation-coaching" element={<SalesPresentation />} />
+        <Route path="/media-training" element={<MediaTraining />} />
         <Route path="/pricing" element={<Pricing />} />
         <Route path="/thank-you" element={<ThankYou />} />
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
