@@ -32,6 +32,9 @@ import PitchCoaching from "./pages/PitchCoaching";
 import Negotiations from "./pages/Negotiations";
 import SalesPresentation from "./pages/SalesPresentation";
 import MediaTraining from "./pages/MediaTraining";
+import InterviewCoaching from "./pages/InterviewCoaching";
+import WeddingSpeech from "./pages/WeddingSpeech";
+import Lawyers from "./pages/Lawyers";
 import Pricing from "./pages/Pricing";
 import ThankYou from "./pages/ThankYou";
 
