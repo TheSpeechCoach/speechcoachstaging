@@ -25,11 +25,9 @@ const HeroSection = () => {
             Inspire • Engage • Influence
           </motion.p>
           <h1 className="font-display font-bold text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-[1.05] tracking-tight mb-8">
-            Find your{" "}
-            <span className="italic text-gradient-gold font-bold">voice</span>,
-            <br />
-            own the{" "}
-            <span className="italic font-extrabold">room</span>
+            <span className="block">You tried YouTube.</span>
+            <span className="block">You tried AI.</span>
+            <span className="block italic text-gradient-gold">Now you're here.</span>
           </h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
