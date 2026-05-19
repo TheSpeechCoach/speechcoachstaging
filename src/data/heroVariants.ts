@@ -1,3 +1,29 @@
+/**
+ * Hero Variants — Architecture
+ * ----------------------------------------------------------------------------
+ * Content for the 31 "Lost..." hero landing pages is deliberately split across
+ * TWO files. Keep them split. Do not inline.
+ *
+ *  1. src/data/heroVariants.ts        (this file)
+ *     Holds the schema/lookup fields for each entry:
+ *       slug, category, title, threeLine, fourLine,
+ *       threeLineSubheading, fourLineSubheading,
+ *       metaTitle, metaDescription, intro,
+ *       problems, workOn, closingHeading, closingCopy, ctaLabel
+ *
+ *  2. src/data/heroVariantContent.ts
+ *     Holds the long-form body copy for each entry, keyed by slug:
+ *       introExtended, whyMatters, approach, outcomes,
+ *       formats, caseSnapshot, faqs
+ *
+ * The two sources are merged at lookup time by `getHeroVariant(slug)` at the
+ * bottom of this file: `{ ...base, ...ext }`. The merged object is what
+ * src/pages/LostHero.tsx consumes — no merging happens anywhere else.
+ *
+ * When adding a new entry: add the schema fields here AND the extended body
+ * copy under the matching slug in heroVariantContent.ts.
+ * ----------------------------------------------------------------------------
+ */
 import { heroVariantContent, type HeroVariantContent } from "./heroVariantContent";
 
 export type HeroCategory = "Core" | "Audience" | "Topic" | "Occasion" | "Specialist";
