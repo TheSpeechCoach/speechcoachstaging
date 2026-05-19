@@ -137,27 +137,64 @@ const LostHero = () => {
       </section>
 
       {/* Intro */}
-      <section className="py-16 px-6 border-t border-border">
+      <section className="py-16 md:py-20 px-6 border-t border-border">
         <div className="container mx-auto max-w-3xl">
-          <motion.p {...fadeUp} className="font-body text-lg text-muted-foreground leading-relaxed">
-            {entry.intro}
-          </motion.p>
+          {entry.introExtended ? (
+            entry.introExtended.split(/\n\n+/).map((para, i) => (
+              <motion.p
+                key={i}
+                {...fadeUp}
+                transition={{ duration: 0.6, delay: i * 0.05, ease: "easeOut" }}
+                className="font-body text-lg text-muted-foreground leading-relaxed mb-6 last:mb-0"
+              >
+                {para}
+              </motion.p>
+            ))
+          ) : (
+            <motion.p {...fadeUp} className="font-body text-lg text-muted-foreground leading-relaxed">
+              {entry.intro}
+            </motion.p>
+          )}
         </div>
       </section>
 
+      {/* Why this matters */}
+      {entry.whyMatters && (
+        <section className="py-16 md:py-20 px-6 bg-card/40 border-y border-border">
+          <div className="container mx-auto max-w-3xl">
+            <motion.h2
+              {...fadeUp}
+              className="font-display text-3xl md:text-5xl font-bold mb-10"
+            >
+              Why this <span className="italic text-gradient-gold">matters</span>
+            </motion.h2>
+            {entry.whyMatters.split(/\n\n+/).map((para, i) => (
+              <motion.p
+                key={i}
+                {...fadeUp}
+                transition={{ duration: 0.6, delay: i * 0.05, ease: "easeOut" }}
+                className="font-body text-lg text-muted-foreground leading-relaxed mb-6 last:mb-0"
+              >
+                {para}
+              </motion.p>
+            ))}
+          </div>
+        </section>
+      )}
+
       {/* Problems */}
-      <section className="py-20 px-6 bg-card/40 border-y border-border">
+      <section className="py-16 md:py-20 px-6">
         <div className="container mx-auto max-w-4xl">
-          <motion.h2 {...fadeUp} className="font-display text-3xl md:text-5xl font-bold mb-12 text-center">
-            Does this sound familiar?
+          <motion.h2 {...fadeUp} className="font-display text-3xl md:text-5xl font-bold mb-12">
+            Does this <span className="italic text-gradient-gold">sound familiar?</span>
           </motion.h2>
           <ul className="grid md:grid-cols-2 gap-5">
             {entry.problems.map((p, i) => (
               <motion.li
                 key={i}
                 {...fadeUp}
-                transition={{ duration: 0.5, delay: i * 0.05, ease: "easeOut" }}
-                className="flex gap-4 p-5 rounded-lg border border-border bg-background/40"
+                transition={{ duration: 0.5, delay: i * 0.04, ease: "easeOut" }}
+                className="flex gap-4 p-5 rounded-lg border border-border bg-card/40"
               >
                 <span className="text-primary font-display text-lg leading-none mt-1">—</span>
                 <span className="font-body text-foreground/90">{p}</span>
@@ -167,18 +204,39 @@ const LostHero = () => {
         </div>
       </section>
 
+      {/* The approach */}
+      {entry.approach && (
+        <section className="py-16 md:py-20 px-6 bg-card/40 border-y border-border">
+          <div className="container mx-auto max-w-3xl">
+            <motion.h2 {...fadeUp} className="font-display text-3xl md:text-5xl font-bold mb-10">
+              The <span className="italic text-gradient-gold">approach</span>
+            </motion.h2>
+            {entry.approach.split(/\n\n+/).map((para, i) => (
+              <motion.p
+                key={i}
+                {...fadeUp}
+                transition={{ duration: 0.6, delay: i * 0.05, ease: "easeOut" }}
+                className="font-body text-lg text-muted-foreground leading-relaxed mb-6 last:mb-0"
+              >
+                {para}
+              </motion.p>
+            ))}
+          </div>
+        </section>
+      )}
+
       {/* What we work on */}
-      <section className="py-20 px-6">
+      <section className="py-16 md:py-20 px-6">
         <div className="container mx-auto max-w-4xl">
-          <motion.h2 {...fadeUp} className="font-display text-3xl md:text-5xl font-bold mb-12 text-center">
-            What we work on
+          <motion.h2 {...fadeUp} className="font-display text-3xl md:text-5xl font-bold mb-12">
+            What we <span className="italic text-gradient-gold">work on</span>
           </motion.h2>
           <ul className="grid md:grid-cols-2 gap-5">
             {entry.workOn.map((w, i) => (
               <motion.li
                 key={i}
                 {...fadeUp}
-                transition={{ duration: 0.5, delay: i * 0.05, ease: "easeOut" }}
+                transition={{ duration: 0.5, delay: i * 0.04, ease: "easeOut" }}
                 className="flex gap-3 items-start"
               >
                 <Check className="w-5 h-5 text-primary mt-1 shrink-0" />
@@ -188,6 +246,100 @@ const LostHero = () => {
           </ul>
         </div>
       </section>
+
+      {/* Outcomes */}
+      {entry.outcomes && entry.outcomes.length > 0 && (
+        <section className="py-16 md:py-20 px-6 bg-card/40 border-y border-border">
+          <div className="container mx-auto max-w-4xl">
+            <motion.h2 {...fadeUp} className="font-display text-3xl md:text-5xl font-bold mb-12">
+              What <span className="italic text-gradient-gold">changes</span>
+            </motion.h2>
+            <ul className="grid md:grid-cols-2 gap-5">
+              {entry.outcomes.map((o, i) => (
+                <motion.li
+                  key={i}
+                  {...fadeUp}
+                  transition={{ duration: 0.5, delay: i * 0.04, ease: "easeOut" }}
+                  className="flex gap-3 items-start"
+                >
+                  <ArrowRight className="w-5 h-5 text-primary mt-1 shrink-0" />
+                  <span className="font-body text-foreground/90">{o}</span>
+                </motion.li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      )}
+
+      {/* Formats */}
+      {entry.formats && entry.formats.length > 0 && (
+        <section className="py-16 md:py-20 px-6">
+          <div className="container mx-auto max-w-5xl">
+            <motion.h2 {...fadeUp} className="font-display text-3xl md:text-5xl font-bold mb-12">
+              How we <span className="italic text-gradient-gold">work</span>
+            </motion.h2>
+            <div className="grid md:grid-cols-3 gap-6">
+              {entry.formats.map((f, i) => (
+                <motion.div
+                  key={i}
+                  {...fadeUp}
+                  transition={{ duration: 0.5, delay: i * 0.08, ease: "easeOut" }}
+                  className="p-7 rounded-lg border border-border bg-card/40 h-full"
+                >
+                  <h3 className="font-display text-xl mb-3 text-foreground">{f.name}</h3>
+                  <p className="font-body text-muted-foreground leading-relaxed">{f.description}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Case snapshot */}
+      {entry.caseSnapshot && (
+        <section className="py-16 md:py-20 px-6 bg-card/40 border-y border-border">
+          <div className="container mx-auto max-w-3xl">
+            <motion.h2 {...fadeUp} className="font-display text-3xl md:text-5xl font-bold mb-10">
+              In <span className="italic text-gradient-gold">practice</span>
+            </motion.h2>
+            <motion.blockquote
+              {...fadeUp}
+              className="font-body italic text-lg md:text-xl text-foreground/85 leading-relaxed border-l-2 border-primary pl-6"
+            >
+              {entry.caseSnapshot}
+            </motion.blockquote>
+          </div>
+        </section>
+      )}
+
+      {/* FAQs */}
+      {entry.faqs && entry.faqs.length > 0 && (
+        <section className="py-16 md:py-20 px-6">
+          <div className="container mx-auto max-w-3xl">
+            <motion.h2 {...fadeUp} className="font-display text-3xl md:text-5xl font-bold mb-10">
+              Common <span className="italic text-gradient-gold">questions</span>
+            </motion.h2>
+            <div className="space-y-4">
+              {entry.faqs.map((f, i) => (
+                <motion.details
+                  key={i}
+                  {...fadeUp}
+                  transition={{ duration: 0.5, delay: i * 0.04, ease: "easeOut" }}
+                  className="group border border-border rounded-lg px-6 py-5 bg-card/40 open:bg-card/60"
+                >
+                  <summary className="font-body font-medium text-foreground cursor-pointer list-none flex justify-between items-center gap-4">
+                    <span>{f.question}</span>
+                    <span className="text-primary transition-transform group-open:rotate-45 text-xl leading-none shrink-0">+</span>
+                  </summary>
+                  <p className="font-body text-muted-foreground leading-relaxed mt-4">
+                    {f.answer}
+                  </p>
+                </motion.details>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Closing CTA */}
       <section id="cta" className="py-24 px-6 border-t border-border">
@@ -219,3 +371,4 @@ const LostHero = () => {
 };
 
 export default LostHero;
+
