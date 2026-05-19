@@ -8,9 +8,11 @@ const ContentCreators = () => (
       <>
         Lost on Camera. Lost the Engagement.{" "}
         <span className="italic text-gradient-gold">Lost the Audience.</span>
+      <br />
+      <span className="italic text-gradient-gold">Now you\'re here.</span>
       </>
     }
-    subheading="Now you're here. On-camera coaching for content creators who know their subject and need their delivery to match."
+    subheading="On-camera coaching for content creators who know their subject and need their delivery to match."
     intro="The content is good. The information is there. The editing is clean. And yet — something isn't landing. On-camera performance is a specific skill and it responds to specific coaching. The confidence, the natural delivery, the ability to connect with an audience through a lens — these are learnable."
     problems={[
       "Look or sound stilted, unnatural or nervous on camera",

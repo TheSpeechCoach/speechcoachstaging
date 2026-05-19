@@ -8,9 +8,11 @@ const PitchCoaching = () => (
       <>
         Lost the Opening. Lost the Ask.{" "}
         <span className="italic text-gradient-gold">Lost the Deal.</span>
+      <br />
+      <span className="italic text-gradient-gold">Now you\'re here.</span>
       </>
     }
-    subheading="Now you're here. Pitch coaching that gets you investment-ready — in delivery, structure and conviction."
+    subheading="Pitch coaching that gets you investment-ready — in delivery, structure and conviction."
     intro="The pitch is not the deck. The deck is the document — the pitch is the performance. Every investor has sat through hundreds of technically correct pitches. What they remember is the founder who made them believe. This coaching turns a good pitch into a compelling one."
     problems={[
       "Pitching to investors and want to be the one they remember",

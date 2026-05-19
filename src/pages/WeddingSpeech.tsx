@@ -8,9 +8,11 @@ const WeddingSpeech = () => (
       <>
         Lost the Speech. Lost the Plot.{" "}
         <span className="italic text-gradient-gold">Lost for Words.</span>
+      <br />
+      <span className="italic text-gradient-gold">Now you\'re here.</span>
       </>
     }
-    subheading="Now you're here. Wedding speech coaching so the most important speech of the day is delivered exactly the way it deserves to be."
+    subheading="Wedding speech coaching so the most important speech of the day is delivered exactly the way it deserves to be."
     intro="You said yes to the speech before you understood what that meant. Now the day is coming and the blank page is the problem. A great wedding speech is personal, warm, structured and well-delivered. It's not about being funny — it's about landing the moment. This coaching helps you write it, rehearse it and own it."
     problems={[
       "You're a best man and have no idea where to start",

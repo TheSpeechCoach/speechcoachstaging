@@ -8,9 +8,11 @@ const Teachers = () => (
       <>
         Lost the Voice. Lost the Lesson.{" "}
         <span className="italic text-gradient-gold">Lost the Class.</span>
+      <br />
+      <span className="italic text-gradient-gold">Now you\'re here.</span>
       </>
     }
-    subheading="Now you're here. Voice and communication coaching for teachers who communicate for a living — and need to protect their most important instrument."
+    subheading="Voice and communication coaching for teachers who communicate for a living — and need to protect their most important instrument."
     intro="Teaching is one of the most demanding communication professions. You speak for hours every day, manage rooms of different-sized audiences, modulate your energy, handle disruption and still find the volume and presence to hold a class at 3pm on a Friday. Voice coaching for teachers is about sustainability as much as skill."
     problems={[
       "Lost your voice in term time and pushed through anyway",

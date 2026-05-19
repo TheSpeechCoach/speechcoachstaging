@@ -8,9 +8,11 @@ const UnitedNations = () => (
       <>
         Lost in Translation. Lost the Resolution.{" "}
         <span className="italic text-gradient-gold">Lost the Room.</span>
+      <br />
+      <span className="italic text-gradient-gold">Now you\'re here.</span>
       </>
     }
-    subheading="Now you're here. Expert speech coaching for UN delegates and diplomats who have the floor — and need to own it."
+    subheading="Expert speech coaching for UN delegates and diplomats who have the floor — and need to own it."
     intro="You have the floor. The world is listening. Multilateral communication demands precision, authority and the ability to speak across languages, cultures and political contexts simultaneously. Whether addressing the General Assembly, presenting in the Security Council or chairing a committee, the stakes demand the highest standard of delivery."
     problems={[
       "Addressing the General Assembly, Security Council or a UN committee",

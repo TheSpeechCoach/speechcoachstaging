@@ -8,9 +8,11 @@ const MedicalProfessionals = () => (
       <>
         Lost in the Jargon. Lost in the Silence.{" "}
         <span className="italic text-gradient-gold">Lost the Patient.</span>
+      <br />
+      <span className="italic text-gradient-gold">Now you\'re here.</span>
       </>
     }
-    subheading="Now you're here. Communication coaching for medical professionals trained in everything — except how to communicate it."
+    subheading="Communication coaching for medical professionals trained in everything — except how to communicate it."
     intro="Medical training builds clinical excellence. It rarely builds communication excellence. Whether presenting at Grand Rounds, preparing a conference keynote or managing difficult patient conversations, the ability to communicate clearly separates good clinicians from trusted ones."
     problems={[
       "Presenting at conference Grand Rounds or academic setting",

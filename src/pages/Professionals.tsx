@@ -8,9 +8,11 @@ const Professionals = () => (
       <>
         Lost the Thread. Lost the Room.{" "}
         <span className="italic text-gradient-gold">Lost the Promotion.</span>
+      <br />
+      <span className="italic text-gradient-gold">Now you\'re here.</span>
       </>
     }
-    subheading="Now you're here. Communication coaching for professionals who are good at their job and want their delivery to match."
+    subheading="Communication coaching for professionals who are good at their job and want their delivery to match."
     intro="It came up in your review. Or you felt it in the meeting. You know your subject but something isn't landing the way it should. Across law, finance, consulting, medicine and technology, the ability to communicate with authority is the differentiator between careers that plateau and careers that accelerate."
     problems={[
       "You received feedback your communication needs work",

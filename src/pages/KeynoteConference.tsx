@@ -8,9 +8,11 @@ const KeynoteConference = () => (
       <>
         Lost the Opening. Lost the Thread.{" "}
         <span className="italic text-gradient-gold">Lost the Room.</span>
+      <br />
+      <span className="italic text-gradient-gold">Now you\'re here.</span>
       </>
     }
-    subheading="Now you're here. Expert coaching for keynote speakers and conference presenters who need to make every minute count."
+    subheading="Expert coaching for keynote speakers and conference presenters who need to make every minute count."
     intro="A keynote is not a presentation. It's a performance. The preparation, the structure, the delivery, the opening, the close — every element has to earn its place. Whether it's a TEDx talk, an industry conference, a company event or an international summit, the standard is the same: the room has to leave changed."
     problems={[
       "Invited to give a keynote and want to be exceptional",
