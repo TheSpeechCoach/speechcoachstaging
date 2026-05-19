@@ -6,10 +6,10 @@ const AccentCoaching = () => (
     metaDescription="Worried your accent is holding you back? Bespoke accent coaching to help you speak more clearly and confidently in English — without losing who you are. Online worldwide."
     h1={
       <>
-        Speak Clearly. Be Understood. <span className="italic text-gradient-gold">Keep Your Identity.</span>
+        Lost in Translation. Lost in the Meeting. <span className="italic text-gradient-gold">Lost the Moment.</span>
       </>
     }
-    subheading="Bespoke accent coaching for professionals who want to communicate with clarity and confidence — without losing the voice that makes them who they are."
+    subheading="Now you're here. Accent softening and clarity coaching so you are never asked to repeat yourself again."
     intro="If English is not your first language — or if you've moved to a new country and found that people sometimes struggle to understand you — this is for you. Accent coaching is not about making you sound British or American. It is about helping you be heard, understood and taken seriously. Your accent is part of who you are. The goal is never to erase it."
     problems={[
       "People ask you to repeat yourself in meetings",

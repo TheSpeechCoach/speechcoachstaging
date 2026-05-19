@@ -6,10 +6,10 @@ const OnlineCoaching = () => (
     metaDescription="Looking for an online speech coach? Work with an expert from anywhere in the world via Zoom. Bespoke 1:1 coaching for professionals across the UK, UAE, USA, Europe and beyond."
     h1={
       <>
-        World-Class Speech Coaching — <span className="italic text-gradient-gold">Wherever You Are in the World.</span>
+        Lost on Camera. Lost Through the Screen. <span className="italic text-gradient-gold">Lost Your Audience.</span>
       </>
     }
-    subheading="Bespoke 1:1 online coaching via Zoom for professionals in the UK, UAE, USA, Europe, Asia and beyond."
+    subheading="Now you're here. Online speech and communication coaching — expert coaching from anywhere in the world."
     intro="Online coaching works. It is not a compromise or a second-best option — it is simply a different format, and for speech and communication coaching, it works exceptionally well. Whether you're in London or Dubai, Frankfurt or Singapore — the quality of your coaching will be exactly the same."
     problemsHeading="How it works"
     problems={[
