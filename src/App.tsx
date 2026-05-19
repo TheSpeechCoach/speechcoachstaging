@@ -16,6 +16,7 @@ import TeamWorkshops from "./pages/TeamWorkshops";
 import ChildrensCoaching from "./pages/ChildrensCoaching";
 import BroadcastMedia from "./pages/BroadcastMedia";
 import SpeechCoachingLeaders from "./pages/SpeechCoachingLeaders";
+import SpeechCoachingFounders from "./pages/SpeechCoachingFounders";
 import Pricing from "./pages/Pricing";
 import ThankYou from "./pages/ThankYou";
 
