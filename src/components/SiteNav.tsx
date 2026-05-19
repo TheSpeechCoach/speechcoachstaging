@@ -2,9 +2,15 @@ import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Phone, Menu, X, ChevronDown } from "lucide-react";
+import { heroVariants } from "@/data/heroVariants";
 
 type ServiceLink = { to: string; label: string };
 type ServiceCategory = { heading: string; links: ServiceLink[] };
+
+const lostHeroLinks: ServiceLink[] = heroVariants.flatMap((v) => [
+  { to: `/hero/3/${v.slug}`, label: `${v.title} · 3-line` },
+  { to: `/hero/4/${v.slug}`, label: `${v.title} · 4-line` },
+]);
 
 const serviceCategories: ServiceCategory[] = [
   {
@@ -64,6 +70,10 @@ const serviceCategories: ServiceCategory[] = [
       { to: "/speech-coaching-content-creators", label: "Content Creators" },
     ],
   },
+  {
+    heading: "Lost Hero Variants",
+    links: lostHeroLinks,
+  },
 ];
 
 const SiteNav = () => {
@@ -118,7 +128,7 @@ const SiteNav = () => {
                   transition={{ duration: 0.15 }}
                   className="absolute left-1/2 -translate-x-1/2 top-full pt-3"
                 >
-                  <div className="bg-background border border-border rounded-md shadow-lg p-6 grid grid-cols-5 gap-6 w-[min(90vw,1100px)]">
+                  <div className="bg-background border border-border rounded-md shadow-lg p-6 grid grid-cols-6 gap-6 w-[min(95vw,1320px)]">
                     {serviceCategories.map((cat) => (
                       <div key={cat.heading} className="min-w-0">
                         <h3 className="font-display text-xs uppercase tracking-widest text-gradient-gold mb-3">
