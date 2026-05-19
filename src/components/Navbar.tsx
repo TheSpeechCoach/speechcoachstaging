@@ -114,7 +114,7 @@ const Navbar = () => {
                   transition={{ duration: 0.15 }}
                   className="absolute left-1/2 -translate-x-1/2 top-full pt-3"
                 >
-                  <div className="bg-background border border-border rounded-md shadow-lg p-6 grid grid-cols-5 gap-6 w-[min(90vw,1100px)]">
+                  <div className="bg-background border border-border rounded-md shadow-lg p-6 grid grid-cols-6 gap-6 w-[min(95vw,1320px)]">
                     {serviceCategories.map((cat) => (
                       <div key={cat.heading} className="min-w-0">
                         <h3 className="font-display text-xs uppercase tracking-widest text-gradient-gold mb-3">
