@@ -1,4 +1,9 @@
+import { heroVariantContent, type HeroVariantContent } from "./heroVariantContent";
+
 export type HeroCategory = "Core" | "Audience" | "Topic" | "Occasion" | "Specialist";
+
+export type HeroFormat = { name: string; description: string };
+export type HeroFAQ = { question: string; answer: string };
 
 export type HeroVariant = {
   slug: string;
@@ -16,7 +21,17 @@ export type HeroVariant = {
   closingHeading: string;
   closingCopy: string;
   ctaLabel: string;
+  // Extended content (merged via getHeroVariant)
+  introExtended?: string;
+  whyMatters?: string;
+  approach?: string;
+  outcomes?: string[];
+  formats?: HeroFormat[];
+  caseSnapshot?: string;
+  faqs?: HeroFAQ[];
 };
+
+export type { HeroVariantContent };
 
 export const heroVariants: HeroVariant[] = [
   {
@@ -982,5 +997,9 @@ export const heroVariants: HeroVariant[] = [
   },
 ];
 
-export const getHeroVariant = (slug: string) =>
-  heroVariants.find((v) => v.slug === slug);
+export const getHeroVariant = (slug: string): HeroVariant | undefined => {
+  const base = heroVariants.find((v) => v.slug === slug);
+  if (!base) return undefined;
+  const ext = heroVariantContent[slug];
+  return ext ? { ...base, ...ext } : base;
+};
