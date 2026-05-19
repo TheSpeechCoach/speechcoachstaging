@@ -44,8 +44,8 @@ const LostHero = () => {
         />
       </Helmet>
       <SiteNav />
-      <main className="flex-1 flex items-center justify-center px-6 pt-32 pb-24">
-        <div className="max-w-5xl mx-auto text-center">
+      <main className="flex-1 flex items-center px-6 pt-32 pb-24">
+        <div className="max-w-5xl text-left">
           <motion.h1
             initial="hidden"
             animate="visible"
@@ -89,7 +89,7 @@ const LostHero = () => {
             initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.6, ease: "easeOut" }}
-            className="font-body text-lg sm:text-xl text-muted-foreground mt-10 max-w-2xl mx-auto"
+            className="font-body text-lg sm:text-xl text-muted-foreground mt-10 max-w-2xl"
           >
             {subheading}
           </motion.p>
