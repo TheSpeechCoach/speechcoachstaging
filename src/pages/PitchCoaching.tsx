@@ -9,7 +9,7 @@ const PitchCoaching = () => (
         Lost the Opening. Lost the Ask.{" "}
         <span className="italic text-gradient-gold">Lost the Deal.</span>
       <br />
-      <span className="italic text-gradient-gold">Now you\'re here.</span>
+      <span className="italic text-gradient-gold">Now you're here.</span>
       </>
     }
     subheading="Pitch coaching that gets you investment-ready — in delivery, structure and conviction."

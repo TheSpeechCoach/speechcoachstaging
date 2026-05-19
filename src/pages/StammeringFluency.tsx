@@ -9,7 +9,7 @@ const StammeringFluency = () => (
         Lost Mid-sentence. Lost Mid-thought.{" "}
         <span className="italic text-gradient-gold">Lost Mid-room.</span>
       <br />
-      <span className="italic text-gradient-gold">Now you\'re here.</span>
+      <span className="italic text-gradient-gold">Now you're here.</span>
       </>
     }
     subheading="Expert fluency coaching for adults who are done letting their stammer control the conversation."

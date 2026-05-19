@@ -9,7 +9,7 @@ const Negotiations = () => (
         Lost the Advantage. Lost the Argument.{" "}
         <span className="italic text-gradient-gold">Lost the Deal.</span>
       <br />
-      <span className="italic text-gradient-gold">Now you\'re here.</span>
+      <span className="italic text-gradient-gold">Now you're here.</span>
       </>
     }
     subheading="Communication coaching for high-stakes negotiations — where how you say it determines what you get."

@@ -9,7 +9,7 @@ const InterviewCoaching = () => (
         Lost for Words. Lost the Thread.{" "}
         <span className="italic text-gradient-gold">Lost the Job.</span>
       <br />
-      <span className="italic text-gradient-gold">Now you\'re here.</span>
+      <span className="italic text-gradient-gold">Now you're here.</span>
       </>
     }
     subheading="Interview coaching that takes you from prepared to compelling."

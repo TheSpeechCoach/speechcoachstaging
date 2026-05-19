@@ -9,7 +9,7 @@ const WeddingSpeech = () => (
         Lost the Speech. Lost the Plot.{" "}
         <span className="italic text-gradient-gold">Lost for Words.</span>
       <br />
-      <span className="italic text-gradient-gold">Now you\'re here.</span>
+      <span className="italic text-gradient-gold">Now you're here.</span>
       </>
     }
     subheading="Wedding speech coaching so the most important speech of the day is delivered exactly the way it deserves to be."

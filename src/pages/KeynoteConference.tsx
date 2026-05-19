@@ -9,7 +9,7 @@ const KeynoteConference = () => (
         Lost the Opening. Lost the Thread.{" "}
         <span className="italic text-gradient-gold">Lost the Room.</span>
       <br />
-      <span className="italic text-gradient-gold">Now you\'re here.</span>
+      <span className="italic text-gradient-gold">Now you're here.</span>
       </>
     }
     subheading="Expert coaching for keynote speakers and conference presenters who need to make every minute count."

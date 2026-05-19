@@ -9,7 +9,7 @@ const LeadershipCommunication = () => (
         Lost the Town Hall. Lost the Culture.{" "}
         <span className="italic text-gradient-gold">Lost the Trust.</span>
       <br />
-      <span className="italic text-gradient-gold">Now you\'re here.</span>
+      <span className="italic text-gradient-gold">Now you're here.</span>
       </>
     }
     subheading="Coaching for leaders whose communication needs to build culture — not just deliver information."

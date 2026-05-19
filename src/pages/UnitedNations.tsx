@@ -9,7 +9,7 @@ const UnitedNations = () => (
         Lost in Translation. Lost the Resolution.{" "}
         <span className="italic text-gradient-gold">Lost the Room.</span>
       <br />
-      <span className="italic text-gradient-gold">Now you\'re here.</span>
+      <span className="italic text-gradient-gold">Now you're here.</span>
       </>
     }
     subheading="Expert speech coaching for UN delegates and diplomats who have the floor — and need to own it."

@@ -9,7 +9,7 @@ const Hospitality = () => (
         Lost with the Board. Lost the Investment Case.{" "}
         <span className="italic text-gradient-gold">Lost the Room.</span>
       <br />
-      <span className="italic text-gradient-gold">Now you\'re here.</span>
+      <span className="italic text-gradient-gold">Now you're here.</span>
       </>
     }
     subheading="Speech coaching for hospitality leaders who run the room — and need to own the boardroom."

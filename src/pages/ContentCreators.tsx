@@ -9,7 +9,7 @@ const ContentCreators = () => (
         Lost on Camera. Lost the Engagement.{" "}
         <span className="italic text-gradient-gold">Lost the Audience.</span>
       <br />
-      <span className="italic text-gradient-gold">Now you\'re here.</span>
+      <span className="italic text-gradient-gold">Now you're here.</span>
       </>
     }
     subheading="On-camera coaching for content creators who know their subject and need their delivery to match."

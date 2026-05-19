@@ -9,7 +9,7 @@ const Lawyers = () => (
         Lost the Argument. Lost the Jury.{" "}
         <span className="italic text-gradient-gold">Lost the Case.</span>
       <br />
-      <span className="italic text-gradient-gold">Now you\'re here.</span>
+      <span className="italic text-gradient-gold">Now you're here.</span>
       </>
     }
     subheading="Advocacy coaching for legal professionals who need to do more than know the law."

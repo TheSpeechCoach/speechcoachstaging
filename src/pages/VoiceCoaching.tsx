@@ -9,7 +9,7 @@ const VoiceCoaching = () => (
         Lost the Volume. Lost the Resonance.{" "}
         <span className="italic text-gradient-gold">Lost the Room.</span>
       <br />
-      <span className="italic text-gradient-gold">Now you\'re here.</span>
+      <span className="italic text-gradient-gold">Now you're here.</span>
       </>
     }
     subheading="Professional voice coaching to develop a voice that commands attention — in any room, at any volume."

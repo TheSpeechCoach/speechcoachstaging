@@ -9,7 +9,7 @@ const Government = () => (
         Lost the Chamber. Lost the Cameras.{" "}
         <span className="italic text-gradient-gold">Lost the Public.</span>
       <br />
-      <span className="italic text-gradient-gold">Now you\'re here.</span>
+      <span className="italic text-gradient-gold">Now you're here.</span>
       </>
     }
     subheading="Speech coaching for politicians and officials who need to communicate with conviction — under scrutiny."

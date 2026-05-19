@@ -9,7 +9,7 @@ const SalesPresentation = () => (
         Lost the Prospect. Lost the Narrative.{" "}
         <span className="italic text-gradient-gold">Lost the Deal.</span>
       <br />
-      <span className="italic text-gradient-gold">Now you\'re here.</span>
+      <span className="italic text-gradient-gold">Now you're here.</span>
       </>
     }
     subheading="Sales presentation coaching that turns technically correct pitches into commercially compelling ones."

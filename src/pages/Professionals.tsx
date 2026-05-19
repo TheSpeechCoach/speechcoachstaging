@@ -9,7 +9,7 @@ const Professionals = () => (
         Lost the Thread. Lost the Room.{" "}
         <span className="italic text-gradient-gold">Lost the Promotion.</span>
       <br />
-      <span className="italic text-gradient-gold">Now you\'re here.</span>
+      <span className="italic text-gradient-gold">Now you're here.</span>
       </>
     }
     subheading="Communication coaching for professionals who are good at their job and want their delivery to match."

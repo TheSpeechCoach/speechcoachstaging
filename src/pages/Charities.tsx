@@ -9,7 +9,7 @@ const Charities = () => (
         Lost the Donor. Lost the Room.{" "}
         <span className="italic text-gradient-gold">Lost the Cause.</span>
       <br />
-      <span className="italic text-gradient-gold">Now you\'re here.</span>
+      <span className="italic text-gradient-gold">Now you're here.</span>
       </>
     }
     subheading="Communication coaching for non-profit leaders who know why it matters — and need others to feel it."

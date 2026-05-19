@@ -9,7 +9,7 @@ const Teachers = () => (
         Lost the Voice. Lost the Lesson.{" "}
         <span className="italic text-gradient-gold">Lost the Class.</span>
       <br />
-      <span className="italic text-gradient-gold">Now you\'re here.</span>
+      <span className="italic text-gradient-gold">Now you're here.</span>
       </>
     }
     subheading="Voice and communication coaching for teachers who communicate for a living — and need to protect their most important instrument."

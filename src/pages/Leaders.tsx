@@ -9,7 +9,7 @@ const Leaders = () => (
         Lost the Authority. Lost the Team.{" "}
         <span className="italic text-gradient-gold">Lost the Room.</span>
       <br />
-      <span className="italic text-gradient-gold">Now you\'re here.</span>
+      <span className="italic text-gradient-gold">Now you're here.</span>
       </>
     }
     subheading="Speech and communication coaching for leaders who need to own every room they walk into."

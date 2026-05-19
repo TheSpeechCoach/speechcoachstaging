@@ -9,7 +9,7 @@ const CryptoBlockchain = () => (
         Lost in the Whitepaper. Lost the Investor.{" "}
         <span className="italic text-gradient-gold">Lost the Room.</span>
       <br />
-      <span className="italic text-gradient-gold">Now you\'re here.</span>
+      <span className="italic text-gradient-gold">Now you're here.</span>
       </>
     }
     subheading="Communication coaching for web3 founders who know the technology — and need to own the narrative."

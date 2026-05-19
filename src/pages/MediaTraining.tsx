@@ -9,7 +9,7 @@ const MediaTraining = () => (
         Lost on Camera. Lost in the Interview.{" "}
         <span className="italic text-gradient-gold">Lost the Message.</span>
       <br />
-      <span className="italic text-gradient-gold">Now you\'re here.</span>
+      <span className="italic text-gradient-gold">Now you're here.</span>
       </>
     }
     subheading="Media training that prepares you for the full weight of press and broadcast scrutiny."

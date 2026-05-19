@@ -9,7 +9,7 @@ const MedicalProfessionals = () => (
         Lost in the Jargon. Lost in the Silence.{" "}
         <span className="italic text-gradient-gold">Lost the Patient.</span>
       <br />
-      <span className="italic text-gradient-gold">Now you\'re here.</span>
+      <span className="italic text-gradient-gold">Now you're here.</span>
       </>
     }
     subheading="Communication coaching for medical professionals trained in everything — except how to communicate it."
