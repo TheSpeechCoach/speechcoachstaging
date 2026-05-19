@@ -39,6 +39,7 @@ import Teachers from "./pages/Teachers";
 import ContentCreators from "./pages/ContentCreators";
 import Pricing from "./pages/Pricing";
 import ThankYou from "./pages/ThankYou";
+import LostHero from "./pages/LostHero";
 
 const queryClient = new QueryClient();
 
@@ -83,6 +84,7 @@ const App = () => (
         <Route path="/speech-coaching-content-creators" element={<ContentCreators />} />
         <Route path="/pricing" element={<Pricing />} />
         <Route path="/thank-you" element={<ThankYou />} />
+        <Route path="/hero/:variant/:slug" element={<LostHero />} />
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="*" element={<NotFound />} />
       </Routes>
