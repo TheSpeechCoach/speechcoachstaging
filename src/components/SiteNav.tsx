@@ -2,9 +2,15 @@ import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Phone, Menu, X, ChevronDown } from "lucide-react";
+import { heroVariants } from "@/data/heroVariants";
 
 type ServiceLink = { to: string; label: string };
 type ServiceCategory = { heading: string; links: ServiceLink[] };
+
+const lostHeroLinks: ServiceLink[] = heroVariants.flatMap((v) => [
+  { to: `/hero/3/${v.slug}`, label: `${v.title} · 3-line` },
+  { to: `/hero/4/${v.slug}`, label: `${v.title} · 4-line` },
+]);
 
 const serviceCategories: ServiceCategory[] = [
   {
@@ -63,6 +69,10 @@ const serviceCategories: ServiceCategory[] = [
       { to: "/speech-coaching-teachers", label: "Teachers & Voice Health" },
       { to: "/speech-coaching-content-creators", label: "Content Creators" },
     ],
+  },
+  {
+    heading: "Lost Hero Variants",
+    links: lostHeroLinks,
   },
 ];
 
