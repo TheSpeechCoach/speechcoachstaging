@@ -27,9 +27,7 @@ const LostHero = () => {
   const lines = variant === "3" ? entry.threeLine : entry.fourLine;
   const subheading =
     variant === "3" ? entry.threeLineSubheading : entry.fourLineSubheading;
-  const isHomepageSpecial = entry.slug.startsWith("homepage-");
-  const appendNowHere = !isHomepageSpecial;
-  // The final array line is climactic gold-italic
+  const appendNowHere = lines[lines.length - 1] !== "Now you're here.";
   const finalLineIndex = lines.length - 1;
 
   const metaTitle = `${entry.title} — ${variant === "3" ? "3-line" : "4-line"} hero | The Speech Coach`;
