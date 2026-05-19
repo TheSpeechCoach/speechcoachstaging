@@ -17,6 +17,9 @@ import ChildrensCoaching from "./pages/ChildrensCoaching";
 import BroadcastMedia from "./pages/BroadcastMedia";
 import Leaders from "./pages/Leaders";
 import SpeechCoachingFounders from "./pages/SpeechCoachingFounders";
+import Professionals from "./pages/Professionals";
+import Hospitality from "./pages/Hospitality";
+import MedicalProfessionals from "./pages/MedicalProfessionals";
 import Pricing from "./pages/Pricing";
 import ThankYou from "./pages/ThankYou";
 
