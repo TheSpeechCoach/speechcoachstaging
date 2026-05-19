@@ -81,6 +81,19 @@ const SiteNav = () => {
   const [servicesOpen, setServicesOpen] = useState(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
 
+  const closeTimer = useRef<number | undefined>(undefined);
+  const openServices = () => {
+    if (closeTimer.current) {
+      window.clearTimeout(closeTimer.current);
+      closeTimer.current = undefined;
+    }
+    setServicesOpen(true);
+  };
+  const scheduleCloseServices = () => {
+    if (closeTimer.current) window.clearTimeout(closeTimer.current);
+    closeTimer.current = window.setTimeout(() => setServicesOpen(false), 180);
+  };
+
   const closeAll = () => {
     setOpen(false);
     setServicesOpen(false);
@@ -106,12 +119,10 @@ const SiteNav = () => {
             Home
           </NavLink>
 
-          <div
-            className="relative"
-            onMouseEnter={() => setServicesOpen(true)}
-            onMouseLeave={() => setServicesOpen(false)}
-          >
+          <div className="relative">
             <button
+              onMouseEnter={openServices}
+              onMouseLeave={scheduleCloseServices}
               className="flex items-center gap-1 text-muted-foreground hover:text-foreground transition-colors"
               onClick={() => setServicesOpen((s) => !s)}
               aria-expanded={servicesOpen}
@@ -126,9 +137,11 @@ const SiteNav = () => {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -6 }}
                   transition={{ duration: 0.15 }}
-                  className="absolute left-1/2 -translate-x-1/2 top-full pt-3"
+                  onMouseEnter={openServices}
+                  onMouseLeave={scheduleCloseServices}
+                  className="fixed top-[72px] left-1/2 -translate-x-1/2 z-[60] pt-3"
                 >
-                  <div className="bg-background border border-border rounded-md shadow-lg p-6 grid grid-cols-6 gap-6 w-[min(95vw,1320px)]">
+                  <div className="bg-background border border-border rounded-md shadow-lg p-6 grid grid-cols-6 gap-6 w-[min(95vw,1320px)] max-h-[80vh] overflow-y-auto">
                     {serviceCategories.map((cat) => (
                       <div key={cat.heading} className="min-w-0">
                         <h3 className="font-display text-xs uppercase tracking-widest text-gradient-gold mb-3">
