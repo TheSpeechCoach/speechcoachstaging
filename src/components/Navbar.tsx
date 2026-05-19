@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Phone, ChevronDown } from "lucide-react";
 import { Link } from "react-router-dom";
