@@ -20,6 +20,9 @@ import SpeechCoachingFounders from "./pages/SpeechCoachingFounders";
 import Professionals from "./pages/Professionals";
 import Hospitality from "./pages/Hospitality";
 import MedicalProfessionals from "./pages/MedicalProfessionals";
+import Government from "./pages/Government";
+import Charities from "./pages/Charities";
+import CryptoBlockchain from "./pages/CryptoBlockchain";
 import Pricing from "./pages/Pricing";
 import ThankYou from "./pages/ThankYou";
 
@@ -47,6 +50,9 @@ const App = () => (
         <Route path="/speech-coaching-professionals" element={<Professionals />} />
         <Route path="/speech-coaching-hospitality" element={<Hospitality />} />
         <Route path="/speech-coaching-medical" element={<MedicalProfessionals />} />
+        <Route path="/speech-coaching-government" element={<Government />} />
+        <Route path="/speech-coaching-charities" element={<Charities />} />
+        <Route path="/speech-coaching-crypto" element={<CryptoBlockchain />} />
         <Route path="/pricing" element={<Pricing />} />
         <Route path="/thank-you" element={<ThankYou />} />
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
