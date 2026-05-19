@@ -15,7 +15,7 @@ import OnlineCoaching from "./pages/OnlineCoaching";
 import TeamWorkshops from "./pages/TeamWorkshops";
 import ChildrensCoaching from "./pages/ChildrensCoaching";
 import BroadcastMedia from "./pages/BroadcastMedia";
-import SpeechCoachingLeaders from "./pages/SpeechCoachingLeaders";
+import Leaders from "./pages/Leaders";
 import SpeechCoachingFounders from "./pages/SpeechCoachingFounders";
 import Pricing from "./pages/Pricing";
 import ThankYou from "./pages/ThankYou";
@@ -39,7 +39,7 @@ const App = () => (
         <Route path="/team-workshops" element={<TeamWorkshops />} />
         <Route path="/speech-coaching-children" element={<ChildrensCoaching />} />
         <Route path="/broadcast-media-coaching" element={<BroadcastMedia />} />
-        <Route path="/speech-coaching-leaders" element={<SpeechCoachingLeaders />} />
+        <Route path="/speech-coaching-leaders" element={<Leaders />} />
         <Route path="/speech-coaching-founders" element={<SpeechCoachingFounders />} />
         <Route path="/pricing" element={<Pricing />} />
         <Route path="/thank-you" element={<ThankYou />} />
