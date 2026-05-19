@@ -6,10 +6,10 @@ const TeamWorkshops = () => (
     metaDescription="Expert-led communication and presentation skills workshops for teams of 5 to 50. Delivered in-person or online. Bespoke programmes available. Get a proposal today."
     h1={
       <>
-        Help Your Team Communicate Like It Matters — <span className="italic text-gradient-gold">Because It Does.</span>
+        Lost the Message. Lost the Team. <span className="italic text-gradient-gold">Lost the Room.</span>
       </>
     }
-    subheading="Bespoke communication and presentation workshops for teams of 5 to 50. In-person, online or at your offsite — fully tailored to your team's needs."
+    subheading="Now you're here. Corporate speech and communication training for teams that need to land their message — every time."
     intro="Your team might be full of brilliant people. But if they can't communicate their brilliance clearly — to clients, to leadership, to each other — that brilliance stays hidden."
     problemsHeading="Workshop topics"
     problems={[

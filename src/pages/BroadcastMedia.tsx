@@ -6,11 +6,10 @@ const BroadcastMedia = () => (
     metaDescription="Specialist voice and on-camera coaching for broadcasters, presenters, podcasters and journalists. 1:1 coaching online worldwide and in London."
     h1={
       <>
-        Broadcast & Media Coaching —{" "}
-        <span className="italic text-gradient-gold">Be Heard</span>, Be Watched, Be Believed.
+        Lost on Playback. Lost Your Audience. <span className="italic text-gradient-gold">Lost Your Confidence.</span>
       </>
     }
-    subheading="Specialist 1:1 coaching for broadcasters, presenters, podcasters and on-air talent who need to sound and look their absolute best."
+    subheading="Now you're here. Broadcast and media coaching for presenters, podcasters and on-screen professionals."
     intro="In broadcast and media, your voice and on-camera presence are everything. Broadcasting demands a completely different skill set to public speaking. The microphone picks up everything. The camera amplifies every hesitation. The Speech Coach works with broadcast and media professionals to develop the specific techniques that make the difference between adequate and genuinely compelling."
     problems={[
       "Your voice doesn't quite cut through on-air the way you'd like",

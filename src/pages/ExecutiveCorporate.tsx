@@ -6,10 +6,10 @@ const ExecutiveCorporate = () => (
     metaDescription="Executive speech and communication coaching for senior leaders, boards and corporate teams. Bespoke 1:1 and group programmes. Online and in-person."
     h1={
       <>
-        Executive Communication Coaching for <span className="italic text-gradient-gold">Leaders Who Need to Be Heard.</span>
+        Lost in the Detail. Lost in the Delivery. <span className="italic text-gradient-gold">Lost the Room.</span>
       </>
     }
-    subheading="Bespoke coaching for senior professionals, board members and corporate teams — delivering real results in how you communicate, present and lead."
+    subheading="Now you're here. Executive communication coaching for senior professionals, boards and leadership teams who need to be heard."
     intro="At the most senior levels, communication is everything. The ability to speak with clarity, gravitas and authority — to a board, an investor group, a large audience or a global team — is what separates good leaders from exceptional ones."
     problems={[
       "You're about to present to a board or investor group and want to be exceptional",

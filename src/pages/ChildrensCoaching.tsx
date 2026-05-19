@@ -6,10 +6,10 @@ const ChildrensCoaching = () => (
     metaDescription="Looking for speech coaching or elocution lessons for your child? Bespoke 1:1 coaching for children aged 8–17. Build confidence, clarity and communication skills. Online & London."
     h1={
       <>
-        Give Your Child the <span className="italic text-gradient-gold">Gift of Confident Communication.</span>
+        Lost for Sounds. Lost for Words. <span className="italic text-gradient-gold">Lost for Time.</span>
       </>
     }
-    subheading="Bespoke 1:1 speech coaching, elocution lessons and communication confidence building for children and teenagers aged 8–17."
+    subheading="Now you're done waiting. Expert speech coaching for children, without the waiting list."
     intro="You know your child has so much to say — but something is getting in the way. Maybe they speak too fast. Maybe they mumble. Maybe they're bright and capable but fall apart when asked to speak in front of others. Whatever it is, it's coachable — and the earlier you start, the greater the benefit."
     problemsHeading="What we help with"
     problems={[
