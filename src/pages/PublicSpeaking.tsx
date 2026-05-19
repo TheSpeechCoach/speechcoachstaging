@@ -6,11 +6,10 @@ const PublicSpeaking = () => (
     metaDescription="Afraid of public speaking? Work with an expert public speaking coach to build real confidence, calm your nerves and deliver powerful presentations. 1:1 coaching online and in London."
     h1={
       <>
-        Terrified of Public Speaking?{" "}
-        <span className="italic text-gradient-gold">You're Not Alone</span> — and It Can Change.
+        Lost for Breath. Lost for Words. <span className="italic text-gradient-gold">Lost Yourself.</span>
       </>
     }
-    subheading="Expert 1:1 public speaking coaching to help you face any audience with calm, confidence and genuine impact."
+    subheading="Now you're here. Expert coaching for anyone who has avoided the stage — or the room — for long enough."
     intro="Public speaking is one of the most common fears in the world. The dry mouth. The racing heart. The mind that goes completely blank the moment all eyes are on you. Whether you're presenting at a team meeting, speaking at a conference, delivering a keynote or standing up at a board meeting — the fear can feel overwhelming. The good news: it is absolutely coachable."
     problems={[
       "You've had a lifelong fear of speaking in front of groups",
