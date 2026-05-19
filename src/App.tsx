@@ -26,6 +26,9 @@ import CryptoBlockchain from "./pages/CryptoBlockchain";
 import UnitedNations from "./pages/UnitedNations";
 import StammeringFluency from "./pages/StammeringFluency";
 import VoiceCoaching from "./pages/VoiceCoaching";
+import LeadershipCommunication from "./pages/LeadershipCommunication";
+import KeynoteConference from "./pages/KeynoteConference";
+import PitchCoaching from "./pages/PitchCoaching";
 import Pricing from "./pages/Pricing";
 import ThankYou from "./pages/ThankYou";
 
