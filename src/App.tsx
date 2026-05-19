@@ -35,6 +35,8 @@ import MediaTraining from "./pages/MediaTraining";
 import InterviewCoaching from "./pages/InterviewCoaching";
 import WeddingSpeech from "./pages/WeddingSpeech";
 import Lawyers from "./pages/Lawyers";
+import Teachers from "./pages/Teachers";
+import ContentCreators from "./pages/ContentCreators";
 import Pricing from "./pages/Pricing";
 import ThankYou from "./pages/ThankYou";
 
@@ -77,6 +79,8 @@ const App = () => (
         <Route path="/interview-coaching" element={<InterviewCoaching />} />
         <Route path="/wedding-speech-coaching" element={<WeddingSpeech />} />
         <Route path="/speech-coaching-lawyers" element={<Lawyers />} />
+        <Route path="/speech-coaching-teachers" element={<Teachers />} />
+        <Route path="/speech-coaching-content-creators" element={<ContentCreators />} />
         <Route path="/pricing" element={<Pricing />} />
         <Route path="/thank-you" element={<ThankYou />} />
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
