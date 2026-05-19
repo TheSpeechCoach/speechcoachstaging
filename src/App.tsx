@@ -23,6 +23,9 @@ import MedicalProfessionals from "./pages/MedicalProfessionals";
 import Government from "./pages/Government";
 import Charities from "./pages/Charities";
 import CryptoBlockchain from "./pages/CryptoBlockchain";
+import UnitedNations from "./pages/UnitedNations";
+import StammeringFluency from "./pages/StammeringFluency";
+import VoiceCoaching from "./pages/VoiceCoaching";
 import Pricing from "./pages/Pricing";
 import ThankYou from "./pages/ThankYou";
 
