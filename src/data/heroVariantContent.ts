@@ -2631,4 +2631,89 @@ export const heroVariantContent: Record<string, HeroVariantContent> = {
       "Multi-host and creator-team consistency",
     ],
   },
+
+  // -------------------------------------------------------------------------
+  "children-present-lost": {
+    introExtended:
+      "We teach children how to talk. How to speak. How to inform. How to debate and discuss. How to present. How to represent and how to be present. How to be fluent, eloquent, articulate and appropriate. We coach communication. We curate confidence. We cultivate character.\n\nMost parents come to this work somewhere between the kindly worded note from school and the audition that is now four weeks away. The child has the words. The child has the ideas. What is missing is the deliberate, exact training that converts a bright young mind into a young speaker — one who can walk into a room, hold an eye line, breathe through a sentence and trust that their voice is welcome.\n\nThis coaching is built for young speakers aged eight to seventeen. Bespoke 1:1 sessions in articulation, fluency, presentation, scholarship interview preparation, debate and the quiet character work that makes the rest of it possible. Sessions are warm, structured and respectful — children retain what they have rehearsed under skilled, kind, exact attention.",
+    whyMatters:
+      "Communication confidence at this age sets the floor for everything that follows: classroom participation, friendships, secondary school interviews, debate, drama, scholarship auditions, the first time the child has to introduce themselves to a room of new peers. A child who learns now that their voice is welcome and capable carries that finding into adolescence; a child who learns the opposite carries the opposite finding into adolescence.\n\nPresenting, representing and being present are not optional skills any more. They are the skills your child will use in every classroom, every interview, every team and every stage they walk on to. Coaching now is the difference between a teenager who steps forward and a teenager who waits to be asked.",
+    approach:
+      "The work is gentle, exact and built around the individual child. Initial assessment identifies the specific articulation, fluency or presentation target — and the parent is given a clear written summary. Sessions then build the skill in question through structured games, scripts, recordings and graduated public-speaking exposure appropriate to the child's age. Progress is tracked session by session and shared with parents at the end of each block.\n\nWhere relevant, sessions integrate with school assessments, scholarship audition timelines, or specific upcoming public-speaking moments (assemblies, debates, end-of-year performances, interviews). The doctrine is the same as the adult work in a form a child can use: what to say, how to say it, how to own it — taught with patience, structure and the expectation that the child will surprise themselves.",
+    outcomes: [
+      "Class presentations and assemblies delivered with confidence, not dread",
+      "Scholarship and senior school interview readiness",
+      "Clear, age-appropriate articulation of target sounds",
+      "Measurable reduction in disfluency frequency where stammer is present",
+      "Eye contact, breath and posture that read as composure",
+      "A young speaker who actually enjoys being listened to",
+      "Parents with a clear written picture of what was worked on and why",
+    ],
+    formats: [
+      {
+        name: "1:1 Children's Coaching Programme",
+        description:
+          "Block of six sessions, typically weekly, designed around the child's specific presentation, articulation or fluency goals. Held at our London studio or via video for families outside London.",
+      },
+      {
+        name: "Audition & Interview Preparation",
+        description:
+          "Compressed preparation for scholarship interviews, drama-school auditions, debate finals, school plays and public-speaking competitions. Tightly timed to the date and the brief.",
+      },
+      {
+        name: "Family Online Programme",
+        description:
+          "Video-based programme for families abroad or outside London. Same structured approach, with parent updates after every session and a clear written progress summary at the end of each block.",
+      },
+    ],
+    caseSnapshot:
+      "A twelve-year-old preparing a scholarship interview for a senior school four weeks out, articulate at home and visibly braced under any direct question. Six sessions: introduction craft, the open question rehearsed eleven different ways, eye-contact exposure, breath under pressure. The interview was held. The offer arrived. The form teacher noted in passing that the child had volunteered to chair the next form debate.",
+    faqs: [
+      {
+        question: "What age range do you coach?",
+        answer:
+          "Eight to seventeen. Sessions for younger children run thirty to forty minutes; older children typically work to a fifty-minute session. We cover articulation, fluency, presentation, debate, scholarship and senior school interview preparation, and the bilingual clarity work many families need.",
+      },
+      {
+        question: "How is this different from school speech and drama?",
+        answer:
+          "School speech and drama is group-based and curriculum-driven. This is 1:1, built around your child's specific goals and the specific moments coming up — the assembly, the audition, the interview, the debate final. The coach is in the room with your child watching them do the actual work and making the specific adjustments that move them forward.",
+      },
+      {
+        question: "Will I be involved as a parent?",
+        answer:
+          "Yes. Every session ends with a brief update. The end of each six-session block includes a written summary of what was worked on, what changed, and what to practise at home. For online sessions parents typically join the last five minutes. The work is on the child, the partnership is with the family.",
+      },
+      {
+        question: "Can you prepare my child for a specific scholarship or senior school interview?",
+        answer:
+          "Yes — and this is one of the most common reasons families come to us in Years 5 to 8. Coaching covers how to introduce yourself, how to answer the open question, how to talk about your interests in a way that sounds genuine, and the eye contact and voice that make the interview land. Tightly tailored to the school and the round.",
+      },
+      {
+        question: "What is the investment?",
+        answer:
+          "Children's six-session blocks start at £900 (£150 per session). Scholarship audition intensives and longer programmes are quoted on request. Video-based programmes are priced identically to in-studio sessions. Sibling rates are available where two children from the same family are coached concurrently.",
+      },
+    ],
+    problems: [
+      "Your child has plenty to say and shrinks the moment they're asked to say it",
+      "Class assemblies, presentations or being called on are dreaded",
+      "A scholarship interview or audition is coming up and the stakes are real",
+      "Bilingual household — clearly articulate at home, markedly quieter at school",
+      "Stammering or disfluency is becoming socially costly",
+      "An academically able child is being read as shy and is paying for it",
+      "School speech and drama hasn't moved the needle the way you hoped",
+      "You want a coach who takes children seriously without patronising them",
+    ],
+    workOn: [
+      "How to present — structure, opening, close and the quiet confidence between",
+      "How to represent — speaking for school, team, debate or scholarship interview",
+      "How to be present — voice, breath, eye contact and physical composure",
+      "Articulation of target sounds, age appropriate",
+      "Fluency strategies for children who stammer",
+      "Reading aloud, assemblies and class presentations",
+      "Audition, scholarship and senior school interview readiness",
+      "Bilingual clarity and accent comfort",
+    ],
+  },
 };

@@ -7,10 +7,15 @@ import { heroVariants } from "@/data/heroVariants";
 type ServiceLink = { to: string; label: string };
 type ServiceCategory = { heading: string; links: ServiceLink[] };
 
-const lostHeroLinks: ServiceLink[] = heroVariants.flatMap((v) => [
-  { to: `/hero/3/${v.slug}`, label: `${v.title} · 3-line` },
-  { to: `/hero/4/${v.slug}`, label: `${v.title} · 4-line` },
-]);
+const lostHeroLinks: ServiceLink[] = heroVariants.flatMap((v) => {
+  const links: ServiceLink[] = [
+    { to: `/hero/3/${v.slug}`, label: `${v.title} · 3-line` },
+  ];
+  if (v.fourLine) {
+    links.push({ to: `/hero/4/${v.slug}`, label: `${v.title} · 4-line` });
+  }
+  return links;
+});
 
 const serviceCategories: ServiceCategory[] = [
   {

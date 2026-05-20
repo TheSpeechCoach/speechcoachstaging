@@ -36,7 +36,7 @@ export type HeroVariant = {
   category: HeroCategory;
   title: string;
   threeLine: [string, string] | [string, string, string];
-  fourLine: [string, string, string, string];
+  fourLine?: [string, string, string, string];
   threeLineSubheading: string;
   fourLineSubheading: string;
   metaTitle: string;
@@ -47,6 +47,8 @@ export type HeroVariant = {
   closingHeading: string;
   closingCopy: string;
   ctaLabel: string;
+  /** When false, suppress the auto-appended "Now you're here." gold-italic line. Default true (append when last line isn't already that). */
+  appendNowHere?: boolean;
   // Extended content (merged via getHeroVariant)
   introExtended?: string;
   whyMatters?: string;
@@ -1020,6 +1022,41 @@ export const heroVariants: HeroVariant[] = [
     closingHeading: "Turn viewers into an audience.",
     closingCopy: "Coaching for content creators, YouTubers, podcasters and social media professionals.",
     ctaLabel: "Book a Session",
+  },
+  {
+    slug: "children-present-lost",
+    category: "Core",
+    title: "Children · Present",
+    threeLine: ["We coach children how to present.", "How to represent.", "How to be present."],
+    appendNowHere: false,
+    threeLineSubheading: "Specialist 1:1 coaching for young speakers aged 8–17 — articulation, confidence, presentation and the quiet character work behind every voice.",
+    fourLineSubheading: "Specialist 1:1 coaching for young speakers aged 8–17 — articulation, confidence, presentation and the quiet character work behind every voice.",
+    metaTitle: "Children's Presentation Coaching | How to Present, Represent, Be Present | The Speech Coach",
+    metaDescription: "Specialist 1:1 speech and presentation coaching for children and teenagers aged 8–17. Articulation, confidence, scholarship interviews and public speaking from a 30-year specialist.",
+    intro: "We teach children how to talk. How to speak. How to inform. How to debate and discuss. How to present. How to represent and how to be present. How to be fluent, eloquent, articulate and appropriate. We coach communication. We curate confidence. We cultivate character.",
+    problems: [
+      "Your child has plenty to say and shrinks the moment they're asked to say it",
+      "Class assemblies, presentations or being called on are dreaded",
+      "A scholarship interview or audition is coming up and the stakes are real",
+      "Bilingual household — clearly articulate at home, markedly quieter at school",
+      "Stammering or disfluency is becoming socially costly",
+      "An academically able child is being read as shy and is paying for it",
+      "You want a coach who takes children seriously without patronising them",
+      "You're done waiting for the school, the SLT list or the holiday club to fix it",
+    ],
+    workOn: [
+      "How to present — structure, opening, close and the quiet confidence between",
+      "How to represent — speaking for school, team, debate or scholarship interview",
+      "How to be present — voice, breath, eye contact and physical composure",
+      "Articulation of target sounds, age appropriate",
+      "Fluency strategies for children who stammer",
+      "Reading aloud, assemblies and class presentations",
+      "Audition, scholarship and senior school interview preparation",
+      "Bilingual clarity and accent comfort",
+    ],
+    closingHeading: "Communication. Confidence. Character.",
+    closingCopy: "Specialist 1:1 coaching for young speakers aged 8–17, in London and online.",
+    ctaLabel: "Book a Parent Consultation",
   },
 ];
 
