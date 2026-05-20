@@ -28,7 +28,7 @@ const PresentationSkills = () => (
       "Presenting on video calls — Zoom, Teams, Google Meet",
     ]}
     closingHeading="Your next presentation could change how people see you at work."
-    closing="Book a free consultation."
+    closing="Book a consultation."
   />
 );
 
