@@ -70,6 +70,7 @@ export function useFitHeroText<T extends HTMLElement>(
 
       setFontSize((current) => {
         const next = `${size}px`;
+        console.log("[fitHeroText] final font size", next, { available, widest, currentPx });
         return current === next ? current : next;
       });
     };
