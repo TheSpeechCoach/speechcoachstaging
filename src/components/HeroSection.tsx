@@ -4,7 +4,7 @@ import useFitHeroText from "@/hooks/useFitHeroText";
 
 const HeroSection = () => {
   const h1Ref = useRef<HTMLHeadingElement>(null);
-  const { fontSize, hasMeasured, letterSpacing } = useFitHeroText(h1Ref, { maxPx: 96, minPx: 28 });
+  const heroFontSize = useFitHeroText(h1Ref, { maxPx: 96, minPx: 24 });
 
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden bg-background">
@@ -31,10 +31,7 @@ const HeroSection = () => {
           </motion.p>
           <h1
             ref={h1Ref}
-            style={{
-              fontSize: hasMeasured ? `${fontSize}px` : "clamp(2.5rem, 7vw, 96px)",
-              letterSpacing,
-            }}
+            style={{ fontSize: heroFontSize }}
             className="font-display font-bold leading-[1.05] tracking-tight mb-8 flex flex-col items-start"
           >
             <span className="w-max whitespace-nowrap">You tried YouTube.</span>
