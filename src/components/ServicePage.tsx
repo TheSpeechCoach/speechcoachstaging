@@ -42,6 +42,7 @@ const ServicePage = ({
   h1,
   subheading,
   intro,
+  postIntro,
   problemsHeading = "Does this sound familiar?",
   problems,
   workOnHeading = "What we work on",
