@@ -30,7 +30,7 @@ const PublicSpeaking = () => (
       "Preparing for your specific next speaking moment",
     ]}
     closingHeading="You don't have to be naturally confident to be a great speaker."
-    closing="You just need the right coaching. Book a free 20-minute consultation."
+    closing="You just need the right coaching. Book a 20-minute consultation."
   />
 );
 
