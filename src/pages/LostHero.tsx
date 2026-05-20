@@ -1,4 +1,5 @@
 import { useParams, Link } from "react-router-dom";
+import { useRef } from "react";
 import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 import { Check, ArrowRight } from "lucide-react";
@@ -6,6 +7,7 @@ import SiteNav from "@/components/SiteNav";
 import SiteFooter from "@/components/SiteFooter";
 import StickyMobileCTA from "@/components/StickyMobileCTA";
 import { getHeroVariant } from "@/data/heroVariants";
+import useFitHeroText from "@/hooks/useFitHeroText";
 
 const fadeUp = {
   initial: { opacity: 0, y: 30 },
@@ -38,6 +40,9 @@ const LostHero = () => {
     variant === "3" ? entry.threeLineSubheading : entry.fourLineSubheading;
   const appendNowHere = lines[lines.length - 1] !== "Now you're here.";
   const finalLineIndex = lines.length - 1;
+
+  const h1Ref = useRef<HTMLHeadingElement>(null);
+  useFitHeroText(h1Ref, { maxPx: 96, minPx: 28, deps: [lines.join("|")] });
 
   return (
     <main className="bg-background text-foreground min-h-screen">
