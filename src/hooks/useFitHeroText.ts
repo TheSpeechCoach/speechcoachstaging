@@ -39,10 +39,37 @@ export function useFitHeroText<T extends HTMLElement>(
       const naturalWidthPerPx = widest / currentPx;
       if (naturalWidthPerPx <= 0) return;
 
-      const target = Math.min(
+      let target = Math.min(
         maxPx,
         Math.max(minPx, Math.floor(available / naturalWidthPerPx))
       );
+
+      // Verify & iterate: apply size inline, force reflow, re-measure widest line.
+      // Decrement until every child line fits within available (1px tolerance) or we hit minPx.
+      const measureWidest = () => {
+        let w = 0;
+        Array.from(el.children).forEach((c) => {
+          const cw = (c as HTMLElement).getBoundingClientRect().width;
+          if (cw > w) w = cw;
+        });
+        return w;
+      };
+
+      const prevInline = el.style.fontSize;
+      el.style.fontSize = `${target}px`;
+      // Force reflow before measuring.
+      void el.offsetWidth;
+      let measured = measureWidest();
+      let guard = 0;
+      while (measured > available + 1 && target > minPx && guard < 200) {
+        target -= 1;
+        el.style.fontSize = `${target}px`;
+        void el.offsetWidth;
+        measured = measureWidest();
+        guard += 1;
+      }
+      // Restore inline style; React state drives the final applied size.
+      el.style.fontSize = prevInline;
 
       if (lastAppliedRef.current === target) {
         hasFitOnceRef.current = true;
