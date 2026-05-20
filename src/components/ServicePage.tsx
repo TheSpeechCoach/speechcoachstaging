@@ -18,6 +18,7 @@ interface ServicePageProps {
   h1: ReactNode;
   subheading: string;
   intro: string;
+  postIntro?: ReactNode;
   problemsHeading?: string;
   problems: string[];
   workOnHeading?: string;
