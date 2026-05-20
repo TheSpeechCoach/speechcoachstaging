@@ -1,4 +1,5 @@
 import { useParams, Link } from "react-router-dom";
+import { useRef } from "react";
 import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 import { Check, ArrowRight } from "lucide-react";
@@ -6,6 +7,7 @@ import SiteNav from "@/components/SiteNav";
 import SiteFooter from "@/components/SiteFooter";
 import StickyMobileCTA from "@/components/StickyMobileCTA";
 import { getHeroVariant } from "@/data/heroVariants";
+import useFitHeroText from "@/hooks/useFitHeroText";
 
 const fadeUp = {
   initial: { opacity: 0, y: 30 },
@@ -38,6 +40,9 @@ const LostHero = () => {
     variant === "3" ? entry.threeLineSubheading : entry.fourLineSubheading;
   const appendNowHere = lines[lines.length - 1] !== "Now you're here.";
   const finalLineIndex = lines.length - 1;
+
+  const h1Ref = useRef<HTMLHeadingElement>(null);
+  useFitHeroText(h1Ref, { maxPx: 96, minPx: 28, deps: [lines.join("|")] });
 
   return (
     <main className="bg-background text-foreground min-h-screen">
@@ -76,13 +81,14 @@ const LostHero = () => {
             </motion.p>
 
             <motion.h1
+              ref={h1Ref}
               initial="hidden"
               animate="visible"
               variants={{
                 hidden: {},
                 visible: { transition: { staggerChildren: 0.12, delayChildren: 0.2 } },
               }}
-              className="font-display font-bold text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-[1.05] tracking-tight mb-8"
+              className="font-display font-bold leading-[1.05] tracking-tight mb-8"
             >
               {lines.map((line, i) => {
                 const isGold = i === finalLineIndex && !appendNowHere;
@@ -94,7 +100,7 @@ const LostHero = () => {
                       visible: { opacity: 1, y: 0 },
                     }}
                     transition={{ duration: 0.6, ease: "easeOut" }}
-                    className={`block ${isGold ? "italic text-gradient-gold" : ""}`}
+                    className={`block whitespace-nowrap ${isGold ? "italic text-gradient-gold" : ""}`}
                   >
                     {line}
                   </motion.span>
@@ -107,7 +113,7 @@ const LostHero = () => {
                     visible: { opacity: 1, y: 0 },
                   }}
                   transition={{ duration: 0.6, ease: "easeOut" }}
-                  className="block italic text-gradient-gold"
+                  className="block whitespace-nowrap italic text-gradient-gold"
                 >
                   Now you're here.
                 </motion.span>
