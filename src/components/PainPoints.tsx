@@ -60,9 +60,8 @@ const PainPoints = () => {
           className="mt-16 text-center"
         >
           <h3 className="font-display text-2xl md:text-3xl mb-4">
-            Have a different conversation,{" "}
-            <br className="hidden md:block" />
-            <span className="italic">get a different outcome.</span>
+            Say it differently.{" "}
+            <span className="italic text-gradient-gold">Land it differently.</span>
           </h3>
           <p className="font-body text-muted-foreground max-w-lg mx-auto mb-8">
             We work directly with executives, founders, leaders, and professionals whose work depends on clear expression, confident delivery, and authentic presence.
