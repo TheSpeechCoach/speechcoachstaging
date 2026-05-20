@@ -77,7 +77,6 @@ export function useFitHeroText<T extends HTMLElement>(
         }
       }
 
-      console.log("fit ran", size);
       setFontSize((current) => (current === size ? current : size));
       setHasMeasured(true);
       setLetterSpacing((current) => (current === nextLetterSpacing ? current : nextLetterSpacing));
