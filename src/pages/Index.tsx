@@ -12,6 +12,7 @@ import FitSection from "@/components/FitSection";
 import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
 import SeoKeywords from "@/components/SeoKeywords";
+import WhoWeWorkWith from "@/components/WhoWeWorkWith";
 import Footer from "@/components/Footer";
 
 const Index = () => {
