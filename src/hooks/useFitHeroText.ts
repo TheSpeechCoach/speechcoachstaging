@@ -8,15 +8,15 @@ export function useFitHeroText<T extends HTMLElement>(
 ): string {
   const [fontSize, setFontSize] = useState<string>(`clamp(2.5rem, 7vw, ${maxPx}px)`);
   const rafRef = useRef<number | null>(null);
-  const hasFitRef = useRef(false);
-  const lastTargetRef = useRef<number | null>(null);
+  const hasFitOnceRef = useRef(false);
 
   useEffect(() => {
     const node = ref.current;
     if (!node) return;
-    hasFitRef.current = false;
-    lastTargetRef.current = null;
+    hasFitOnceRef.current = false;
 
+    // Always recomputes from scratch. Safe to call any number of times.
+    // Scales both DOWN and UP based on current parent width.
     const fit = () => {
       const el = ref.current;
       if (!el) return;
@@ -24,16 +24,15 @@ export function useFitHeroText<T extends HTMLElement>(
       const available = (parent ?? el).clientWidth;
       if (!available || available < 120) return;
 
-      // Read currentPx first, then measure widest in the same frame
       const currentPx = parseFloat(getComputedStyle(el).fontSize) || maxPx;
+      if (currentPx <= 0) return;
 
       let widest = 0;
       Array.from(el.children).forEach((c) => {
         const w = (c as HTMLElement).getBoundingClientRect().width;
         if (w > widest) widest = w;
       });
-
-      if (widest <= 0 || currentPx <= 0) return;
+      if (widest <= 0) return;
 
       const naturalWidthPerPx = widest / currentPx;
       if (naturalWidthPerPx <= 0) return;
@@ -43,48 +42,52 @@ export function useFitHeroText<T extends HTMLElement>(
         Math.max(minPx, Math.floor(available / naturalWidthPerPx))
       );
 
-      hasFitRef.current = true;
-      lastTargetRef.current = target;
+      hasFitOnceRef.current = true;
       el.setAttribute("data-fit", String(target));
-      setFontSize((cur) => {
-        const next = `${target}px`;
-        return cur === next ? cur : next;
-      });
+      setFontSize((cur) => (cur === `${target}px` ? cur : `${target}px`));
     };
 
+    // Scheduler used by observer / resize: ALWAYS runs fit, no guard.
     const schedule = () => {
       if (rafRef.current != null) cancelAnimationFrame(rafRef.current);
       rafRef.current = requestAnimationFrame(() => {
-        rafRef.current = requestAnimationFrame(fit);
+        rafRef.current = null;
+        fit();
       });
     };
 
+    // Initial fit + double-rAF to let layout settle.
     fit();
-    schedule();
+    requestAnimationFrame(() => requestAnimationFrame(fit));
 
+    // On-mount retry timers — only relevant before first successful fit.
+    // These do NOT block subsequent resize/observer recomputes.
     const retryTimers = [50, 200, 500].map((delay) =>
       window.setTimeout(() => {
-        if (!hasFitRef.current) fit();
+        if (!hasFitOnceRef.current) fit();
       }, delay)
     );
 
-    const ro = new ResizeObserver(schedule);
+    // ResizeObserver: observe node, parent, and documentElement.
+    // Callback ALWAYS schedules a fresh fit() — no guards.
+    const ro = new ResizeObserver(() => schedule());
     ro.observe(node);
     if (node.parentElement) ro.observe(node.parentElement);
-    // Also observe documentElement so viewport changes always fire
     ro.observe(document.documentElement);
 
-    window.addEventListener("resize", schedule);
-    window.addEventListener("orientationchange", schedule);
+    // Window listeners: ALWAYS schedule a fresh fit() — no guards.
+    const onResize = () => schedule();
+    window.addEventListener("resize", onResize);
+    window.addEventListener("orientationchange", onResize);
 
     const fonts = (document as Document & { fonts?: { ready: Promise<unknown> } }).fonts;
-    if (fonts?.ready) fonts.ready.then(schedule).catch(() => {});
+    if (fonts?.ready) fonts.ready.then(() => schedule()).catch(() => {});
 
     return () => {
-      window.removeEventListener("resize", schedule);
-      window.removeEventListener("orientationchange", schedule);
+      window.removeEventListener("resize", onResize);
+      window.removeEventListener("orientationchange", onResize);
       ro.disconnect();
-      retryTimers.forEach((timer) => window.clearTimeout(timer));
+      retryTimers.forEach((t) => window.clearTimeout(t));
       if (rafRef.current != null) cancelAnimationFrame(rafRef.current);
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
