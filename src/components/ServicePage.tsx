@@ -18,6 +18,7 @@ interface ServicePageProps {
   h1: ReactNode;
   subheading: string;
   intro: string;
+  postIntro?: ReactNode;
   problemsHeading?: string;
   problems: string[];
   workOnHeading?: string;
@@ -41,6 +42,7 @@ const ServicePage = ({
   h1,
   subheading,
   intro,
+  postIntro,
   problemsHeading = "Does this sound familiar?",
   problems,
   workOnHeading = "What we work on",
@@ -98,6 +100,8 @@ const ServicePage = ({
           </motion.p>
         </div>
       </section>
+
+      {postIntro}
 
       {/* Problems */}
       <section className="py-20 px-6 bg-card/40 border-y border-border">
