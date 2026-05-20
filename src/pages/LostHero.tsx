@@ -19,6 +19,11 @@ const fadeUp = {
 const LostHero = () => {
   const { variant, slug } = useParams<{ variant: string; slug: string }>();
   const entry = slug ? getHeroVariant(slug) : undefined;
+  const h1Ref = useRef<HTMLHeadingElement>(null);
+  const lineDeps = entry
+    ? (variant === "3" ? entry.threeLine : entry.fourLine).join("|")
+    : "";
+  const heroFontSize = useFitHeroText(h1Ref, { maxPx: 96, minPx: 24, deps: [lineDeps] });
 
   if (!entry || (variant !== "3" && variant !== "4")) {
     return (
@@ -40,9 +45,6 @@ const LostHero = () => {
     variant === "3" ? entry.threeLineSubheading : entry.fourLineSubheading;
   const appendNowHere = lines[lines.length - 1] !== "Now you're here.";
   const finalLineIndex = lines.length - 1;
-
-  const h1Ref = useRef<HTMLHeadingElement>(null);
-  const heroFontSize = useFitHeroText(h1Ref, { maxPx: 96, minPx: 24, deps: [lines.join("|")] });
 
   return (
     <main className="bg-background text-foreground min-h-screen">

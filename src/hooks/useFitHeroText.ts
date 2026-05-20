@@ -16,7 +16,6 @@ export function useFitHeroText<T extends HTMLElement>(
     hasFitRef.current = false;
 
     const fit = () => {
-      if (hasFitRef.current) return;
       const el = ref.current;
       if (!el) return;
       const parent = el.parentElement;
@@ -45,7 +44,11 @@ export function useFitHeroText<T extends HTMLElement>(
     };
 
     schedule();
-    const retryTimers = [50, 200, 500].map((delay) => window.setTimeout(fit, delay));
+    const retryTimers = [50, 200, 500].map((delay) =>
+      window.setTimeout(() => {
+        if (!hasFitRef.current) fit();
+      }, delay)
+    );
     const ro = new ResizeObserver(schedule);
     ro.observe(node);
     if (node.parentElement) ro.observe(node.parentElement);
