@@ -33,8 +33,8 @@ const faqs = [
     a: "Speech therapy is a clinical service for medical or developmental conditions. Speech coaching is for people who communicate perfectly well but want to do it significantly better — more confidently, clearly, and with greater impact.",
   },
   {
-    q: "What happens in the free consultation?",
-    a: "A free 20-minute call — no charge, no obligation. We'll talk about what you want to work on, answer questions, and let you know how we'd approach your coaching.",
+    q: "What happens in the introductory consultation?",
+    a: "A 20-minute call — no obligation. We'll talk about what you want to work on, answer questions, and let you know how we'd approach your coaching.",
   },
   {
     q: "Do you work with companies and teams?",
