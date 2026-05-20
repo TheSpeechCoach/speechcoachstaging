@@ -1,6 +1,11 @@
 import { motion } from "framer-motion";
+import { useRef } from "react";
+import useFitHeroText from "@/hooks/useFitHeroText";
 
 const HeroSection = () => {
+  const h1Ref = useRef<HTMLHeadingElement>(null);
+  useFitHeroText(h1Ref, { maxPx: 96, minPx: 28 });
+
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden bg-background">
       {/* Subtle radial gold glow */}
@@ -24,10 +29,13 @@ const HeroSection = () => {
           >
             Inspire • Engage • Influence
           </motion.p>
-          <h1 className="font-display font-bold text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-[1.05] tracking-tight mb-8">
-            <span className="block">You tried YouTube.</span>
-            <span className="block">You tried AI.</span>
-            <span className="block italic text-gradient-gold">Now you're here.</span>
+          <h1
+            ref={h1Ref}
+            className="font-display font-bold leading-[1.05] tracking-tight mb-8"
+          >
+            <span className="block whitespace-nowrap">You tried YouTube.</span>
+            <span className="block whitespace-nowrap">You tried AI.</span>
+            <span className="block whitespace-nowrap italic text-gradient-gold">Now you're here.</span>
           </h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
