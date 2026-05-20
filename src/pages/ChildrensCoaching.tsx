@@ -11,6 +11,29 @@ const ChildrensCoaching = () => (
     }
     subheading="Bespoke 1:1 speech coaching, elocution lessons and communication confidence building for children and teenagers aged 8–17."
     intro="You know your child has so much to say — but something is getting in the way. Maybe they speak too fast. Maybe they mumble. Maybe they're bright and capable but fall apart when asked to speak in front of others. Whatever it is, it's coachable — and the earlier you start, the greater the benefit."
+    postIntro={
+      <section className="py-8 px-6 border-t border-border">
+        <div className="container mx-auto max-w-3xl">
+          <div className="space-y-4">
+            <p className="font-body text-lg text-muted-foreground leading-relaxed">
+              We teach children: 'How to Talk'.
+            </p>
+            <p className="font-body text-lg text-muted-foreground leading-relaxed">
+              How to speak. How to inform. How to debate and discuss.
+            </p>
+            <p className="font-body text-lg text-muted-foreground leading-relaxed">
+              How to present. How to represent and how to be present.
+            </p>
+            <p className="font-body text-lg text-muted-foreground leading-relaxed">
+              How to be fluent, eloquent, articulate and appropriate.
+            </p>
+            <p className="font-body text-lg text-primary font-semibold leading-relaxed">
+              We coach communication. We curate confidence. We cultivate character.
+            </p>
+          </div>
+        </div>
+      </section>
+    }
     problemsHeading="What we help with"
     problems={[
       "Speaking too quickly",
