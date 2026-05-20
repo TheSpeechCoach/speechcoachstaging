@@ -40,6 +40,7 @@ import ContentCreators from "./pages/ContentCreators";
 import Pricing from "./pages/Pricing";
 import ThankYou from "./pages/ThankYou";
 import LostHero from "./pages/LostHero";
+import WhoWeWorkWith from "./pages/WhoWeWorkWith";
 
 const queryClient = new QueryClient();
 
@@ -85,6 +86,7 @@ const App = () => (
         <Route path="/pricing" element={<Pricing />} />
         <Route path="/thank-you" element={<ThankYou />} />
         <Route path="/hero/:variant/:slug" element={<LostHero />} />
+        <Route path="/who-we-work-with" element={<WhoWeWorkWith />} />
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="*" element={<NotFound />} />
       </Routes>

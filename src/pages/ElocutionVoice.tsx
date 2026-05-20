@@ -29,7 +29,7 @@ const ElocutionVoice = () => (
       "Intonation — the rise and fall that keeps people listening",
     ]}
     closingHeading="Your voice can change — and faster than you think."
-    closing="Book a free 20-minute consultation."
+    closing="Book a 20-minute consultation."
   />
 );
 

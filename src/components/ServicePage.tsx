@@ -48,7 +48,7 @@ const ServicePage = ({
   extraBlocks = [],
   closingHeading = "Ready to take the next step?",
   closing,
-  ctaLabel = "Book Your Free Consultation",
+  ctaLabel = "Book a Consultation",
 }: ServicePageProps) => {
   return (
     <main className="bg-background text-foreground min-h-screen">

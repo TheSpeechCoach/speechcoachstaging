@@ -18,7 +18,7 @@ const faqs = [
   },
   {
     q: "How many sessions will I need?",
-    a: "This depends on what you're working on. Some clients come for a single intensive session. Others work on an ongoing programme over several months. In your free consultation, we'll give you an honest recommendation.",
+    a: "This depends on what you're working on. Some clients come for a single intensive session. Others work on an ongoing programme over several months. In your introductory consultation, we'll give you an honest recommendation.",
   },
   {
     q: "Do you offer online sessions?",
@@ -33,8 +33,8 @@ const faqs = [
     a: "Speech therapy is a clinical service for medical or developmental conditions. Speech coaching is for people who communicate perfectly well but want to do it significantly better — more confidently, clearly, and with greater impact.",
   },
   {
-    q: "What happens in the free consultation?",
-    a: "A free 20-minute call — no charge, no obligation. We'll talk about what you want to work on, answer questions, and let you know how we'd approach your coaching.",
+    q: "What happens in the introductory consultation?",
+    a: "A 20-minute call — no obligation. We'll talk about what you want to work on, answer questions, and let you know how we'd approach your coaching.",
   },
   {
     q: "Do you work with companies and teams?",
@@ -107,13 +107,13 @@ const Pricing = () => (
           Still have a <span className="italic text-gradient-gold">question?</span>
         </motion.h2>
         <motion.p {...fadeUp} className="font-body text-lg text-muted-foreground mb-10">
-          Get in touch — we're happy to help. Book your free consultation today.
+          Get in touch — we're happy to help. Book a consultation today.
         </motion.p>
         <a
           href="mailto:info@thespeech.coach"
           className="inline-flex items-center gap-2 bg-primary text-primary-foreground hover:bg-primary/90 transition-all px-8 py-4 rounded-full font-body text-sm font-medium glow-gold"
         >
-          Book Your Free Consultation
+          Book a Consultation
           <ArrowRight className="w-4 h-4" />
         </a>
       </div>

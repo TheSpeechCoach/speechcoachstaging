@@ -69,8 +69,8 @@ const BroadcastMedia = () => (
       },
     ]}
     closingHeading="Footage you would willingly publish."
-    closing="Broadcast-ready coaching for the interview, the podcast and the camera in front of you. Book a free 20-minute consultation."
-    ctaLabel="Book Your Free Consultation"
+    closing="Broadcast-ready coaching for the interview, the podcast and the camera in front of you. Book a 20-minute consultation."
+    ctaLabel="Book a Consultation"
   />
 );
 

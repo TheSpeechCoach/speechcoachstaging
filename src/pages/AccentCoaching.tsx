@@ -28,7 +28,7 @@ const AccentCoaching = () => (
       "Confidence when speaking English under pressure",
     ]}
     closingHeading="Work on clarity, not identity."
-    closing="Book a free 20-minute consultation."
+    closing="Book a 20-minute consultation."
   />
 );
 

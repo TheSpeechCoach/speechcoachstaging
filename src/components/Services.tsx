@@ -2,24 +2,28 @@ import { motion } from "framer-motion";
 
 const services = [
   {
-    title: "Executives, Leaders & Professionals",
-    description: "Refine your public speaking, enhance vocal control, and communicate with precision and impact — whether on stage, in meetings, or on camera. From career progressions to fundraising pitches.",
-  },
-  {
-    title: "Performance & Broadcast",
-    description: "Workshops for actors, performers, and voice professionals across film, theatre, television, and radio. Voice characterisation, accent coaching, vocal projection, and voice care.",
-  },
-  {
-    title: "Content Creators & Digital",
-    description: "Speech coaching for podcasters, YouTubers, and social media presenters — clear, sustainable, and engaging communication across digital platforms and video conferencing.",
-  },
-  {
-    title: "Children & Young Speakers",
-    description: "We teach children how to talk, present, debate, and tell stories that entertain and engage. Building fluency, eloquence, confidence, and character from an early age.",
+    title: "1:1 Private Coaching",
+    description: "Bespoke one-to-one programmes built around your goals, your material and your speaking environment.",
   },
   {
     title: "Group Workshops",
-    description: "Transform your team's communication skills with interactive workshops designed for lasting impact. Available in person at our London HQ or online worldwide.",
+    description: "Interactive team sessions delivered at our London HQ or online to teams worldwide.",
+  },
+  {
+    title: "Specialist Programmes",
+    description: "Structured, CPD-accredited courses and multi-session programmes focused on a defined discipline.",
+  },
+  {
+    title: "Named-Event Preparation",
+    description: "Focused preparation for a specific keynote, pitch, interview, panel or broadcast appearance.",
+  },
+  {
+    title: "Online or In Person",
+    description: "Delivered live online to clients across more than thirty countries, or in person in London.",
+  },
+  {
+    title: "Intensives",
+    description: "Compressed, high-intensity coaching when the date is close and the stakes are high.",
   },
 ];
 

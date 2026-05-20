@@ -35,7 +35,7 @@ const OnlineCoaching = () => (
       },
     ]}
     closingHeading="Wherever you are, we can work together."
-    closing="Book a free 20-minute consultation."
+    closing="Book a 20-minute consultation."
   />
 );
 

@@ -4,7 +4,7 @@ const StickyMobileCTA = () => (
       href="mailto:info@thespeech.coach"
       className="block w-full text-center bg-primary text-primary-foreground hover:bg-primary/90 transition-all px-6 py-3 rounded-full font-body text-sm font-medium glow-gold"
     >
-      Book Your Free Consultation
+      Book a Consultation
     </a>
   </div>
 );
