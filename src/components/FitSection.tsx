@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
 
+const eyebrows = ["The Why", "The Will", "The Want"];
+
 const criteria = [
-  "You're an executive, founder, leader, or professional who speaks publicly",
   "You have a specific event, pitch, keynote, or presentation coming up",
   "You're committed to practice and growth between sessions",
   "You value honest, evidence-informed feedback over surface-level praise",
@@ -18,8 +19,8 @@ const FitSection = () => {
           transition={{ duration: 0.6 }}
           className="font-display text-3xl md:text-4xl mb-12"
         >
-          What we need from you{" "}
-          <span className="italic text-gradient-gold">to be a fit:</span>
+          Do You{" "}
+          <span className="italic text-gradient-gold">Have…?</span>
         </motion.h2>
 
         <div className="grid sm:grid-cols-2 gap-6">
@@ -35,7 +36,12 @@ const FitSection = () => {
               <span className="text-primary font-display text-2xl font-bold mt-[-2px]">
                 {String(i + 1).padStart(2, "0")}
               </span>
-              <p className="font-body text-foreground">{c}</p>
+              <div className="flex-1">
+                <span className="text-primary font-body text-xs uppercase tracking-widest mb-1 block">
+                  {eyebrows[i]}
+                </span>
+                <p className="font-body text-foreground">{c}</p>
+              </div>
             </motion.div>
           ))}
         </div>
@@ -47,7 +53,7 @@ const FitSection = () => {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="mt-12 text-center"
         >
-          <p className="font-display text-xl mb-6 text-muted-foreground">Do you tick these boxes?</p>
+          <p className="font-display text-xl mb-6 text-muted-foreground">Does this sound like you?</p>
           <a
             href="#cta"
             className="inline-block border border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all px-8 py-3 rounded-full font-body text-sm"
@@ -61,3 +67,4 @@ const FitSection = () => {
 };
 
 export default FitSection;
+
