@@ -23,12 +23,6 @@ const Index = () => {
       <CredentialsSection />
       <PainPoints />
       <MidCTA
-        heading={
-          <>
-            Say it differently.{" "}
-            <span className="italic text-gradient-gold">Land it differently.</span>
-          </>
-        }
         body="We work directly with executives, founders, leaders, and professionals whose work depends on clear expression, confident delivery, and authentic presence."
       />
       <MethodologySection />
