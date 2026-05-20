@@ -53,12 +53,14 @@ const FitSection = () => {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="mt-12 text-center"
         >
-          <p className="font-display text-xl mb-6 text-muted-foreground">Does this sound like you?</p>
+          <p className="font-display text-xl mb-6 text-muted-foreground">If the answer is yes</p>
           <a
-            href="#cta"
+            href="https://www.thespeech.coach/book-now/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-block border border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all px-8 py-3 rounded-full font-body text-sm"
           >
-            Let's talk about you
+            Let's talk
           </a>
         </motion.div>
       </div>
