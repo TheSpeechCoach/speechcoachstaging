@@ -101,6 +101,8 @@ const ServicePage = ({
         </div>
       </section>
 
+      {postIntro}
+
       {/* Problems */}
       <section className="py-20 px-6 bg-card/40 border-y border-border">
         <div className="container mx-auto max-w-4xl">
