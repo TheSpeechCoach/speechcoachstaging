@@ -20,12 +20,17 @@ const LostHero = () => {
   const { variant, slug } = useParams<{ variant: string; slug: string }>();
   const entry = slug ? getHeroVariant(slug) : undefined;
   const h1Ref = useRef<HTMLHeadingElement>(null);
-  const lineDeps = entry
-    ? (variant === "3" ? entry.threeLine : entry.fourLine).join("|")
-    : "";
+  const activeLines = entry
+    ? (variant === "3" ? entry.threeLine : entry.fourLine)
+    : undefined;
+  const lineDeps = activeLines ? activeLines.join("|") : "";
   const heroFontSize = useFitHeroText(h1Ref, { maxPx: 96, minPx: 24, deps: [lineDeps] });
 
-  if (!entry || (variant !== "3" && variant !== "4")) {
+  const validVariant =
+    (variant === "3" && !!entry?.threeLine) ||
+    (variant === "4" && !!entry?.fourLine);
+
+  if (!entry || !validVariant || !activeLines) {
     return (
       <div className="min-h-screen bg-background text-foreground">
         <SiteNav />
@@ -40,10 +45,12 @@ const LostHero = () => {
     );
   }
 
-  const lines = variant === "3" ? entry.threeLine : entry.fourLine;
+  const lines = activeLines;
   const subheading =
     variant === "3" ? entry.threeLineSubheading : entry.fourLineSubheading;
-  const appendNowHere = lines[lines.length - 1] !== "Now you're here.";
+  const lastIsAlreadyNowHere = lines[lines.length - 1] === "Now you're here.";
+  const appendNowHere =
+    entry.appendNowHere === false ? false : !lastIsAlreadyNowHere;
   const finalLineIndex = lines.length - 1;
 
   return (

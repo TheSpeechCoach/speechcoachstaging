@@ -36,7 +36,7 @@ export type HeroVariant = {
   category: HeroCategory;
   title: string;
   threeLine: [string, string] | [string, string, string];
-  fourLine: [string, string, string, string];
+  fourLine?: [string, string, string, string];
   threeLineSubheading: string;
   fourLineSubheading: string;
   metaTitle: string;
@@ -47,6 +47,8 @@ export type HeroVariant = {
   closingHeading: string;
   closingCopy: string;
   ctaLabel: string;
+  /** When false, suppress the auto-appended "Now you're here." gold-italic line. Default true (append when last line isn't already that). */
+  appendNowHere?: boolean;
   // Extended content (merged via getHeroVariant)
   introExtended?: string;
   whyMatters?: string;
