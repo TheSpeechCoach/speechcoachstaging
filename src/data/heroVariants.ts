@@ -35,7 +35,7 @@ export type HeroVariant = {
   slug: string;
   category: HeroCategory;
   title: string;
-  threeLine: [string, string, string];
+  threeLine: [string, string] | [string, string, string];
   fourLine: [string, string, string, string];
   threeLineSubheading: string;
   fourLineSubheading: string;
