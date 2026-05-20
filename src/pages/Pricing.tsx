@@ -18,7 +18,7 @@ const faqs = [
   },
   {
     q: "How many sessions will I need?",
-    a: "This depends on what you're working on. Some clients come for a single intensive session. Others work on an ongoing programme over several months. In your free consultation, we'll give you an honest recommendation.",
+    a: "This depends on what you're working on. Some clients come for a single intensive session. Others work on an ongoing programme over several months. In your introductory consultation, we'll give you an honest recommendation.",
   },
   {
     q: "Do you offer online sessions?",
