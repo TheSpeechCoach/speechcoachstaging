@@ -28,7 +28,7 @@ const CommunicationCoaching = () => (
       "Confident communication in meetings and on calls",
     ]}
     closingHeading="Great communicators aren't born — they're coached."
-    closing="Book your free consultation."
+    closing="Book a consultation."
   />
 );
 
