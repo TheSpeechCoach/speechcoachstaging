@@ -53,7 +53,7 @@ const ChildrensCoaching = () => (
       "All coaches at TSC have an advanced DBS check",
       "We work with children from age 8 through to teenagers up to age 17",
     ]}
-    closingHeading="Book a 20-minute parent consultation."
+    closingHeading="Book a Parent Consultation"
     closing="No obligation, just a conversation."
     ctaLabel="Book Parent Consultation"
   />

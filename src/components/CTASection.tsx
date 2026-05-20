@@ -24,7 +24,7 @@ const CTASection = () => {
           transition={{ duration: 0.6, delay: 0.15 }}
           className="font-body text-muted-foreground text-lg max-w-md mx-auto mb-10"
         >
-          London-based. Global reach. Book a discovery call and let's find out how we can help you communicate with clarity, composure, and impact.
+          London-based. Global reach. Book a consultation and let's find out how we can help you communicate with clarity, composure, and impact.
         </motion.p>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
