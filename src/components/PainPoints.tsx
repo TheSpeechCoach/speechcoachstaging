@@ -52,27 +52,6 @@ const PainPoints = () => {
           ))}
         </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="mt-16 text-center"
-        >
-          <h3 className="font-display text-2xl md:text-3xl mb-4">
-            Say it differently.{" "}
-            <span className="italic text-gradient-gold">Land it differently.</span>
-          </h3>
-          <p className="font-body text-muted-foreground max-w-lg mx-auto mb-8">
-            We work directly with executives, founders, leaders, and professionals whose work depends on clear expression, confident delivery, and authentic presence.
-          </p>
-          <a
-            href="#cta"
-            className="inline-block border border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all px-8 py-3 rounded-full font-body text-sm"
-          >
-            Let's talk
-          </a>
-        </motion.div>
       </div>
     </section>
   );
