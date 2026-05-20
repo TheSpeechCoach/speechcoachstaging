@@ -14,6 +14,7 @@ interface Options {
  * Returns a CSS font-size string. Initial value is a responsive clamp() so
  * first paint is always correctly sized even before JS runs; after mount the
  * hook overwrites it with a precise px value so the longest line fits exactly.
+ * Measurement never mutates node.style; React owns the inline font-size.
  */
 export function useFitHeroText<T extends HTMLElement>(
   ref: RefObject<T>,
@@ -39,34 +40,33 @@ export function useFitHeroText<T extends HTMLElement>(
         return;
       }
 
-      const prev = node.style.fontSize;
-      node.style.fontSize = `${maxPx}px`;
+      const currentPx = parseFloat(getComputedStyle(node).fontSize);
+      if (!Number.isFinite(currentPx) || currentPx <= 0) {
+        rafRef.current = requestAnimationFrame(fit);
+        return;
+      }
 
       const children = Array.from(node.children) as HTMLElement[];
       if (children.length === 0) {
-        node.style.fontSize = prev;
         return;
       }
 
       let widest = 0;
       children.forEach((c) => {
-        const w = Math.max(c.scrollWidth, c.getBoundingClientRect().width);
+        const w = c.getBoundingClientRect().width;
         if (w > widest) widest = w;
       });
 
       if (widest === 0) {
-        node.style.fontSize = prev;
         rafRef.current = requestAnimationFrame(fit);
         return;
       }
 
-      const size =
-        widest > available
-          ? Math.max(minPx, Math.floor((available / widest) * maxPx))
-          : maxPx;
-
-      // Clear the inline measuring style — React state drives the final size.
-      node.style.fontSize = "";
+      const naturalWidthPerPx = widest / currentPx;
+      const size = Math.min(
+        maxPx,
+        Math.max(minPx, Math.floor(available / naturalWidthPerPx))
+      );
 
       setFontSize((current) => {
         const next = `${size}px`;
@@ -76,7 +76,9 @@ export function useFitHeroText<T extends HTMLElement>(
 
     const schedule = () => {
       if (rafRef.current != null) cancelAnimationFrame(rafRef.current);
-      rafRef.current = requestAnimationFrame(fit);
+      rafRef.current = requestAnimationFrame(() => {
+        rafRef.current = requestAnimationFrame(fit);
+      });
     };
 
     schedule();
