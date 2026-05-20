@@ -107,13 +107,13 @@ const Pricing = () => (
           Still have a <span className="italic text-gradient-gold">question?</span>
         </motion.h2>
         <motion.p {...fadeUp} className="font-body text-lg text-muted-foreground mb-10">
-          Get in touch — we're happy to help. Book your free consultation today.
+          Get in touch — we're happy to help. Book a consultation today.
         </motion.p>
         <a
           href="mailto:info@thespeech.coach"
           className="inline-flex items-center gap-2 bg-primary text-primary-foreground hover:bg-primary/90 transition-all px-8 py-4 rounded-full font-body text-sm font-medium glow-gold"
         >
-          Book Your Free Consultation
+          Book a Consultation
           <ArrowRight className="w-4 h-4" />
         </a>
       </div>
