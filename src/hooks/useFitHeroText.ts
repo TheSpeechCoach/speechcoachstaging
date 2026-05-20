@@ -1,4 +1,4 @@
-import { useLayoutEffect, useRef, RefObject } from "react";
+import { useEffect, useRef, useState, RefObject } from "react";
 
 interface Options {
   maxPx?: number;
@@ -16,8 +16,10 @@ export function useFitHeroText<T extends HTMLElement>(
   { maxPx = 96, minPx = 24, deps = [] }: Options = {}
 ) {
   const rafRef = useRef<number | null>(null);
+  const [fontSize, setFontSize] = useState<number | null>(null);
+  const [letterSpacing, setLetterSpacing] = useState<string | undefined>(undefined);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     const el = ref.current;
     if (!el) return;
 
@@ -54,6 +56,7 @@ export function useFitHeroText<T extends HTMLElement>(
       }
 
       let size = maxPx;
+      let nextLetterSpacing: string | undefined;
       if (widest > available) {
         size = Math.max(minPx, Math.floor((available / widest) * maxPx));
         node.style.fontSize = `${size}px`;
@@ -68,9 +71,14 @@ export function useFitHeroText<T extends HTMLElement>(
         if (widestAtFloor > available) {
           const ratio = available / widestAtFloor;
           const tighten = Math.max(-0.04, ratio - 1);
-          node.style.letterSpacing = `${tighten}em`;
+          nextLetterSpacing = `${tighten}em`;
+          node.style.letterSpacing = nextLetterSpacing;
         }
       }
+
+      console.log("fit ran", size);
+      setFontSize((current) => (current === size ? current : size));
+      setLetterSpacing((current) => (current === nextLetterSpacing ? current : nextLetterSpacing));
     };
 
     const schedule = () => {
@@ -95,6 +103,8 @@ export function useFitHeroText<T extends HTMLElement>(
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [ref, maxPx, minPx, ...deps]);
+
+  return { fontSize, letterSpacing };
 }
 
 export default useFitHeroText;
