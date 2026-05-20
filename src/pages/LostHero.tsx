@@ -42,7 +42,7 @@ const LostHero = () => {
   const finalLineIndex = lines.length - 1;
 
   const h1Ref = useRef<HTMLHeadingElement>(null);
-  useFitHeroText(h1Ref, { maxPx: 96, minPx: 28, deps: [lines.join("|")] });
+  const { fontSize, hasMeasured, letterSpacing } = useFitHeroText(h1Ref, { maxPx: 96, minPx: 28, deps: [lines.join("|")] });
 
   return (
     <main className="bg-background text-foreground min-h-screen">
@@ -82,6 +82,10 @@ const LostHero = () => {
 
             <motion.h1
               ref={h1Ref}
+              style={{
+                fontSize: hasMeasured ? `${fontSize}px` : "clamp(2.5rem, 7vw, 96px)",
+                letterSpacing,
+              }}
               initial="hidden"
               animate="visible"
               variants={{
