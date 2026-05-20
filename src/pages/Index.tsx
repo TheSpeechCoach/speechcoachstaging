@@ -33,6 +33,7 @@ const Index = () => {
       />
       <MethodologySection />
       <Services />
+      <WhoWeWorkWith />
       <CPDSection />
       <Testimonials />
       <CoachSection />
