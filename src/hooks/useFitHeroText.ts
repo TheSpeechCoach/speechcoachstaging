@@ -8,17 +8,19 @@ export function useFitHeroText<T extends HTMLElement>(
 ): string {
   const [fontSize, setFontSize] = useState<string>(`clamp(2.5rem, 7vw, ${maxPx}px)`);
   const rafRef = useRef<number | null>(null);
+  const hasFitRef = useRef(false);
 
   useEffect(() => {
     const node = ref.current;
     if (!node) return;
+    hasFitRef.current = false;
 
     const fit = () => {
       const el = ref.current;
       if (!el) return;
       const parent = el.parentElement;
       const available = (parent ?? el).clientWidth;
-      if (!available || available < 120) { rafRef.current = requestAnimationFrame(fit); return; }
+      if (!available || available < 120) return;
       const currentPx = parseFloat(getComputedStyle(el).fontSize) || maxPx;
 
       let widest = 0;
@@ -27,20 +29,29 @@ export function useFitHeroText<T extends HTMLElement>(
         if (w > widest) widest = w;
       });
 
-      if (widest <= 0) { rafRef.current = requestAnimationFrame(fit); return; }
+      if (widest <= 0) return;
 
       const naturalWidthPerPx = widest / currentPx;
       const target = Math.min(maxPx, Math.max(minPx, Math.floor(available / naturalWidthPerPx)));
+      hasFitRef.current = true;
       el.setAttribute("data-fit", String(target));
       setFontSize((cur) => { const next = `${target}px`; return cur === next ? cur : next; });
     };
 
     const schedule = () => {
       if (rafRef.current != null) cancelAnimationFrame(rafRef.current);
-      rafRef.current = requestAnimationFrame(() => requestAnimationFrame(fit));
+      rafRef.current = requestAnimationFrame(() => {
+        rafRef.current = requestAnimationFrame(fit);
+      });
     };
 
+    fit();
     schedule();
+    const retryTimers = [50, 200, 500].map((delay) =>
+      window.setTimeout(() => {
+        if (!hasFitRef.current) fit();
+      }, delay)
+    );
     const ro = new ResizeObserver(schedule);
     ro.observe(node);
     if (node.parentElement) ro.observe(node.parentElement);
@@ -51,6 +62,7 @@ export function useFitHeroText<T extends HTMLElement>(
     return () => {
       window.removeEventListener("resize", schedule);
       ro.disconnect();
+      retryTimers.forEach((timer) => window.clearTimeout(timer));
       if (rafRef.current != null) cancelAnimationFrame(rafRef.current);
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps

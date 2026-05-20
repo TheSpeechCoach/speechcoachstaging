@@ -19,6 +19,11 @@ const fadeUp = {
 const LostHero = () => {
   const { variant, slug } = useParams<{ variant: string; slug: string }>();
   const entry = slug ? getHeroVariant(slug) : undefined;
+  const h1Ref = useRef<HTMLHeadingElement>(null);
+  const lineDeps = entry
+    ? (variant === "3" ? entry.threeLine : entry.fourLine).join("|")
+    : "";
+  const heroFontSize = useFitHeroText(h1Ref, { maxPx: 96, minPx: 24, deps: [lineDeps] });
 
   if (!entry || (variant !== "3" && variant !== "4")) {
     return (
@@ -40,9 +45,6 @@ const LostHero = () => {
     variant === "3" ? entry.threeLineSubheading : entry.fourLineSubheading;
   const appendNowHere = lines[lines.length - 1] !== "Now you're here.";
   const finalLineIndex = lines.length - 1;
-
-  const h1Ref = useRef<HTMLHeadingElement>(null);
-  const heroFontSize = useFitHeroText(h1Ref, { maxPx: 96, minPx: 24, deps: [lines.join("|")] });
 
   return (
     <main className="bg-background text-foreground min-h-screen">
@@ -80,46 +82,30 @@ const LostHero = () => {
               Inspire • Engage • Influence
             </motion.p>
 
-            <motion.h1
+            <h1
               ref={h1Ref}
               style={{ fontSize: heroFontSize }}
-              initial="hidden"
-              animate="visible"
-              variants={{
-                hidden: {},
-                visible: { transition: { staggerChildren: 0.12, delayChildren: 0.2 } },
-              }}
               className="font-display font-bold leading-[1.05] tracking-tight mb-8 flex flex-col items-start"
             >
               {lines.map((line, i) => {
                 const isGold = i === finalLineIndex && !appendNowHere;
                 return (
-                  <motion.span
+                  <span
                     key={`${entry.slug}-${i}`}
-                    variants={{
-                      hidden: { opacity: 0, y: 18 },
-                      visible: { opacity: 1, y: 0 },
-                    }}
-                    transition={{ duration: 0.6, ease: "easeOut" }}
                     className={`w-max whitespace-nowrap ${isGold ? "italic text-gradient-gold" : ""}`}
                   >
                     {line}
-                  </motion.span>
+                  </span>
                 );
               })}
               {appendNowHere && (
-                <motion.span
-                  variants={{
-                    hidden: { opacity: 0, y: 18 },
-                    visible: { opacity: 1, y: 0 },
-                  }}
-                  transition={{ duration: 0.6, ease: "easeOut" }}
+                <span
                   className="w-max whitespace-nowrap italic text-gradient-gold"
                 >
                   Now you're here.
-                </motion.span>
+                </span>
               )}
-            </motion.h1>
+            </h1>
 
             <motion.p
               initial={{ opacity: 0, y: 20 }}
