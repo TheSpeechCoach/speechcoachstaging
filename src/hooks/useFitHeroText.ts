@@ -40,9 +40,12 @@ export function useFitHeroText<T extends HTMLElement>(
 
     const schedule = () => {
       if (rafRef.current != null) cancelAnimationFrame(rafRef.current);
-      rafRef.current = requestAnimationFrame(() => requestAnimationFrame(fit));
+      rafRef.current = requestAnimationFrame(() => {
+        rafRef.current = requestAnimationFrame(fit);
+      });
     };
 
+    fit();
     schedule();
     const retryTimers = [50, 200, 500].map((delay) =>
       window.setTimeout(() => {
