@@ -38,10 +38,6 @@ const Index = () => {
       <Testimonials />
       <CoachSection />
       <FitSection />
-      <MidCTA
-        heading={<>Do you tick these boxes?</>}
-        body="We work directly with executives, founders, leaders, and professionals whose work depends on clear expression, confident delivery, and authentic presence."
-      />
       <FAQSection />
       <CTASection />
       <SeoKeywords />
