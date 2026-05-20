@@ -88,7 +88,7 @@ const LostHero = () => {
                 hidden: {},
                 visible: { transition: { staggerChildren: 0.12, delayChildren: 0.2 } },
               }}
-              className="font-display font-bold leading-[1.05] tracking-tight mb-8"
+              className="font-display font-bold leading-[1.05] tracking-tight mb-8 flex flex-col items-start"
             >
               {lines.map((line, i) => {
                 const isGold = i === finalLineIndex && !appendNowHere;
@@ -100,7 +100,7 @@ const LostHero = () => {
                       visible: { opacity: 1, y: 0 },
                     }}
                     transition={{ duration: 0.6, ease: "easeOut" }}
-                    className={`block whitespace-nowrap ${isGold ? "italic text-gradient-gold" : ""}`}
+                    className={`w-max whitespace-nowrap ${isGold ? "italic text-gradient-gold" : ""}`}
                   >
                     {line}
                   </motion.span>
@@ -113,7 +113,7 @@ const LostHero = () => {
                     visible: { opacity: 1, y: 0 },
                   }}
                   transition={{ duration: 0.6, ease: "easeOut" }}
-                  className="block whitespace-nowrap italic text-gradient-gold"
+                  className="w-max whitespace-nowrap italic text-gradient-gold"
                 >
                   Now you're here.
                 </motion.span>

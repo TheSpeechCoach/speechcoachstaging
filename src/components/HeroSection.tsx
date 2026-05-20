@@ -31,11 +31,11 @@ const HeroSection = () => {
           </motion.p>
           <h1
             ref={h1Ref}
-            className="font-display font-bold leading-[1.05] tracking-tight mb-8"
+            className="font-display font-bold leading-[1.05] tracking-tight mb-8 flex flex-col items-start"
           >
-            <span className="block whitespace-nowrap">You tried YouTube.</span>
-            <span className="block whitespace-nowrap">You tried AI.</span>
-            <span className="block whitespace-nowrap italic text-gradient-gold">Now you're here.</span>
+            <span className="w-max whitespace-nowrap">You tried YouTube.</span>
+            <span className="w-max whitespace-nowrap">You tried AI.</span>
+            <span className="w-max whitespace-nowrap italic text-gradient-gold">Now you're here.</span>
           </h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
