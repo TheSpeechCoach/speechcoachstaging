@@ -9,11 +9,13 @@ export function useFitHeroText<T extends HTMLElement>(
   const [fontSize, setFontSize] = useState<string>(`clamp(2.5rem, 7vw, ${maxPx}px)`);
   const rafRef = useRef<number | null>(null);
   const hasFitOnceRef = useRef(false);
+  const lastAppliedRef = useRef<number | null>(null);
 
   useEffect(() => {
     const node = ref.current;
     if (!node) return;
     hasFitOnceRef.current = false;
+    lastAppliedRef.current = null;
 
     // Always recomputes from scratch. Safe to call any number of times.
     // Scales both DOWN and UP based on current parent width.
@@ -42,7 +44,13 @@ export function useFitHeroText<T extends HTMLElement>(
         Math.max(minPx, Math.floor(available / naturalWidthPerPx))
       );
 
+      if (lastAppliedRef.current === target) {
+        hasFitOnceRef.current = true;
+        return;
+      }
+
       hasFitOnceRef.current = true;
+      lastAppliedRef.current = target;
       el.setAttribute("data-fit", String(target));
       setFontSize((cur) => (cur === `${target}px` ? cur : `${target}px`));
     };
@@ -68,12 +76,10 @@ export function useFitHeroText<T extends HTMLElement>(
       }, delay)
     );
 
-    // ResizeObserver: observe node, parent, and documentElement.
-    // Callback ALWAYS schedules a fresh fit() — no guards.
+    // ResizeObserver: observe only the parent container.
+    // Observing the H1 itself creates a feedback loop because fit() changes its size.
     const ro = new ResizeObserver(() => schedule());
-    ro.observe(node);
     if (node.parentElement) ro.observe(node.parentElement);
-    ro.observe(document.documentElement);
 
     // Window listeners: ALWAYS schedule a fresh fit() — no guards.
     const onResize = () => schedule();
