@@ -40,6 +40,7 @@ import ContentCreators from "./pages/ContentCreators";
 import Pricing from "./pages/Pricing";
 import ThankYou from "./pages/ThankYou";
 import LostHero from "./pages/LostHero";
+import WhoWeWorkWith from "./pages/WhoWeWorkWith";
 
 const queryClient = new QueryClient();
 
