@@ -1,0 +1,62 @@
+import { useEffect, useRef, useState, RefObject } from "react";
+
+interface Options { maxPx?: number; minPx?: number; deps?: unknown[]; }
+
+export function useFitHeroText<T extends HTMLElement>(
+  ref: RefObject<T>,
+  { maxPx = 96, minPx = 24, deps = [] }: Options = {}
+): string {
+  const [fontSize, setFontSize] = useState<string>(`clamp(2.5rem, 7vw, ${maxPx}px)`);
+  const rafRef = useRef<number | null>(null);
+
+  useEffect(() => {
+    const node = ref.current;
+    if (!node) return;
+
+    const fit = () => {
+      const el = ref.current;
+      if (!el) return;
+      const parent = el.parentElement;
+      const available = (parent ?? el).clientWidth;
+      if (!available || available < 120) { rafRef.current = requestAnimationFrame(fit); return; }
+      const currentPx = parseFloat(getComputedStyle(el).fontSize) || maxPx;
+
+      let widest = 0;
+      Array.from(el.children).forEach((c) => {
+        const w = (c as HTMLElement).getBoundingClientRect().width;
+        if (w > widest) widest = w;
+      });
+
+      if (widest <= 0) { rafRef.current = requestAnimationFrame(fit); return; }
+
+      const naturalWidthPerPx = widest / currentPx;
+      const target = Math.min(maxPx, Math.max(minPx, Math.floor(available / naturalWidthPerPx)));
+      el.setAttribute("data-fit", String(target));
+      setFontSize((cur) => { const next = `${target}px`; return cur === next ? cur : next; });
+    };
+
+    const schedule = () => {
+      if (rafRef.current != null) cancelAnimationFrame(rafRef.current);
+      rafRef.current = requestAnimationFrame(() => requestAnimationFrame(fit));
+    };
+
+    schedule();
+    const ro = new ResizeObserver(schedule);
+    ro.observe(node);
+    if (node.parentElement) ro.observe(node.parentElement);
+    window.addEventListener("resize", schedule);
+    const fonts = (document as Document & { fonts?: { ready: Promise<unknown> } }).fonts;
+    if (fonts?.ready) fonts.ready.then(schedule).catch(() => {});
+
+    return () => {
+      window.removeEventListener("resize", schedule);
+      ro.disconnect();
+      if (rafRef.current != null) cancelAnimationFrame(rafRef.current);
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [ref, maxPx, minPx, ...deps]);
+
+  return fontSize;
+}
+
+export default useFitHeroText;
