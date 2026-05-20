@@ -95,7 +95,7 @@ export const heroVariants: HeroVariant[] = [
     slug: "executive-lost",
     category: "Core",
     title: "Executive Speech Coaching",
-    threeLine: ["You've sat through the training.", "The room still didn't move.", "Now you want the real thing."],
+    threeLine: ["You sat through the training.", "The room still didn't move.", "Now you want the real thing."],
     fourLine: ["Lost in the detail.", "Lost in the delivery.", "Lost the room.", "Now you're here."],
     threeLineSubheading: "Executive communication coaching for senior professionals, boards and leadership teams who need to be heard.",
     fourLineSubheading: "Executive communication coaching for senior professionals, boards and leadership teams who need to be heard.",
