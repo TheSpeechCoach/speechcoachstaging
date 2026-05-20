@@ -16,7 +16,8 @@ export function useFitHeroText<T extends HTMLElement>(
   { maxPx = 96, minPx = 24, deps = [] }: Options = {}
 ) {
   const rafRef = useRef<number | null>(null);
-  const [fontSize, setFontSize] = useState<number | null>(null);
+  const [fontSize, setFontSize] = useState(maxPx);
+  const [hasMeasured, setHasMeasured] = useState(false);
   const [letterSpacing, setLetterSpacing] = useState<string | undefined>(undefined);
 
   useEffect(() => {
@@ -78,6 +79,7 @@ export function useFitHeroText<T extends HTMLElement>(
 
       console.log("fit ran", size);
       setFontSize((current) => (current === size ? current : size));
+      setHasMeasured(true);
       setLetterSpacing((current) => (current === nextLetterSpacing ? current : nextLetterSpacing));
     };
 
@@ -104,7 +106,7 @@ export function useFitHeroText<T extends HTMLElement>(
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [ref, maxPx, minPx, ...deps]);
 
-  return { fontSize, letterSpacing };
+  return { fontSize, hasMeasured, letterSpacing };
 }
 
 export default useFitHeroText;
