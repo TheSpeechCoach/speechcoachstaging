@@ -43,7 +43,7 @@ const Group = ({ title, items }: { title: string; items: Audience[] }) => (
     <motion.h2 {...fadeUp} className="font-display text-2xl md:text-3xl font-bold mb-8">
       {title}
     </motion.h2>
-    <div className="grid md:grid-cols-2 gap-5">
+    <div className="grid md:grid-cols-2 gap-6">
       {items.map((a, i) => (
         <motion.div
           key={a.href}
@@ -52,7 +52,7 @@ const Group = ({ title, items }: { title: string; items: Audience[] }) => (
         >
           <Link
             to={a.href}
-            className="block p-6 rounded-lg border border-border bg-card/40 hover:border-primary/40 transition-colors h-full"
+            className="block p-8 rounded-xl border border-border bg-card/40 hover:border-primary/40 transition-colors h-full"
           >
             <h3 className="font-display text-lg md:text-xl font-semibold mb-2 flex items-center gap-2">
               {a.label}
@@ -92,7 +92,7 @@ const WhoWeWorkWithPage = () => (
       </div>
     </section>
 
-    <section className="py-16 px-6 border-t border-border">
+    <section className="py-20 md:py-28 px-6 border-t border-border">
       <div className="container mx-auto max-w-5xl">
         <Group title="By profession" items={byProfession} />
         <Group title="By sector" items={bySector} />
@@ -100,7 +100,7 @@ const WhoWeWorkWithPage = () => (
       </div>
     </section>
 
-    <section className="py-24 px-6 border-t border-border">
+    <section className="py-20 md:py-28 px-6 border-t border-border">
       <div className="container mx-auto max-w-3xl text-center">
         <motion.h2 {...fadeUp} className="font-display text-3xl md:text-5xl font-bold mb-6">
           Ready to <span className="italic text-gradient-gold">start the work?</span>

@@ -31,7 +31,7 @@ const audiences = [
 
 const WhoWeWorkWith = () => {
   return (
-    <section id="who-we-work-with" className="py-24 md:py-32 border-t border-border">
+    <section id="who-we-work-with" className="py-20 md:py-28 border-t border-border">
       <div className="container mx-auto px-6">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}

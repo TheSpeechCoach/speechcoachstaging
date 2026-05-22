@@ -84,7 +84,7 @@ const Pricing = () => (
       </div>
     </section>
 
-    <section className="py-16 px-6 border-t border-border">
+    <section className="py-20 md:py-28 px-6 border-t border-border">
       <div className="container mx-auto max-w-3xl">
         <Accordion type="single" collapsible className="w-full">
           {faqs.map((f, i) => (
@@ -101,7 +101,7 @@ const Pricing = () => (
       </div>
     </section>
 
-    <section className="py-24 px-6 border-t border-border">
+    <section className="py-20 md:py-28 px-6 border-t border-border">
       <div className="container mx-auto max-w-3xl text-center">
         <motion.h2 {...fadeUp} className="font-display text-3xl md:text-5xl font-bold mb-6">
           Still have a <span className="italic text-gradient-gold">question?</span>

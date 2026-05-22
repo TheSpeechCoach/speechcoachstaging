@@ -3,7 +3,7 @@ import { Linkedin } from "lucide-react";
 
 const CoachSection = () => {
   return (
-    <section className="py-24 md:py-32 bg-card">
+    <section className="py-20 md:py-28 bg-card">
       <div className="container mx-auto px-6">
         <div className="max-w-3xl">
           <motion.h2
