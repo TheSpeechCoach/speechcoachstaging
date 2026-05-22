@@ -78,9 +78,8 @@ const ServicePage = ({
         </div>
         <div className="container mx-auto max-w-4xl relative text-center">
           {heroLines ? (
-            <motion.h1
+            <h1
               ref={h1Ref}
-              {...fadeUp}
               style={{ fontSize: heroFontSize }}
               className="font-display font-bold leading-[1.05] tracking-tight mb-6 flex flex-col items-center"
             >
@@ -95,7 +94,7 @@ const ServicePage = ({
                   </span>
                 );
               })}
-            </motion.h1>
+            </h1>
           ) : (
             <motion.h1
               {...fadeUp}
@@ -104,6 +103,7 @@ const ServicePage = ({
               {h1}
             </motion.h1>
           )}
+
           <motion.p
             {...fadeUp}
             transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
