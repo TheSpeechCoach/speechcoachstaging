@@ -91,7 +91,7 @@ export const heroVariants: HeroVariant[] = [
     ],
     closingHeading: "Now you're here.",
     closingCopy: "Bespoke 1:1 and corporate coaching, in London and online. Initial consultation within 48 hours.",
-    ctaLabel: "Let's talk about you...",
+    ctaLabel: "Let's talk...",
   },
   {
     slug: "executive-lost",

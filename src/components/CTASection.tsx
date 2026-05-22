@@ -37,7 +37,7 @@ const CTASection = () => {
             href="https://www.thespeech.coach/book-now/"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block bg-primary text-primary-foreground hover:opacity-90 transition-opacity px-10 py-4 rounded-full font-body text-sm tracking-wide glow-gold"
+            className="inline-block bg-primary text-primary-foreground hover:bg-primary/90 transition-all px-10 py-4 rounded-full font-body text-sm tracking-wide glow-gold"
           >
             Book Now
           </a>
