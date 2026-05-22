@@ -92,7 +92,7 @@ const Services = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="mt-16"
         >
-          <h3 className="font-display text-2xl mb-8">
+          <h3 className="font-display text-3xl md:text-4xl mb-8">
             Areas of <span className="italic text-gradient-gold">expertise</span>
           </h3>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
