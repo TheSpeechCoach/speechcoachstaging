@@ -1,10 +1,12 @@
 import { Helmet } from "react-helmet-async";
-import { ReactNode } from "react";
+import { ReactNode, useRef } from "react";
 import { motion } from "framer-motion";
 import { Check, ArrowRight } from "lucide-react";
 import SiteNav from "./SiteNav";
 import SiteFooter from "./SiteFooter";
 import StickyMobileCTA from "./StickyMobileCTA";
+import useFitHeroText from "@/hooks/useFitHeroText";
+
 
 export interface ContentBlock {
   heading: string;
@@ -15,7 +17,8 @@ export interface ContentBlock {
 interface ServicePageProps {
   metaTitle: string;
   metaDescription: string;
-  h1: ReactNode;
+  h1?: ReactNode;
+  heroLines?: string[];
   subheading: string;
   intro: string;
   postIntro?: ReactNode;
@@ -29,6 +32,7 @@ interface ServicePageProps {
   ctaLabel?: string;
 }
 
+
 const fadeUp = {
   initial: { opacity: 0, y: 30 },
   whileInView: { opacity: 1, y: 0 },
@@ -40,6 +44,7 @@ const ServicePage = ({
   metaTitle,
   metaDescription,
   h1,
+  heroLines,
   subheading,
   intro,
   postIntro,
@@ -52,6 +57,11 @@ const ServicePage = ({
   closing,
   ctaLabel = "Book a Consultation",
 }: ServicePageProps) => {
+  const h1Ref = useRef<HTMLHeadingElement>(null);
+  const lineDeps = heroLines ? heroLines.join("|") : "";
+  const heroFontSize = useFitHeroText(h1Ref, { maxPx: 96, minPx: 24, deps: [lineDeps] });
+  const finalLineIndex = heroLines ? heroLines.length - 1 : -1;
+
   return (
     <main className="bg-background text-foreground min-h-screen">
       <Helmet>
@@ -67,12 +77,33 @@ const ServicePage = ({
           <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[700px] h-[700px] rounded-full bg-primary/10 blur-3xl" />
         </div>
         <div className="container mx-auto max-w-4xl relative text-center">
-          <motion.h1
-            {...fadeUp}
-            className="font-display text-4xl md:text-6xl font-bold leading-tight tracking-tight mb-6"
-          >
-            {h1}
-          </motion.h1>
+          {heroLines ? (
+            <motion.h1
+              ref={h1Ref}
+              {...fadeUp}
+              style={{ fontSize: heroFontSize }}
+              className="font-display font-bold leading-[1.05] tracking-tight mb-6 flex flex-col items-center"
+            >
+              {heroLines.map((line, i) => {
+                const isGold = i === finalLineIndex;
+                return (
+                  <span
+                    key={i}
+                    className={`w-max whitespace-nowrap ${isGold ? "italic text-gradient-gold" : ""}`}
+                  >
+                    {line}
+                  </span>
+                );
+              })}
+            </motion.h1>
+          ) : (
+            <motion.h1
+              {...fadeUp}
+              className="font-display text-4xl md:text-6xl font-bold leading-tight tracking-tight mb-6"
+            >
+              {h1}
+            </motion.h1>
+          )}
           <motion.p
             {...fadeUp}
             transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
@@ -91,6 +122,7 @@ const ServicePage = ({
           </motion.a>
         </div>
       </section>
+
 
       {/* Intro */}
       <section className="py-20 md:py-28 px-6 border-t border-border">

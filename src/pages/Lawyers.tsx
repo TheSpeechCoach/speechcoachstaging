@@ -4,14 +4,12 @@ const Lawyers = () => (
   <ServicePage
     metaTitle="Speech Coaching for Lawyers | Advocacy & Courtroom Communication | The Speech Coach"
     metaDescription="Communication and advocacy coaching for barristers, solicitors and legal professionals. Courtroom presence, tribunal preparation and legal communication."
-    h1={
-      <>
-        Lost the Argument. Lost the Jury.{" "}
-        <span className="italic text-gradient-gold">Lost the Case.</span>
-      <br />
-      <span className="italic text-gradient-gold">Now you're here.</span>
-      </>
-    }
+    heroLines={[
+      "Lost the Argument.",
+      "Lost the Jury.",
+      "Lost the Case.",
+      "Now you're here.",
+    ]}
     subheading="Advocacy coaching for legal professionals who need to do more than know the law."
     intro="Legal skill and advocacy skill are different things. The ability to construct a watertight argument is not the same as the ability to deliver one with the authority and presence that wins a room. Whether it's a court appearance, a tribunal, a client presentation or a media appearance, how you communicate is part of the outcome."
     problems={[

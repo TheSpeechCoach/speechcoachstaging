@@ -4,14 +4,12 @@ const Government = () => (
   <ServicePage
     metaTitle="Speech Coaching for Politicians & Government | Political Communication | The Speech Coach"
     metaDescription="Speech and communication coaching for politicians, civil servants and government officials. Select committee, media training and public speaking coaching."
-    h1={
-      <>
-        Lost the Chamber. Lost the Cameras.{" "}
-        <span className="italic text-gradient-gold">Lost the Public.</span>
-      <br />
-      <span className="italic text-gradient-gold">Now you're here.</span>
-      </>
-    }
+    heroLines={[
+      "Lost the Chamber.",
+      "Lost the Cameras.",
+      "Lost the Public.",
+      "Now you're here.",
+    ]}
     subheading="Speech coaching for politicians and officials who need to communicate with conviction — under scrutiny."
     intro="Political communication has never been more demanding or more visible. Speeches, select committees, media appearances — the ability to speak with clarity and authority in every format is essential. Whether you're an MP, a minister or a civil servant, communication is your primary instrument."
     problems={[

@@ -4,14 +4,12 @@ const CryptoBlockchain = () => (
   <ServicePage
     metaTitle="Speech Coach for Crypto & Blockchain | Web3 Communication Coaching | The Speech Coach"
     metaDescription="Pitch and communication coaching for crypto founders, blockchain executives and web3 professionals. Token2049, investor pitches, keynotes and panel appearances."
-    h1={
-      <>
-        Lost in the Whitepaper. Lost the Investor.{" "}
-        <span className="italic text-gradient-gold">Lost the Room.</span>
-      <br />
-      <span className="italic text-gradient-gold">Now you're here.</span>
-      </>
-    }
+    heroLines={[
+      "Lost in the Whitepaper.",
+      "Lost the Investor.",
+      "Lost the Room.",
+      "Now you're here.",
+    ]}
     subheading="Communication coaching for web3 founders who know the technology — and need to own the narrative."
     intro="The whitepaper is always ready. The speaker rarely is. The crypto and web3 space is full of brilliant builders who struggle to translate technical conviction into investor confidence. Whether presenting at Token2049, pitching to a VC or appearing on a panel, how you communicate determines whether you're taken seriously."
     problems={[
