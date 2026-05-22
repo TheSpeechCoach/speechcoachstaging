@@ -40,6 +40,33 @@ const fadeUp = {
   transition: { duration: 0.6, ease: "easeOut" as const },
 };
 
+const FittedHeroHeadline = ({ lines }: { lines: string[] }) => {
+  const h1Ref = useRef<HTMLHeadingElement>(null);
+  const lineDeps = lines.join("|");
+  const heroFontSize = useFitHeroText(h1Ref, { maxPx: 96, minPx: 24, deps: [lineDeps] });
+  const finalLineIndex = lines.length - 1;
+
+  return (
+    <h1
+      ref={h1Ref}
+      style={{ fontSize: heroFontSize }}
+      className="font-display font-bold leading-[1.05] tracking-tight mb-6 flex w-full flex-col items-center"
+    >
+      {lines.map((line, i) => {
+        const isGold = i === finalLineIndex;
+        return (
+          <span
+            key={i}
+            className={`w-max whitespace-nowrap ${isGold ? "italic text-gradient-gold" : ""}`}
+          >
+            {line}
+          </span>
+        );
+      })}
+    </h1>
+  );
+};
+
 const ServicePage = ({
   metaTitle,
   metaDescription,
@@ -57,11 +84,6 @@ const ServicePage = ({
   closing,
   ctaLabel = "Book a Consultation",
 }: ServicePageProps) => {
-  const h1Ref = useRef<HTMLHeadingElement>(null);
-  const lineDeps = heroLines ? heroLines.join("|") : "";
-  const heroFontSize = useFitHeroText(h1Ref, { maxPx: 96, minPx: 24, deps: [lineDeps] });
-  const finalLineIndex = heroLines ? heroLines.length - 1 : -1;
-
   return (
     <main className="bg-background text-foreground min-h-screen">
       <Helmet>
@@ -78,23 +100,7 @@ const ServicePage = ({
         </div>
         <div className="container mx-auto max-w-4xl relative text-center">
           {heroLines ? (
-            <h1
-              ref={h1Ref}
-              style={{ fontSize: heroFontSize }}
-              className="font-display font-bold leading-[1.05] tracking-tight mb-6 flex flex-col items-center"
-            >
-              {heroLines.map((line, i) => {
-                const isGold = i === finalLineIndex;
-                return (
-                  <span
-                    key={i}
-                    className={`w-max whitespace-nowrap ${isGold ? "italic text-gradient-gold" : ""}`}
-                  >
-                    {line}
-                  </span>
-                );
-              })}
-            </h1>
+            <FittedHeroHeadline lines={heroLines} />
           ) : (
             <motion.h1
               {...fadeUp}

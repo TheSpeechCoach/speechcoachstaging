@@ -23,7 +23,7 @@ export function useFitHeroText<T extends HTMLElement>(
       const el = ref.current;
       if (!el) return;
       const parent = el.parentElement;
-      const available = (parent ?? el).clientWidth;
+      const available = el.clientWidth || parent?.clientWidth || 0;
       if (!available || available < 120) return;
 
       const currentPx = parseFloat(getComputedStyle(el).fontSize) || maxPx;
