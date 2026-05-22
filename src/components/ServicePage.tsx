@@ -17,7 +17,8 @@ export interface ContentBlock {
 interface ServicePageProps {
   metaTitle: string;
   metaDescription: string;
-  h1: ReactNode;
+  h1?: ReactNode;
+  heroLines?: string[];
   subheading: string;
   intro: string;
   postIntro?: ReactNode;
@@ -30,6 +31,7 @@ interface ServicePageProps {
   closing: string;
   ctaLabel?: string;
 }
+
 
 const fadeUp = {
   initial: { opacity: 0, y: 30 },
