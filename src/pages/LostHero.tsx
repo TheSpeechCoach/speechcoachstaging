@@ -188,13 +188,13 @@ const LostHero = () => {
           <motion.h2 {...fadeUp} className="font-display text-3xl md:text-5xl font-bold mb-12">
             Does this <span className="italic text-gradient-gold">sound familiar?</span>
           </motion.h2>
-          <ul className="grid md:grid-cols-2 gap-5">
+          <ul className="grid md:grid-cols-2 gap-6">
             {entry.problems.map((p, i) => (
               <motion.li
                 key={i}
                 {...fadeUp}
                 transition={{ duration: 0.5, delay: i * 0.04, ease: "easeOut" }}
-                className="flex gap-4 p-5 rounded-lg border border-border bg-card/40"
+                className="flex gap-4 p-8 rounded-xl border border-border bg-card/40"
               >
                 <span className="text-primary font-display text-lg leading-none mt-1">—</span>
                 <span className="font-body text-foreground/90">{p}</span>
@@ -231,7 +231,7 @@ const LostHero = () => {
           <motion.h2 {...fadeUp} className="font-display text-3xl md:text-5xl font-bold mb-12">
             What we <span className="italic text-gradient-gold">work on</span>
           </motion.h2>
-          <ul className="grid md:grid-cols-2 gap-5">
+          <ul className="grid md:grid-cols-2 gap-6">
             {entry.workOn.map((w, i) => (
               <motion.li
                 key={i}
@@ -254,7 +254,7 @@ const LostHero = () => {
             <motion.h2 {...fadeUp} className="font-display text-3xl md:text-5xl font-bold mb-12">
               What <span className="italic text-gradient-gold">changes</span>
             </motion.h2>
-            <ul className="grid md:grid-cols-2 gap-5">
+            <ul className="grid md:grid-cols-2 gap-6">
               {entry.outcomes.map((o, i) => (
                 <motion.li
                   key={i}
@@ -284,7 +284,7 @@ const LostHero = () => {
                   key={i}
                   {...fadeUp}
                   transition={{ duration: 0.5, delay: i * 0.08, ease: "easeOut" }}
-                  className="p-7 rounded-lg border border-border bg-card/40 h-full"
+                  className="p-8 rounded-xl border border-border bg-card/40 h-full"
                 >
                   <h3 className="font-display text-xl mb-3 text-foreground">{f.name}</h3>
                   <p className="font-body text-muted-foreground leading-relaxed">{f.description}</p>
