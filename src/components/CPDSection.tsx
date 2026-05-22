@@ -23,7 +23,7 @@ const courses = [
 
 const CPDSection = () => {
   return (
-    <section id="cpd" className="py-24 md:py-32">
+    <section id="cpd" className="py-20 md:py-28">
       <div className="container mx-auto px-6">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}

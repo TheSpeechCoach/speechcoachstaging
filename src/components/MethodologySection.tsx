@@ -20,7 +20,7 @@ const steps = [
 
 const MethodologySection = () => {
   return (
-    <section id="methodology" className="py-24 md:py-32 bg-card">
+    <section id="methodology" className="py-20 md:py-28 bg-card">
       <div className="container mx-auto px-6">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}

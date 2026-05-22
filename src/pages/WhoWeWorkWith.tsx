@@ -92,7 +92,7 @@ const WhoWeWorkWithPage = () => (
       </div>
     </section>
 
-    <section className="py-16 px-6 border-t border-border">
+    <section className="py-20 md:py-28 px-6 border-t border-border">
       <div className="container mx-auto max-w-5xl">
         <Group title="By profession" items={byProfession} />
         <Group title="By sector" items={bySector} />
@@ -100,7 +100,7 @@ const WhoWeWorkWithPage = () => (
       </div>
     </section>
 
-    <section className="py-24 px-6 border-t border-border">
+    <section className="py-20 md:py-28 px-6 border-t border-border">
       <div className="container mx-auto max-w-3xl text-center">
         <motion.h2 {...fadeUp} className="font-display text-3xl md:text-5xl font-bold mb-6">
           Ready to <span className="italic text-gradient-gold">start the work?</span>

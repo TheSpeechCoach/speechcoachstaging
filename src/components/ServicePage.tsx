@@ -93,7 +93,7 @@ const ServicePage = ({
       </section>
 
       {/* Intro */}
-      <section className="py-16 px-6 border-t border-border">
+      <section className="py-20 md:py-28 px-6 border-t border-border">
         <div className="container mx-auto max-w-3xl">
           <motion.p {...fadeUp} className="font-body text-lg text-muted-foreground leading-relaxed">
             {intro}
@@ -104,7 +104,7 @@ const ServicePage = ({
       {postIntro}
 
       {/* Problems */}
-      <section className="py-20 px-6 bg-card/40 border-y border-border">
+      <section className="py-20 md:py-28 px-6 bg-card/40 border-y border-border">
         <div className="container mx-auto max-w-4xl">
           <motion.h2 {...fadeUp} className="font-display text-3xl md:text-5xl font-bold mb-12 text-center">
             {problemsHeading}
@@ -126,7 +126,7 @@ const ServicePage = ({
       </section>
 
       {/* What we work on */}
-      <section className="py-20 px-6">
+      <section className="py-20 md:py-28 px-6">
         <div className="container mx-auto max-w-4xl">
           <motion.h2 {...fadeUp} className="font-display text-3xl md:text-5xl font-bold mb-12 text-center">
             {workOnHeading}
@@ -149,7 +149,7 @@ const ServicePage = ({
 
       {/* Extra blocks */}
       {extraBlocks.map((block, i) => (
-        <section key={i} className="py-16 px-6 border-t border-border">
+        <section key={i} className="py-20 md:py-28 px-6 border-t border-border">
           <div className="container mx-auto max-w-4xl">
             <motion.h2 {...fadeUp} className="font-display text-2xl md:text-4xl font-bold mb-6">
               {block.heading}
@@ -179,7 +179,7 @@ const ServicePage = ({
       ))}
 
       {/* Closing CTA */}
-      <section className="py-24 px-6 border-t border-border">
+      <section className="py-20 md:py-28 px-6 border-t border-border">
         <div className="container mx-auto max-w-3xl text-center">
           <motion.h2
             {...fadeUp}

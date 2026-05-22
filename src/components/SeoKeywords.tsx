@@ -15,7 +15,7 @@ const keywordLinks = [
 ];
 
 const SeoKeywords = () => (
-  <section className="py-20 px-6 border-t border-border">
+  <section className="py-20 md:py-28 px-6 border-t border-border">
     <div className="container mx-auto max-w-4xl text-center">
       <motion.h2
         initial={{ opacity: 0, y: 30 }}
