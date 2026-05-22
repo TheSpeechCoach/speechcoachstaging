@@ -43,7 +43,7 @@ const Group = ({ title, items }: { title: string; items: Audience[] }) => (
     <motion.h2 {...fadeUp} className="font-display text-2xl md:text-3xl font-bold mb-8">
       {title}
     </motion.h2>
-    <div className="grid md:grid-cols-2 gap-5">
+    <div className="grid md:grid-cols-2 gap-6">
       {items.map((a, i) => (
         <motion.div
           key={a.href}
@@ -52,7 +52,7 @@ const Group = ({ title, items }: { title: string; items: Audience[] }) => (
         >
           <Link
             to={a.href}
-            className="block p-6 rounded-lg border border-border bg-card/40 hover:border-primary/40 transition-colors h-full"
+            className="block p-8 rounded-xl border border-border bg-card/40 hover:border-primary/40 transition-colors h-full"
           >
             <h3 className="font-display text-lg md:text-xl font-semibold mb-2 flex items-center gap-2">
               {a.label}
