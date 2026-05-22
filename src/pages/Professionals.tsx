@@ -4,13 +4,13 @@ const Professionals = () => (
   <ServicePage
     metaTitle="Speech Coaching for Professionals | Communication Coaching London | The Speech Coach"
     metaDescription="Speech and communication coaching for ambitious professionals. Improve presentation skills, gravitas and career impact. Expert coaching in London and online."
-    h1={
-      <>
-        Lost the Thread. Lost the Room.{" "}
-        <span className="italic text-gradient-gold">Lost the Promotion.</span>
-      <br />
-      <span className="italic text-gradient-gold">Now you're here.</span>
-      </>
+    heroLines={[
+      "Lost the Thread.",
+      "Lost the Room.",
+      "Lost the Promotion.",
+      "Now you're here.",
+    ]}
+    h1={null
     }
     subheading="Communication coaching for professionals who are good at their job and want their delivery to match."
     intro="It came up in your review. Or you felt it in the meeting. You know your subject but something isn't landing the way it should. Across law, finance, consulting, medicine and technology, the ability to communicate with authority is the differentiator between careers that plateau and careers that accelerate."

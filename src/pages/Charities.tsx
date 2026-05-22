@@ -4,13 +4,13 @@ const Charities = () => (
   <ServicePage
     metaTitle="Speech Coaching for Charities | Communication for Non-profit Leaders | The Speech Coach"
     metaDescription="Communication and speech coaching for charity leaders, trustees and fundraisers. Tell your story, move donors and advocate with impact."
-    h1={
-      <>
-        Lost the Donor. Lost the Room.{" "}
-        <span className="italic text-gradient-gold">Lost the Cause.</span>
-      <br />
-      <span className="italic text-gradient-gold">Now you're here.</span>
-      </>
+    heroLines={[
+      "Lost the Donor.",
+      "Lost the Room.",
+      "Lost the Cause.",
+      "Now you're here.",
+    ]}
+    h1={null
     }
     subheading="Communication coaching for non-profit leaders who know why it matters — and need others to feel it."
     intro="Charity communication fails not because the cause is weak but because the emotional transfer doesn't happen. Facts don't move people — stories do. Whether you're addressing trustees, speaking at a fundraising dinner or presenting to grant bodies, your ability to land the emotional weight of your cause drives action."

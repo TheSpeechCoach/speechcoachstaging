@@ -4,13 +4,13 @@ const MedicalProfessionals = () => (
   <ServicePage
     metaTitle="Speech Coaching for Doctors | Communication for Medical Professionals | The Speech Coach"
     metaDescription="Communication coaching for consultants, surgeons, GPs and medical professionals. Grand Rounds, conference presentations and clinical leadership coaching."
-    h1={
-      <>
-        Lost in the Jargon. Lost in the Silence.{" "}
-        <span className="italic text-gradient-gold">Lost the Patient.</span>
-      <br />
-      <span className="italic text-gradient-gold">Now you're here.</span>
-      </>
+    heroLines={[
+      "Lost in the Jargon.",
+      "Lost in the Silence.",
+      "Lost the Patient.",
+      "Now you're here.",
+    ]}
+    h1={null
     }
     subheading="Communication coaching for medical professionals trained in everything — except how to communicate it."
     intro="Medical training builds clinical excellence. It rarely builds communication excellence. Whether presenting at Grand Rounds, preparing a conference keynote or managing difficult patient conversations, the ability to communicate clearly separates good clinicians from trusted ones."

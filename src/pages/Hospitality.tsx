@@ -4,13 +4,13 @@ const Hospitality = () => (
   <ServicePage
     metaTitle="Speech Coaching for Hospitality Leaders | Executive Communication | The Speech Coach"
     metaDescription="Communication coaching for GMs, hotel executives and hospitality group leaders. Board presentations, investor communication and executive presence coaching."
-    h1={
-      <>
-        Lost with the Board. Lost the Investment Case.{" "}
-        <span className="italic text-gradient-gold">Lost the Room.</span>
-      <br />
-      <span className="italic text-gradient-gold">Now you're here.</span>
-      </>
+    heroLines={[
+      "Lost with the Board.",
+      "Lost the Investment Case.",
+      "Lost the Room.",
+      "Now you're here.",
+    ]}
+    h1={null
     }
     subheading="Speech coaching for hospitality leaders who run the room — and need to own the boardroom."
     intro="Hospitality is the industry of communication. But the skills that make an exceptional operator are different from what's required when presenting to ownership groups, investment boards or brand leadership. This coaching bridges that gap."

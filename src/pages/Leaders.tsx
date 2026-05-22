@@ -4,13 +4,13 @@ const Leaders = () => (
   <ServicePage
     metaTitle="Speech Coach for Leaders | Executive Communication Coaching | The Speech Coach"
     metaDescription="Speech and communication coaching for CEOs, directors and senior leaders. Build executive presence, authority and gravitas. Bespoke 1:1 coaching in London and online."
-    h1={
-      <>
-        Lost the Authority. Lost the Team.{" "}
-        <span className="italic text-gradient-gold">Lost the Room.</span>
-      <br />
-      <span className="italic text-gradient-gold">Now you're here.</span>
-      </>
+    heroLines={[
+      "Lost the Authority.",
+      "Lost the Team.",
+      "Lost the Room.",
+      "Now you're here.",
+    ]}
+    h1={null
     }
     subheading="Speech and communication coaching for leaders who need to own every room they walk into."
     intro="Leadership is a communication challenge as much as a strategic one. The most effective leaders have the ability to land their ideas. Whether addressing a board, leading a town hall or managing up, how you communicate determines whether you lead or just occupy a title."

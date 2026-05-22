@@ -4,13 +4,13 @@ const UnitedNations = () => (
   <ServicePage
     metaTitle="Speech Coaching for UN Delegates | Diplomatic Communication | The Speech Coach"
     metaDescription="Expert speech coaching for UN delegates, diplomats and international officials. General Assembly preparation, multilateral communication and diplomatic speaking."
-    h1={
-      <>
-        Lost in Translation. Lost the Resolution.{" "}
-        <span className="italic text-gradient-gold">Lost the Room.</span>
-      <br />
-      <span className="italic text-gradient-gold">Now you're here.</span>
-      </>
+    heroLines={[
+      "Lost in Translation.",
+      "Lost the Resolution.",
+      "Lost the Room.",
+      "Now you're here.",
+    ]}
+    h1={null
     }
     subheading="Expert speech coaching for UN delegates and diplomats who have the floor — and need to own it."
     intro="You have the floor. The world is listening. Multilateral communication demands precision, authority and the ability to speak across languages, cultures and political contexts simultaneously. Whether addressing the General Assembly, presenting in the Security Council or chairing a committee, the stakes demand the highest standard of delivery."
