@@ -9,7 +9,7 @@ type Props = {
 
 const MidCTA = ({ heading, body, ctaLabel = "Let's talk...", ctaHref = "#cta" }: Props) => {
   return (
-    <section className="py-20 md:py-28">
+    <section className="pt-12 md:pt-16 pb-20 md:pb-28">
       <div className="container mx-auto px-6 max-w-3xl text-center">
         {heading && (
           <motion.h2
