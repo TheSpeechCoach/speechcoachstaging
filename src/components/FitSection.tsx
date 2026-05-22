@@ -31,7 +31,7 @@ const FitSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: i * 0.1 }}
-              className="flex gap-4 items-start bg-card border border-border rounded-lg p-6"
+              className="flex gap-4 items-start bg-card border border-border rounded-xl p-8"
             >
               <span className="text-primary font-display text-2xl font-bold mt-[-2px]">
                 {String(i + 1).padStart(2, "0")}
