@@ -50,7 +50,7 @@ const FittedHeroHeadline = ({ lines }: { lines: string[] }) => {
     <h1
       ref={h1Ref}
       style={{ fontSize: heroFontSize }}
-      className="font-display font-bold leading-[1.05] tracking-tight mb-6 flex flex-col items-center"
+      className="font-display font-bold leading-[1.05] tracking-tight mb-6 flex w-full flex-col items-center"
     >
       {lines.map((line, i) => {
         const isGold = i === finalLineIndex;
