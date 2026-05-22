@@ -21,7 +21,7 @@ const painPoints = [
 
 const PainPoints = () => {
   return (
-    <section id="about" className="py-20 md:py-28">
+    <section id="about" className="pt-20 md:pt-28">
       <div className="container mx-auto px-6">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
