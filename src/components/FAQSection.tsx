@@ -51,13 +51,24 @@ const FAQSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="font-body text-muted-foreground text-center mb-12"
+          className="font-body text-muted-foreground text-center mb-8"
         >
-          Can't find the answer?{" "}
-          <a href="#cta" className="text-primary hover:underline">
-            Let's talk about you
-          </a>
+          Can't find the answer?
         </motion.p>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.15 }}
+          className="flex justify-center mb-12"
+        >
+          <a
+            href="#cta"
+            className="inline-block bg-primary text-primary-foreground hover:bg-primary/90 transition-all px-8 py-3 rounded-full font-body text-sm tracking-wide glow-gold"
+          >
+            Book a Consultation
+          </a>
+        </motion.div>
 
         <Accordion type="single" collapsible className="space-y-3">
           {faqs.map((faq, i) => (

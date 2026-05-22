@@ -38,7 +38,7 @@ const MidCTA = ({ heading, body, ctaLabel = "Let's talk...", ctaHref = "#cta" }:
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
           whileHover={{ y: -2 }}
-          className="inline-block w-full sm:w-auto bg-primary text-primary-foreground hover:opacity-90 transition-all px-10 py-4 rounded-full font-body text-lg tracking-wide glow-gold"
+          className="inline-block w-full sm:w-auto bg-primary text-primary-foreground hover:bg-primary/90 transition-all px-10 py-4 rounded-full font-body text-lg tracking-wide glow-gold"
         >
           {ctaLabel}
         </motion.a>

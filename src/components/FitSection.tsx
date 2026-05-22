@@ -23,7 +23,7 @@ const FitSection = () => {
           <span className="italic text-gradient-gold">Have…?</span>
         </motion.h2>
 
-        <div className="grid sm:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {criteria.map((c, i) => (
             <motion.div
               key={i}
@@ -58,7 +58,7 @@ const FitSection = () => {
             href="https://www.thespeech.coach/book-now/"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block border border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all px-8 py-3 rounded-full font-body text-sm"
+            className="inline-block bg-primary text-primary-foreground hover:bg-primary/90 transition-all px-8 py-3 rounded-full font-body text-sm glow-gold"
           >
             Let's talk
           </a>

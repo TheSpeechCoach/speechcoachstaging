@@ -51,9 +51,9 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
-            className="inline-block bg-primary text-primary-foreground hover:opacity-90 transition-opacity px-8 py-3 rounded-full font-body text-sm tracking-wide glow-gold"
+            className="inline-block bg-primary text-primary-foreground hover:bg-primary/90 transition-all px-8 py-3 rounded-full font-body text-sm tracking-wide glow-gold"
           >
-            Let's talk about you...
+            Let's talk...
           </motion.a>
         </motion.div>
       </div>
