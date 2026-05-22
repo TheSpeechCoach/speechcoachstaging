@@ -41,7 +41,7 @@ const MethodologySection = () => {
           An integrated and evidence-informed approach drawing on techniques from communication science, performance training, and clinical voice practice.
         </motion.p>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-6">
           {steps.map((step, i) => (
             <motion.div
               key={i}
@@ -49,7 +49,7 @@ const MethodologySection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.15 }}
-              className="bg-background border border-border rounded-lg p-8"
+              className="bg-background border border-border rounded-xl p-8"
             >
               <span className="text-primary font-display text-3xl font-bold">{step.number}</span>
               <h3 className="font-display text-xl font-semibold mt-4 mb-3">{step.title}</h3>
