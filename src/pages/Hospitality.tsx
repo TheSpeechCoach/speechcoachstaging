@@ -10,8 +10,6 @@ const Hospitality = () => (
       "Lost the Room.",
       "Now you're here.",
     ]}
-    h1={null
-    }
     subheading="Speech coaching for hospitality leaders who run the room — and need to own the boardroom."
     intro="Hospitality is the industry of communication. But the skills that make an exceptional operator are different from what's required when presenting to ownership groups, investment boards or brand leadership. This coaching bridges that gap."
     problems={[

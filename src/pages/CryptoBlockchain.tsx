@@ -10,8 +10,6 @@ const CryptoBlockchain = () => (
       "Lost the Room.",
       "Now you're here.",
     ]}
-    h1={null
-    }
     subheading="Communication coaching for web3 founders who know the technology — and need to own the narrative."
     intro="The whitepaper is always ready. The speaker rarely is. The crypto and web3 space is full of brilliant builders who struggle to translate technical conviction into investor confidence. Whether presenting at Token2049, pitching to a VC or appearing on a panel, how you communicate determines whether you're taken seriously."
     problems={[

@@ -10,8 +10,6 @@ const Leaders = () => (
       "Lost the Room.",
       "Now you're here.",
     ]}
-    h1={null
-    }
     subheading="Speech and communication coaching for leaders who need to own every room they walk into."
     intro="Leadership is a communication challenge as much as a strategic one. The most effective leaders have the ability to land their ideas. Whether addressing a board, leading a town hall or managing up, how you communicate determines whether you lead or just occupy a title."
     problems={[

@@ -10,8 +10,6 @@ const ContentCreators = () => (
       "Lost the Audience.",
       "Now you're here.",
     ]}
-    h1={null
-    }
     subheading="On-camera coaching for content creators who know their subject and need their delivery to match."
     intro="The content is good. The information is there. The editing is clean. And yet — something isn't landing. On-camera performance is a specific skill and it responds to specific coaching. The confidence, the natural delivery, the ability to connect with an audience through a lens — these are learnable."
     problems={[

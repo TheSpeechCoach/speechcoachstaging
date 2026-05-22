@@ -10,8 +10,6 @@ const MedicalProfessionals = () => (
       "Lost the Patient.",
       "Now you're here.",
     ]}
-    h1={null
-    }
     subheading="Communication coaching for medical professionals trained in everything — except how to communicate it."
     intro="Medical training builds clinical excellence. It rarely builds communication excellence. Whether presenting at Grand Rounds, preparing a conference keynote or managing difficult patient conversations, the ability to communicate clearly separates good clinicians from trusted ones."
     problems={[

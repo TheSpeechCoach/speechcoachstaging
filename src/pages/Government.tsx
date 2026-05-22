@@ -10,8 +10,6 @@ const Government = () => (
       "Lost the Public.",
       "Now you're here.",
     ]}
-    h1={null
-    }
     subheading="Speech coaching for politicians and officials who need to communicate with conviction — under scrutiny."
     intro="Political communication has never been more demanding or more visible. Speeches, select committees, media appearances — the ability to speak with clarity and authority in every format is essential. Whether you're an MP, a minister or a civil servant, communication is your primary instrument."
     problems={[

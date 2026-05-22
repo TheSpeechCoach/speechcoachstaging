@@ -10,8 +10,6 @@ const Charities = () => (
       "Lost the Cause.",
       "Now you're here.",
     ]}
-    h1={null
-    }
     subheading="Communication coaching for non-profit leaders who know why it matters — and need others to feel it."
     intro="Charity communication fails not because the cause is weak but because the emotional transfer doesn't happen. Facts don't move people — stories do. Whether you're addressing trustees, speaking at a fundraising dinner or presenting to grant bodies, your ability to land the emotional weight of your cause drives action."
     problems={[

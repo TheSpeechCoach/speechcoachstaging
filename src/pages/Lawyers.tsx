@@ -10,8 +10,6 @@ const Lawyers = () => (
       "Lost the Case.",
       "Now you're here.",
     ]}
-    h1={null
-    }
     subheading="Advocacy coaching for legal professionals who need to do more than know the law."
     intro="Legal skill and advocacy skill are different things. The ability to construct a watertight argument is not the same as the ability to deliver one with the authority and presence that wins a room. Whether it's a court appearance, a tribunal, a client presentation or a media appearance, how you communicate is part of the outcome."
     problems={[

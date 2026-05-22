@@ -10,8 +10,6 @@ const UnitedNations = () => (
       "Lost the Room.",
       "Now you're here.",
     ]}
-    h1={null
-    }
     subheading="Expert speech coaching for UN delegates and diplomats who have the floor — and need to own it."
     intro="You have the floor. The world is listening. Multilateral communication demands precision, authority and the ability to speak across languages, cultures and political contexts simultaneously. Whether addressing the General Assembly, presenting in the Security Council or chairing a committee, the stakes demand the highest standard of delivery."
     problems={[

@@ -10,8 +10,6 @@ const Professionals = () => (
       "Lost the Promotion.",
       "Now you're here.",
     ]}
-    h1={null
-    }
     subheading="Communication coaching for professionals who are good at their job and want their delivery to match."
     intro="It came up in your review. Or you felt it in the meeting. You know your subject but something isn't landing the way it should. Across law, finance, consulting, medicine and technology, the ability to communicate with authority is the differentiator between careers that plateau and careers that accelerate."
     problems={[
