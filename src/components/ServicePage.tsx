@@ -109,13 +109,13 @@ const ServicePage = ({
           <motion.h2 {...fadeUp} className="font-display text-3xl md:text-5xl font-bold mb-12 text-center">
             {problemsHeading}
           </motion.h2>
-          <ul className="grid md:grid-cols-2 gap-5">
+          <ul className="grid md:grid-cols-2 gap-6">
             {problems.map((p, i) => (
               <motion.li
                 key={i}
                 {...fadeUp}
                 transition={{ duration: 0.5, delay: i * 0.05, ease: "easeOut" }}
-                className="flex gap-4 p-5 rounded-lg border border-border bg-background/40"
+                className="flex gap-4 p-8 rounded-xl border border-border bg-background/40"
               >
                 <span className="text-primary font-display text-lg leading-none mt-1">—</span>
                 <span className="font-body text-foreground/90">{p}</span>
