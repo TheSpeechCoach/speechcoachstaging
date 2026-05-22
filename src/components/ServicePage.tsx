@@ -131,7 +131,7 @@ const ServicePage = ({
           <motion.h2 {...fadeUp} className="font-display text-3xl md:text-5xl font-bold mb-12 text-center">
             {workOnHeading}
           </motion.h2>
-          <ul className="grid md:grid-cols-2 gap-5">
+          <ul className="grid md:grid-cols-2 gap-6">
             {workOn.map((w, i) => (
               <motion.li
                 key={i}
