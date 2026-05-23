@@ -114,16 +114,6 @@ const SiteNav = () => {
           <span className="font-bold">.Coach</span>
         </Link>
         <div className="hidden lg:flex items-center gap-6 font-body text-sm">
-          <NavLink
-            to="/"
-            end
-            className={({ isActive }) =>
-              `transition-colors ${isActive ? "text-foreground" : "text-muted-foreground hover:text-foreground"}`
-            }
-          >
-            Home
-          </NavLink>
-
           <div className="relative">
             <button
               onMouseEnter={openServices}
@@ -173,6 +163,11 @@ const SiteNav = () => {
             </AnimatePresence>
           </div>
 
+          <a href="/#about" className="text-muted-foreground hover:text-foreground transition-colors">About</a>
+          <a href="/#methodology" className="text-muted-foreground hover:text-foreground transition-colors">Methodology</a>
+          <a href="/#cpd" className="text-muted-foreground hover:text-foreground transition-colors">CPD</a>
+          <a href="/#faq" className="text-muted-foreground hover:text-foreground transition-colors">FAQ</a>
+
           <NavLink
             to="/pricing"
             className={({ isActive }) =>
@@ -185,6 +180,14 @@ const SiteNav = () => {
           <a href="tel:+442071646769" className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors">
             <Phone className="w-3.5 h-3.5" />
             +44 (0)207 164 6769
+          </a>
+          <a
+            href="https://www.thespeech.coach/book-now/"
+            target="_blank"
+            rel="noopener"
+            className="border border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all px-5 py-2 rounded-full text-sm"
+          >
+            Book a Consultation
           </a>
         </div>
         <button
@@ -204,10 +207,6 @@ const SiteNav = () => {
             className="lg:hidden bg-background border-b border-border overflow-hidden"
           >
             <div className="flex flex-col gap-4 p-6 font-body max-h-[80vh] overflow-y-auto">
-              <Link to="/" onClick={closeAll} className="text-muted-foreground hover:text-foreground">
-                Home
-              </Link>
-
               <div>
                 <button
                   className="flex items-center justify-between w-full text-muted-foreground hover:text-foreground"
