@@ -253,12 +253,25 @@ const SiteNav = () => {
                 </AnimatePresence>
               </div>
 
+              <a href="/#about" onClick={closeAll} className="text-muted-foreground hover:text-foreground">About</a>
+              <a href="/#methodology" onClick={closeAll} className="text-muted-foreground hover:text-foreground">Methodology</a>
+              <a href="/#cpd" onClick={closeAll} className="text-muted-foreground hover:text-foreground">CPD</a>
+              <a href="/#faq" onClick={closeAll} className="text-muted-foreground hover:text-foreground">FAQ</a>
               <Link to="/pricing" onClick={closeAll} className="text-muted-foreground hover:text-foreground">
                 Pricing
               </Link>
               <a href="tel:+442071646769" className="text-muted-foreground hover:text-foreground flex items-center gap-2">
                 <Phone className="w-3.5 h-3.5" />
                 +44 (0)207 164 6769
+              </a>
+              <a
+                href="https://www.thespeech.coach/book-now/"
+                target="_blank"
+                rel="noopener"
+                onClick={closeAll}
+                className="border border-primary text-primary px-5 py-2 rounded-full text-sm text-center"
+              >
+                Book a Consultation
               </a>
             </div>
           </motion.div>
