@@ -4,14 +4,12 @@ const PitchCoaching = () => (
   <ServicePage
     metaTitle="Pitch Coach | Investor Pitch Coaching | The Speech Coach"
     metaDescription="Expert pitch coaching for founders, entrepreneurs and sales leaders. Investor pitches, Demo Day, Dragons' Den and business pitch preparation."
-    h1={
-      <>
-        Lost the Opening. Lost the Ask.{" "}
-        <span className="italic text-gradient-gold">Lost the Deal.</span>
-      <br />
-      <span className="italic text-gradient-gold">Now you're here.</span>
-      </>
-    }
+    heroLines={[
+      "Lost the Opening.",
+      "Lost the Ask.",
+      "Lost the Deal.",
+      "Now you're here.",
+    ]}
     subheading="Pitch coaching that gets you investment-ready — in delivery, structure and conviction."
     intro="The pitch is not the deck. The deck is the document — the pitch is the performance. Every investor has sat through hundreds of technically correct pitches. What they remember is the founder who made them believe. This coaching turns a good pitch into a compelling one."
     problems={[

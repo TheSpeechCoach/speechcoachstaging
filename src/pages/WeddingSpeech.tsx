@@ -4,14 +4,12 @@ const WeddingSpeech = () => (
   <ServicePage
     metaTitle="Wedding Speech Coach | Best Man & Father of Bride Speech Coaching | The Speech Coach"
     metaDescription="Expert wedding speech coaching for best men, fathers of the bride and grooms. Write it. Rehearse it. Deliver it perfectly."
-    h1={
-      <>
-        Lost the Speech. Lost the Plot.{" "}
-        <span className="italic text-gradient-gold">Lost for Words.</span>
-      <br />
-      <span className="italic text-gradient-gold">Now you're here.</span>
-      </>
-    }
+    heroLines={[
+      "Lost the Speech.",
+      "Lost the Plot.",
+      "Lost for Words.",
+      "Now you're here.",
+    ]}
     subheading="Wedding speech coaching so the most important speech of the day is delivered exactly the way it deserves to be."
     intro="You said yes to the speech before you understood what that meant. Now the day is coming and the blank page is the problem. A great wedding speech is personal, warm, structured and well-delivered. It's not about being funny — it's about landing the moment. This coaching helps you write it, rehearse it and own it."
     problems={[

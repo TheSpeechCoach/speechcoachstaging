@@ -4,14 +4,12 @@ const InterviewCoaching = () => (
   <ServicePage
     metaTitle="Interview Coaching London | Job Interview Speech Coach | The Speech Coach"
     metaDescription="Expert interview coaching for professionals, executives and graduates. Prepare, practise and perform at your best in job interviews and promotion panels."
-    h1={
-      <>
-        Lost for Words. Lost the Thread.{" "}
-        <span className="italic text-gradient-gold">Lost the Job.</span>
-      <br />
-      <span className="italic text-gradient-gold">Now you're here.</span>
-      </>
-    }
+    heroLines={[
+      "Lost for Words.",
+      "Lost the Thread.",
+      "Lost the Job.",
+      "Now you're here.",
+    ]}
     subheading="Interview coaching that takes you from prepared to compelling."
     intro="You know you can do the job. The interview is the proof of concept — and proof of concept is a communication challenge. Most candidates prepare the content. Few prepare the delivery. Interview coaching works on both: what you say, how you say it, and how you own the room when it counts."
     problems={[

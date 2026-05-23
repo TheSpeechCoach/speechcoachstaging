@@ -4,14 +4,12 @@ const VoiceCoaching = () => (
   <ServicePage
     metaTitle="Voice Coach London | Professional Voice Coaching | The Speech Coach"
     metaDescription="Professional voice coaching for executives, presenters and professionals. Develop resonance, authority and vocal range. Expert voice coach in London and online."
-    h1={
-      <>
-        Lost the Volume. Lost the Resonance.{" "}
-        <span className="italic text-gradient-gold">Lost the Room.</span>
-      <br />
-      <span className="italic text-gradient-gold">Now you're here.</span>
-      </>
-    }
+    heroLines={[
+      "Lost the Volume.",
+      "Lost the Resonance.",
+      "Lost the Room.",
+      "Now you're here.",
+    ]}
     subheading="Professional voice coaching to develop a voice that commands attention — in any room, at any volume."
     intro="Your voice is your primary professional instrument. Thin, quiet, rushed or monotone delivery undermines the quality of the ideas behind it. Voice coaching isn't about sounding different — it's about sounding like yourself, at your best. Resonant, authoritative, controlled and heard."
     problems={[

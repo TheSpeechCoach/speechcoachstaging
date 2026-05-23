@@ -4,14 +4,12 @@ const Negotiations = () => (
   <ServicePage
     metaTitle="Negotiation Communication Coaching | Speech Coach for Negotiations | The Speech Coach"
     metaDescription="Communication coaching for high-stakes negotiations. Develop verbal authority, persuasion and presence in commercial, legal and executive negotiations."
-    h1={
-      <>
-        Lost the Advantage. Lost the Argument.{" "}
-        <span className="italic text-gradient-gold">Lost the Deal.</span>
-      <br />
-      <span className="italic text-gradient-gold">Now you're here.</span>
-      </>
-    }
+    heroLines={[
+      "Lost the Advantage.",
+      "Lost the Argument.",
+      "Lost the Deal.",
+      "Now you're here.",
+    ]}
     subheading="Communication coaching for high-stakes negotiations — where how you say it determines what you get."
     intro="Negotiation is a communication performance. The person who controls the room, the language, the pace and the silence controls the outcome. Whether you're negotiating commercial contracts, M&A transactions, employment terms or international agreements, your communication is your leverage."
     problems={[
