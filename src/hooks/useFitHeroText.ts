@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, RefObject } from "react";
+import { useLayoutEffect, useRef, useState, RefObject } from "react";
 
 interface Options { maxPx?: number; minPx?: number; deps?: unknown[]; }
 
@@ -11,7 +11,7 @@ export function useFitHeroText<T extends HTMLElement>(
   const hasFitOnceRef = useRef(false);
   const lastAppliedRef = useRef<number | null>(null);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const node = ref.current;
     if (!node) return;
     hasFitOnceRef.current = false;
@@ -36,8 +36,6 @@ export function useFitHeroText<T extends HTMLElement>(
         return w;
       };
 
-      const prevInline = el.style.fontSize;
-
       // Always start at maxPx and decrement until the widest line truly fits.
       // Never trust an analytical estimate or the cap — always verify against the rendered width.
       let target = maxPx;
@@ -45,22 +43,24 @@ export function useFitHeroText<T extends HTMLElement>(
       void el.offsetWidth;
       let measured = measureWidest();
       let guard = 0;
-      while (measured > available + 1 && target > minPx && guard < 400) {
+      while (measured > available - 2 && target > minPx && guard < 400) {
         target -= 1;
         el.style.fontSize = `${target}px`;
         void el.offsetWidth;
         measured = measureWidest();
         guard += 1;
       }
-      el.style.fontSize = prevInline;
 
       if (lastAppliedRef.current === target) {
         hasFitOnceRef.current = true;
+        el.style.fontSize = `${target}px`;
+        el.setAttribute("data-fit", String(target));
         return;
       }
 
       hasFitOnceRef.current = true;
       lastAppliedRef.current = target;
+      el.style.fontSize = `${target}px`;
       el.setAttribute("data-fit", String(target));
       setFontSize((cur) => (cur === `${target}px` ? cur : `${target}px`));
     };
