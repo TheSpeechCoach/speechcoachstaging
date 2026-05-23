@@ -110,7 +110,9 @@ const Pricing = () => (
           Get in touch — we're happy to help. Book a consultation today.
         </motion.p>
         <a
-          href="mailto:info@thespeech.coach"
+          href="https://www.thespeech.coach/book-now/"
+          target="_blank"
+          rel="noopener"
           className="inline-flex items-center gap-2 bg-primary text-primary-foreground hover:bg-primary/90 transition-all px-8 py-4 rounded-full font-body text-sm font-medium glow-gold"
         >
           Book a Consultation

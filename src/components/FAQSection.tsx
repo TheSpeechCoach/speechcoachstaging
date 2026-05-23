@@ -63,7 +63,9 @@ const FAQSection = () => {
           className="flex justify-center mb-8 md:mb-10"
         >
           <a
-            href="#cta"
+            href="https://www.thespeech.coach/book-now/"
+            target="_blank"
+            rel="noopener"
             className="inline-block bg-primary text-primary-foreground hover:bg-primary/90 transition-all px-8 py-3 rounded-full font-body text-sm tracking-wide glow-gold"
           >
             Book a Consultation

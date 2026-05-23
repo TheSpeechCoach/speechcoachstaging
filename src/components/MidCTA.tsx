@@ -7,7 +7,7 @@ type Props = {
   ctaHref?: string;
 };
 
-const MidCTA = ({ heading, body, ctaLabel = "Let's talk...", ctaHref = "#cta" }: Props) => {
+const MidCTA = ({ heading, body, ctaLabel = "Let's talk...", ctaHref = "https://www.thespeech.coach/book-now/" }: Props) => {
   return (
     <section className="pt-8 md:pt-10 pb-16 md:pb-20">
       <div className="container mx-auto px-6 max-w-3xl text-center">
@@ -33,6 +33,8 @@ const MidCTA = ({ heading, body, ctaLabel = "Let's talk...", ctaHref = "#cta" }:
         </motion.p>
         <motion.a
           href={ctaHref}
+          target={ctaHref.startsWith("http") ? "_blank" : undefined}
+          rel={ctaHref.startsWith("http") ? "noopener" : undefined}
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}

@@ -120,7 +120,9 @@ const ServicePage = ({
           <motion.a
             {...fadeUp}
             transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
-            href="mailto:info@thespeech.coach"
+            href="https://www.thespeech.coach/book-now/"
+            target="_blank"
+            rel="noopener"
             className="inline-flex items-center gap-2 bg-primary text-primary-foreground hover:bg-primary/90 transition-all px-8 py-4 rounded-full font-body text-sm font-medium glow-gold"
           >
             {ctaLabel}
@@ -230,7 +232,9 @@ const ServicePage = ({
           </motion.p>
           <motion.a
             {...fadeUp}
-            href="mailto:info@thespeech.coach"
+            href="https://www.thespeech.coach/book-now/"
+            target="_blank"
+            rel="noopener"
             className="inline-flex items-center gap-2 bg-primary text-primary-foreground hover:bg-primary/90 transition-all px-8 py-4 rounded-full font-body text-sm font-medium glow-gold"
           >
             {ctaLabel}

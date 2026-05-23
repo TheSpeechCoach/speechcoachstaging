@@ -12,7 +12,7 @@ const ChildrensCoaching = () => (
     subheading="Bespoke 1:1 speech coaching, elocution lessons and communication confidence building for children and teenagers aged 8–17."
     intro="You know your child has so much to say — but something is getting in the way. Maybe they speak too fast. Maybe they mumble. Maybe they're bright and capable but fall apart when asked to speak in front of others. Whatever it is, it's coachable — and the earlier you start, the greater the benefit."
     postIntro={
-      <section className="py-8 px-6 border-t border-border">
+      <section className="py-16 md:py-20 px-6 border-t border-border">
         <div className="container mx-auto max-w-3xl">
           <div className="space-y-4">
             <p className="font-body text-lg text-muted-foreground leading-relaxed">
