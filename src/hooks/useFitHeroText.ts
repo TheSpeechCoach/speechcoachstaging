@@ -27,8 +27,11 @@ export function useFitHeroText<T extends HTMLElement>(
       const parentInlinePadding = parentStyles
         ? parseFloat(parentStyles.paddingLeft || "0") + parseFloat(parentStyles.paddingRight || "0")
         : 0;
-      // Use the actual H1 content box when available; container utilities can add horizontal padding.
-      const available = el.clientWidth || Math.max(0, (parent?.clientWidth || 0) - parentInlinePadding);
+      // IMPORTANT: do NOT trust el.clientWidth — the H1 uses flex-col + items-start with
+      // w-max children, so its own clientWidth grows to the widest child and the fit loop
+      // would never iterate. Always measure available width from the parent's content box.
+      const parentClient = parent?.clientWidth ?? 0;
+      const available = Math.max(0, parentClient - parentInlinePadding);
       if (!available || available < 120) return;
 
       const measureWidest = () => {

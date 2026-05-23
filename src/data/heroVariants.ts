@@ -1206,8 +1206,8 @@ export const heroVariants: HeroVariant[] = [
     slug: "alphabetti-lost",
     category: "Topic",
     title: "Speaking Anxiety & Nerves",
-    threeLine: ["You find it hard to breathe.", "Your palms get sweaty.", "Every time you speak is like Alphabetti-Spaghetti."],
-    fourLine: ["You find it hard to breathe.", "Your palms get sweaty.", "Every time you speak is like Alphabetti-Spaghetti."] as unknown as [string, string, string, string],
+    threeLine: ["You find it hard to breathe.", "Your palms get sweaty.", "Every time you speak is like Alphabetti-Spaghetti.", "Now you're here."] as unknown as [string, string, string],
+    fourLine: ["You find it hard to breathe.", "Your palms get sweaty.", "Every time you speak is like Alphabetti-Spaghetti.", "Now you're here."],
     threeLineSubheading: "Specialist coaching for the physical reality of speaking nerves — breath, body and the calm beneath the words.",
     fourLineSubheading: "Specialist coaching for the physical reality of speaking nerves — breath, body and the calm beneath the words.",
     metaTitle: "Speaking Anxiety & Nerves Coaching | The Speech Coach",
@@ -1236,7 +1236,6 @@ export const heroVariants: HeroVariant[] = [
     closingHeading: "Speak with the calm version of yourself.",
     closingCopy: "Specialist 1:1 coaching for speaking anxiety and nerves, in London and online. Initial consultation within 48 hours.",
     ctaLabel: "Book a Consultation",
-    appendNowHere: false,
   },
 ];
 
