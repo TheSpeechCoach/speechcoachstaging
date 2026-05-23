@@ -4,14 +4,12 @@ const KeynoteConference = () => (
   <ServicePage
     metaTitle="Keynote Speaker Coach | Conference Presentation Coaching | The Speech Coach"
     metaDescription="Expert keynote and conference speaker coaching. TEDx preparation, opening keynotes, panel sessions and conference presentations. London and online."
-    h1={
-      <>
-        Lost the Opening. Lost the Thread.{" "}
-        <span className="italic text-gradient-gold">Lost the Room.</span>
-      <br />
-      <span className="italic text-gradient-gold">Now you're here.</span>
-      </>
-    }
+    heroLines={[
+      "Lost the Opening.",
+      "Lost the Thread.",
+      "Lost the Room.",
+      "Now you're here.",
+    ]}
     subheading="Expert coaching for keynote speakers and conference presenters who need to make every minute count."
     intro="A keynote is not a presentation. It's a performance. The preparation, the structure, the delivery, the opening, the close — every element has to earn its place. Whether it's a TEDx talk, an industry conference, a company event or an international summit, the standard is the same: the room has to leave changed."
     problems={[
