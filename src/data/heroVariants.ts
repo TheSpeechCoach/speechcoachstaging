@@ -1237,7 +1237,6 @@ export const heroVariants: HeroVariant[] = [
     closingCopy: "Specialist 1:1 coaching for speaking anxiety and nerves, in London and online. Initial consultation within 48 hours.",
     ctaLabel: "Book a Consultation",
   },
-  },
 ];
 
 export const getHeroVariant = (slug: string): HeroVariant | undefined => {
