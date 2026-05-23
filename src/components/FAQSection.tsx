@@ -35,7 +35,7 @@ const faqs = [
 
 const FAQSection = () => {
   return (
-    <section id="faq" className="py-20 md:py-28 bg-card">
+    <section id="faq" className="py-16 md:py-20 bg-card">
       <div className="container mx-auto px-6 max-w-3xl">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
@@ -60,7 +60,7 @@ const FAQSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.15 }}
-          className="flex justify-center mb-12"
+          className="flex justify-center mb-8 md:mb-10"
         >
           <a
             href="#cta"

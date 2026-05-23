@@ -94,7 +94,7 @@ const ServicePage = ({
       <SiteNav />
 
       {/* Hero */}
-      <section className="relative pt-40 pb-24 px-6 overflow-hidden">
+      <section className="relative pt-28 md:pt-32 pb-16 md:pb-20 px-6 overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[700px] h-[700px] rounded-full bg-primary/10 blur-3xl" />
         </div>
@@ -131,7 +131,7 @@ const ServicePage = ({
 
 
       {/* Intro */}
-      <section className="py-20 md:py-28 px-6 border-t border-border">
+      <section className="py-16 md:py-20 px-6 border-t border-border">
         <div className="container mx-auto max-w-3xl">
           <motion.p {...fadeUp} className="font-body text-lg text-muted-foreground leading-relaxed">
             {intro}
@@ -142,9 +142,9 @@ const ServicePage = ({
       {postIntro}
 
       {/* Problems */}
-      <section className="py-20 md:py-28 px-6 bg-card/40 border-y border-border">
+      <section className="py-16 md:py-20 px-6 bg-card/40 border-y border-border">
         <div className="container mx-auto max-w-4xl">
-          <motion.h2 {...fadeUp} className="font-display text-3xl md:text-5xl font-bold mb-12 text-center">
+          <motion.h2 {...fadeUp} className="font-display text-3xl md:text-5xl font-bold mb-8 md:mb-10 text-center">
             {problemsHeading}
           </motion.h2>
           <ul className="grid md:grid-cols-2 gap-6">
@@ -153,7 +153,7 @@ const ServicePage = ({
                 key={i}
                 {...fadeUp}
                 transition={{ duration: 0.5, delay: i * 0.05, ease: "easeOut" }}
-                className="flex gap-4 p-8 rounded-xl border border-border bg-background/40"
+                className="flex gap-4 p-6 md:p-8 rounded-xl border border-border bg-background/40"
               >
                 <span className="text-primary font-display text-lg leading-none mt-1">—</span>
                 <span className="font-body text-foreground/90">{p}</span>
@@ -164,9 +164,9 @@ const ServicePage = ({
       </section>
 
       {/* What we work on */}
-      <section className="py-20 md:py-28 px-6">
+      <section className="py-16 md:py-20 px-6">
         <div className="container mx-auto max-w-4xl">
-          <motion.h2 {...fadeUp} className="font-display text-3xl md:text-5xl font-bold mb-12 text-center">
+          <motion.h2 {...fadeUp} className="font-display text-3xl md:text-5xl font-bold mb-8 md:mb-10 text-center">
             {workOnHeading}
           </motion.h2>
           <ul className="grid md:grid-cols-2 gap-6">
@@ -187,7 +187,7 @@ const ServicePage = ({
 
       {/* Extra blocks */}
       {extraBlocks.map((block, i) => (
-        <section key={i} className="py-20 md:py-28 px-6 border-t border-border">
+        <section key={i} className="py-16 md:py-20 px-6 border-t border-border">
           <div className="container mx-auto max-w-4xl">
             <motion.h2 {...fadeUp} className="font-display text-2xl md:text-4xl font-bold mb-6">
               {block.heading}
@@ -217,7 +217,7 @@ const ServicePage = ({
       ))}
 
       {/* Closing CTA */}
-      <section className="py-20 md:py-28 px-6 border-t border-border">
+      <section className="py-16 md:py-20 px-6 border-t border-border">
         <div className="container mx-auto max-w-3xl text-center">
           <motion.h2
             {...fadeUp}

@@ -23,7 +23,7 @@ const courses = [
 
 const CPDSection = () => {
   return (
-    <section id="cpd" className="py-20 md:py-28">
+    <section id="cpd" className="py-16 md:py-20">
       <div className="container mx-auto px-6">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
@@ -39,12 +39,12 @@ const CPDSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="font-body text-muted-foreground max-w-xl mb-16"
+          className="font-body text-muted-foreground max-w-xl mb-8 md:mb-10"
         >
           All courses meet globally recognised standards for professional development, structured to deliver relevant and transformative measurable outcomes.
         </motion.p>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-6">
           {courses.map((course, i) => (
             <motion.div
               key={i}
@@ -52,7 +52,7 @@ const CPDSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.12 }}
-              className="bg-card border border-border rounded-lg p-8 flex flex-col"
+              className="bg-card border border-border rounded-lg p-6 md:p-8 flex flex-col"
             >
               <p className="font-body text-xs uppercase tracking-wider text-primary mb-2">{course.subtitle}</p>
               <h3 className="font-display text-xl font-semibold mb-3">{course.title}</h3>

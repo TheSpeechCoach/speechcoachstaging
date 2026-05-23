@@ -21,7 +21,7 @@ const painPoints = [
 
 const PainPoints = () => {
   return (
-    <section id="about" className="pt-20 md:pt-28">
+    <section id="about" className="pt-16 md:pt-20">
       <div className="container mx-auto px-6">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
@@ -34,7 +34,7 @@ const PainPoints = () => {
           <span className="font-bold italic text-gradient-gold">sound familiar?</span>
         </motion.h2>
 
-        <div className="grid md:grid-cols-2 gap-6 mt-12">
+        <div className="grid md:grid-cols-2 gap-6 mt-8">
           {painPoints.map((point, i) => (
             <motion.div
               key={i}
@@ -42,7 +42,7 @@ const PainPoints = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="bg-card border border-border rounded-xl p-8 hover:border-primary/30 transition-colors"
+              className="bg-card border border-border rounded-xl p-6 md:p-8 hover:border-primary/30 transition-colors"
             >
               <p className="font-body text-lg">
                 <span className="font-semibold text-foreground">{point.bold}</span>{" "}

@@ -44,7 +44,7 @@ const skillsList = [
 
 const Services = () => {
   return (
-    <section id="services" className="py-20 md:py-28">
+    <section id="services" className="py-16 md:py-20">
       <div className="container mx-auto px-6">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
@@ -60,7 +60,7 @@ const Services = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="font-body text-muted-foreground max-w-xl mb-16"
+          className="font-body text-muted-foreground max-w-xl mb-8 md:mb-10"
         >
           Every engagement is bespoke. Based in London and working with clients worldwide, we offer private sessions, group workshops, and specialist programmes — delivered online or in person.
         </motion.p>
@@ -90,7 +90,7 @@ const Services = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="mt-16"
+          className="mt-8"
         >
           <h3 className="font-display text-3xl md:text-4xl mb-8">
             Areas of <span className="italic text-gradient-gold">expertise</span>

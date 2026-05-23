@@ -73,7 +73,7 @@ const LostHero = () => {
           <div className="absolute bottom-0 -left-40 w-[500px] h-[500px] rounded-full bg-primary/5 blur-[120px]" />
         </div>
 
-        <div className="container relative z-10 mx-auto px-6 pt-32 pb-20">
+        <div className="container relative z-10 mx-auto px-6 pt-28 md:pt-32 pb-16 md:pb-20">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
@@ -137,7 +137,7 @@ const LostHero = () => {
       </section>
 
       {/* Intro */}
-      <section className="py-20 md:py-28 px-6 border-t border-border">
+      <section className="py-16 md:py-20 px-6 border-t border-border">
         <div className="container mx-auto max-w-3xl">
           {entry.introExtended ? (
             entry.introExtended.split(/\n\n+/).map((para, i) => (
@@ -160,7 +160,7 @@ const LostHero = () => {
 
       {/* Why this matters */}
       {entry.whyMatters && (
-        <section className="py-20 md:py-28 px-6 bg-card/40 border-y border-border">
+        <section className="py-16 md:py-20 px-6 bg-card/40 border-y border-border">
           <div className="container mx-auto max-w-3xl">
             <motion.h2
               {...fadeUp}
@@ -183,9 +183,9 @@ const LostHero = () => {
       )}
 
       {/* Problems */}
-      <section className="py-20 md:py-28 px-6">
+      <section className="py-16 md:py-20 px-6">
         <div className="container mx-auto max-w-4xl">
-          <motion.h2 {...fadeUp} className="font-display text-3xl md:text-5xl font-bold mb-12">
+          <motion.h2 {...fadeUp} className="font-display text-3xl md:text-5xl font-bold mb-8 md:mb-10">
             Does this <span className="italic text-gradient-gold">sound familiar?</span>
           </motion.h2>
           <ul className="grid md:grid-cols-2 gap-6">
@@ -194,7 +194,7 @@ const LostHero = () => {
                 key={i}
                 {...fadeUp}
                 transition={{ duration: 0.5, delay: i * 0.04, ease: "easeOut" }}
-                className="flex gap-4 p-8 rounded-xl border border-border bg-card/40"
+                className="flex gap-4 p-6 md:p-8 rounded-xl border border-border bg-card/40"
               >
                 <span className="text-primary font-display text-lg leading-none mt-1">—</span>
                 <span className="font-body text-foreground/90">{p}</span>
@@ -206,7 +206,7 @@ const LostHero = () => {
 
       {/* The approach */}
       {entry.approach && (
-        <section className="py-20 md:py-28 px-6 bg-card/40 border-y border-border">
+        <section className="py-16 md:py-20 px-6 bg-card/40 border-y border-border">
           <div className="container mx-auto max-w-3xl">
             <motion.h2 {...fadeUp} className="font-display text-3xl md:text-5xl font-bold mb-10">
               The <span className="italic text-gradient-gold">approach</span>
@@ -226,9 +226,9 @@ const LostHero = () => {
       )}
 
       {/* What we work on */}
-      <section className="py-20 md:py-28 px-6">
+      <section className="py-16 md:py-20 px-6">
         <div className="container mx-auto max-w-4xl">
-          <motion.h2 {...fadeUp} className="font-display text-3xl md:text-5xl font-bold mb-12">
+          <motion.h2 {...fadeUp} className="font-display text-3xl md:text-5xl font-bold mb-8 md:mb-10">
             What we <span className="italic text-gradient-gold">work on</span>
           </motion.h2>
           <ul className="grid md:grid-cols-2 gap-6">
@@ -249,9 +249,9 @@ const LostHero = () => {
 
       {/* Outcomes */}
       {entry.outcomes && entry.outcomes.length > 0 && (
-        <section className="py-20 md:py-28 px-6 bg-card/40 border-y border-border">
+        <section className="py-16 md:py-20 px-6 bg-card/40 border-y border-border">
           <div className="container mx-auto max-w-4xl">
-            <motion.h2 {...fadeUp} className="font-display text-3xl md:text-5xl font-bold mb-12">
+            <motion.h2 {...fadeUp} className="font-display text-3xl md:text-5xl font-bold mb-8 md:mb-10">
               What <span className="italic text-gradient-gold">changes</span>
             </motion.h2>
             <ul className="grid md:grid-cols-2 gap-6">
@@ -273,9 +273,9 @@ const LostHero = () => {
 
       {/* Formats */}
       {entry.formats && entry.formats.length > 0 && (
-        <section className="py-20 md:py-28 px-6">
+        <section className="py-16 md:py-20 px-6">
           <div className="container mx-auto max-w-5xl">
-            <motion.h2 {...fadeUp} className="font-display text-3xl md:text-5xl font-bold mb-12">
+            <motion.h2 {...fadeUp} className="font-display text-3xl md:text-5xl font-bold mb-8 md:mb-10">
               How we <span className="italic text-gradient-gold">work</span>
             </motion.h2>
             <div className="grid md:grid-cols-3 gap-6">
@@ -284,7 +284,7 @@ const LostHero = () => {
                   key={i}
                   {...fadeUp}
                   transition={{ duration: 0.5, delay: i * 0.08, ease: "easeOut" }}
-                  className="p-8 rounded-xl border border-border bg-card/40 h-full"
+                  className="p-6 md:p-8 rounded-xl border border-border bg-card/40 h-full"
                 >
                   <h3 className="font-display text-xl mb-3 text-foreground">{f.name}</h3>
                   <p className="font-body text-muted-foreground leading-relaxed">{f.description}</p>
@@ -297,7 +297,7 @@ const LostHero = () => {
 
       {/* Case snapshot */}
       {entry.caseSnapshot && (
-        <section className="py-20 md:py-28 px-6 bg-card/40 border-y border-border">
+        <section className="py-16 md:py-20 px-6 bg-card/40 border-y border-border">
           <div className="container mx-auto max-w-3xl">
             <motion.h2 {...fadeUp} className="font-display text-3xl md:text-5xl font-bold mb-10">
               In <span className="italic text-gradient-gold">practice</span>
@@ -314,7 +314,7 @@ const LostHero = () => {
 
       {/* FAQs */}
       {entry.faqs && entry.faqs.length > 0 && (
-        <section className="py-20 md:py-28 px-6">
+        <section className="py-16 md:py-20 px-6">
           <div className="container mx-auto max-w-3xl">
             <motion.h2 {...fadeUp} className="font-display text-3xl md:text-5xl font-bold mb-10">
               Common <span className="italic text-gradient-gold">questions</span>
@@ -342,7 +342,7 @@ const LostHero = () => {
       )}
 
       {/* Closing CTA */}
-      <section id="cta" className="py-20 md:py-28 px-6 border-t border-border">
+      <section id="cta" className="py-16 md:py-20 px-6 border-t border-border">
         <div className="container mx-auto max-w-3xl text-center">
           <motion.h2
             {...fadeUp}

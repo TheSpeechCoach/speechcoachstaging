@@ -31,7 +31,7 @@ const audiences = [
 
 const WhoWeWorkWith = () => {
   return (
-    <section id="who-we-work-with" className="py-20 md:py-28 border-t border-border">
+    <section id="who-we-work-with" className="py-16 md:py-20 border-t border-border">
       <div className="container mx-auto px-6">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
@@ -47,7 +47,7 @@ const WhoWeWorkWith = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="font-body text-muted-foreground max-w-xl mb-16"
+          className="font-body text-muted-foreground max-w-xl mb-8 md:mb-10"
         >
           A snapshot of the people whose work depends on how they speak. The full picture spans dozens of professions and sectors.
         </motion.p>
@@ -71,7 +71,7 @@ const WhoWeWorkWith = () => {
           <div className="border-t border-border" />
         </div>
 
-        <div className="mt-12 text-center">
+        <div className="mt-8 text-center">
           <Link
             to="/who-we-work-with"
             className="inline-flex items-center gap-2 bg-primary text-primary-foreground hover:bg-primary/90 transition-all px-8 py-4 rounded-full font-body text-sm font-medium glow-gold"

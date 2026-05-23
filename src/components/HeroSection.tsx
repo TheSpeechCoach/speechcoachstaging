@@ -14,7 +14,7 @@ const HeroSection = () => {
         <div className="absolute bottom-0 -left-40 w-[500px] h-[500px] rounded-full bg-primary/5 blur-[120px]" />
       </div>
 
-      <div className="container relative z-10 mx-auto px-6 pt-32 pb-20">
+      <div className="container relative z-10 mx-auto px-6 pt-28 md:pt-32 pb-16 md:pb-20">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}

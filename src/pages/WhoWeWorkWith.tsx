@@ -39,7 +39,7 @@ const fadeUp = {
 };
 
 const Group = ({ title, items }: { title: string; items: Audience[] }) => (
-  <div className="mb-16">
+  <div className="mb-8 md:mb-10">
     <motion.h2 {...fadeUp} className="font-display text-2xl md:text-3xl font-bold mb-8">
       {title}
     </motion.h2>
@@ -52,7 +52,7 @@ const Group = ({ title, items }: { title: string; items: Audience[] }) => (
         >
           <Link
             to={a.href}
-            className="block p-8 rounded-xl border border-border bg-card/40 hover:border-primary/40 transition-colors h-full"
+            className="block p-6 md:p-8 rounded-xl border border-border bg-card/40 hover:border-primary/40 transition-colors h-full"
           >
             <h3 className="font-display text-lg md:text-xl font-semibold mb-2 flex items-center gap-2">
               {a.label}
@@ -78,7 +78,7 @@ const WhoWeWorkWithPage = () => (
 
     <SiteNav />
 
-    <section className="relative pt-40 pb-20 px-6 overflow-hidden">
+    <section className="relative pt-28 md:pt-32 pb-16 md:pb-20 px-6 overflow-hidden">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[700px] h-[700px] rounded-full bg-primary/10 blur-3xl" />
       </div>
@@ -92,7 +92,7 @@ const WhoWeWorkWithPage = () => (
       </div>
     </section>
 
-    <section className="py-20 md:py-28 px-6 border-t border-border">
+    <section className="py-16 md:py-20 px-6 border-t border-border">
       <div className="container mx-auto max-w-5xl">
         <Group title="By profession" items={byProfession} />
         <Group title="By sector" items={bySector} />
@@ -100,7 +100,7 @@ const WhoWeWorkWithPage = () => (
       </div>
     </section>
 
-    <section className="py-20 md:py-28 px-6 border-t border-border">
+    <section className="py-16 md:py-20 px-6 border-t border-border">
       <div className="container mx-auto max-w-3xl text-center">
         <motion.h2 {...fadeUp} className="font-display text-3xl md:text-5xl font-bold mb-6">
           Ready to <span className="italic text-gradient-gold">start the work?</span>
