@@ -4,14 +4,12 @@ const LeadershipCommunication = () => (
   <ServicePage
     metaTitle="Leadership Communication Coaching | Internal Communication for Leaders | The Speech Coach"
     metaDescription="Leadership communication coaching for executives and senior managers. Town halls, all-hands, culture communication and internal leadership speaking."
-    h1={
-      <>
-        Lost the Town Hall. Lost the Culture.{" "}
-        <span className="italic text-gradient-gold">Lost the Trust.</span>
-      <br />
-      <span className="italic text-gradient-gold">Now you're here.</span>
-      </>
-    }
+    heroLines={[
+      "Lost the Town Hall.",
+      "Lost the Culture.",
+      "Lost the Trust.",
+      "Now you're here.",
+    ]}
     subheading="Coaching for leaders whose communication needs to build culture — not just deliver information."
     intro="Leadership communication is different from public speaking. It's not about impressing an audience — it's about moving one. The best leaders don't just inform their organisations, they energise them. Whether it's a town hall, an all-hands, a difficult team conversation or a culture-building message, how you communicate shapes how people feel about working for you."
     problems={[
