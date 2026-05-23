@@ -39,7 +39,7 @@ const fadeUp = {
 };
 
 const Group = ({ title, items }: { title: string; items: Audience[] }) => (
-  <div className="mb-16">
+  <div className="mb-8 md:mb-10">
     <motion.h2 {...fadeUp} className="font-display text-2xl md:text-3xl font-bold mb-8">
       {title}
     </motion.h2>

@@ -27,7 +27,7 @@ const CredentialsSection = () => {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="font-display text-2xl md:text-3xl font-semibold text-center mb-12"
+          className="font-display text-2xl md:text-3xl font-semibold text-center mb-8 md:mb-10"
         >
           Trusted by
         </motion.h2>

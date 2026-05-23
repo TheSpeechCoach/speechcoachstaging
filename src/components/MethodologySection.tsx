@@ -36,7 +36,7 @@ const MethodologySection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="font-body text-muted-foreground max-w-xl mb-16"
+          className="font-body text-muted-foreground max-w-xl mb-8 md:mb-10"
         >
           An integrated and evidence-informed approach drawing on techniques from communication science, performance training, and clinical voice practice.
         </motion.p>

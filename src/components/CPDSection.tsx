@@ -39,7 +39,7 @@ const CPDSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="font-body text-muted-foreground max-w-xl mb-16"
+          className="font-body text-muted-foreground max-w-xl mb-8 md:mb-10"
         >
           All courses meet globally recognised standards for professional development, structured to deliver relevant and transformative measurable outcomes.
         </motion.p>

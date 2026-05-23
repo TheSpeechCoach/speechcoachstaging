@@ -60,7 +60,7 @@ const FAQSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.15 }}
-          className="flex justify-center mb-12"
+          className="flex justify-center mb-8 md:mb-10"
         >
           <a
             href="#cta"

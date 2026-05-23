@@ -34,7 +34,7 @@ const PainPoints = () => {
           <span className="font-bold italic text-gradient-gold">sound familiar?</span>
         </motion.h2>
 
-        <div className="grid md:grid-cols-2 gap-6 mt-12">
+        <div className="grid md:grid-cols-2 gap-6 mt-8">
           {painPoints.map((point, i) => (
             <motion.div
               key={i}

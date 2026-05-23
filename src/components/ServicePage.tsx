@@ -144,7 +144,7 @@ const ServicePage = ({
       {/* Problems */}
       <section className="py-16 md:py-20 px-6 bg-card/40 border-y border-border">
         <div className="container mx-auto max-w-4xl">
-          <motion.h2 {...fadeUp} className="font-display text-3xl md:text-5xl font-bold mb-12 text-center">
+          <motion.h2 {...fadeUp} className="font-display text-3xl md:text-5xl font-bold mb-8 md:mb-10 text-center">
             {problemsHeading}
           </motion.h2>
           <ul className="grid md:grid-cols-2 gap-6">
@@ -166,7 +166,7 @@ const ServicePage = ({
       {/* What we work on */}
       <section className="py-16 md:py-20 px-6">
         <div className="container mx-auto max-w-4xl">
-          <motion.h2 {...fadeUp} className="font-display text-3xl md:text-5xl font-bold mb-12 text-center">
+          <motion.h2 {...fadeUp} className="font-display text-3xl md:text-5xl font-bold mb-8 md:mb-10 text-center">
             {workOnHeading}
           </motion.h2>
           <ul className="grid md:grid-cols-2 gap-6">

@@ -17,7 +17,7 @@ const FitSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="font-display text-3xl md:text-4xl mb-12"
+          className="font-display text-3xl md:text-4xl mb-8 md:mb-10"
         >
           Do You{" "}
           <span className="italic text-gradient-gold">Have…?</span>
@@ -51,7 +51,7 @@ const FitSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="mt-12 text-center"
+          className="mt-8 text-center"
         >
           <p className="font-display text-xl mb-6 text-muted-foreground">If the answer is yes</p>
           <a

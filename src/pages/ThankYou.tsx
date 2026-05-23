@@ -30,11 +30,11 @@ const ThankYou = () => (
         >
           Thank You — <span className="italic text-gradient-gold">We'll Be in Touch Shortly.</span>
         </motion.h1>
-        <p className="font-body text-lg text-muted-foreground mb-12 max-w-2xl mx-auto">
+        <p className="font-body text-lg text-muted-foreground mb-8 md:mb-10 max-w-2xl mx-auto">
           Your message has been received. A member of The Speech Coach team will get back to you within
           24 hours. In the meantime, explore our services below.
         </p>
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 mb-12">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 mb-8 md:mb-10">
           {links.map((l) => (
             <Link
               key={l.to}
