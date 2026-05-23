@@ -23,29 +23,10 @@ export function useFitHeroText<T extends HTMLElement>(
       const el = ref.current;
       if (!el) return;
       const parent = el.parentElement;
-      const available = el.clientWidth || parent?.clientWidth || 0;
+      // Prefer parent.clientWidth — it reflects the real settled container.
+      const available = parent?.clientWidth || el.clientWidth || 0;
       if (!available || available < 120) return;
 
-      const currentPx = parseFloat(getComputedStyle(el).fontSize) || maxPx;
-      if (currentPx <= 0) return;
-
-      let widest = 0;
-      Array.from(el.children).forEach((c) => {
-        const w = (c as HTMLElement).getBoundingClientRect().width;
-        if (w > widest) widest = w;
-      });
-      if (widest <= 0) return;
-
-      const naturalWidthPerPx = widest / currentPx;
-      if (naturalWidthPerPx <= 0) return;
-
-      let target = Math.min(
-        maxPx,
-        Math.max(minPx, Math.floor(available / naturalWidthPerPx))
-      );
-
-      // Verify & iterate: apply size inline, force reflow, re-measure widest line.
-      // Decrement until every child line fits within available (1px tolerance) or we hit minPx.
       const measureWidest = () => {
         let w = 0;
         Array.from(el.children).forEach((c) => {
@@ -56,19 +37,21 @@ export function useFitHeroText<T extends HTMLElement>(
       };
 
       const prevInline = el.style.fontSize;
+
+      // Always start at maxPx and decrement until the widest line truly fits.
+      // Never trust an analytical estimate or the cap — always verify against the rendered width.
+      let target = maxPx;
       el.style.fontSize = `${target}px`;
-      // Force reflow before measuring.
       void el.offsetWidth;
       let measured = measureWidest();
       let guard = 0;
-      while (measured > available + 1 && target > minPx && guard < 200) {
+      while (measured > available + 1 && target > minPx && guard < 400) {
         target -= 1;
         el.style.fontSize = `${target}px`;
         void el.offsetWidth;
         measured = measureWidest();
         guard += 1;
       }
-      // Restore inline style; React state drives the final applied size.
       el.style.fontSize = prevInline;
 
       if (lastAppliedRef.current === target) {
@@ -114,13 +97,25 @@ export function useFitHeroText<T extends HTMLElement>(
     window.addEventListener("orientationchange", onResize);
 
     const fonts = (document as Document & { fonts?: { ready: Promise<unknown> } }).fonts;
-    if (fonts?.ready) fonts.ready.then(() => schedule()).catch(() => {});
+    const postFontTimers: number[] = [];
+    if (fonts?.ready) {
+      fonts.ready
+        .then(() => {
+          schedule();
+          // Re-fit after font swap settles — covers late layout reflows.
+          [50, 200, 500, 1000].forEach((d) =>
+            postFontTimers.push(window.setTimeout(() => schedule(), d))
+          );
+        })
+        .catch(() => {});
+    }
 
     return () => {
       window.removeEventListener("resize", onResize);
       window.removeEventListener("orientationchange", onResize);
       ro.disconnect();
       retryTimers.forEach((t) => window.clearTimeout(t));
+      postFontTimers.forEach((t) => window.clearTimeout(t));
       if (rafRef.current != null) cancelAnimationFrame(rafRef.current);
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
