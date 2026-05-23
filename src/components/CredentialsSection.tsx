@@ -20,7 +20,7 @@ const CredentialsSection = () => {
   // duplicate for seamless marquee
   const loop = [...logos, ...logos];
   return (
-    <section className="py-20 md:py-28 border-t border-border overflow-hidden">
+    <section className="py-16 md:py-20 border-t border-border overflow-hidden">
       <div className="container mx-auto px-6">
         <motion.h2
           initial={{ opacity: 0 }}

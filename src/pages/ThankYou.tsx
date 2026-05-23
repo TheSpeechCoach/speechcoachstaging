@@ -20,7 +20,7 @@ const ThankYou = () => (
       <meta name="robots" content="noindex" />
     </Helmet>
     <SiteNav />
-    <section className="flex-1 flex items-center justify-center px-6 pt-40 pb-20">
+    <section className="flex-1 flex items-center justify-center px-6 pt-28 md:pt-32 pb-16 md:pb-20">
       <div className="container mx-auto max-w-3xl text-center">
         <motion.h1
           initial={{ opacity: 0, y: 30 }}

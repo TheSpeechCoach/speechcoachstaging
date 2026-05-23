@@ -69,7 +69,7 @@ const Pricing = () => (
 
     <SiteNav />
 
-    <section className="relative pt-40 pb-20 px-6 overflow-hidden">
+    <section className="relative pt-28 md:pt-32 pb-16 md:pb-20 px-6 overflow-hidden">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[700px] h-[700px] rounded-full bg-primary/10 blur-3xl" />
       </div>
@@ -84,7 +84,7 @@ const Pricing = () => (
       </div>
     </section>
 
-    <section className="py-20 md:py-28 px-6 border-t border-border">
+    <section className="py-16 md:py-20 px-6 border-t border-border">
       <div className="container mx-auto max-w-3xl">
         <Accordion type="single" collapsible className="w-full">
           {faqs.map((f, i) => (
@@ -101,7 +101,7 @@ const Pricing = () => (
       </div>
     </section>
 
-    <section className="py-20 md:py-28 px-6 border-t border-border">
+    <section className="py-16 md:py-20 px-6 border-t border-border">
       <div className="container mx-auto max-w-3xl text-center">
         <motion.h2 {...fadeUp} className="font-display text-3xl md:text-5xl font-bold mb-6">
           Still have a <span className="italic text-gradient-gold">question?</span>

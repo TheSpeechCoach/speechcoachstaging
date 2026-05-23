@@ -3,7 +3,7 @@ import { Linkedin } from "lucide-react";
 
 const Testimonials = () => {
   return (
-    <section id="testimonials" className="py-20 md:py-28 bg-card">
+    <section id="testimonials" className="py-16 md:py-20 bg-card">
       <div className="container mx-auto px-6 text-center">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}

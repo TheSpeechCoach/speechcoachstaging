@@ -16,7 +16,7 @@ const PagePlaceholder = ({ name, title, description }: Props) => {
         {description && <meta name="description" content={description} />}
       </Helmet>
       <SiteNav />
-      <section className="flex-1 flex items-center justify-center px-6 pt-32 pb-20">
+      <section className="flex-1 flex items-center justify-center px-6 pt-28 md:pt-32 pb-16 md:pb-20">
         <div className="text-center">
           <h1 className="font-display text-4xl md:text-6xl font-bold mb-4">{name}</h1>
           <p className="font-body text-muted-foreground text-lg">Page coming soon</p>
