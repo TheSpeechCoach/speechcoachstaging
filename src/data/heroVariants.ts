@@ -1237,6 +1237,7 @@ export const heroVariants: HeroVariant[] = [
     closingCopy: "Specialist 1:1 coaching for speaking anxiety and nerves, in London and online. Initial consultation within 48 hours.",
     ctaLabel: "Book a Consultation",
     appendNowHere: false,
+    // NOTE: lines already end with "Now you're here." so appendNowHere stays false to avoid duplicating it.
   },
 ];
 
