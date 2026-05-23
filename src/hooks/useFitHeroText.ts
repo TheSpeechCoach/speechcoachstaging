@@ -115,6 +115,7 @@ export function useFitHeroText<T extends HTMLElement>(
       window.removeEventListener("orientationchange", onResize);
       ro.disconnect();
       retryTimers.forEach((t) => window.clearTimeout(t));
+      postFontTimers.forEach((t) => window.clearTimeout(t));
       if (rafRef.current != null) cancelAnimationFrame(rafRef.current);
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
