@@ -52,7 +52,7 @@ const Group = ({ title, items }: { title: string; items: Audience[] }) => (
         >
           <Link
             to={a.href}
-            className="block p-8 rounded-xl border border-border bg-card/40 hover:border-primary/40 transition-colors h-full"
+            className="block p-6 md:p-8 rounded-xl border border-border bg-card/40 hover:border-primary/40 transition-colors h-full"
           >
             <h3 className="font-display text-lg md:text-xl font-semibold mb-2 flex items-center gap-2">
               {a.label}

@@ -194,7 +194,7 @@ const LostHero = () => {
                 key={i}
                 {...fadeUp}
                 transition={{ duration: 0.5, delay: i * 0.04, ease: "easeOut" }}
-                className="flex gap-4 p-8 rounded-xl border border-border bg-card/40"
+                className="flex gap-4 p-6 md:p-8 rounded-xl border border-border bg-card/40"
               >
                 <span className="text-primary font-display text-lg leading-none mt-1">—</span>
                 <span className="font-body text-foreground/90">{p}</span>
@@ -284,7 +284,7 @@ const LostHero = () => {
                   key={i}
                   {...fadeUp}
                   transition={{ duration: 0.5, delay: i * 0.08, ease: "easeOut" }}
-                  className="p-8 rounded-xl border border-border bg-card/40 h-full"
+                  className="p-6 md:p-8 rounded-xl border border-border bg-card/40 h-full"
                 >
                   <h3 className="font-display text-xl mb-3 text-foreground">{f.name}</h3>
                   <p className="font-body text-muted-foreground leading-relaxed">{f.description}</p>
