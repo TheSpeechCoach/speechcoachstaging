@@ -124,7 +124,9 @@ const LostHero = () => {
             </motion.p>
 
             <motion.a
-              href="#cta"
+              href="https://www.thespeech.coach/book-now/"
+              target="_blank"
+              rel="noopener"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.5 }}
@@ -355,7 +357,9 @@ const LostHero = () => {
           </motion.p>
           <motion.a
             {...fadeUp}
-            href="mailto:info@thespeech.coach"
+            href="https://www.thespeech.coach/book-now/"
+            target="_blank"
+            rel="noopener"
             className="inline-flex items-center gap-2 bg-primary text-primary-foreground hover:bg-primary/90 transition-all px-8 py-4 rounded-full font-body text-sm font-medium glow-gold"
           >
             {entry.ctaLabel}

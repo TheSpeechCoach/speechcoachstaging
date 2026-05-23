@@ -109,7 +109,9 @@ const WhoWeWorkWithPage = () => (
           Book a consultation and we'll talk through where you are and where you want to be.
         </motion.p>
         <a
-          href="mailto:info@thespeech.coach"
+          href="https://www.thespeech.coach/book-now/"
+          target="_blank"
+          rel="noopener"
           className="inline-flex items-center gap-2 bg-primary text-primary-foreground hover:bg-primary/90 transition-all px-8 py-4 rounded-full font-body text-sm font-medium glow-gold"
         >
           Book a Consultation

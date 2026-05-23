@@ -47,7 +47,9 @@ const HeroSection = () => {
             …with over 30 years of expert speech coaching that transforms nervous speakers into confident, compelling communicators.
           </motion.p>
           <motion.a
-            href="#cta"
+            href="https://www.thespeech.coach/book-now/"
+            target="_blank"
+            rel="noopener"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
