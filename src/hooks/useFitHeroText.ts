@@ -97,7 +97,18 @@ export function useFitHeroText<T extends HTMLElement>(
     window.addEventListener("orientationchange", onResize);
 
     const fonts = (document as Document & { fonts?: { ready: Promise<unknown> } }).fonts;
-    if (fonts?.ready) fonts.ready.then(() => schedule()).catch(() => {});
+    const postFontTimers: number[] = [];
+    if (fonts?.ready) {
+      fonts.ready
+        .then(() => {
+          schedule();
+          // Re-fit after font swap settles — covers late layout reflows.
+          [50, 200, 500, 1000].forEach((d) =>
+            postFontTimers.push(window.setTimeout(() => schedule(), d))
+          );
+        })
+        .catch(() => {});
+    }
 
     return () => {
       window.removeEventListener("resize", onResize);
