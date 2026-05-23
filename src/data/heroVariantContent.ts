@@ -2716,4 +2716,297 @@ export const heroVariantContent: Record<string, HeroVariantContent> = {
       "Bilingual clarity and accent comfort",
     ],
   },
+
+  // =========================================================================
+  // TOPIC — Additional
+  // =========================================================================
+  "stutter-clutter-lost": {
+    introExtended:
+      "Disfluency comes in many shapes. Stammering — repetitions, prolongations, blocks. Cluttering — speech that runs faster than the listener can follow, with collapsed syllables and a rhythm that loses its edges. Mumbling under pressure. Rushing past the words that matter. Word avoidance so reflexive the speaker no longer notices the substitutions they make a hundred times a day.\n\nWhat unifies them is mechanical. The breath, the rhythm, the motor planning underneath fluent speech is doing something the speaker did not choose and would, given the chance, rather not be doing. The good news is that all of it responds to expert work. Not in a week, and not by willpower, but reliably, with someone who knows what they are listening to and what to do about it.\n\nThis coaching is for adults — professionals, leaders, performers, anyone whose fluency has become a cost they no longer want to absorb. The work draws on three decades of clinical and coaching practice across stammering, cluttering and articulation. The doctrine is the same as everywhere else in the practice: what to say, how to say it, how to own it. The fluency layer simply sits underneath.",
+    whyMatters:
+      "The cost of disfluency is rarely the disfluency itself. It is everything the speaker has rearranged to avoid it — the meetings declined, the words substituted, the seniority not pursued, the recordings not watched back. None of it shows up in a job description; all of it shows up in a career and a self-narrative.\n\nThe inverse is also true. A speaker whose fluency lifts, even by a margin, recovers options they had quietly stopped considering. The work pays back disproportionately.",
+    approach:
+      "We begin with listening — a full hour of you speaking under different conditions, with structured feedback on what is actually happening rather than what you've been told is happening. Then the work splits into three: the mechanical (breath, rhythm, articulation), the strategic (fluency strategies, decluttering, avoidance reduction) and the performative (rehearsal under condition, recording work, the moments that matter most in your diary).\n\nSessions are 1:1, in person in London or via video. Most clients work in six- to twelve-session arcs and continue in maintenance work afterwards. The coaching is paced patiently and held to a high standard — no shortcuts, no gimmicks, and no pretending the work is faster than it is.",
+    outcomes: [
+      "A measurably calmer pace under pressure",
+      "Fewer blocks, repetitions or collapsed syllables in the moments that matter",
+      "Recordings of yourself that match the speaker in your head",
+      "The seniority of voice your role requires",
+      "Strategies that hold up in meetings, presentations and interviews",
+      "A fluency you trust rather than monitor",
+    ],
+    formats: [
+      {
+        name: "1:1 Fluency Programme",
+        description:
+          "Eight to twelve sessions over three to four months. The default arc for stammering, cluttering and clarity work. Built around your real material and the moments coming up in your diary.",
+      },
+      {
+        name: "Intensive Preparation",
+        description:
+          "Compressed coaching for a single named event — keynote, interview, board meeting, media appearance. Three to five sessions inside a tight window with full rehearsal.",
+      },
+      {
+        name: "Maintenance Coaching",
+        description:
+          "Ongoing monthly sessions for clients who have completed the core arc and want to hold the work over the long term.",
+      },
+    ],
+    caseSnapshot:
+      "A senior fund manager who had stammered since childhood and had spent twenty years rearranging meetings to minimise his speaking time came in ahead of a London Stock Exchange listing roadshow. Ten sessions: breath and rhythm, fluency strategies for the specific contexts that broke him, full rehearsal of the roadshow deck. The roadshow ran. His CFO's note afterwards read: 'I have worked with him for nine years. I have never heard him sound like that.'",
+    faqs: [
+      {
+        question: "I've had speech therapy before — is this different?",
+        answer:
+          "It is. Most adult clients here have had earlier therapy, often as children, and have plateaued or regressed. This work is built for adult professional life — the contexts that matter, the seniority you need to project, the moments your earlier therapy was never asked to prepare you for. The clinical training is here; the framing is professional.",
+      },
+      {
+        question: "Will the stammer go away?",
+        answer:
+          "We do not promise to cure stammering — anyone who does is selling. We promise to reduce its hold on your professional and personal life: fewer blocks in the moments that matter, recovered options, a voice that you trust. For many clients the practical reduction is substantial; for all clients the relationship with the disfluency changes.",
+      },
+      {
+        question: "Can the work be done online?",
+        answer:
+          "Yes. Around half of fluency clients work entirely online. The format is unaffected and recording work is, if anything, easier in the online format.",
+      },
+      {
+        question: "What does this cost?",
+        answer:
+          "Fluency programmes from £1,800 for the core eight-session arc. Intensive preparation £900–£2,400. Maintenance coaching £225 per session. Written proposal within forty-eight hours of an initial consultation.",
+      },
+    ],
+  },
+
+  "muddle-fuddle-lost": {
+    introExtended:
+      "Muddled speaking is rarely a thinking problem. It is a structure problem dressed up as a thinking problem. The thought is there, often a good one; the route through it is not. The speaker starts, qualifies, circles back, hedges, gets to the point in the third minute when the room has already partly tuned out, and walks away from the meeting wondering why senior colleagues finished the sentences for them again.\n\nThe fix is structural before it is rhetorical. We rebuild the route — opening line, spine, close — and teach you to hold it under interruption, scrutiny and pressure. Clarity is not a personality trait. It is a habit of construction, and habits respond to training.",
+    whyMatters:
+      "Senior rooms reward speakers who arrive with a structure already loaded. Headline first. Evidence second. Implication third. The speaker who buries the line under preamble, however clever the preamble, reads as junior — and is treated accordingly. The cost is the slow attrition of being the smartest person in the room and the third most listened to.\n\nThe inverse is equally true. A speaker who lands the line cleanly, under pressure, with the structure visible, accelerates. Promotions are decided in the rooms where clarity reads as authority.",
+    approach:
+      "We work on your real material: the meeting you have this week, the update you are dreading, the pitch coming up. We strip the verbal padding, identify the line, build the spine, and rehearse the delivery under condition until headline-first becomes a reflex rather than a discipline. Sessions are 1:1, in person in London or via video, typically six to eight sessions over six to ten weeks.",
+    outcomes: [
+      "The line lands in the first thirty seconds, every time",
+      "Hedges, qualifiers and 'just' disappear from the delivery",
+      "Senior colleagues stop finishing your sentences",
+      "Q&A becomes an asset rather than a liability",
+      "Written and spoken delivery match in sharpness",
+      "Meetings end with the room clear on what you actually meant",
+    ],
+    formats: [
+      {
+        name: "1:1 Clarity Programme",
+        description:
+          "Six to eight sessions over six to ten weeks. The default arc for senior speakers rebuilding structure and headline-first delivery.",
+      },
+      {
+        name: "Intensive Preparation",
+        description:
+          "Three to four sessions inside a tight window for a single named event — board paper, investor pitch, conference talk.",
+      },
+      {
+        name: "Corporate Workshops",
+        description:
+          "Half-day or full-day workshops for leadership and client-facing teams on structure, headline-first delivery and the discipline of the full stop.",
+      },
+    ],
+    caseSnapshot:
+      "A general counsel newly promoted to executive committee level had built a twenty-year career on written precision and was being read in the new room as discursive. Six sessions: headline-first reframing, hedge audit, full rehearsal on three live committee papers. By the third committee meeting after the work, the CEO's note read: 'The room is quieter when you speak. Keep going.'",
+    faqs: [
+      {
+        question: "Is this for me if I'm already a confident speaker?",
+        answer:
+          "Yes — and many clients arrive precisely there. Confident speakers who muddle are often the hardest cases to self-diagnose because the confidence masks the structural problem. The work is built for senior speakers who do not need more reps; they need a sharper architecture.",
+      },
+      {
+        question: "Will I sound rehearsed?",
+        answer:
+          "No. The work is structural, not scripted. The point is to free you from over-preparation, not lock you into it. By the end of the arc the structure runs in the background; you stop noticing it; the room hears the line.",
+      },
+      {
+        question: "Can the work be done online?",
+        answer:
+          "Yes. Around half of clarity clients work entirely online and the format is unaffected.",
+      },
+      {
+        question: "What does this cost?",
+        answer:
+          "Clarity programmes from £1,800 for six sessions. Intensives £900–£1,800. Corporate workshops quoted per day. Written proposal within forty-eight hours of an initial consultation.",
+      },
+    ],
+  },
+
+  "what-to-say-lost": {
+    introExtended:
+      "What to say. How to say it. The doctrine is short because the work is long. Most speakers underperform because one half has outgrown the other — the message is sharp and the delivery has not caught up, or the delivery is polished and the message has not been examined in years. The work pairs them: every session moves both at once.\n\nWe do not believe in template talks, borrowed openings, or the off-the-shelf TED structure dressed up as personality. The message is built from your material, the delivery is built around your voice, and the result is a piece of communication that is unmistakably yours — at its strongest, under condition, when it matters.",
+    whyMatters:
+      "Communication is the layer underneath every other professional skill. When it is sharp, the work speaks; when it is blurred, the work has to be re-explained. Coaching this layer is the single highest-leverage piece of professional development most senior people never receive — because no one taught it in school, the books cannot rehearse it, and the chatbot cannot watch you do it.\n\nThe doctrine is not a slogan. It is the operating principle of every session.",
+    approach:
+      "Session one is diagnostic — voice, message, video, structured feedback. From session two the work is your real material: the talk you are giving, the meeting you are dreading, the pitch you have written and quietly do not believe yet. We build the message, work the voice, rehearse under condition, and review on camera.\n\nSessions are 1:1, in person in London or via video. The default arc is six sessions over six to twelve weeks. The work pays back in the moments that matter and accumulates across a career.",
+    outcomes: [
+      "A message you can defend under interruption and scrutiny",
+      "A voice that matches the seniority of the role",
+      "An opening and close the room remembers",
+      "Confidence that comes from competence, not pep talk",
+      "Delivery on camera with the same presence as in the room",
+      "A communication style that is unmistakably yours",
+    ],
+    formats: [
+      {
+        name: "1:1 Foundational Programme",
+        description:
+          "Six sessions over six to twelve weeks. The default starting point for individual clients new to the practice.",
+      },
+      {
+        name: "Intensive Preparation",
+        description:
+          "Two to four sessions inside a tight timeline for a single named event. Full rehearsal to performance level.",
+      },
+      {
+        name: "Ongoing Coaching",
+        description:
+          "Monthly sessions for senior clients who have completed the foundational arc and want to hold the work over the long term.",
+      },
+    ],
+    caseSnapshot:
+      "A founder of a Series C technology company had pitched the same deck thirty times and watched the conversion rate slowly fall. Six sessions: message rebuild, opening rewrite, voice work, full rehearsal under condition. The next eight pitches converted at more than double the previous rate. Same product. Same deck slot. A different speaker.",
+    faqs: [
+      {
+        question: "How long until I see a difference?",
+        answer:
+          "Most clients notice a change in voice and structure within the first two sessions. By session four the change is visible to colleagues and partners. The work is cumulative.",
+      },
+      {
+        question: "Do I need to come to London?",
+        answer:
+          "No. Around half of 1:1 work is delivered via video. Video sessions are designed for the medium and are particularly effective for clients whose own work is increasingly remote.",
+      },
+      {
+        question: "Is the coaching confidential?",
+        answer:
+          "Yes. All 1:1 work is held under strict confidentiality. NDAs are signed as standard for senior, public and regulated clients.",
+      },
+      {
+        question: "What does this cost?",
+        answer:
+          "Foundational programmes from £1,800 for six sessions. Intensives £900–£2,400. Senior and bespoke engagements quoted per scope. Written proposal within forty-eight hours.",
+      },
+    ],
+  },
+
+  "say-it-own-it-lost": {
+    introExtended:
+      "What to say. How to say it. How to own it. The third half is the one most coaching never reaches. Owning it is the layer beyond competent delivery — the composure that holds when challenged, the rehearsal that takes adequate into inevitable, the authority that does not apologise for itself. It is the difference between a talk that was fine and a talk the room is still quoting six months later.\n\nThis work is for speakers who have already done the foundational work — your message is sharp, your delivery is technically capable — and who want to take the next step. Senior leaders moving onto bigger platforms. Founders pitching at scale. Public-facing executives whose performance has become part of the role. The doctrine is the same; the depth is greater.",
+    whyMatters:
+      "The rooms that matter most reward presence over preparation. A speaker who has rehearsed adequately and a speaker who has rehearsed past adequate sound the same on paper and look entirely different in the room. The first reads as prepared. The second reads as inevitable.\n\nThe career compounding of owning the room is hard to overstate. Boards trust speakers who hold under pressure. Investors back founders who do not flinch. Conference circuits return to keynotes the room remembers. Owning it is not vanity. It is professional infrastructure.",
+    approach:
+      "The work is in three layers, simultaneously. Message — sharpened until it survives interruption, scrutiny and edit. Delivery — voice, breath, pace, eye, body, on camera and in the room, rehearsed against the actual conditions of the moment. Presence — the rehearsal arc that takes the work past adequate into delivery the room remembers. Sessions are 1:1, in person in London or via video, typically eight to twelve sessions for the full arc.",
+    outcomes: [
+      "A delivery the room remembers, not just receives",
+      "Composure under interruption, challenge and scrutiny",
+      "The opening and close the room quotes back",
+      "Authority that does not apologise for itself",
+      "Q&A that lifts the talk rather than dilutes it",
+      "Recordings you are glad to share",
+    ],
+    formats: [
+      {
+        name: "1:1 Presence Programme",
+        description:
+          "Eight to twelve sessions over three to four months. The full doctrine — message, delivery, presence — for speakers stepping into bigger platforms.",
+      },
+      {
+        name: "Intensive Preparation",
+        description:
+          "Compressed coaching for a single high-stakes event — keynote, IPO roadshow, board, conference. Full rehearsal to performance level.",
+      },
+      {
+        name: "Executive Retainer",
+        description:
+          "Ongoing senior retainer for public-facing executives whose schedule includes regular high-stakes speaking. Monthly sessions plus event-led intensives.",
+      },
+    ],
+    caseSnapshot:
+      "A chief executive of a FTSE 250 group with a confident speaking style and a long history of decent talks came in ahead of an investor day where the share price would move on the delivery. Ten sessions: message rebuild, opening and close discipline, full rehearsal under condition with footage review, nerve management for the Q&A. The day ran. The share price moved the right way. Six months later the chair's note read: 'You walked out of that room a different leader. The room saw it.'",
+    faqs: [
+      {
+        question: "How is this different from foundational coaching?",
+        answer:
+          "Foundational coaching builds the message and the delivery. This work takes them past adequate into ownership — the rehearsal depth, presence work and pressure rehearsal that most coaching never reaches. It is for speakers ready for the next step.",
+      },
+      {
+        question: "Is this confidential?",
+        answer:
+          "Yes — and at this seniority confidentiality is non-negotiable. NDAs are standard. Sessions can be held off-site or via secure video for public and regulated clients.",
+      },
+      {
+        question: "Do I need to come to London?",
+        answer:
+          "No. Senior clients are coached worldwide via secure video. The format is unaffected.",
+      },
+      {
+        question: "What does this cost?",
+        answer:
+          "Presence programmes from £3,600 for the eight-session arc. Senior intensives, retainers and three-day C-suite programmes quoted bespoke, typically £5,000–£30,000 depending on scope. Written proposal within forty-eight hours.",
+      },
+    ],
+  },
+
+  "alphabetti-lost": {
+    introExtended:
+      "Speaking anxiety is a physical event before it is anything else. The breath shortens before the first word. The chest tightens. The hands turn cold or wet. The voice thins. The words that were there in rehearsal scatter and a smaller, more frightened version of the speaker arrives at the lectern. None of it is a character flaw. All of it is physiology — and physiology responds to training.\n\nThis coaching is for the speaker whose nerves have taken over the moment that matters. Senior professionals who have started declining invitations. Founders who freeze on demo day. Lawyers, doctors, academics, executives whose competence in the room is being undercut by their body's response to the room. The work is patient, technical and kind — and the rehearsal arc is the only reliable nerve antidote there is.",
+    whyMatters:
+      "The cost of speaking anxiety is rarely a single moment. It is the cumulative attrition of opportunities quietly declined — the panel that was sidestepped, the keynote that went to someone else, the promotion that did not come because the senior platform was unavailable. None of it shows up on a balance sheet; all of it shows up in a career.\n\nThe inverse is liberating. A speaker who has done the nerve work recovers a category of professional and personal opportunity they had quietly written off. The work pays back disproportionately.",
+    approach:
+      "We begin with the body. Breath work — the foundation underneath every steady voice. Nervous-system regulation — practical protocols for the morning of, the minute before, the first sentence. Body — posture, ground, physical composure that quiets the head. Then voice — projection and steadiness under adrenaline rather than thinning under it. Then rehearsal under condition — graduated, paced, until the moment that used to overwhelm you is one your body has already lived through.\n\nSessions are 1:1, in person in London or via video. The default arc is eight to ten sessions over two to three months. For named events we extend or compress the arc accordingly.",
+    outcomes: [
+      "A breath that holds when the room turns to you",
+      "Hands and voice that stay steady under adrenaline",
+      "A morning-of and minute-before protocol that actually works",
+      "The first sentence delivered by a calm version of yourself",
+      "Recovery strategies for the moments mid-talk when something slips",
+      "A category of professional opportunity recovered",
+    ],
+    formats: [
+      {
+        name: "1:1 Nerves Programme",
+        description:
+          "Eight to ten sessions over two to three months. The default arc for clients with significant speaking anxiety. Paced kindly and held to a high standard.",
+      },
+      {
+        name: "Pre-Event Intensive",
+        description:
+          "Compressed coaching for a single named event the client is dreading. Three to five sessions inside a tight window with graduated rehearsal under condition.",
+      },
+      {
+        name: "Maintenance Coaching",
+        description:
+          "Ongoing monthly sessions for clients who have completed the core arc and want to hold the work over the long term.",
+      },
+    ],
+    caseSnapshot:
+      "A consultant surgeon who had presented internationally for fifteen years developed acute speaking anxiety after a single bad experience at a London conference and had spent eighteen months declining invitations. Ten sessions: breath, nervous-system regulation, graduated rehearsal under condition, full delivery of the talk he had been avoiding. He gave the talk. The note afterwards read: 'I had forgotten this version of myself existed.'",
+    faqs: [
+      {
+        question: "Will the nerves go away?",
+        answer:
+          "We do not promise to remove nerves — a degree of arousal is part of any high-stakes performance and is, properly trained, an asset. We promise to change the relationship: the physiology settles, the body learns the moment in advance, and what used to overwhelm becomes something you can work with rather than against.",
+      },
+      {
+        question: "I've tried mindfulness apps and beta-blockers — is this different?",
+        answer:
+          "Yes. Apps and medication can take the edge off; they do not change the underlying physiology or the rehearsal architecture. This work does both — and the gains hold without them. Many clients use the apps and medication less or not at all by the end of the arc.",
+      },
+      {
+        question: "Can the work be done online?",
+        answer:
+          "Yes. Around half of nerves clients work entirely online and the format is unaffected. We can include in-person rehearsal at the studio for clients who want to layer it in.",
+      },
+      {
+        question: "What does this cost?",
+        answer:
+          "Nerves programmes from £2,250 for the eight-session arc. Pre-event intensives £900–£2,400. Maintenance coaching £225 per session. Written proposal within forty-eight hours.",
+      },
+    ],
+  },
 };
