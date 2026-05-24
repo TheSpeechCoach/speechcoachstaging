@@ -11,24 +11,33 @@ const TeamWorkshops = () => (
     }
     subheading="Bespoke communication and presentation workshops for teams of 5 to 50. In-person, online or at your offsite — fully tailored to your team's needs."
     intro="Your team might be full of brilliant people. But if they can't communicate their brilliance clearly — to clients, to leadership, to each other — that brilliance stays hidden."
-    problemsHeading="Workshop topics"
     problems={[
-      "Eliminating filler words across the team",
+      "Your team is full of brilliant people who can't always communicate it clearly.",
+      "Presentations to clients or leadership fall flat.",
+      "Filler words and rambling undermine your team on calls.",
+      "People hold back instead of speaking with authority.",
+      "Your team struggles to handle tough questions under pressure.",
+      "You're preparing for a big pitch or conference and want everyone sharp.",
+    ]}
+    workOn={[
+      "Eliminating filler words",
       "Presenting confidently to clients and leadership",
       "Communicating clearly on video calls",
       "Structuring messages for impact",
       "Speaking with authority at all levels",
       "Handling questions under pressure",
     ]}
-    workOnHeading="Formats"
-    workOn={[
-      "Half-day (3hrs)",
-      "Full-day (6hrs)",
-      "Two-day intensive",
-      "Online group sessions",
-      "Ongoing monthly coaching",
-    ]}
     extraBlocks={[
+      {
+        heading: "Formats",
+        items: [
+          "Half-day (3hrs)",
+          "Full-day (6hrs)",
+          "Two-day intensive",
+          "Online group sessions",
+          "Ongoing monthly coaching",
+        ],
+      },
       {
         heading: "Who books our workshops",
         items: [
