@@ -11,22 +11,33 @@ const OnlineCoaching = () => (
     }
     subheading="Bespoke 1:1 online coaching via Zoom for professionals in the UK, UAE, USA, Europe, Asia and beyond."
     intro="Online coaching works. It is not a compromise or a second-best option — it is simply a different format, and for speech and communication coaching, it works exceptionally well. Whether you're in London or Dubai, Frankfurt or Singapore — the quality of your coaching will be exactly the same."
-    problemsHeading="How it works"
     problems={[
-      "Sessions delivered via Zoom — link sent ahead of each session",
-      "Sessions typically 60 minutes",
-      "Book around your schedule — mornings, evenings and weekends available",
-      "Notes, exercises and resources sent after each session",
-      "Progress tracked across your programme",
+      "You're based outside London and great coaching feels out of reach.",
+      "You're in the UAE, Europe, the USA or Asia and need a coach who travels well — digitally.",
+      "Your schedule is packed and travelling to sessions isn't realistic.",
+      "You want world-class coaching without the commute.",
+      "You wonder whether online coaching can really be as effective.",
+      "You value the flexibility of evening or weekend sessions.",
     ]}
-    workOnHeading="Who it's for"
     workOn={[
-      "Professionals based outside London",
-      "Clients in UAE, Saudi Arabia, Europe, USA, Asia",
-      "Busy professionals who can't travel",
-      "People who prefer flexibility of online sessions",
+      "Clarity and articulation",
+      "Confidence and presence on camera and in the room",
+      "Voice — pace, pause and projection",
+      "Structuring what you say so you never go blank",
+      "Managing nerves under pressure",
+      "Preparing for your specific next speaking moment",
     ]}
     extraBlocks={[
+      {
+        heading: "How it works",
+        items: [
+          "Sessions delivered via Zoom — link sent ahead of each session",
+          "Sessions typically 60 minutes",
+          "Book around your schedule — mornings, evenings and weekends available",
+          "Notes, exercises and resources sent after each session",
+          "Progress tracked across your programme",
+        ],
+      },
       {
         heading: "Does online really work?",
         intro:
