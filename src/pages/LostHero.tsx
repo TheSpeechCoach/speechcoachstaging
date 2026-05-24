@@ -52,6 +52,9 @@ const LostHero = () => {
   const appendNowHere =
     entry.appendNowHere === false ? false : !lastIsAlreadyNowHere;
   const finalLineIndex = lines.length - 1;
+  // Single concise intro paragraph: use first paragraph of intro only.
+  const introParagraph = entry.intro.split(/\n\n+/)[0].trim();
+  const workOn = entry.workOn.length % 2 === 0 ? entry.workOn : entry.workOn.slice(0, entry.workOn.length - 1);
 
   return (
     <main className="bg-background text-foreground min-h-screen">
@@ -66,7 +69,7 @@ const LostHero = () => {
 
       <SiteNav />
 
-      {/* Hero — matches homepage HeroSection layout */}
+      {/* Hero — keep existing fit-to-width behaviour */}
       <section className="relative min-h-screen flex items-center overflow-hidden bg-background">
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-1/3 -right-40 w-[600px] h-[600px] rounded-full bg-primary/10 blur-[120px]" />
@@ -106,9 +109,7 @@ const LostHero = () => {
                 );
               })}
               {appendNowHere && (
-                <span
-                  className="w-max whitespace-nowrap italic text-gradient-gold"
-                >
+                <span className="w-max whitespace-nowrap italic text-gradient-gold">
                   Now you're here.
                 </span>
               )}
@@ -138,65 +139,28 @@ const LostHero = () => {
         </div>
       </section>
 
-      {/* Intro */}
+      {/* Intro — single concise paragraph */}
       <section className="py-16 md:py-20 px-6 border-t border-border">
         <div className="container mx-auto max-w-3xl">
-          {entry.introExtended ? (
-            entry.introExtended.split(/\n\n+/).map((para, i) => (
-              <motion.p
-                key={i}
-                {...fadeUp}
-                transition={{ duration: 0.6, delay: i * 0.05, ease: "easeOut" }}
-                className="font-body text-lg text-muted-foreground leading-relaxed mb-6 last:mb-0"
-              >
-                {para}
-              </motion.p>
-            ))
-          ) : (
-            <motion.p {...fadeUp} className="font-body text-lg text-muted-foreground leading-relaxed">
-              {entry.intro}
-            </motion.p>
-          )}
+          <motion.p {...fadeUp} className="font-body text-lg text-muted-foreground leading-relaxed">
+            {introParagraph}
+          </motion.p>
         </div>
       </section>
 
-      {/* Why this matters */}
-      {entry.whyMatters && (
-        <section className="py-16 md:py-20 px-6 bg-card/40 border-y border-border">
-          <div className="container mx-auto max-w-3xl">
-            <motion.h2
-              {...fadeUp}
-              className="font-display text-3xl md:text-5xl font-bold mb-10"
-            >
-              Why this <span className="italic text-gradient-gold">matters</span>
-            </motion.h2>
-            {entry.whyMatters.split(/\n\n+/).map((para, i) => (
-              <motion.p
-                key={i}
-                {...fadeUp}
-                transition={{ duration: 0.6, delay: i * 0.05, ease: "easeOut" }}
-                className="font-body text-lg text-muted-foreground leading-relaxed mb-6 last:mb-0"
-              >
-                {para}
-              </motion.p>
-            ))}
-          </div>
-        </section>
-      )}
-
       {/* Problems */}
-      <section className="py-16 md:py-20 px-6">
+      <section className="py-16 md:py-20 px-6 bg-card/40 border-y border-border">
         <div className="container mx-auto max-w-4xl">
-          <motion.h2 {...fadeUp} className="font-display text-3xl md:text-5xl font-bold mb-8 md:mb-10">
-            Does this <span className="italic text-gradient-gold">sound familiar?</span>
+          <motion.h2 {...fadeUp} className="font-display text-3xl md:text-5xl font-bold mb-8 md:mb-10 text-center">
+            Does this sound familiar?
           </motion.h2>
           <ul className="grid md:grid-cols-2 gap-6">
             {entry.problems.map((p, i) => (
               <motion.li
                 key={i}
                 {...fadeUp}
-                transition={{ duration: 0.5, delay: i * 0.04, ease: "easeOut" }}
-                className="flex gap-4 p-6 md:p-8 rounded-xl border border-border bg-card/40"
+                transition={{ duration: 0.5, delay: i * 0.05, ease: "easeOut" }}
+                className="flex gap-4 p-6 md:p-8 rounded-xl border border-border bg-background/40"
               >
                 <span className="text-primary font-display text-lg leading-none mt-1">—</span>
                 <span className="font-body text-foreground/90">{p}</span>
@@ -206,39 +170,18 @@ const LostHero = () => {
         </div>
       </section>
 
-      {/* The approach */}
-      {entry.approach && (
-        <section className="py-16 md:py-20 px-6 bg-card/40 border-y border-border">
-          <div className="container mx-auto max-w-3xl">
-            <motion.h2 {...fadeUp} className="font-display text-3xl md:text-5xl font-bold mb-10">
-              The <span className="italic text-gradient-gold">approach</span>
-            </motion.h2>
-            {entry.approach.split(/\n\n+/).map((para, i) => (
-              <motion.p
-                key={i}
-                {...fadeUp}
-                transition={{ duration: 0.6, delay: i * 0.05, ease: "easeOut" }}
-                className="font-body text-lg text-muted-foreground leading-relaxed mb-6 last:mb-0"
-              >
-                {para}
-              </motion.p>
-            ))}
-          </div>
-        </section>
-      )}
-
       {/* What we work on */}
       <section className="py-16 md:py-20 px-6">
         <div className="container mx-auto max-w-4xl">
-          <motion.h2 {...fadeUp} className="font-display text-3xl md:text-5xl font-bold mb-8 md:mb-10">
-            What we <span className="italic text-gradient-gold">work on</span>
+          <motion.h2 {...fadeUp} className="font-display text-3xl md:text-5xl font-bold mb-8 md:mb-10 text-center">
+            What we work on
           </motion.h2>
           <ul className="grid md:grid-cols-2 gap-6">
-            {entry.workOn.map((w, i) => (
+            {workOn.map((w, i) => (
               <motion.li
                 key={i}
                 {...fadeUp}
-                transition={{ duration: 0.5, delay: i * 0.04, ease: "easeOut" }}
+                transition={{ duration: 0.5, delay: i * 0.05, ease: "easeOut" }}
                 className="flex gap-3 items-start"
               >
                 <Check className="w-5 h-5 text-primary mt-1 shrink-0" />
@@ -249,77 +192,12 @@ const LostHero = () => {
         </div>
       </section>
 
-      {/* Outcomes */}
-      {entry.outcomes && entry.outcomes.length > 0 && (
-        <section className="py-16 md:py-20 px-6 bg-card/40 border-y border-border">
-          <div className="container mx-auto max-w-4xl">
-            <motion.h2 {...fadeUp} className="font-display text-3xl md:text-5xl font-bold mb-8 md:mb-10">
-              What <span className="italic text-gradient-gold">changes</span>
-            </motion.h2>
-            <ul className="grid md:grid-cols-2 gap-6">
-              {entry.outcomes.map((o, i) => (
-                <motion.li
-                  key={i}
-                  {...fadeUp}
-                  transition={{ duration: 0.5, delay: i * 0.04, ease: "easeOut" }}
-                  className="flex gap-3 items-start"
-                >
-                  <ArrowRight className="w-5 h-5 text-primary mt-1 shrink-0" />
-                  <span className="font-body text-foreground/90">{o}</span>
-                </motion.li>
-              ))}
-            </ul>
-          </div>
-        </section>
-      )}
-
-      {/* Formats */}
-      {entry.formats && entry.formats.length > 0 && (
-        <section className="py-16 md:py-20 px-6">
-          <div className="container mx-auto max-w-5xl">
-            <motion.h2 {...fadeUp} className="font-display text-3xl md:text-5xl font-bold mb-8 md:mb-10">
-              How we <span className="italic text-gradient-gold">work</span>
-            </motion.h2>
-            <div className="grid md:grid-cols-3 gap-6">
-              {entry.formats.map((f, i) => (
-                <motion.div
-                  key={i}
-                  {...fadeUp}
-                  transition={{ duration: 0.5, delay: i * 0.08, ease: "easeOut" }}
-                  className="p-6 md:p-8 rounded-xl border border-border bg-card/40 h-full"
-                >
-                  <h3 className="font-display text-xl mb-3 text-foreground">{f.name}</h3>
-                  <p className="font-body text-muted-foreground leading-relaxed">{f.description}</p>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
-
-      {/* Case snapshot */}
-      {entry.caseSnapshot && (
-        <section className="py-16 md:py-20 px-6 bg-card/40 border-y border-border">
-          <div className="container mx-auto max-w-3xl">
-            <motion.h2 {...fadeUp} className="font-display text-3xl md:text-5xl font-bold mb-10">
-              In <span className="italic text-gradient-gold">practice</span>
-            </motion.h2>
-            <motion.blockquote
-              {...fadeUp}
-              className="font-body italic text-lg md:text-xl text-foreground/85 leading-relaxed border-l-2 border-primary pl-6"
-            >
-              {entry.caseSnapshot}
-            </motion.blockquote>
-          </div>
-        </section>
-      )}
-
       {/* FAQs */}
       {entry.faqs && entry.faqs.length > 0 && (
-        <section className="py-16 md:py-20 px-6">
+        <section className="py-16 md:py-20 px-6 border-t border-border">
           <div className="container mx-auto max-w-3xl">
-            <motion.h2 {...fadeUp} className="font-display text-3xl md:text-5xl font-bold mb-10">
-              Common <span className="italic text-gradient-gold">questions</span>
+            <motion.h2 {...fadeUp} className="font-display text-3xl md:text-5xl font-bold mb-8 md:mb-10 text-center">
+              Common questions
             </motion.h2>
             <div className="space-y-4">
               {entry.faqs.map((f, i) => (
@@ -375,4 +253,3 @@ const LostHero = () => {
 };
 
 export default LostHero;
-
