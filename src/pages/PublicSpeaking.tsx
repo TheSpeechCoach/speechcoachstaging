@@ -26,7 +26,6 @@ const PublicSpeaking = () => (
       "How to structure what you say so you never go blank",
       "Voice control — pace, pause, projection and power",
       "How to hold the room and engage your audience",
-      "Practice with feedback in a safe private space",
       "Preparing for your specific next speaking moment",
     ]}
     closingHeading="You don't have to be naturally confident to be a great speaker."

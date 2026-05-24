@@ -26,7 +26,6 @@ const ExecutiveCorporate = () => (
       "Voice, pace, tone and delivery",
       "Handling questions under pressure",
       "Communicating complex ideas simply",
-      "Preparation for media appearances",
     ]}
     extraBlocks={[
       {

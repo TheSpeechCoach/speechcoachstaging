@@ -26,7 +26,6 @@ const SpeechCoachingFounders = () => (
       "Handling tough questions from boards and investors",
       "Leading all-hands and town halls with authority",
       "Managing up and communicating with senior stakeholders",
-      "Executive presence as your company scales",
     ]}
     closingHeading="Ready to pitch with the conviction investors respond to?"
     closing="Bespoke 1:1 coaching, online or in-person. Initial consultation within 48 hours."

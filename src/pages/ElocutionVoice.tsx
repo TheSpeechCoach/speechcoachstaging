@@ -24,7 +24,6 @@ const ElocutionVoice = () => (
       "Tone — warmth, authority, expressiveness",
       "Pace — finding the right rhythm",
       "Projection — how to fill a room without shouting",
-      "Resonance — developing depth",
       "Pause — using silence powerfully",
       "Intonation — the rise and fall that keeps people listening",
     ]}
