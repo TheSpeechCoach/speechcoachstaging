@@ -25,7 +25,6 @@ const PresentationSkills = () => (
       "Pace, pause and emphasis",
       "Body language and eye contact",
       "Handling questions with confidence",
-      "Presenting on video calls — Zoom, Teams, Google Meet",
     ]}
     closingHeading="Your next presentation could change how people see you at work."
     closing="Book a consultation."
