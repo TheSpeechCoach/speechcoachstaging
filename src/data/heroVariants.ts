@@ -1185,8 +1185,6 @@ export const heroVariants: HeroVariant[] = [
       "Presence — the physical and vocal authority of a settled speaker",
       "Opening and close — the two moments the room remembers",
       "Holding the thread under challenge, scrutiny and Q&A",
-      "Rehearsal under condition — the work that produces ownership",
-      "Live footage and structured feedback",
       "A delivery that is unmistakably yours, at its strongest",
     ],
     closingHeading: "Now you're here.",
