@@ -114,9 +114,9 @@ const SiteNav = () => {
             <span className="italic text-gradient-gold">Speech</span>{" "}
             <span className="font-bold inline-flex items-center" style={{lineHeight:1}}>
               C
-              <span className="relative inline-flex items-center justify-center" style={{lineHeight:1, width:'0.78em', height:'0.78em'}}>
-                <span className="absolute inset-0 rounded-full border-[0.06em] border-current" />
-                <img src="/White.png" alt="" className="absolute inset-0 m-auto" style={{width:'88%',height:'88%',objectFit:'contain'}} />
+              <span className="relative inline-flex items-center justify-center" style={{lineHeight:1}}>
+                O
+                <img src="/White.png" alt="" className="absolute" style={{width:'70%',height:'70%',objectFit:'contain',left:'50%',top:'50%',transform:'translate(-50%,-50%)'}} />
               </span>
               ach
             </span>
