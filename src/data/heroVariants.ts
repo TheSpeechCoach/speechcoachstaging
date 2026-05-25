@@ -1152,8 +1152,6 @@ export const heroVariants: HeroVariant[] = [
       "Opening minutes and the discipline of a strong start",
       "Story, evidence and the rhythm between them",
       "Confidence under pressure and scrutiny",
-      "Structure that gives you freedom rather than confining you",
-      "Live rehearsal on your real material",
       "A communication style that is unmistakably yours",
     ],
     closingHeading: "Now you're here.",
