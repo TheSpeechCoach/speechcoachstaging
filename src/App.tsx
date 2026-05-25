@@ -41,6 +41,7 @@ import Pricing from "./pages/Pricing";
 import ThankYou from "./pages/ThankYou";
 import LostHero from "./pages/LostHero";
 import WhoWeWorkWith from "./pages/WhoWeWorkWith";
+import ScrollToTop from "./components/ScrollToTop";
 
 const queryClient = new QueryClient();
 
@@ -49,6 +50,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Index />} />
         <Route path="/public-speaking-coaching" element={<PublicSpeaking />} />
