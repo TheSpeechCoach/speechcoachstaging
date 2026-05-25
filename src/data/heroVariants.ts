@@ -126,7 +126,7 @@ export const heroVariants: HeroVariant[] = [
     ],
     closingHeading: "Communicate at the level you operate at.",
     closingCopy: "Discreet bespoke coaching for senior executives. Proposals within 48 hours.",
-    ctaLabel: "Request a Proposal",,
+    ctaLabel: "Request a Proposal",
     areasIntro: "The communication skills senior executives draw on most:",
     areasOverrides: {
       "presentations-public-speaking": "Boardroom & Investor Presenting",
@@ -203,7 +203,7 @@ export const heroVariants: HeroVariant[] = [
     ],
     closingHeading: "Don't wait for the waiting list.",
     closingCopy: "Specialist children's speech coaching in London and online.",
-    ctaLabel: "Book a Consultation",,
+    ctaLabel: "Book a Consultation",
     areasIntro: "The skills young speakers grow into through our coaching:",
     areasOverrides: {
       "presentations-public-speaking": "Confident Speaking & Presenting",
@@ -249,7 +249,7 @@ export const heroVariants: HeroVariant[] = [
     ],
     closingHeading: "Sound like the host they came for.",
     closingCopy: "Coaching for podcasters, presenters and broadcast professionals.",
-    ctaLabel: "Book a Session",,
+    ctaLabel: "Book a Session",
     areasIntro: "The skills broadcasters, presenters and on-air talent draw on most:",
     areasOverrides: {
       "presentations-public-speaking": "Live Hosting & On-Air Presenting",
@@ -326,7 +326,7 @@ export const heroVariants: HeroVariant[] = [
     ],
     closingHeading: "Ready to lead every room you walk into?",
     closingCopy: "Bespoke proposals within 48 hours.",
-    ctaLabel: "Request a Proposal",,
+    ctaLabel: "Request a Proposal",
     areasIntro: "The communication skills senior leaders rely on most:",
     areasOverrides: {
       "presentations-public-speaking": "Boardroom & Town Hall Presence",
@@ -372,7 +372,7 @@ export const heroVariants: HeroVariant[] = [
     ],
     closingHeading: "Ready to pitch with the conviction investors respond to?",
     closingCopy: "Bespoke 1:1 coaching, online or in-person. Initial consultation within 48 hours.",
-    ctaLabel: "Book a Consultation",,
+    ctaLabel: "Book a Consultation",
     areasIntro: "The communication skills founders need most when raising, hiring and selling:",
     areasOverrides: {
       "presentations-public-speaking": "Investor & Demo-Day Presenting",
@@ -479,7 +479,7 @@ export const heroVariants: HeroVariant[] = [
     ],
     closingHeading: "Your clinical expertise deserves communication that matches it.",
     closingCopy: "Confidential coaching for NHS and private sector medical professionals.",
-    ctaLabel: "Book a Consultation",,
+    ctaLabel: "Book a Consultation",
     areasIntro: "The communication skills that matter most in clinical, academic and patient-facing settings:",
     areasOverrides: {
       "presentations-public-speaking": "Grand Rounds & Conference Presentations",
@@ -649,7 +649,7 @@ export const heroVariants: HeroVariant[] = [
     ],
     closingHeading: "Done avoiding. Now you're here.",
     closingCopy: "Confidential 1:1 coaching, in London and online.",
-    ctaLabel: "Book a Consultation",,
+    ctaLabel: "Book a Consultation",
     areasIntro: "The skills that turn fear of speaking into steady, trusted delivery:",
     areasOverrides: {
       "presentations-public-speaking": "Confident Public Speaking",
@@ -695,7 +695,7 @@ export const heroVariants: HeroVariant[] = [
     ],
     closingHeading: "Be heard the first time.",
     closingCopy: "Precision accent and clarity coaching for working professionals.",
-    ctaLabel: "Book a Consultation",,
+    ctaLabel: "Book a Consultation",
     areasIntro: "The areas accent and elocution work most often touches:",
     areasOverrides: {
       "presentations-public-speaking": "Internationally Clear Presenting",
@@ -741,7 +741,7 @@ export const heroVariants: HeroVariant[] = [
     ],
     closingHeading: "Speak on your own terms.",
     closingCopy: "Confidential, compassionate 1:1 coaching for adults who stammer.",
-    ctaLabel: "Book a Consultation",,
+    ctaLabel: "Book a Consultation",
     areasIntro: "The areas stammering and fluency coaching typically supports:",
     areasOverrides: {
       "presentations-public-speaking": "Speaking Up with More Ease",
@@ -787,7 +787,7 @@ export const heroVariants: HeroVariant[] = [
     ],
     closingHeading: "Develop a voice that does your thinking justice.",
     closingCopy: "Expert voice coaching in London and online.",
-    ctaLabel: "Book a Session",,
+    ctaLabel: "Book a Session",
     areasIntro: "The areas voice coaching most often unlocks:",
     areasOverrides: {
       "presentations-public-speaking": "Voice That Carries the Room",
@@ -864,7 +864,7 @@ export const heroVariants: HeroVariant[] = [
     ],
     closingHeading: "Make the room leave changed.",
     closingCopy: "Intensive keynote coaching packages for one-off events and regular conference speakers.",
-    ctaLabel: "Book a Session",,
+    ctaLabel: "Book a Session",
     areasIntro: "The skills behind a keynote audiences actually remember:",
     areasOverrides: {
       "presentations-public-speaking": "Keynote Delivery & Stagecraft",
@@ -910,7 +910,7 @@ export const heroVariants: HeroVariant[] = [
     ],
     closingHeading: "Get investment-ready.",
     closingCopy: "Intensive pitch coaching packages tailored to your stage and investor audience.",
-    ctaLabel: "Book a Session",,
+    ctaLabel: "Book a Session",
     areasIntro: "The skills that decide whether a pitch lands or stalls:",
     areasOverrides: {
       "presentations-public-speaking": "Investor & Client Pitch Delivery",
@@ -956,7 +956,7 @@ export const heroVariants: HeroVariant[] = [
     ],
     closingHeading: "Control the room. Control the outcome.",
     closingCopy: "Intensive coaching for senior professionals preparing for high-value negotiations.",
-    ctaLabel: "Request a Consultation",,
+    ctaLabel: "Request a Consultation",
     areasIntro: "The communication skills that shape the outcome of any negotiation:",
     areasOverrides: {
       "presentations-public-speaking": "Opening & Anchoring Statements",
@@ -1002,7 +1002,7 @@ export const heroVariants: HeroVariant[] = [
     ],
     closingHeading: "Expert coaching, wherever you are.",
     closingCopy: "1:1 online sessions for professionals worldwide.",
-    ctaLabel: "Book a Consultation",,
+    ctaLabel: "Book a Consultation",
     areasIntro: "The communication skills that make online presence land:",
     areasOverrides: {
       "presentations-public-speaking": "Webinar & Virtual Speaking",
@@ -1048,7 +1048,7 @@ export const heroVariants: HeroVariant[] = [
     ],
     closingHeading: "Stop losing deals you should be winning.",
     closingCopy: "Individual and team coaching for sales professionals across all sectors.",
-    ctaLabel: "Book a Session",,
+    ctaLabel: "Book a Session",
     areasIntro: "The communication skills behind sales conversations that convert:",
     areasOverrides: {
       "presentations-public-speaking": "Sales Presentations & Demos",
@@ -1094,7 +1094,7 @@ export const heroVariants: HeroVariant[] = [
     ],
     closingHeading: "Be ready for the cameras before they're on you.",
     closingCopy: "Expert media training for executives, public figures and spokespeople.",
-    ctaLabel: "Request a Consultation",,
+    ctaLabel: "Request a Consultation",
     areasIntro: "The skills that decide how well you hold up under media scrutiny:",
     areasOverrides: {
       "presentations-public-speaking": "On-Message Public Appearances",
@@ -1140,7 +1140,7 @@ export const heroVariants: HeroVariant[] = [
     ],
     closingHeading: "Get the role you're qualified for.",
     closingCopy: "Expert interview coaching for professionals at every career stage.",
-    ctaLabel: "Book a Session",,
+    ctaLabel: "Book a Session",
     areasIntro: "The communication skills that decide how interviews go:",
     areasOverrides: {
       "presentations-public-speaking": "Panel & Assessment-Day Presenting",
@@ -1186,7 +1186,7 @@ export const heroVariants: HeroVariant[] = [
     ],
     closingHeading: "Deliver the speech they'll talk about for years.",
     closingCopy: "One-off coaching sessions or a full speech preparation programme.",
-    ctaLabel: "Book a Session",,
+    ctaLabel: "Book a Session",
     areasIntro: "The speaking skills that make a wedding speech land beautifully:",
     areasOverrides: {
       "presentations-public-speaking": "Wedding & Ceremony Speaking",
@@ -1232,7 +1232,7 @@ export const heroVariants: HeroVariant[] = [
     ],
     closingHeading: "The argument deserves the advocacy.",
     closingCopy: "Discreet expert coaching for barristers, solicitors and legal professionals.",
-    ctaLabel: "Request a Consultation",,
+    ctaLabel: "Request a Consultation",
     areasIntro: "The communication skills lawyers and advocates use every day:",
     areasOverrides: {
       "presentations-public-speaking": "Courtroom & Conference Speaking",
@@ -1278,7 +1278,7 @@ export const heroVariants: HeroVariant[] = [
     ],
     closingHeading: "Protect your voice. Elevate your teaching.",
     closingCopy: "Individual coaching and school-wide CPD programmes available.",
-    ctaLabel: "Book a Consultation",,
+    ctaLabel: "Book a Consultation",
     areasIntro: "The communication skills teachers and lecturers rely on every day:",
     areasOverrides: {
       "presentations-public-speaking": "Classroom & Lecture Presenting",
