@@ -109,11 +109,9 @@ const SiteNav = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <div className="container mx-auto flex items-center justify-between py-5 px-6">
         <Link to="/" className="flex items-center gap-2 font-display text-4xl tracking-tight">
-          <span className="font-display text-2xl text-foreground flex items-baseline leading-none">
-            <span className="font-bold">The</span>
-            <span>&nbsp;</span>
-            <span className="italic text-gradient-gold">Speech</span>
-            <span>&nbsp;</span>
+          <span className="font-display text-foreground flex items-baseline leading-none">
+            <span className="font-bold">The</span>{" "}
+            <span className="italic text-gradient-gold">Speech</span>{" "}
             <span className="font-bold inline-flex items-baseline">
               C
               <span className="relative inline-block" style={{width:'0.78em',height:'0.78em'}}>
