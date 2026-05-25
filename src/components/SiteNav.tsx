@@ -108,8 +108,21 @@ const SiteNav = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <div className="container mx-auto flex items-center justify-between py-5 px-6">
-        <Link to="/" className="flex items-center gap-2 font-display text-xl tracking-tight">
-          <span className="font-display text-lg text-foreground flex items-center"><span className="font-bold">The</span>{"\u00A0"}<span className="italic text-gradient-gold">Speech</span>{"\u00A0"}<span className="font-bold inline-flex items-center">C<span className="inline-flex items-center justify-center rounded-full border-2 border-white mx-[0.04em]" style={{width:'0.72em',height:'0.72em'}}><img src="/White.png" alt="" style={{width:'85%',height:'85%',objectFit:'contain'}} /></span>ach</span></span>
+        <Link to="/" className="flex items-center font-display tracking-tight">
+          <span className="font-display text-2xl text-foreground flex items-baseline leading-none">
+            <span className="font-bold">The</span>
+            <span>&nbsp;</span>
+            <span className="italic text-gradient-gold">Speech</span>
+            <span>&nbsp;</span>
+            <span className="font-bold inline-flex items-baseline">
+              C
+              <span className="relative inline-block" style={{width:'0.78em',height:'0.78em'}}>
+                <span className="absolute inset-0 rounded-full border-[0.06em] border-current" />
+                <img src="/White.png" alt="" className="absolute inset-0 m-auto" style={{width:'88%',height:'88%',objectFit:'contain'}} />
+              </span>
+              ach
+            </span>
+          </span>
         </Link>
         <div className="hidden lg:flex items-center gap-6 font-body text-sm">
           <div className="relative">
