@@ -110,7 +110,7 @@ const SiteNav = () => {
       <div className="container mx-auto flex items-center justify-between py-5 px-6">
         <Link to="/" className="flex items-center">
           <img
-            src="/TSC Logo white.jpg"
+            src="/White.png"
             alt="The Speech Coach"
             className="h-10 w-auto"
           />
