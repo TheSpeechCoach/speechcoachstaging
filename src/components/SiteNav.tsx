@@ -109,12 +109,7 @@ const SiteNav = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <div className="container mx-auto flex items-center justify-between py-5 px-6">
         <Link to="/" className="flex items-center gap-2 font-display text-xl tracking-tight">
-          <img
-            src="/White.png"
-            alt="The Speech Coach"
-            className="h-10 w-auto"
-          />
-          <span className="font-display text-lg text-foreground"><span className="font-bold">The</span>{" "}<span className="italic text-gradient-gold">Speech</span>{" "}<span className="font-bold">Coach</span></span>
+          <span className="font-display text-lg text-foreground flex items-center"><span className="font-bold">The</span>{"\u00A0"}<span className="italic text-gradient-gold">Speech</span>{"\u00A0"}<span className="font-bold inline-flex items-center">C<img src="/White.png" alt="o" className="inline-block h-[1em] w-auto mx-0.5" />ach</span></span>
         </Link>
         <div className="hidden lg:flex items-center gap-6 font-body text-sm">
           <div className="relative">
