@@ -49,6 +49,10 @@ export type HeroVariant = {
   ctaLabel: string;
   /** When false, suppress the auto-appended "Now you're here." gold-italic line. Default true (append when last line isn't already that). */
   appendNowHere?: boolean;
+  /** Optional intro line above the Areas of Expertise grid on the variant page. */
+  areasIntro?: string;
+  /** Optional tailored card labels keyed by area id (see src/data/areasOfExpertise.ts). */
+  areasOverrides?: Partial<Record<string, string>>;
   // Extended content (merged via getHeroVariant)
   introExtended?: string;
   whyMatters?: string;
@@ -123,6 +127,21 @@ export const heroVariants: HeroVariant[] = [
     closingHeading: "Communicate at the level you operate at.",
     closingCopy: "Discreet bespoke coaching for senior executives. Proposals within 48 hours.",
     ctaLabel: "Request a Proposal",
+    areasIntro: "The communication skills senior executives draw on most:",
+    areasOverrides: {
+      "presentations-public-speaking": "Boardroom & Investor Presenting",
+      "confidence-in-communication": "Confidence in High-Stakes Settings",
+      "fluency-elocution-articulation": "Crisp Executive Articulation",
+      "stage-presence-gravitas": "Executive Gravitas",
+      "accent-dialect-refinement": "International Executive English",
+      "voice-intonation": "Authoritative Vocal Range",
+      "pace-cadence-volume": "Measured Executive Pace",
+      "storytelling-techniques": "Strategic Storytelling",
+      "scripting-composition": "Speech & Talk-Track Crafting",
+      "gesture-body-language": "Composed Executive Presence",
+      "video-conferencing-digital": "Hybrid & Remote Leadership",
+      "broadcast-voice-performance": "Media & Spokesperson Skills"
+    }
   },
   {
     slug: "corporate-workshops-lost",
@@ -185,6 +204,21 @@ export const heroVariants: HeroVariant[] = [
     closingHeading: "Don't wait for the waiting list.",
     closingCopy: "Specialist children's speech coaching in London and online.",
     ctaLabel: "Book a Consultation",
+    areasIntro: "The skills young speakers grow into through our coaching:",
+    areasOverrides: {
+      "presentations-public-speaking": "Confident Speaking & Presenting",
+      "confidence-in-communication": "Confidence in Front of Class & Adults",
+      "fluency-elocution-articulation": "Clear Speech & Diction",
+      "stage-presence-gravitas": "Presence on Stage",
+      "accent-dialect-refinement": "Spoken English & Refinement",
+      "voice-intonation": "Voice Use & Expression",
+      "pace-cadence-volume": "Pace, Volume & Calm",
+      "storytelling-techniques": "Storytelling & Reading Aloud",
+      "scripting-composition": "Speeches & Assemblies",
+      "gesture-body-language": "Posture & Body Language",
+      "video-conferencing-digital": "On-Camera Confidence",
+      "broadcast-voice-performance": "Performance & Drama Skills"
+    }
   },
   {
     slug: "broadcast-lost",
@@ -216,6 +250,21 @@ export const heroVariants: HeroVariant[] = [
     closingHeading: "Sound like the host they came for.",
     closingCopy: "Coaching for podcasters, presenters and broadcast professionals.",
     ctaLabel: "Book a Session",
+    areasIntro: "The skills broadcasters, presenters and on-air talent draw on most:",
+    areasOverrides: {
+      "presentations-public-speaking": "Live Hosting & On-Air Presenting",
+      "confidence-in-communication": "Confidence in the Studio & On Camera",
+      "fluency-elocution-articulation": "Broadcast Clarity & Diction",
+      "stage-presence-gravitas": "On-Camera Authority",
+      "accent-dialect-refinement": "Broadcast-Ready Accent Work",
+      "voice-intonation": "Microphone Voice & Range",
+      "pace-cadence-volume": "Broadcast Pace & Timing",
+      "storytelling-techniques": "Narrative for Features & Interviews",
+      "scripting-composition": "Scripting Links, Voiceover & Intros",
+      "gesture-body-language": "On-Camera Body Language",
+      "video-conferencing-digital": "Remote & Down-the-Line Broadcasting",
+      "broadcast-voice-performance": "On-Air Persona & Performance"
+    }
   },
   {
     slug: "cpd-lost",
@@ -278,6 +327,21 @@ export const heroVariants: HeroVariant[] = [
     closingHeading: "Ready to lead every room you walk into?",
     closingCopy: "Bespoke proposals within 48 hours.",
     ctaLabel: "Request a Proposal",
+    areasIntro: "The communication skills senior leaders rely on most:",
+    areasOverrides: {
+      "presentations-public-speaking": "Boardroom & Town Hall Presence",
+      "confidence-in-communication": "Confidence in High-Stakes Rooms",
+      "fluency-elocution-articulation": "Crisp Executive Articulation",
+      "stage-presence-gravitas": "Executive Gravitas",
+      "accent-dialect-refinement": "International Executive English",
+      "voice-intonation": "Authoritative, Steady Voice",
+      "pace-cadence-volume": "Measured Executive Pace",
+      "storytelling-techniques": "Strategic Storytelling",
+      "scripting-composition": "Crafting Leadership Messages",
+      "gesture-body-language": "Composed Leadership Presence",
+      "video-conferencing-digital": "All-Hands & Hybrid Leadership",
+      "broadcast-voice-performance": "Media & Spokesperson Confidence"
+    }
   },
   {
     slug: "founders-lost",
@@ -309,6 +373,21 @@ export const heroVariants: HeroVariant[] = [
     closingHeading: "Ready to pitch with the conviction investors respond to?",
     closingCopy: "Bespoke 1:1 coaching, online or in-person. Initial consultation within 48 hours.",
     ctaLabel: "Book a Consultation",
+    areasIntro: "The communication skills founders need most when raising, hiring and selling:",
+    areasOverrides: {
+      "presentations-public-speaking": "Investor & Demo-Day Presenting",
+      "confidence-in-communication": "Confidence in the Room with VCs",
+      "fluency-elocution-articulation": "Sharp, Clear Delivery",
+      "stage-presence-gravitas": "Founder Gravitas & Credibility",
+      "accent-dialect-refinement": "International Founder English",
+      "voice-intonation": "Voice That Carries Conviction",
+      "pace-cadence-volume": "Pitch Pace & Pause",
+      "storytelling-techniques": "Founder Storytelling & Vision",
+      "scripting-composition": "Pitch Decks & Talk Tracks",
+      "gesture-body-language": "On-Stage Founder Presence",
+      "video-conferencing-digital": "Remote Pitching & Calls",
+      "broadcast-voice-performance": "Media & Podcast Appearances"
+    }
   },
   {
     slug: "professionals-lost",
@@ -401,6 +480,21 @@ export const heroVariants: HeroVariant[] = [
     closingHeading: "Your clinical expertise deserves communication that matches it.",
     closingCopy: "Confidential coaching for NHS and private sector medical professionals.",
     ctaLabel: "Book a Consultation",
+    areasIntro: "The communication skills that matter most in clinical, academic and patient-facing settings:",
+    areasOverrides: {
+      "presentations-public-speaking": "Grand Rounds & Conference Presentations",
+      "confidence-in-communication": "Confidence in High-Stakes Clinical Conversations",
+      "fluency-elocution-articulation": "Clear Clinical Articulation",
+      "stage-presence-gravitas": "Authority at the Lectern & Bedside",
+      "accent-dialect-refinement": "Internationally Understood Clinical English",
+      "voice-intonation": "Voice Care for Long Clinical Days",
+      "pace-cadence-volume": "Pace & Pause for Complex Information",
+      "storytelling-techniques": "Case Storytelling for Teaching & Talks",
+      "scripting-composition": "Scripting Lectures, Talks & Plenaries",
+      "gesture-body-language": "Composed Presence with Patients & Peers",
+      "video-conferencing-digital": "Telemedicine & Online Teaching",
+      "broadcast-voice-performance": "Media & Spokesperson Skills"
+    }
   },
   {
     slug: "government-lost",
@@ -556,6 +650,21 @@ export const heroVariants: HeroVariant[] = [
     closingHeading: "Done avoiding. Now you're here.",
     closingCopy: "Confidential 1:1 coaching, in London and online.",
     ctaLabel: "Book a Consultation",
+    areasIntro: "The skills that turn fear of speaking into steady, trusted delivery:",
+    areasOverrides: {
+      "presentations-public-speaking": "Confident Public Speaking",
+      "confidence-in-communication": "Confidence When Nerves Hit",
+      "fluency-elocution-articulation": "Clear Speech Under Pressure",
+      "stage-presence-gravitas": "Calm Presence in the Room",
+      "accent-dialect-refinement": "Comfortable, Clear Spoken English",
+      "voice-intonation": "Steady, Grounded Voice",
+      "pace-cadence-volume": "Pace, Pause & Breath Control",
+      "storytelling-techniques": "Storytelling That Steadies You",
+      "scripting-composition": "Preparing Talks You Trust",
+      "gesture-body-language": "Composed Body Language",
+      "video-conferencing-digital": "Confidence on Camera & Calls",
+      "broadcast-voice-performance": "Confidence on Mic & On Air"
+    }
   },
   {
     slug: "accent-softening-lost",
@@ -587,6 +696,21 @@ export const heroVariants: HeroVariant[] = [
     closingHeading: "Be heard the first time.",
     closingCopy: "Precision accent and clarity coaching for working professionals.",
     ctaLabel: "Book a Consultation",
+    areasIntro: "The areas accent and elocution work most often touches:",
+    areasOverrides: {
+      "presentations-public-speaking": "Internationally Clear Presenting",
+      "confidence-in-communication": "Confidence in Spoken English",
+      "fluency-elocution-articulation": "Fluency, Elocution & Diction",
+      "stage-presence-gravitas": "Polished Professional Presence",
+      "accent-dialect-refinement": "Accent Softening & Refinement",
+      "voice-intonation": "Natural English Intonation",
+      "pace-cadence-volume": "Pace & Rhythm in English",
+      "storytelling-techniques": "Telling Your Story in English",
+      "scripting-composition": "Preparing Talks in English",
+      "gesture-body-language": "Aligned Body Language",
+      "video-conferencing-digital": "Clear English on Video Calls",
+      "broadcast-voice-performance": "On-Air Spoken English"
+    }
   },
   {
     slug: "stammering-lost",
@@ -618,6 +742,21 @@ export const heroVariants: HeroVariant[] = [
     closingHeading: "Speak on your own terms.",
     closingCopy: "Confidential, compassionate 1:1 coaching for adults who stammer.",
     ctaLabel: "Book a Consultation",
+    areasIntro: "The areas stammering and fluency coaching typically supports:",
+    areasOverrides: {
+      "presentations-public-speaking": "Speaking Up with More Ease",
+      "confidence-in-communication": "Confidence Through Fluency Work",
+      "fluency-elocution-articulation": "Fluency, Flow & Articulation",
+      "stage-presence-gravitas": "Composed Presence When Speaking",
+      "accent-dialect-refinement": "Comfortable Spoken Delivery",
+      "voice-intonation": "Voice Use & Intonation",
+      "pace-cadence-volume": "Pace, Pause & Breath",
+      "storytelling-techniques": "Telling Your Story",
+      "scripting-composition": "Preparing What You Want to Say",
+      "gesture-body-language": "Calm Body Language",
+      "video-conferencing-digital": "Speaking on Calls & Video",
+      "broadcast-voice-performance": "On-Mic & On-Air Fluency"
+    }
   },
   {
     slug: "voice-lost",
@@ -649,6 +788,21 @@ export const heroVariants: HeroVariant[] = [
     closingHeading: "Develop a voice that does your thinking justice.",
     closingCopy: "Expert voice coaching in London and online.",
     ctaLabel: "Book a Session",
+    areasIntro: "The areas voice coaching most often unlocks:",
+    areasOverrides: {
+      "presentations-public-speaking": "Voice That Carries the Room",
+      "confidence-in-communication": "Confidence in Your Own Voice",
+      "fluency-elocution-articulation": "Clear Articulation & Diction",
+      "stage-presence-gravitas": "Vocal Authority & Gravitas",
+      "accent-dialect-refinement": "Polished Spoken English",
+      "voice-intonation": "Tone, Pitch & Intonation",
+      "pace-cadence-volume": "Pace, Volume & Projection",
+      "storytelling-techniques": "Expressive Storytelling",
+      "scripting-composition": "Scripts that Sound Like You",
+      "gesture-body-language": "Body Aligned with Voice",
+      "video-conferencing-digital": "Voice on Video Calls",
+      "broadcast-voice-performance": "Broadcast & Mic Voice"
+    }
   },
   {
     slug: "leadership-comms-lost",
@@ -711,6 +865,21 @@ export const heroVariants: HeroVariant[] = [
     closingHeading: "Make the room leave changed.",
     closingCopy: "Intensive keynote coaching packages for one-off events and regular conference speakers.",
     ctaLabel: "Book a Session",
+    areasIntro: "The skills behind a keynote audiences actually remember:",
+    areasOverrides: {
+      "presentations-public-speaking": "Keynote Delivery & Stagecraft",
+      "confidence-in-communication": "Confidence on the Main Stage",
+      "fluency-elocution-articulation": "Polished Keynote Articulation",
+      "stage-presence-gravitas": "Keynote Presence & Gravitas",
+      "accent-dialect-refinement": "Internationally Clear Keynote Speech",
+      "voice-intonation": "Resonant Keynote Voice",
+      "pace-cadence-volume": "Keynote Pace & Pause",
+      "storytelling-techniques": "Keynote Storytelling",
+      "scripting-composition": "Writing the Keynote",
+      "gesture-body-language": "Stagecraft & Movement",
+      "video-conferencing-digital": "Virtual & Hybrid Keynotes",
+      "broadcast-voice-performance": "Filmed & Streamed Talks"
+    }
   },
   {
     slug: "pitch-lost",
@@ -742,6 +911,21 @@ export const heroVariants: HeroVariant[] = [
     closingHeading: "Get investment-ready.",
     closingCopy: "Intensive pitch coaching packages tailored to your stage and investor audience.",
     ctaLabel: "Book a Session",
+    areasIntro: "The skills that decide whether a pitch lands or stalls:",
+    areasOverrides: {
+      "presentations-public-speaking": "Investor & Client Pitch Delivery",
+      "confidence-in-communication": "Confidence Under Pitch Pressure",
+      "fluency-elocution-articulation": "Clean, Persuasive Articulation",
+      "stage-presence-gravitas": "Authority in the Pitch Room",
+      "accent-dialect-refinement": "International Pitch Clarity",
+      "voice-intonation": "Persuasive Vocal Range",
+      "pace-cadence-volume": "Pitch Pace & Strategic Pause",
+      "storytelling-techniques": "Pitch Narrative & Hooks",
+      "scripting-composition": "Pitch Scripting & Talk Tracks",
+      "gesture-body-language": "Confident Pitch Body Language",
+      "video-conferencing-digital": "Remote & Hybrid Pitching",
+      "broadcast-voice-performance": "Media-Ready Pitch Delivery"
+    }
   },
   {
     slug: "negotiations-lost",
@@ -773,6 +957,21 @@ export const heroVariants: HeroVariant[] = [
     closingHeading: "Control the room. Control the outcome.",
     closingCopy: "Intensive coaching for senior professionals preparing for high-value negotiations.",
     ctaLabel: "Request a Consultation",
+    areasIntro: "The communication skills that shape the outcome of any negotiation:",
+    areasOverrides: {
+      "presentations-public-speaking": "Opening & Anchoring Statements",
+      "confidence-in-communication": "Confidence Across the Table",
+      "fluency-elocution-articulation": "Crisp, Considered Articulation",
+      "stage-presence-gravitas": "Negotiator's Gravitas",
+      "accent-dialect-refinement": "Clearly Understood Across Cultures",
+      "voice-intonation": "Calm, Controlled Voice",
+      "pace-cadence-volume": "Measured Pace & Strategic Pause",
+      "storytelling-techniques": "Framing & Persuasive Narrative",
+      "scripting-composition": "Prepared Positions & Language",
+      "gesture-body-language": "Composed Negotiation Body Language",
+      "video-conferencing-digital": "Remote & Hybrid Negotiation",
+      "broadcast-voice-performance": "High-Stakes Spokesperson Skills"
+    }
   },
   {
     slug: "online-lost",
@@ -804,6 +1003,21 @@ export const heroVariants: HeroVariant[] = [
     closingHeading: "Expert coaching, wherever you are.",
     closingCopy: "1:1 online sessions for professionals worldwide.",
     ctaLabel: "Book a Consultation",
+    areasIntro: "The communication skills that make online presence land:",
+    areasOverrides: {
+      "presentations-public-speaking": "Webinar & Virtual Speaking",
+      "confidence-in-communication": "Confidence on Camera",
+      "fluency-elocution-articulation": "Clear Online Articulation",
+      "stage-presence-gravitas": "On-Camera Authority",
+      "accent-dialect-refinement": "Clearly Understood Online",
+      "voice-intonation": "Engaging Online Voice",
+      "pace-cadence-volume": "Pace, Pause & Energy Online",
+      "storytelling-techniques": "Storytelling Through a Screen",
+      "scripting-composition": "Scripting for Video & Webinar",
+      "gesture-body-language": "On-Camera Framing & Body Language",
+      "video-conferencing-digital": "Video Conferencing Mastery",
+      "broadcast-voice-performance": "Streamed & Recorded Performance"
+    }
   },
   {
     slug: "sales-lost",
@@ -835,6 +1049,21 @@ export const heroVariants: HeroVariant[] = [
     closingHeading: "Stop losing deals you should be winning.",
     closingCopy: "Individual and team coaching for sales professionals across all sectors.",
     ctaLabel: "Book a Session",
+    areasIntro: "The communication skills behind sales conversations that convert:",
+    areasOverrides: {
+      "presentations-public-speaking": "Sales Presentations & Demos",
+      "confidence-in-communication": "Confidence in the Sales Conversation",
+      "fluency-elocution-articulation": "Clear, Persuasive Articulation",
+      "stage-presence-gravitas": "Authority with Senior Buyers",
+      "accent-dialect-refinement": "Internationally Understood Selling",
+      "voice-intonation": "Engaging Sales Voice",
+      "pace-cadence-volume": "Sales Pace & Strategic Pause",
+      "storytelling-techniques": "Customer Storytelling",
+      "scripting-composition": "Pitch & Talk-Track Crafting",
+      "gesture-body-language": "Confident Sales Presence",
+      "video-conferencing-digital": "Remote & Hybrid Selling",
+      "broadcast-voice-performance": "Recorded & Webinar Selling"
+    }
   },
   {
     slug: "media-training-lost",
@@ -866,6 +1095,21 @@ export const heroVariants: HeroVariant[] = [
     closingHeading: "Be ready for the cameras before they're on you.",
     closingCopy: "Expert media training for executives, public figures and spokespeople.",
     ctaLabel: "Request a Consultation",
+    areasIntro: "The skills that decide how well you hold up under media scrutiny:",
+    areasOverrides: {
+      "presentations-public-speaking": "On-Message Public Appearances",
+      "confidence-in-communication": "Confidence Under Tough Questions",
+      "fluency-elocution-articulation": "Clear, Quotable Articulation",
+      "stage-presence-gravitas": "Composed Spokesperson Presence",
+      "accent-dialect-refinement": "Clearly Understood Across Markets",
+      "voice-intonation": "Calm, Controlled Broadcast Voice",
+      "pace-cadence-volume": "Measured Pace Under Pressure",
+      "storytelling-techniques": "Message-Led Storytelling",
+      "scripting-composition": "Key Messages & Soundbites",
+      "gesture-body-language": "On-Camera Body Language",
+      "video-conferencing-digital": "Down-the-Line & Remote Interviews",
+      "broadcast-voice-performance": "Broadcast & Podcast Performance"
+    }
   },
   {
     slug: "interview-lost",
@@ -897,6 +1141,21 @@ export const heroVariants: HeroVariant[] = [
     closingHeading: "Get the role you're qualified for.",
     closingCopy: "Expert interview coaching for professionals at every career stage.",
     ctaLabel: "Book a Session",
+    areasIntro: "The communication skills that decide how interviews go:",
+    areasOverrides: {
+      "presentations-public-speaking": "Panel & Assessment-Day Presenting",
+      "confidence-in-communication": "Confidence Under Interview Pressure",
+      "fluency-elocution-articulation": "Clear, Composed Articulation",
+      "stage-presence-gravitas": "Interview Presence & Credibility",
+      "accent-dialect-refinement": "Clearly Understood at Interview",
+      "voice-intonation": "Steady, Convincing Voice",
+      "pace-cadence-volume": "Interview Pace & Pause",
+      "storytelling-techniques": "Story-Led Interview Answers",
+      "scripting-composition": "Preparing Answers & Examples",
+      "gesture-body-language": "Composed Interview Body Language",
+      "video-conferencing-digital": "Online & Video Interviews",
+      "broadcast-voice-performance": "On-Camera Interview Skills"
+    }
   },
   {
     slug: "wedding-lost",
@@ -928,6 +1187,21 @@ export const heroVariants: HeroVariant[] = [
     closingHeading: "Deliver the speech they'll talk about for years.",
     closingCopy: "One-off coaching sessions or a full speech preparation programme.",
     ctaLabel: "Book a Session",
+    areasIntro: "The speaking skills that make a wedding speech land beautifully:",
+    areasOverrides: {
+      "presentations-public-speaking": "Wedding & Ceremony Speaking",
+      "confidence-in-communication": "Confidence on the Day",
+      "fluency-elocution-articulation": "Clear, Heartfelt Articulation",
+      "stage-presence-gravitas": "Composed Presence at the Top Table",
+      "accent-dialect-refinement": "Polished Spoken Delivery",
+      "voice-intonation": "Warm, Expressive Voice",
+      "pace-cadence-volume": "Pace, Pause & Audibility",
+      "storytelling-techniques": "Wedding Storytelling",
+      "scripting-composition": "Writing the Speech",
+      "gesture-body-language": "Calm, Connected Body Language",
+      "video-conferencing-digital": "Speeches for Remote Guests",
+      "broadcast-voice-performance": "Performing the Speech with Heart"
+    }
   },
   {
     slug: "lawyers-lost",
@@ -959,6 +1233,21 @@ export const heroVariants: HeroVariant[] = [
     closingHeading: "The argument deserves the advocacy.",
     closingCopy: "Discreet expert coaching for barristers, solicitors and legal professionals.",
     ctaLabel: "Request a Consultation",
+    areasIntro: "The communication skills lawyers and advocates use every day:",
+    areasOverrides: {
+      "presentations-public-speaking": "Courtroom & Conference Speaking",
+      "confidence-in-communication": "Confidence Under Cross-Examination",
+      "fluency-elocution-articulation": "Forensic Clarity & Articulation",
+      "stage-presence-gravitas": "Advocate's Gravitas",
+      "accent-dialect-refinement": "Polished Professional English",
+      "voice-intonation": "Courtroom Voice & Range",
+      "pace-cadence-volume": "Measured Courtroom Pace",
+      "storytelling-techniques": "Case Narrative & Argument",
+      "scripting-composition": "Submissions, Speeches & Statements",
+      "gesture-body-language": "Composed Courtroom Presence",
+      "video-conferencing-digital": "Remote Hearings & Client Calls",
+      "broadcast-voice-performance": "Media Comment & Spokesperson Skills"
+    }
   },
   {
     slug: "teachers-lost",
@@ -990,6 +1279,21 @@ export const heroVariants: HeroVariant[] = [
     closingHeading: "Protect your voice. Elevate your teaching.",
     closingCopy: "Individual coaching and school-wide CPD programmes available.",
     ctaLabel: "Book a Consultation",
+    areasIntro: "The communication skills teachers and lecturers rely on every day:",
+    areasOverrides: {
+      "presentations-public-speaking": "Classroom & Lecture Presenting",
+      "confidence-in-communication": "Confidence in Front of Any Class",
+      "fluency-elocution-articulation": "Clear Teaching Voice",
+      "stage-presence-gravitas": "Classroom Authority",
+      "accent-dialect-refinement": "Clearly Understood Classroom English",
+      "voice-intonation": "Voice Care for Teaching Days",
+      "pace-cadence-volume": "Pace & Projection in the Classroom",
+      "storytelling-techniques": "Storytelling for Learning",
+      "scripting-composition": "Planning Talks, Assemblies & Lectures",
+      "gesture-body-language": "Calm, Commanding Body Language",
+      "video-conferencing-digital": "Online & Hybrid Teaching",
+      "broadcast-voice-performance": "Recorded & Streamed Lessons"
+    }
   },
   {
     slug: "creators-lost",

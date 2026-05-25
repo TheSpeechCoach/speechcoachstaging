@@ -7,6 +7,7 @@ import SiteNav from "@/components/SiteNav";
 import SiteFooter from "@/components/SiteFooter";
 import StickyMobileCTA from "@/components/StickyMobileCTA";
 import { getHeroVariant } from "@/data/heroVariants";
+import { areasOfExpertise } from "@/data/areasOfExpertise";
 import useFitHeroText from "@/hooks/useFitHeroText";
 
 const fadeUp = {
@@ -189,6 +190,45 @@ const LostHero = () => {
               </motion.li>
             ))}
           </ul>
+        </div>
+      </section>
+
+      {/* Areas of expertise */}
+      <section className="py-16 md:py-20 px-6 border-t border-border">
+        <div className="container mx-auto max-w-5xl">
+          <motion.h2 {...fadeUp} className="font-display text-3xl md:text-5xl font-bold mb-4 text-center">
+            Areas of <span className="italic text-gradient-gold">expertise</span>
+          </motion.h2>
+          {entry.areasIntro && (
+            <motion.p
+              {...fadeUp}
+              transition={{ duration: 0.6, delay: 0.05, ease: "easeOut" }}
+              className="font-body text-muted-foreground text-center max-w-2xl mx-auto mb-10"
+            >
+              {entry.areasIntro}
+            </motion.p>
+          )}
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            {areasOfExpertise.map((area, i) => {
+              const label = entry.areasOverrides?.[area.id] ?? area.name;
+              return (
+                <motion.div
+                  key={area.id}
+                  initial={{ opacity: 0, y: 16 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-40px" }}
+                  transition={{ duration: 0.4, delay: i * 0.03, ease: "easeOut" }}
+                >
+                  <Link
+                    to={`/areas-of-expertise#${area.id}`}
+                    className="block h-full bg-card border border-border rounded-lg px-4 py-3 font-body text-sm text-muted-foreground hover:text-foreground hover:border-primary/30 transition-colors"
+                  >
+                    {label}
+                  </Link>
+                </motion.div>
+              );
+            })}
+          </div>
         </div>
       </section>
 

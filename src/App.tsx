@@ -41,6 +41,7 @@ import Pricing from "./pages/Pricing";
 import ThankYou from "./pages/ThankYou";
 import LostHero from "./pages/LostHero";
 import WhoWeWorkWith from "./pages/WhoWeWorkWith";
+import AreasOfExpertise from "./pages/AreasOfExpertise";
 import ScrollToTop from "./components/ScrollToTop";
 
 const queryClient = new QueryClient();
@@ -89,6 +90,7 @@ const App = () => (
         <Route path="/thank-you" element={<ThankYou />} />
         <Route path="/hero/:variant/:slug" element={<LostHero />} />
         <Route path="/who-we-work-with" element={<WhoWeWorkWith />} />
+        <Route path="/areas-of-expertise" element={<AreasOfExpertise />} />
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="*" element={<NotFound />} />
       </Routes>
