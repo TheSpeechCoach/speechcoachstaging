@@ -50,6 +50,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Index />} />
         <Route path="/public-speaking-coaching" element={<PublicSpeaking />} />
