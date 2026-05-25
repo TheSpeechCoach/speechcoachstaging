@@ -112,7 +112,7 @@ const SiteNav = () => {
           <span className="font-display text-foreground flex items-baseline leading-none">
             <span className="font-bold">The</span>{" "}
             <span className="italic text-gradient-gold">Speech</span>{" "}
-            <span className="font-bold inline-flex items-baseline">
+            <span className="font-bold inline-flex items-center" style={{lineHeight:1}}>
               C
               <span className="relative inline-block" style={{width:'0.78em',height:'0.78em'}}>
                 <span className="absolute inset-0 rounded-full border-[0.06em] border-current" />
