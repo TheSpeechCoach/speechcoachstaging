@@ -116,7 +116,7 @@ const SiteNav = () => {
               C
               <span className="relative inline-flex items-center justify-center" style={{lineHeight:1}}>
                 O
-                <img src="/White.png" alt="" className="absolute" style={{width:'70%',height:'70%',objectFit:'contain',left:'50%',top:'50%',transform:'translate(-50%,-50%)'}} />
+                <img src="/White.png" alt="" style={{position:'absolute',width:'72%',objectFit:'contain',mixBlendMode:'multiply',filter:'invert(1)'}} />
               </span>
               ach
             </span>
