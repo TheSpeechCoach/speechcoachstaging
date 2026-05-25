@@ -80,15 +80,17 @@ const AreasOfExpertise = () => {
               {...fadeUp}
               className="font-display text-3xl md:text-5xl font-bold mb-6 leading-tight"
             >
-              {area.name.split(/( & |, )/).map((part, idx) =>
-                idx === 0 ? (
-                  <span key={idx}>{part}</span>
-                ) : (
-                  <span key={idx} className={idx === 1 ? "italic text-gradient-gold" : ""}>
-                    {part}
-                  </span>
-                )
-              )}
+              {(() => {
+                const m = area.name.match(/^(.*?)( & | ?, ?)(.+)$/);
+                if (!m) return area.name;
+                return (
+                  <>
+                    {m[1]}
+                    {m[2]}
+                    <span className="italic text-gradient-gold">{m[3]}</span>
+                  </>
+                );
+              })()}
             </motion.h2>
             <motion.p
               {...fadeUp}
