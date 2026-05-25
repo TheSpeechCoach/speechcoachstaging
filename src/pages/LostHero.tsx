@@ -7,6 +7,7 @@ import SiteNav from "@/components/SiteNav";
 import SiteFooter from "@/components/SiteFooter";
 import StickyMobileCTA from "@/components/StickyMobileCTA";
 import { getHeroVariant } from "@/data/heroVariants";
+import { areasOfExpertise } from "@/data/areasOfExpertise";
 import useFitHeroText from "@/hooks/useFitHeroText";
 
 const fadeUp = {
