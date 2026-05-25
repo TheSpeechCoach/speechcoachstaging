@@ -109,17 +109,11 @@ const SiteNav = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <div className="container mx-auto flex items-center justify-between py-5 px-6">
         <Link to="/" className="flex items-center gap-2 font-display text-4xl tracking-tight">
+          <img src="/White.png" alt="" className="h-10 w-auto" />
           <span className="font-display text-foreground flex items-baseline leading-none">
             <span className="font-bold">The</span>{" "}
             <span className="italic text-gradient-gold">Speech</span>{" "}
-            <span className="font-bold inline-flex items-center" style={{lineHeight:1}}>
-              C
-              <span className="relative inline-flex items-center justify-center" style={{lineHeight:1}}>
-                O
-                <img src="/White.png" alt="" style={{position:'absolute',width:'72%',objectFit:'contain',mixBlendMode:'multiply',filter:'invert(1)'}} />
-              </span>
-              ach
-            </span>
+            <span className="font-bold">Coach</span>
           </span>
         </Link>
         <div className="hidden lg:flex items-center gap-6 font-body text-sm">
