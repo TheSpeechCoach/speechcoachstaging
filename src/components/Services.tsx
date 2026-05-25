@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const services = [
   {
@@ -27,19 +28,19 @@ const services = [
   },
 ];
 
-const skillsList = [
-  "Presentations & Public Speaking",
-  "Confidence in Communication",
-  "Fluency, Elocution & Articulation",
-  "Stage Presence & Gravitas",
-  "Accent, Dialect & Refinement",
-  "Voice & Intonation",
-  "Pace, Cadence & Volume",
-  "Storytelling Techniques",
-  "Scripting & Composition",
-  "Gesture & Body Language",
-  "Video Conferencing & Digital Discourse",
-  "Broadcast Voice & Performance",
+const skillsList: { label: string; id: string }[] = [
+  { label: "Presentations & Public Speaking", id: "presentations-public-speaking" },
+  { label: "Confidence in Communication", id: "confidence-in-communication" },
+  { label: "Fluency, Elocution & Articulation", id: "fluency-elocution-articulation" },
+  { label: "Stage Presence & Gravitas", id: "stage-presence-gravitas" },
+  { label: "Accent, Dialect & Refinement", id: "accent-dialect-refinement" },
+  { label: "Voice & Intonation", id: "voice-intonation" },
+  { label: "Pace, Cadence & Volume", id: "pace-cadence-volume" },
+  { label: "Storytelling Techniques", id: "storytelling-techniques" },
+  { label: "Scripting & Composition", id: "scripting-composition" },
+  { label: "Gesture & Body Language", id: "gesture-body-language" },
+  { label: "Video Conferencing & Digital Discourse", id: "video-conferencing-digital" },
+  { label: "Broadcast Voice & Performance", id: "broadcast-voice-performance" },
 ];
 
 const Services = () => {
@@ -97,9 +98,13 @@ const Services = () => {
           </h3>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {skillsList.map((skill, i) => (
-              <div key={i} className="bg-card border border-border rounded-lg px-4 py-3 font-body text-sm text-muted-foreground hover:text-foreground hover:border-primary/30 transition-colors">
-                {skill}
-              </div>
+              <Link
+                key={i}
+                to={`/areas-of-expertise#${skill.id}`}
+                className="block bg-card border border-border rounded-lg px-4 py-3 font-body text-sm text-muted-foreground hover:text-foreground hover:border-primary/30 transition-colors cursor-pointer"
+              >
+                {skill.label}
+              </Link>
             ))}
           </div>
         </motion.div>
