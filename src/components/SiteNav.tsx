@@ -114,7 +114,7 @@ const SiteNav = () => {
             alt="The Speech Coach"
             className="h-10 w-auto"
           />
-          <span className="font-display text-lg text-foreground">TheSpeechCoach</span>
+          <span className="font-display text-lg text-foreground"><span className="font-bold">The</span><span className="italic text-gradient-gold">Speech</span><span className="font-bold">Coach</span></span>
         </Link>
         <div className="hidden lg:flex items-center gap-6 font-body text-sm">
           <div className="relative">
