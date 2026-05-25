@@ -49,6 +49,10 @@ export type HeroVariant = {
   ctaLabel: string;
   /** When false, suppress the auto-appended "Now you're here." gold-italic line. Default true (append when last line isn't already that). */
   appendNowHere?: boolean;
+  /** Optional intro line above the Areas of Expertise grid on the variant page. */
+  areasIntro?: string;
+  /** Optional tailored card labels keyed by area id (see src/data/areasOfExpertise.ts). */
+  areasOverrides?: Partial<Record<string, string>>;
   // Extended content (merged via getHeroVariant)
   introExtended?: string;
   whyMatters?: string;
