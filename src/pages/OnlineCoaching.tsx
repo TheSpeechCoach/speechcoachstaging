@@ -41,7 +41,7 @@ const OnlineCoaching = () => (
       {
         heading: "Does online really work?",
         intro:
-          "Yes. For speech and communication coaching, online sessions are highly effective. The Speech Coach has worked with professionals across more than 30 countries — all online.",
+          "Yes. For speech and communication coaching, online sessions are highly effective. The Speech Coach has worked with professionals worldwide — all online.",
         items: [],
       },
     ]}
