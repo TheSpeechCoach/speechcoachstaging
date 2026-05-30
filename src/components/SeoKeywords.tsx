@@ -24,8 +24,8 @@ const SeoKeywords = () => (
         transition={{ duration: 0.6 }}
         className="font-display text-3xl md:text-5xl font-bold mb-6 leading-tight"
       >
-        Trusted by Professionals in{" "}
-        <span className="italic text-gradient-gold">Over 30 Countries</span>
+        Trusted by Professionals{" "}
+        <span className="italic text-gradient-gold">Worldwide</span>
       </motion.h2>
       <motion.p
         initial={{ opacity: 0, y: 30 }}
