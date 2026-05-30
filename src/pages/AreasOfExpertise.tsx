@@ -5,6 +5,7 @@ import SiteNav from "@/components/SiteNav";
 import SiteFooter from "@/components/SiteFooter";
 import StickyMobileCTA from "@/components/StickyMobileCTA";
 import { areasOfExpertise } from "@/data/areasOfExpertise";
+import CTASection from "@/components/CTASection";
 
 const fadeUp = {
   initial: { opacity: 0, y: 30 },
@@ -82,12 +83,23 @@ const AreasOfExpertise = () => {
             >
               {(() => {
                 const m = area.name.match(/^(.*?)( & | ?, ?)(.+)$/);
-                if (!m) return area.name;
+                if (m) {
+                  return (
+                    <>
+                      {m[1]}
+                      {m[2]}
+                      <span className="italic text-gradient-gold">{m[3]}</span>
+                    </>
+                  );
+                }
+                const idx = area.name.lastIndexOf(" ");
+                if (idx === -1) {
+                  return <span className="italic text-gradient-gold">{area.name}</span>;
+                }
                 return (
                   <>
-                    {m[1]}
-                    {m[2]}
-                    <span className="italic text-gradient-gold">{m[3]}</span>
+                    {area.name.slice(0, idx + 1)}
+                    <span className="italic text-gradient-gold">{area.name.slice(idx + 1)}</span>
                   </>
                 );
               })()}
@@ -103,30 +115,7 @@ const AreasOfExpertise = () => {
         </section>
       ))}
 
-      {/* Closing CTA */}
-      <section className="py-16 md:py-20 px-6 border-t border-border">
-        <div className="container mx-auto max-w-3xl text-center">
-          <motion.h2
-            {...fadeUp}
-            className="font-display text-3xl md:text-5xl font-bold mb-6 leading-tight"
-          >
-            Find the work that will make the biggest difference for you.
-          </motion.h2>
-          <motion.p {...fadeUp} className="font-body text-lg text-muted-foreground mb-10">
-            Every programme is shaped around the speaker in front of us. Tell us what's coming up and we'll build the work around it.
-          </motion.p>
-          <motion.a
-            {...fadeUp}
-            href="https://www.thespeech.coach/book-now/"
-            target="_blank"
-            rel="noopener"
-            className="inline-flex items-center gap-2 bg-primary text-primary-foreground hover:bg-primary/90 transition-all px-8 py-4 rounded-full font-body text-sm font-medium glow-gold"
-          >
-            Book a Consultation
-            <ArrowRight className="w-4 h-4" />
-          </motion.a>
-        </div>
-      </section>
+      <CTASection />
 
       <SiteFooter />
       <StickyMobileCTA />
