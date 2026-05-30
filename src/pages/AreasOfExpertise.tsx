@@ -115,6 +115,10 @@ const AreasOfExpertise = () => {
         </section>
       ))}
 
+      <div className="container mx-auto max-w-3xl px-6 pb-16 md:pb-20">
+        <p className="text-right font-display italic text-gradient-gold text-2xl md:text-3xl">...and more...</p>
+      </div>
+
       <div className="border-t border-border">
         <CTASection />
       </div>
