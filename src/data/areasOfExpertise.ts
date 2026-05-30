@@ -9,7 +9,7 @@ export const areasOfExpertise: AreaOfExpertise[] = [
     id: "presentations-public-speaking",
     name: "Presentations & Public Speaking",
     paragraph:
-      "Presentation and public speaking coaching for professionals who need to hold a room — boardrooms, keynotes, conferences, panels and town halls. We build the structure, openings, transitions and stage craft that turn information into a message audiences remember, follow and act on.",
+      "Presentation and public speaking coaching for professionals who need to hold a room — boardrooms, keynotes, conferences, pitches, panels and town halls. We build the structure, openings, transitions and stage craft that turn information into a message audiences remember, follow and act on.",
   },
   {
     id: "confidence-in-communication",
