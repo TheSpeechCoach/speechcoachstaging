@@ -90,7 +90,7 @@ const LostHero = () => {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="font-body text-sm tracking-[0.3em] uppercase text-primary mb-8"
             >
-              Inspire • Engage • Influence
+              Professional • Practical • Proven
             </motion.p>
 
             <h1

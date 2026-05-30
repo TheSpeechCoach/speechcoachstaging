@@ -27,7 +27,7 @@ const HeroSection = () => {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="font-body text-sm tracking-[0.3em] uppercase text-primary mb-8"
           >
-            Inspire • Engage • Influence
+            Expert Public Speaking Coaching
           </motion.p>
           <h1
             ref={h1Ref}
