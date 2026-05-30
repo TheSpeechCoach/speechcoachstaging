@@ -32,10 +32,13 @@ const SiteFooter = () => {
       <div className="container mx-auto px-6">
         <div className="grid md:grid-cols-3 gap-12 mb-12">
           <div>
-            <Link to="/" className="font-display text-xl tracking-tight">
-              <span className="font-bold">The</span>
-              <span className="italic text-gradient-gold">Speech</span>
-              <span className="font-bold">.Coach</span>
+            <Link to="/" className="flex items-center gap-3 font-display text-3xl tracking-tight">
+              <img src="/White.png" alt="" className="h-10 w-auto" />
+              <span className="font-display text-foreground flex items-baseline leading-none gap-2">
+                <span className="font-bold">The</span>
+                <span className="italic text-gradient-gold">Speech</span>
+                <span className="font-bold">Coach</span>
+              </span>
             </Link>
             <p className="font-body text-sm text-muted-foreground mt-4 max-w-xs">
               Bespoke speech, voice and communication coaching for professionals worldwide.
