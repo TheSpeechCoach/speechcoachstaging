@@ -119,6 +119,17 @@ const Pricing = () => (
           Book a Consultation
           <ArrowRight className="w-4 h-4" />
         </a>
+        <p className="text-xs text-muted-foreground mt-3 text-center">
+          By booking, you agree to our{" "}
+          <Link to="/terms-and-conditions" className="underline underline-offset-2 hover:text-foreground transition-colors">
+            Terms &amp; Conditions
+          </Link>{" "}
+          and{" "}
+          <Link to="/privacy-policy" className="underline underline-offset-2 hover:text-foreground transition-colors">
+            Privacy Policy
+          </Link>
+          .
+        </p>
       </div>
     </section>
 
