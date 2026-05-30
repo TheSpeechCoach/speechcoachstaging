@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
+import StatsStrip from "@/components/StatsStrip";
 import CredentialsSection from "@/components/CredentialsSection";
 import PainPoints from "@/components/PainPoints";
 import MidCTA from "@/components/MidCTA";
