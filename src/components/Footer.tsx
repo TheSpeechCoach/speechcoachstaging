@@ -20,10 +20,13 @@ const Footer = () => {
       <div className="container mx-auto px-6">
         {/* Row A */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-          <Link to="/" className="font-display text-lg tracking-tight">
-            <span className="font-bold">The</span>
-            <span className="italic text-gradient-gold">Speech</span>
-            <span className="font-bold">.Coach</span>
+          <Link to="/" className="flex items-center gap-3 font-display text-3xl tracking-tight">
+            <img src="/White.png" alt="" className="h-10 w-auto" />
+            <span className="font-display text-foreground flex items-baseline leading-none gap-2">
+              <span className="font-bold">The</span>
+              <span className="italic text-gradient-gold">Speech</span>
+              <span className="font-bold">Coach</span>
+            </span>
           </Link>
           <div className="flex items-center gap-5">
             <a aria-label="LinkedIn" href="https://www.linkedin.com/in/thespeechcoach" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
