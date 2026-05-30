@@ -88,9 +88,24 @@ const SiteFooter = () => {
             </ul>
           </div>
         </div>
-        <div className="border-t border-border pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="font-body text-xs text-muted-foreground">
-            © {new Date().getFullYear()} The Speech Coach Ltd. All rights reserved.
+        {/* Row B — legal links */}
+        <div className="mt-6 pt-6 border-t border-border/40 text-center md:text-left">
+          <Link to="/privacy-policy" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+            Privacy Policy
+          </Link>
+          <span className="text-muted-foreground mx-2">•</span>
+          <Link to="/terms-and-conditions" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+            Terms &amp; Conditions
+          </Link>
+        </div>
+
+        {/* Row C — disclaimer + copyright */}
+        <div className="mt-4 text-center md:text-left text-xs text-muted-foreground/70 leading-relaxed">
+          <p>
+            <span className="text-foreground/50">*</span>This number includes clinical and non-clinical clients successfully supported since 1995.
+          </p>
+          <p>
+            © {new Date().getFullYear()} The Speech Coach Limited. Registered in England &amp; Wales. Company No. 11516901. ICO Registration No. ZA754577.
           </p>
         </div>
       </div>

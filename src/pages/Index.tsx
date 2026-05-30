@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
+import StatsStrip from "@/components/StatsStrip";
 import CredentialsSection from "@/components/CredentialsSection";
 import PainPoints from "@/components/PainPoints";
 import MidCTA from "@/components/MidCTA";
@@ -20,6 +21,7 @@ const Index = () => {
     <main className="bg-background text-foreground min-h-screen">
       <Navbar />
       <HeroSection />
+      <StatsStrip />
       <CredentialsSection />
       <PainPoints />
       <MidCTA

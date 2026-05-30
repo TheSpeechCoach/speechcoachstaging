@@ -1,4 +1,5 @@
 import { Linkedin, Youtube, Instagram } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const TikTokIcon = ({ className }: { className?: string }) => (
   <svg className={className} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -11,12 +12,13 @@ const TelegramIcon = ({ className }: { className?: string }) => (
     <path d="M21.94 4.32 18.7 19.61c-.24 1.08-.88 1.34-1.78.83l-4.92-3.62-2.37 2.28c-.26.26-.48.48-.99.48l.35-5.02 9.13-8.25c.4-.35-.09-.55-.61-.2L6.22 13.27 1.36 11.75c-1.06-.33-1.08-1.06.22-1.57l19-7.32c.88-.33 1.65.2 1.36 1.46Z" />
   </svg>
 );
-import { Link } from "react-router-dom";
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
   return (
     <footer className="border-t border-border py-12">
       <div className="container mx-auto px-6">
+        {/* Row A */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <Link to="/" className="font-display text-lg tracking-tight">
             <span className="font-bold">The</span>
@@ -40,8 +42,26 @@ const Footer = () => {
               <TelegramIcon className="w-5 h-5" />
             </a>
           </div>
-          <p className="font-body text-sm text-muted-foreground">
-            © {new Date().getFullYear()} The Speech Coach Ltd. All rights reserved.
+        </div>
+
+        {/* Row B — legal links */}
+        <div className="mt-6 pt-6 border-t border-border/40 text-center md:text-left">
+          <Link to="/privacy-policy" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+            Privacy Policy
+          </Link>
+          <span className="text-muted-foreground mx-2">•</span>
+          <Link to="/terms-and-conditions" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+            Terms &amp; Conditions
+          </Link>
+        </div>
+
+        {/* Row C — disclaimer + copyright */}
+        <div className="mt-4 text-center md:text-left text-xs text-muted-foreground/70 leading-relaxed">
+          <p>
+            <span className="text-foreground/50">*</span>This number includes clinical and non-clinical clients successfully supported since 1995.
+          </p>
+          <p>
+            © {currentYear} The Speech Coach Limited. Registered in England &amp; Wales. Company No. 11516901. ICO Registration No. ZA754577.
           </p>
         </div>
       </div>

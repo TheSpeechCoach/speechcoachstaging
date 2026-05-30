@@ -20,7 +20,7 @@ const services = [
   },
   {
     title: "Online or In Person",
-    description: "Delivered live online to clients across more than thirty countries, or in person in London.",
+    description: "Delivered live online to clients worldwide, or in person in London.",
   },
   {
     title: "Intensives",
