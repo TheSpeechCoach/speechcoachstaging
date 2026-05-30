@@ -102,7 +102,7 @@ const SiteFooter = () => {
         {/* Row C — disclaimer + copyright */}
         <div className="mt-4 text-center md:text-left text-xs text-muted-foreground/70 leading-relaxed">
           <p>
-            <span className="text-foreground/50">*</span>This number includes clinical and non-clinical clients successfully supported since 1995.
+            <span className="text-foreground/50">*</span>The 3,000+ figure reflects both clinical and non-clinical clients successfully supported since 1995.
           </p>
           <p>
             © {new Date().getFullYear()} The Speech Coach Limited. Registered in England &amp; Wales. Company No. 11516901. ICO Registration No. ZA754577.
