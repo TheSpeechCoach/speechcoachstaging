@@ -53,7 +53,7 @@ const AreasOfExpertise = () => {
             transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
             className="font-body text-lg md:text-xl text-muted-foreground mb-10 max-w-2xl mx-auto"
           >
-            We coach across the full range of speech, voice and communication skills.
+            We coach the full range of speech, voice and communication skills,<br />from the foundations to the finer points.
           </motion.p>
           <motion.a
             {...fadeUp}
