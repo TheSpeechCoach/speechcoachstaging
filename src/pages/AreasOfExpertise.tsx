@@ -115,7 +115,9 @@ const AreasOfExpertise = () => {
         </section>
       ))}
 
-      <CTASection />
+      <div className="border-t border-border">
+        <CTASection />
+      </div>
 
       <SiteFooter />
       <StickyMobileCTA />
