@@ -45,6 +45,7 @@ import AreasOfExpertise from "./pages/AreasOfExpertise";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsAndConditions from "./pages/TermsAndConditions";
 import ScrollToTop from "./components/ScrollToTop";
+import ScrollToTopButton from "./components/ScrollToTopButton";
 
 const queryClient = new QueryClient();
 
@@ -54,6 +55,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <ScrollToTop />
+      <ScrollToTopButton />
       <Routes>
         <Route path="/" element={<Index />} />
         <Route path="/public-speaking-coaching" element={<PublicSpeaking />} />
