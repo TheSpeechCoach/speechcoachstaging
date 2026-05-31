@@ -22,7 +22,6 @@ const Index = () => {
     <main className="bg-background text-foreground min-h-screen">
       <Navbar />
       <HeroSection />
-      <StatsStrip />
       <CredentialsSection />
       <PainPoints />
       <MidCTA
@@ -37,6 +36,7 @@ const Index = () => {
       <CoachSection />
       <FitSection />
       <FAQSection />
+      <StatsStrip />
       <CTASection />
       <SeoKeywords />
       <Footer />
