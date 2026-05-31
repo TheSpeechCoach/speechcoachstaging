@@ -33,35 +33,6 @@ const BroadcastMedia = () => (
     ]}
     extraBlocks={[
       {
-        heading: "Why broadcast matters more than ever",
-        intro:
-          "Broadcast appearances are the single most leveraged communication a senior professional does. A ten-minute Today programme interview reaches more people than a year of internal town halls. A bad clip — handled badly under hostile questioning — circulates indefinitely. A well-delivered piece becomes the reference point everyone in your industry quotes back at you. Producers note who handles the medium. So do audiences.",
-        items: [],
-      },
-      {
-        heading: "How we work",
-        intro:
-          "The work is medium-specific. Studio set-up, camera framing, microphone awareness, the physics of pace and breath under broadcast conditions, the soundbite discipline that gets you quoted accurately rather than edited cruelly. For long-form podcast we coach narrative structure, the management of the silent space, and the discipline of not over-answering. For self-shot content we coach framing, the opening hook and the close. Sessions are 1:1, often run in a broadcast-condition studio with full camera and microphone set-up, using playback, structured feedback and repeated takes. For named upcoming interviews we work through the producer brief, anticipate hostile and hooky questions, and rehearse the bridging and the soundbite that will survive the edit.",
-        items: [],
-      },
-      {
-        heading: "Outcomes",
-        items: [
-          "Studio interviews that land your message and survive the edit",
-          "Soundbite discipline that produces quotable, broadcast-ready answers",
-          "Composure under hostile or interruptive questioning",
-          "Down-the-line interviews delivered with full presence and pace",
-          "Podcast long-form that holds the audience past the first ten minutes",
-          "Self-shot video that you will actually publish",
-        ],
-      },
-      {
-        heading: "Programme formats",
-        intro:
-          "Broadcast Media Training Day — a single intensive day of studio-condition coaching across hostile interview, friendly interview, down-the-line and panel, with full playback and structured feedback. Named-Interview Preparation — compressed preparation for a specific upcoming interview such as Today, Newsnight, Sky News or a podcast feature, with two to three sessions inside the run-up window. Podcast & Content Programme — a block of sessions for hosts and guests building long-form podcast presence or regular video content: voice, pacing, structure, on-camera presence and editing-aware delivery.",
-        items: [],
-      },
-      {
         heading: "Case snapshot",
         intro:
           "The CEO of a mid-cap consumer business, called on Today the morning after a difficult set of half-year results, had ninety minutes' notice and a hostile presenter. One pre-session by video the night before: three bridging lines, two soundbites, the discipline of finishing every answer with the message rather than the defence. The clip that travelled was the executive's line — not the question. The Chair's note afterwards used the word 'professional'. The work was three hours total.",
