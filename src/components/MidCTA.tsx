@@ -40,7 +40,7 @@ const MidCTA = ({ heading, body, ctaLabel = "Let's talk...", ctaHref = "/book-no
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          whileHover={{ y: -2 }}
+          
           className="inline-block w-full sm:w-auto bg-primary text-primary-foreground border border-transparent hover:bg-background hover:text-primary hover:border-primary transition-all px-10 py-4 rounded-full font-body text-lg tracking-wide glow-gold"
         >
           {ctaLabel}
