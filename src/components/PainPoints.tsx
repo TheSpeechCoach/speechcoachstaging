@@ -42,7 +42,7 @@ const PainPoints = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="bg-card border border-border rounded-xl p-6 md:p-8 hover:border-primary/30 transition-colors"
+              className="bg-card border border-border rounded-xl p-6 md:p-8 hover:border-primary/60 transition-colors"
             >
               <p className="font-body text-lg">
                 <span className="font-semibold text-foreground">{point.bold}</span>{" "}
