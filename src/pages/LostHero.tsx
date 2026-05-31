@@ -133,7 +133,7 @@ const LostHero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.5 }}
-              className="inline-block bg-primary text-primary-foreground hover:bg-primary/80 transition-all px-8 py-3 rounded-full font-body text-sm tracking-wide glow-gold"
+              className="inline-block bg-primary text-primary-foreground hover:bg-background hover:text-primary transition-all px-8 py-3 rounded-full font-body text-sm tracking-wide glow-gold"
             >
               Let's talk...
             </MotionLink>
@@ -279,7 +279,7 @@ const LostHero = () => {
           <MotionLink
             {...fadeUp}
             to="/book-now"
-            className="inline-flex items-center gap-2 bg-primary text-primary-foreground hover:bg-primary/80 transition-all px-8 py-4 rounded-full font-body text-sm font-medium glow-gold"
+            className="inline-flex items-center gap-2 bg-primary text-primary-foreground hover:bg-background hover:text-primary transition-all px-8 py-4 rounded-full font-body text-sm font-medium glow-gold"
           >
             {entry.ctaLabel}
             <ArrowRight className="w-4 h-4" />

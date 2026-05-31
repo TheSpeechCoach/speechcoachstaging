@@ -57,7 +57,7 @@ const FitSection = () => {
           <p className="font-display text-xl mb-6 text-muted-foreground">If the answer is yes</p>
           <Link
             to="/book-now"
-            className="inline-block bg-primary text-primary-foreground hover:bg-primary/80 transition-all px-8 py-3 rounded-full font-body text-sm glow-gold"
+            className="inline-block bg-primary text-primary-foreground hover:bg-background hover:text-primary transition-all px-8 py-3 rounded-full font-body text-sm glow-gold"
           >
             Let's talk
           </Link>
