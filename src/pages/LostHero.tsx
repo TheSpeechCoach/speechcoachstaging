@@ -6,6 +6,7 @@ import { Check, ArrowRight } from "lucide-react";
 import SiteNav from "@/components/SiteNav";
 import SiteFooter from "@/components/SiteFooter";
 import StickyMobileCTA from "@/components/StickyMobileCTA";
+import StatsStrip from "@/components/StatsStrip";
 import { getHeroVariant } from "@/data/heroVariants";
 import { areasOfExpertise } from "@/data/areasOfExpertise";
 import useFitHeroText from "@/hooks/useFitHeroText";
@@ -260,6 +261,8 @@ const LostHero = () => {
           </div>
         </section>
       )}
+
+      <StatsStrip />
 
       {/* Closing CTA */}
       <section id="cta" className="py-16 md:py-20 px-6 border-t border-border">
