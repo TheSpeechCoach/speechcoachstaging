@@ -119,11 +119,11 @@ const Pricing = () => (
         </Link>
         <p className="text-xs text-muted-foreground mt-3 text-center">
           By booking, you agree to our{" "}
-          <Link to="/terms-and-conditions" className="underline underline-offset-2 hover:text-foreground transition-colors">
+          <Link to="/terms-and-conditions" className="underline underline-offset-2 hover:text-primary transition-colors">
             Terms &amp; Conditions
           </Link>{" "}
           and{" "}
-          <Link to="/privacy-policy" className="underline underline-offset-2 hover:text-foreground transition-colors">
+          <Link to="/privacy-policy" className="underline underline-offset-2 hover:text-primary transition-colors">
             Privacy Policy
           </Link>
           .
