@@ -96,6 +96,7 @@ const App = () => (
         <Route path="/hero/:variant/:slug" element={<LostHero />} />
         <Route path="/who-we-work-with" element={<WhoWeWorkWith />} />
         <Route path="/areas-of-expertise" element={<AreasOfExpertise />} />
+        <Route path="/book-now" element={<BookNow />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
