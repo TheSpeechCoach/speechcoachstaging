@@ -42,7 +42,7 @@ const HeroSection = () => {
             <span className="w-max whitespace-nowrap italic text-gradient-gold">Now you're here.</span>
           </h1>
           <motion.p
-            initial={{ opacity: 0, y: 20, filter: 'blur(6px)' }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
             className="font-body text-lg md:text-xl text-muted-foreground max-w-xl mb-10"
@@ -51,7 +51,7 @@ const HeroSection = () => {
           </motion.p>
           <MotionLink
             to="/book-now"
-            initial={{ opacity: 0, y: 20, filter: 'blur(6px)' }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
             className="inline-block bg-primary text-primary-foreground border border-transparent hover:bg-background hover:text-primary hover:border-primary transition-all px-8 py-3 rounded-full font-body text-sm tracking-wide glow-gold"

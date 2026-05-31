@@ -7,8 +7,8 @@ const CTASection = () => {
     <section id="cta" className="py-16 md:py-20">
       <div className="container mx-auto px-6 text-center">
         <motion.h2
-          initial={{ opacity: 0, y: 30, filter: 'blur(6px)' }}
-          whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
           className="font-display text-4xl md:text-5xl lg:text-6xl mb-6"
@@ -19,8 +19,8 @@ const CTASection = () => {
           the way you speak?
         </motion.h2>
         <motion.p
-          initial={{ opacity: 0, y: 20, filter: 'blur(6px)' }}
-          whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.15 }}
           className="font-body text-muted-foreground text-lg max-w-md mx-auto mb-10"
@@ -28,8 +28,8 @@ const CTASection = () => {
           Book a consultation and let's find out how we can help you communicate with clarity, composure, and impact.
         </motion.p>
         <motion.div
-          initial={{ opacity: 0, y: 20, filter: 'blur(6px)' }}
-          whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.3 }}
           className="flex flex-col sm:flex-row items-center justify-center gap-4"

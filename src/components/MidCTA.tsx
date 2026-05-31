@@ -16,8 +16,8 @@ const MidCTA = ({ heading, body, ctaLabel = "Let's talk...", ctaHref = "/book-no
       <div className="container mx-auto px-6 max-w-3xl text-center">
         {heading && (
           <motion.h2
-            initial={{ opacity: 0, y: 20, filter: 'blur(6px)' }}
-            whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
             className="font-display font-bold text-3xl md:text-5xl mb-6 leading-tight"
@@ -26,8 +26,8 @@ const MidCTA = ({ heading, body, ctaLabel = "Let's talk...", ctaHref = "/book-no
           </motion.h2>
         )}
         <motion.p
-          initial={{ opacity: 0, y: 20, filter: 'blur(6px)' }}
-          whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.1 }}
           className="font-body text-muted-foreground text-lg mb-10"
@@ -36,8 +36,8 @@ const MidCTA = ({ heading, body, ctaLabel = "Let's talk...", ctaHref = "/book-no
         </motion.p>
         <MotionLink
           to={ctaHref}
-          initial={{ opacity: 0, y: 20, filter: 'blur(6px)' }}
-          whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
           whileHover={{ y: -2 }}
