@@ -7,6 +7,7 @@ import SiteNav from "./SiteNav";
 import SiteFooter from "./SiteFooter";
 import StickyMobileCTA from "./StickyMobileCTA";
 import useFitHeroText from "@/hooks/useFitHeroText";
+import { staggerContainer, revealItem } from "@/lib/motion";
 
 const MotionLink = motion(Link);
 
@@ -156,19 +157,24 @@ const ServicePage = ({
           <motion.h2 {...fadeUp} className="font-display text-3xl md:text-5xl font-bold mb-8 md:mb-10 text-center">
             {problemsHeading}
           </motion.h2>
-          <ul className="grid md:grid-cols-2 gap-6">
+          <motion.ul
+            className="grid md:grid-cols-2 gap-6"
+            variants={staggerContainer}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-10%" }}
+          >
             {problems.map((p, i) => (
               <motion.li
                 key={i}
-                {...fadeUp}
-                transition={{ duration: 0.5, delay: i * 0.05, ease: "easeOut" }}
+                variants={revealItem}
                 className="flex gap-4 p-6 md:p-8 rounded-xl border border-border bg-background/40"
               >
                 <span className="text-primary font-display text-lg leading-none mt-1">—</span>
                 <span className="font-body text-foreground/90">{p}</span>
               </motion.li>
             ))}
-          </ul>
+          </motion.ul>
         </div>
       </section>
 
@@ -180,19 +186,24 @@ const ServicePage = ({
           <motion.h2 {...fadeUp} className="font-display text-3xl md:text-5xl font-bold mb-8 md:mb-10 text-center">
             {workOnHeading}
           </motion.h2>
-          <ul className="grid md:grid-cols-2 gap-6">
+          <motion.ul
+            className="grid md:grid-cols-2 gap-6"
+            variants={staggerContainer}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-10%" }}
+          >
             {workOn.map((w, i) => (
               <motion.li
                 key={i}
-                {...fadeUp}
-                transition={{ duration: 0.5, delay: i * 0.05, ease: "easeOut" }}
+                variants={revealItem}
                 className="flex gap-3 items-start"
               >
                 <Check className="w-5 h-5 text-primary mt-1 shrink-0" />
                 <span className="font-body text-foreground/90">{w}</span>
               </motion.li>
             ))}
-          </ul>
+          </motion.ul>
         </div>
       </section>
 
@@ -209,19 +220,24 @@ const ServicePage = ({
               </motion.p>
             )}
             {block.items.length > 0 && (
-              <ul className="grid md:grid-cols-2 gap-6">
+              <motion.ul
+                className="grid md:grid-cols-2 gap-6"
+                variants={staggerContainer}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: "-10%" }}
+              >
                 {block.items.map((item, j) => (
                   <motion.li
                     key={j}
-                    {...fadeUp}
-                    transition={{ duration: 0.5, delay: j * 0.04, ease: "easeOut" }}
+                    variants={revealItem}
                     className="flex gap-3 items-start"
                   >
                     <Check className="w-5 h-5 text-primary mt-1 shrink-0" />
                     <span className="font-body text-foreground/90">{item}</span>
                   </motion.li>
                 ))}
-              </ul>
+              </motion.ul>
             )}
           </div>
         </section>
