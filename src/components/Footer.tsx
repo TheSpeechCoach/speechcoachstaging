@@ -29,19 +29,19 @@ const Footer = () => {
             </span>
           </Link>
           <div className="flex items-center gap-5">
-            <a aria-label="LinkedIn" href="https://www.linkedin.com/in/thespeechcoach" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
+            <a aria-label="LinkedIn" href="https://www.linkedin.com/in/thespeechcoach" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
               <Linkedin className="w-5 h-5" />
             </a>
-            <a aria-label="YouTube" href="https://www.youtube.com/@TheSpeechCoach" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
+            <a aria-label="YouTube" href="https://www.youtube.com/@TheSpeechCoach" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
               <Youtube className="w-5 h-5" />
             </a>
-            <a aria-label="Instagram" href="https://www.instagram.com/thespeech.coach" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
+            <a aria-label="Instagram" href="https://www.instagram.com/thespeech.coach" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
               <Instagram className="w-5 h-5" />
             </a>
-            <a aria-label="TikTok" href="https://www.tiktok.com/@thespeechcoach" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
+            <a aria-label="TikTok" href="https://www.tiktok.com/@thespeechcoach" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
               <TikTokIcon className="w-5 h-5" />
             </a>
-            <a aria-label="Telegram" href="https://t.me/thespeechcoach" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
+            <a aria-label="Telegram" href="https://t.me/thespeechcoach" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
               <TelegramIcon className="w-5 h-5" />
             </a>
           </div>
@@ -49,11 +49,11 @@ const Footer = () => {
 
         {/* Row B — legal links */}
         <div className="mt-6 pt-6 border-t border-border/40 text-center md:text-left">
-          <Link to="/privacy-policy" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+          <Link to="/privacy-policy" className="text-sm text-muted-foreground hover:text-primary transition-colors">
             Privacy Policy
           </Link>
           <span className="text-muted-foreground mx-2">•</span>
-          <Link to="/terms-and-conditions" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+          <Link to="/terms-and-conditions" className="text-sm text-muted-foreground hover:text-primary transition-colors">
             Terms &amp; Conditions
           </Link>
         </div>

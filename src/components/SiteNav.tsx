@@ -121,7 +121,7 @@ const SiteNav = () => {
             <button
               onMouseEnter={openServices}
               onMouseLeave={scheduleCloseServices}
-              className="flex items-center gap-1 text-muted-foreground hover:text-foreground transition-colors"
+              className="flex items-center gap-1 text-muted-foreground hover:text-primary transition-colors"
               onClick={() => setServicesOpen((s) => !s)}
               aria-expanded={servicesOpen}
             >
@@ -151,7 +151,7 @@ const SiteNav = () => {
                               <Link
                                 to={s.to}
                                 onClick={() => setServicesOpen(false)}
-                                className="block text-sm text-muted-foreground hover:text-foreground transition-colors"
+                                className="block text-sm text-muted-foreground hover:text-primary transition-colors"
                               >
                                 {s.label}
                               </Link>
@@ -166,21 +166,21 @@ const SiteNav = () => {
             </AnimatePresence>
           </div>
 
-          <a href="/#about" className="text-muted-foreground hover:text-foreground transition-colors">About</a>
-          <a href="/#methodology" className="text-muted-foreground hover:text-foreground transition-colors">Methodology</a>
-          <a href="/#cpd" className="text-muted-foreground hover:text-foreground transition-colors">CPD</a>
-          <a href="/#faq" className="text-muted-foreground hover:text-foreground transition-colors">FAQ</a>
+          <a href="/#about" className="text-muted-foreground hover:text-primary transition-colors">About</a>
+          <a href="/#methodology" className="text-muted-foreground hover:text-primary transition-colors">Methodology</a>
+          <a href="/#cpd" className="text-muted-foreground hover:text-primary transition-colors">CPD</a>
+          <a href="/#faq" className="text-muted-foreground hover:text-primary transition-colors">FAQ</a>
 
           <NavLink
             to="/pricing"
             className={({ isActive }) =>
-              `transition-colors ${isActive ? "text-foreground" : "text-muted-foreground hover:text-foreground"}`
+              `transition-colors ${isActive ? "text-foreground" : "text-muted-foreground hover:text-primary"}`
             }
           >
             Pricing
           </NavLink>
 
-          <a href="tel:+442071646769" className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors">
+          <a href="tel:+442071646769" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
             <Phone className="w-3.5 h-3.5" />
             +44 (0)207 164 6769
           </a>
@@ -210,7 +210,7 @@ const SiteNav = () => {
             <div className="flex flex-col gap-4 p-6 font-body max-h-[80vh] overflow-y-auto">
               <div>
                 <button
-                  className="flex items-center justify-between w-full text-muted-foreground hover:text-foreground"
+                  className="flex items-center justify-between w-full text-muted-foreground hover:text-primary"
                   onClick={() => setMobileServicesOpen((s) => !s)}
                   aria-expanded={mobileServicesOpen}
                 >
@@ -239,7 +239,7 @@ const SiteNav = () => {
                                   <Link
                                     to={s.to}
                                     onClick={closeAll}
-                                    className="block text-sm text-muted-foreground hover:text-foreground"
+                                    className="block text-sm text-muted-foreground hover:text-primary"
                                   >
                                     {s.label}
                                   </Link>
@@ -254,14 +254,14 @@ const SiteNav = () => {
                 </AnimatePresence>
               </div>
 
-              <a href="/#about" onClick={closeAll} className="text-muted-foreground hover:text-foreground">About</a>
-              <a href="/#methodology" onClick={closeAll} className="text-muted-foreground hover:text-foreground">Methodology</a>
-              <a href="/#cpd" onClick={closeAll} className="text-muted-foreground hover:text-foreground">CPD</a>
-              <a href="/#faq" onClick={closeAll} className="text-muted-foreground hover:text-foreground">FAQ</a>
-              <Link to="/pricing" onClick={closeAll} className="text-muted-foreground hover:text-foreground">
+              <a href="/#about" onClick={closeAll} className="text-muted-foreground hover:text-primary">About</a>
+              <a href="/#methodology" onClick={closeAll} className="text-muted-foreground hover:text-primary">Methodology</a>
+              <a href="/#cpd" onClick={closeAll} className="text-muted-foreground hover:text-primary">CPD</a>
+              <a href="/#faq" onClick={closeAll} className="text-muted-foreground hover:text-primary">FAQ</a>
+              <Link to="/pricing" onClick={closeAll} className="text-muted-foreground hover:text-primary">
                 Pricing
               </Link>
-              <a href="tel:+442071646769" className="text-muted-foreground hover:text-foreground flex items-center gap-2">
+              <a href="tel:+442071646769" className="text-muted-foreground hover:text-primary flex items-center gap-2">
                 <Phone className="w-3.5 h-3.5" />
                 +44 (0)207 164 6769
               </a>

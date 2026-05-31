@@ -44,19 +44,19 @@ const SiteFooter = () => {
               Bespoke speech, voice and communication coaching for professionals worldwide.
             </p>
             <div className="flex items-center gap-4 mt-6">
-              <a aria-label="LinkedIn" href="https://www.linkedin.com/in/thespeechcoach" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
+              <a aria-label="LinkedIn" href="https://www.linkedin.com/in/thespeechcoach" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a aria-label="YouTube" href="https://www.youtube.com/@TheSpeechCoach" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
+              <a aria-label="YouTube" href="https://www.youtube.com/@TheSpeechCoach" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                 <Youtube className="w-5 h-5" />
               </a>
-              <a aria-label="Instagram" href="https://www.instagram.com/thespeech.coach" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
+              <a aria-label="Instagram" href="https://www.instagram.com/thespeech.coach" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                 <Instagram className="w-5 h-5" />
               </a>
-              <a aria-label="TikTok" href="https://www.tiktok.com/@thespeechcoach" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
+              <a aria-label="TikTok" href="https://www.tiktok.com/@thespeechcoach" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                 <TikTokIcon className="w-5 h-5" />
               </a>
-              <a aria-label="Telegram" href="https://t.me/thespeechcoach" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
+              <a aria-label="Telegram" href="https://t.me/thespeechcoach" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                 <TelegramIcon className="w-5 h-5" />
               </a>
             </div>
@@ -66,7 +66,7 @@ const SiteFooter = () => {
             <ul className="space-y-2 font-body text-sm">
               {services.map((s) => (
                 <li key={s.to}>
-                  <Link to={s.to} className="text-muted-foreground hover:text-foreground transition-colors">
+                  <Link to={s.to} className="text-muted-foreground hover:text-primary transition-colors">
                     {s.label}
                   </Link>
                 </li>
@@ -77,13 +77,13 @@ const SiteFooter = () => {
             <h3 className="font-display font-semibold text-sm uppercase tracking-wider mb-4">Contact</h3>
             <ul className="space-y-3 font-body text-sm">
               <li>
-                <a href="tel:+442071646769" className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors">
+                <a href="tel:+442071646769" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
                   <Phone className="w-4 h-4" />
                   +44 (0)207 164 6769
                 </a>
               </li>
               <li>
-                <a href="mailto:info@thespeech.coach" className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors">
+                <a href="mailto:info@thespeech.coach" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
                   <Mail className="w-4 h-4" />
                   info@thespeech.coach
                 </a>
@@ -93,11 +93,11 @@ const SiteFooter = () => {
         </div>
         {/* Row B — legal links */}
         <div className="mt-6 pt-6 border-t border-border/40 text-center md:text-left">
-          <Link to="/privacy-policy" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+          <Link to="/privacy-policy" className="text-sm text-muted-foreground hover:text-primary transition-colors">
             Privacy Policy
           </Link>
           <span className="text-muted-foreground mx-2">•</span>
-          <Link to="/terms-and-conditions" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+          <Link to="/terms-and-conditions" className="text-sm text-muted-foreground hover:text-primary transition-colors">
             Terms &amp; Conditions
           </Link>
         </div>
