@@ -58,17 +58,15 @@ const AreasOfExpertise = () => {
           >
             We coach the full range of speech, voice and communication skills,<br />from the foundations to the finer points.
           </motion.p>
-          <motion.a
+          <MotionLink
             {...fadeUp}
             transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
-            href="https://www.thespeech.coach/book-now/"
-            target="_blank"
-            rel="noopener"
+            to="/book-now"
             className="inline-flex items-center gap-2 bg-primary text-primary-foreground hover:bg-primary/90 transition-all px-8 py-4 rounded-full font-body text-sm font-medium glow-gold"
           >
             Book a Consultation
             <ArrowRight className="w-4 h-4" />
-          </motion.a>
+          </MotionLink>
         </div>
       </section>
 
