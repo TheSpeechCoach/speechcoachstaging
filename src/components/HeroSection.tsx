@@ -1,6 +1,9 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { useRef } from "react";
 import useFitHeroText from "@/hooks/useFitHeroText";
+
+const MotionLink = motion(Link);
 
 const HeroSection = () => {
   const h1Ref = useRef<HTMLHeadingElement>(null);
