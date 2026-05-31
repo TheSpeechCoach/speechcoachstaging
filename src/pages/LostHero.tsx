@@ -10,6 +10,8 @@ import { getHeroVariant } from "@/data/heroVariants";
 import { areasOfExpertise } from "@/data/areasOfExpertise";
 import useFitHeroText from "@/hooks/useFitHeroText";
 
+const MotionLink = motion(Link);
+
 const fadeUp = {
   initial: { opacity: 0, y: 30 },
   whileInView: { opacity: 1, y: 0 },
