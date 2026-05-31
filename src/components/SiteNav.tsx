@@ -184,14 +184,12 @@ const SiteNav = () => {
             <Phone className="w-3.5 h-3.5" />
             +44 (0)207 164 6769
           </a>
-          <a
-            href="https://www.thespeech.coach/book-now/"
-            target="_blank"
-            rel="noopener"
+          <Link
+            to="/book-now"
             className="border border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all px-5 py-2 rounded-full text-sm"
           >
             Book a Consultation
-          </a>
+          </Link>
         </div>
         <button
           className="lg:hidden text-foreground"
