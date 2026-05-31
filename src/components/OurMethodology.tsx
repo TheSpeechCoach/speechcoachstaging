@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { staggerContainer, revealItem } from "@/lib/motion";
 
 const pillars = [
   {
@@ -38,21 +39,24 @@ const OurMethodology = () => {
           Everything we teach rests on three pillars — what you say, how you say it, and how you own it.
         </motion.p>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <motion.div
+          className="grid md:grid-cols-3 gap-6"
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-10%" }}
+        >
           {pillars.map((p, i) => (
             <motion.div
               key={i}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.15 }}
+              variants={revealItem}
               className="bg-card border border-border rounded-xl p-8"
             >
               <h3 className="font-display text-xl font-semibold italic text-gradient-gold mb-3">{p.title}</h3>
               <p className="font-body text-muted-foreground leading-relaxed">{p.body}</p>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
