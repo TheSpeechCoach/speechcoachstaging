@@ -36,7 +36,7 @@ const MethodologySection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="font-body text-muted-foreground max-w-xl mb-8 md:mb-10"
+          className="font-body text-lg text-muted-foreground mb-8 md:mb-10"
         >
           Every engagement follows a clear, structured path — from initial assessment to embedded, lasting results.
         </motion.p>

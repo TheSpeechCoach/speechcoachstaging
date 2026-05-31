@@ -33,7 +33,7 @@ const OurMethodology = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="font-body text-muted-foreground max-w-xl mb-8 md:mb-10"
+          className="font-body text-lg text-muted-foreground mb-8 md:mb-10"
         >
           Everything we teach rests on three pillars — what you say, how you say it, and how you own it.
         </motion.p>

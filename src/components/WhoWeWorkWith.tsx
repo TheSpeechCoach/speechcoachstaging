@@ -47,7 +47,7 @@ const WhoWeWorkWith = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="font-body text-muted-foreground max-w-xl mb-8 md:mb-10"
+          className="font-body text-lg text-muted-foreground mb-8 md:mb-10"
         >
           A snapshot of the people whose work depends on how they speak. The full picture spans dozens of professions and sectors.
         </motion.p>
