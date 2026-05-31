@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { staggerContainer, revealItem } from "@/lib/motion";
 
 const steps = [
   {
@@ -41,14 +42,17 @@ const MethodologySection = () => {
           Every engagement follows a clear, structured path — from initial assessment to embedded, lasting results.
         </motion.p>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <motion.div
+          className="grid md:grid-cols-3 gap-6"
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-10%" }}
+        >
           {steps.map((step, i) => (
             <motion.div
               key={i}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.15 }}
+              variants={revealItem}
               className="bg-background border border-border rounded-xl p-8"
             >
               <span className="text-primary font-display text-3xl font-bold">{step.number}</span>
@@ -56,7 +60,7 @@ const MethodologySection = () => {
               <p className="font-body text-muted-foreground leading-relaxed">{step.description}</p>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

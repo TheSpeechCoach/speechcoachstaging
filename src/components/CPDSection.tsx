@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { staggerContainer, revealItem } from "@/lib/motion";
 
 const courses = [
   {
@@ -44,14 +45,17 @@ const CPDSection = () => {
           All courses meet globally recognised standards for professional development, structured to deliver relevant and transformative measurable outcomes.
         </motion.p>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <motion.div
+          className="grid md:grid-cols-3 gap-6"
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-10%" }}
+        >
           {courses.map((course, i) => (
             <motion.div
               key={i}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.12 }}
+              variants={revealItem}
               className="bg-card border border-border rounded-lg p-6 md:p-8 flex flex-col"
             >
               <p className="font-body text-xs uppercase tracking-wider text-primary mb-2">{course.subtitle}</p>
@@ -60,7 +64,7 @@ const CPDSection = () => {
               <p className="font-body text-sm text-foreground font-medium">{course.duration}</p>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
