@@ -61,7 +61,7 @@ const Services = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="font-body text-muted-foreground max-w-xl mb-8 md:mb-10"
+          className="font-body text-lg text-muted-foreground mb-8 md:mb-10"
         >
           Every engagement is bespoke. Based in London and working with clients worldwide, we offer private sessions, group workshops, and specialist programmes — delivered online or in person.
         </motion.p>
