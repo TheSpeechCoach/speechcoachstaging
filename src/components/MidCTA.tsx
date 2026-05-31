@@ -1,4 +1,7 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+
+const MotionLink = motion(Link);
 
 type Props = {
   heading?: React.ReactNode;
@@ -7,7 +10,7 @@ type Props = {
   ctaHref?: string;
 };
 
-const MidCTA = ({ heading, body, ctaLabel = "Let's talk...", ctaHref = "https://www.thespeech.coach/book-now/" }: Props) => {
+const MidCTA = ({ heading, body, ctaLabel = "Let's talk...", ctaHref = "/book-now" }: Props) => {
   return (
     <section className="pt-8 md:pt-10 pb-16 md:pb-20">
       <div className="container mx-auto px-6 max-w-3xl text-center">
@@ -31,10 +34,8 @@ const MidCTA = ({ heading, body, ctaLabel = "Let's talk...", ctaHref = "https://
         >
           {body}
         </motion.p>
-        <motion.a
-          href={ctaHref}
-          target={ctaHref.startsWith("http") ? "_blank" : undefined}
-          rel={ctaHref.startsWith("http") ? "noopener" : undefined}
+        <MotionLink
+          to={ctaHref}
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -43,7 +44,7 @@ const MidCTA = ({ heading, body, ctaLabel = "Let's talk...", ctaHref = "https://
           className="inline-block w-full sm:w-auto bg-primary text-primary-foreground hover:bg-primary/90 transition-all px-10 py-4 rounded-full font-body text-lg tracking-wide glow-gold"
         >
           {ctaLabel}
-        </motion.a>
+        </MotionLink>
       </div>
     </section>
   );

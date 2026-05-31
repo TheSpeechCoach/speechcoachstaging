@@ -108,15 +108,13 @@ const WhoWeWorkWithPage = () => (
         <motion.p {...fadeUp} className="font-body text-lg text-muted-foreground mb-10">
           Book a consultation and we'll talk through where you are and where you want to be.
         </motion.p>
-        <a
-          href="https://www.thespeech.coach/book-now/"
-          target="_blank"
-          rel="noopener"
+        <Link
+          to="/book-now"
           className="inline-flex items-center gap-2 bg-primary text-primary-foreground hover:bg-primary/90 transition-all px-8 py-4 rounded-full font-body text-sm font-medium glow-gold"
         >
           Book a Consultation
           <ArrowRight className="w-4 h-4" />
-        </a>
+        </Link>
       </div>
     </section>
 

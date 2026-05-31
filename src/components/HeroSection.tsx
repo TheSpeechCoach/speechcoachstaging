@@ -1,6 +1,9 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { useRef } from "react";
 import useFitHeroText from "@/hooks/useFitHeroText";
+
+const MotionLink = motion(Link);
 
 const HeroSection = () => {
   const h1Ref = useRef<HTMLHeadingElement>(null);
@@ -46,17 +49,15 @@ const HeroSection = () => {
           >
             …with over 30 years of expert speech coaching that transforms nervous speakers into confident, compelling communicators.
           </motion.p>
-          <motion.a
-            href="https://www.thespeech.coach/book-now/"
-            target="_blank"
-            rel="noopener"
+          <MotionLink
+            to="/book-now"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
             className="inline-block bg-primary text-primary-foreground hover:bg-primary/90 transition-all px-8 py-3 rounded-full font-body text-sm tracking-wide glow-gold"
           >
             Let's talk...
-          </motion.a>
+          </MotionLink>
         </motion.div>
       </div>
     </section>

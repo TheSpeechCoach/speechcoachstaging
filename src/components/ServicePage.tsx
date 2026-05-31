@@ -1,11 +1,14 @@
 import { Helmet } from "react-helmet-async";
 import { ReactNode, useRef } from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { Check, ArrowRight } from "lucide-react";
 import SiteNav from "./SiteNav";
 import SiteFooter from "./SiteFooter";
 import StickyMobileCTA from "./StickyMobileCTA";
 import useFitHeroText from "@/hooks/useFitHeroText";
+
+const MotionLink = motion(Link);
 
 
 export interface ContentBlock {
@@ -117,17 +120,15 @@ const ServicePage = ({
           >
             {subheading}
           </motion.p>
-          <motion.a
+          <MotionLink
             {...fadeUp}
             transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
-            href="https://www.thespeech.coach/book-now/"
-            target="_blank"
-            rel="noopener"
+            to="/book-now"
             className="inline-flex items-center gap-2 bg-primary text-primary-foreground hover:bg-primary/90 transition-all px-8 py-4 rounded-full font-body text-sm font-medium glow-gold"
           >
             {ctaLabel}
             <ArrowRight className="w-4 h-4" />
-          </motion.a>
+          </MotionLink>
         </div>
       </section>
 
@@ -230,16 +231,14 @@ const ServicePage = ({
           <motion.p {...fadeUp} className="font-body text-lg text-muted-foreground mb-10">
             {closing}
           </motion.p>
-          <motion.a
+          <MotionLink
             {...fadeUp}
-            href="https://www.thespeech.coach/book-now/"
-            target="_blank"
-            rel="noopener"
+            to="/book-now"
             className="inline-flex items-center gap-2 bg-primary text-primary-foreground hover:bg-primary/90 transition-all px-8 py-4 rounded-full font-body text-sm font-medium glow-gold"
           >
             {ctaLabel}
             <ArrowRight className="w-4 h-4" />
-          </motion.a>
+          </MotionLink>
         </div>
       </section>
 

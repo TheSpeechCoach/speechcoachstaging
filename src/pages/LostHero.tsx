@@ -10,6 +10,8 @@ import { getHeroVariant } from "@/data/heroVariants";
 import { areasOfExpertise } from "@/data/areasOfExpertise";
 import useFitHeroText from "@/hooks/useFitHeroText";
 
+const MotionLink = motion(Link);
+
 const fadeUp = {
   initial: { opacity: 0, y: 30 },
   whileInView: { opacity: 1, y: 0 },
@@ -125,17 +127,15 @@ const LostHero = () => {
               {subheading}
             </motion.p>
 
-            <motion.a
-              href="https://www.thespeech.coach/book-now/"
-              target="_blank"
-              rel="noopener"
+            <MotionLink
+              to="/book-now"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.5 }}
               className="inline-block bg-primary text-primary-foreground hover:bg-primary/90 transition-all px-8 py-3 rounded-full font-body text-sm tracking-wide glow-gold"
             >
               Let's talk...
-            </motion.a>
+            </MotionLink>
           </motion.div>
         </div>
       </section>
@@ -273,16 +273,14 @@ const LostHero = () => {
           <motion.p {...fadeUp} className="font-body text-lg text-muted-foreground mb-10">
             {entry.closingCopy}
           </motion.p>
-          <motion.a
+          <MotionLink
             {...fadeUp}
-            href="https://www.thespeech.coach/book-now/"
-            target="_blank"
-            rel="noopener"
+            to="/book-now"
             className="inline-flex items-center gap-2 bg-primary text-primary-foreground hover:bg-primary/90 transition-all px-8 py-4 rounded-full font-body text-sm font-medium glow-gold"
           >
             {entry.ctaLabel}
             <ArrowRight className="w-4 h-4" />
-          </motion.a>
+          </MotionLink>
         </div>
       </section>
 

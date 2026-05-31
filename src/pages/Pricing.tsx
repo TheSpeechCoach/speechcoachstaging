@@ -110,15 +110,13 @@ const Pricing = () => (
         <motion.p {...fadeUp} className="font-body text-lg text-muted-foreground mb-10">
           Get in touch — we're happy to help. Book a consultation today.
         </motion.p>
-        <a
-          href="https://www.thespeech.coach/book-now/"
-          target="_blank"
-          rel="noopener"
+        <Link
+          to="/book-now"
           className="inline-flex items-center gap-2 bg-primary text-primary-foreground hover:bg-primary/90 transition-all px-8 py-4 rounded-full font-body text-sm font-medium glow-gold"
         >
           Book a Consultation
           <ArrowRight className="w-4 h-4" />
-        </a>
+        </Link>
         <p className="text-xs text-muted-foreground mt-3 text-center">
           By booking, you agree to our{" "}
           <Link to="/terms-and-conditions" className="underline underline-offset-2 hover:text-foreground transition-colors">
