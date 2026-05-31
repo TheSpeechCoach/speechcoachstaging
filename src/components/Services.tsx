@@ -82,7 +82,6 @@ const Services = () => {
               </p>
             </motion.div>
           ))}
-          <div className="border-t border-border" />
         </div>
 
         {/* Skills Grid */}
@@ -91,7 +90,7 @@ const Services = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="mt-8"
+          className="border-t border-border pt-12 md:pt-16"
         >
           <h3 className="font-display text-3xl md:text-4xl mb-8">
             Areas of <span className="italic text-gradient-gold">expertise</span>
