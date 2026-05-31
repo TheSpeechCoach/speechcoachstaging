@@ -110,7 +110,7 @@ const WhoWeWorkWithPage = () => (
         </motion.p>
         <Link
           to="/book-now"
-          className="inline-flex items-center gap-2 bg-primary text-primary-foreground hover:bg-background hover:text-primary transition-all px-8 py-4 rounded-full font-body text-sm font-medium glow-gold"
+          className="inline-flex items-center gap-2 bg-primary text-primary-foreground border border-transparent hover:bg-background hover:text-primary hover:border-primary transition-all px-8 py-4 rounded-full font-body text-sm font-medium glow-gold"
         >
           Book a Consultation
           <ArrowRight className="w-4 h-4" />

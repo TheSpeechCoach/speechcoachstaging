@@ -65,7 +65,7 @@ const FAQSection = () => {
         >
           <Link
             to="/book-now"
-            className="inline-block bg-primary text-primary-foreground hover:bg-background hover:text-primary transition-all px-8 py-3 rounded-full font-body text-sm tracking-wide glow-gold"
+            className="inline-block bg-primary text-primary-foreground border border-transparent hover:bg-background hover:text-primary hover:border-primary transition-all px-8 py-3 rounded-full font-body text-sm tracking-wide glow-gold"
           >
             Book a Consultation
           </Link>
