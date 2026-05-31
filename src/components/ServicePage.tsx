@@ -134,13 +134,17 @@ const ServicePage = ({
 
 
       {/* Intro */}
-      <section className="py-16 md:py-20 px-6 border-t border-border">
-        <div className="container mx-auto max-w-3xl">
-          <motion.p {...fadeUp} className="font-body text-lg text-muted-foreground leading-relaxed">
-            {intro}
-          </motion.p>
-        </div>
-      </section>
+      {intro && (
+        <section className="py-16 md:py-20 px-6 border-t border-border">
+          <div className="container mx-auto max-w-3xl">
+            <motion.p {...fadeUp} className="font-body text-lg text-muted-foreground leading-relaxed">
+              {intro}
+            </motion.p>
+          </div>
+        </section>
+      )}
+
+
 
       {postIntro}
 
