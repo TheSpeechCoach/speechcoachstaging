@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform, useReducedMotion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { useRef } from "react";
 import useFitHeroText from "@/hooks/useFitHeroText";
@@ -8,13 +8,18 @@ const MotionLink = motion(Link);
 const HeroSection = () => {
   const h1Ref = useRef<HTMLHeadingElement>(null);
   const heroFontSize = useFitHeroText(h1Ref, { maxPx: 96, minPx: 24 });
+  const sectionRef = useRef<HTMLElement>(null);
+  const { scrollYProgress } = useScroll({ target: sectionRef, offset: ["start start", "end start"] });
+  const reduce = useReducedMotion();
+  const y1 = useTransform(scrollYProgress, [0, 1], reduce ? [0, 0] : [0, 120]);
+  const y2 = useTransform(scrollYProgress, [0, 1], reduce ? [0, 0] : [0, -90]);
 
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden bg-background">
+    <section ref={sectionRef} className="relative min-h-screen flex items-center overflow-hidden bg-background">
       {/* Subtle radial gold glow */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/3 -right-40 w-[600px] h-[600px] rounded-full bg-primary/10 blur-[120px]" />
-        <div className="absolute bottom-0 -left-40 w-[500px] h-[500px] rounded-full bg-primary/5 blur-[120px]" />
+        <motion.div style={{ y: y1 }} className="absolute top-1/3 -right-40 w-[600px] h-[600px] rounded-full bg-primary/10 blur-[120px]" />
+        <motion.div style={{ y: y2 }} className="absolute bottom-0 -left-40 w-[500px] h-[500px] rounded-full bg-primary/5 blur-[120px]" />
       </div>
 
       <div className="container relative z-10 mx-auto px-6 pt-28 md:pt-32 pb-16 md:pb-20">
