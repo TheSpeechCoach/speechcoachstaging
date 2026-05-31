@@ -42,6 +42,7 @@ import ThankYou from "./pages/ThankYou";
 import LostHero from "./pages/LostHero";
 import WhoWeWorkWith from "./pages/WhoWeWorkWith";
 import AreasOfExpertise from "./pages/AreasOfExpertise";
+import BookNow from "./pages/BookNow";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsAndConditions from "./pages/TermsAndConditions";
 import ScrollToTop from "./components/ScrollToTop";
