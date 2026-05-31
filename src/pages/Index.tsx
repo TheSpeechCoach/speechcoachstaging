@@ -6,6 +6,7 @@ import PainPoints from "@/components/PainPoints";
 import MidCTA from "@/components/MidCTA";
 import Services from "@/components/Services";
 import MethodologySection from "@/components/MethodologySection";
+import OurMethodology from "@/components/OurMethodology";
 import CPDSection from "@/components/CPDSection";
 import Testimonials from "@/components/Testimonials";
 import CoachSection from "@/components/CoachSection";
@@ -27,6 +28,7 @@ const Index = () => {
       <MidCTA
         body="We work directly with executives, founders, leaders, and professionals whose work depends on clear expression, confident delivery, and authentic presence."
       />
+      <OurMethodology />
       <MethodologySection />
       <Services />
       <WhoWeWorkWith />
