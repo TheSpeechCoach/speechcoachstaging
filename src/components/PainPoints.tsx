@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { staggerContainer, revealItem } from "@/lib/motion";
 
 const painPoints = [
   {
@@ -34,14 +35,17 @@ const PainPoints = () => {
           <span className="font-bold italic text-gradient-gold">sound familiar?</span>
         </motion.h2>
 
-        <div className="grid md:grid-cols-2 gap-6 mt-8">
+        <motion.div
+          className="grid md:grid-cols-2 gap-6 mt-8"
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-10%" }}
+        >
           {painPoints.map((point, i) => (
             <motion.div
               key={i}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
+              variants={revealItem}
               className="bg-card border border-border rounded-xl p-6 md:p-8 hover:border-primary/60 transition-colors"
             >
               <p className="font-body text-lg">
@@ -50,7 +54,7 @@ const PainPoints = () => {
               </p>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
 
       </div>
     </section>

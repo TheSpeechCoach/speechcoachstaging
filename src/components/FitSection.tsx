@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { staggerContainer, revealItem } from "@/lib/motion";
 
 const eyebrows = ["The Why", "The Will", "The Want"];
 
@@ -24,14 +25,17 @@ const FitSection = () => {
           <span className="italic text-gradient-gold">Have…?</span>
         </motion.h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-3 gap-6"
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-10%" }}
+        >
           {criteria.map((c, i) => (
             <motion.div
               key={i}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: i * 0.1 }}
+              variants={revealItem}
               className="flex gap-4 items-start bg-card border border-border rounded-xl p-8"
             >
               <span className="text-primary font-display text-2xl font-bold mt-[-2px]">
@@ -45,7 +49,7 @@ const FitSection = () => {
               </div>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}

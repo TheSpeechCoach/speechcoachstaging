@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { staggerContainer, revealItem } from "@/lib/motion";
 
 const services = [
   {
@@ -66,14 +67,17 @@ const Services = () => {
           Every engagement is bespoke. Based in London and working with clients worldwide, we offer private sessions, group workshops, and specialist programmes — delivered online or in person.
         </motion.p>
 
-        <div className="space-y-0">
+        <motion.div
+          className="space-y-0"
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-10%" }}
+        >
           {services.map((s, i) => (
             <motion.div
               key={i}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: i * 0.08 }}
+              variants={revealItem}
               className="border-t border-border py-8 md:py-10 grid md:grid-cols-3 gap-4 md:gap-8 items-start"
             >
               <h3 className="font-display text-xl md:text-2xl font-semibold">{s.title}</h3>
@@ -82,7 +86,7 @@ const Services = () => {
               </p>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
 
         {/* Skills Grid */}
         <motion.div
