@@ -11,7 +11,7 @@ const ChildrensCoaching = () => (
     }
     subheading="Bespoke 1:1 speech coaching, elocution lessons and communication confidence building for children and teenagers aged 8–17."
     intro=""
-    postIntro={
+    postProblems={
       <section className="py-16 md:py-20 px-6 border-t border-border">
         <div className="container mx-auto max-w-3xl">
           <div className="rounded-2xl border border-primary/30 bg-card/40 p-8 md:p-10 space-y-4 glow-gold">
@@ -28,7 +28,9 @@ const ChildrensCoaching = () => (
               How to be fluent, eloquent, articulate and appropriate.
             </p>
             <p className="font-body text-lg md:text-xl text-primary font-semibold leading-relaxed pt-2">
-              We coach communication. We curate confidence. We cultivate character.
+              We coach communication.<br />
+              We curate confidence.<br />
+              We cultivate character.
             </p>
           </div>
         </div>

@@ -27,6 +27,7 @@ interface ServicePageProps {
   postIntro?: ReactNode;
   problemsHeading?: string;
   problems: string[];
+  postProblems?: ReactNode;
   workOnHeading?: string;
   workOn: string[];
   extraBlocks?: ContentBlock[];
@@ -80,6 +81,7 @@ const ServicePage = ({
   postIntro,
   problemsHeading = "Does this sound familiar?",
   problems,
+  postProblems,
   workOnHeading = "What we work on",
   workOn,
   extraBlocks = [],
@@ -169,6 +171,8 @@ const ServicePage = ({
           </ul>
         </div>
       </section>
+
+      {postProblems}
 
       {/* What we work on */}
       <section className="py-16 md:py-20 px-6">
