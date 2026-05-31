@@ -27,6 +27,7 @@ const SpeechCoachingLeaders = () => (
       "Speaking with clarity under pressure",
       "Handling tough questions with composure",
       "Delivering vision with conviction",
+      "Storytelling that moves and persuades",
     ]}
     closingHeading="Ready to lead with the voice your role deserves?"
     closing="Bespoke 1:1 coaching, online or in-person. Initial consultation within 48 hours."
