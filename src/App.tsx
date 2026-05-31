@@ -42,6 +42,7 @@ import ThankYou from "./pages/ThankYou";
 import LostHero from "./pages/LostHero";
 import WhoWeWorkWith from "./pages/WhoWeWorkWith";
 import AreasOfExpertise from "./pages/AreasOfExpertise";
+import BookNow from "./pages/BookNow";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsAndConditions from "./pages/TermsAndConditions";
 import ScrollToTop from "./components/ScrollToTop";
@@ -95,6 +96,7 @@ const App = () => (
         <Route path="/hero/:variant/:slug" element={<LostHero />} />
         <Route path="/who-we-work-with" element={<WhoWeWorkWith />} />
         <Route path="/areas-of-expertise" element={<AreasOfExpertise />} />
+        <Route path="/book-now" element={<BookNow />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
