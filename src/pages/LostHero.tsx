@@ -222,7 +222,7 @@ const LostHero = () => {
                 >
                   <Link
                     to={`/areas-of-expertise#${area.id}`}
-                    className="block h-full bg-card border border-border rounded-lg px-4 py-3 font-body text-sm text-muted-foreground hover:text-primary hover:border-primary/60 transition-colors"
+                    className="block h-full bg-card border border-border rounded-lg px-4 py-3 font-body text-sm text-muted-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors"
                   >
                     {label}
                   </Link>
