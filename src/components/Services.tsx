@@ -49,8 +49,8 @@ const Services = () => {
     <section id="services" className="py-16 md:py-20">
       <div className="container mx-auto px-6">
         <motion.h2
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 30, filter: 'blur(6px)' }}
+          whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
           className="font-display text-3xl md:text-4xl mb-4"
@@ -58,8 +58,8 @@ const Services = () => {
           How we <span className="italic text-gradient-gold">work</span>
         </motion.h2>
         <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 20, filter: 'blur(6px)' }}
+          whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.1 }}
           className="font-body text-lg text-muted-foreground mb-8 md:mb-10"
@@ -90,8 +90,8 @@ const Services = () => {
 
         {/* Skills Grid */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 30, filter: 'blur(6px)' }}
+          whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
           className="border-t border-white/20 pt-12 md:pt-16"

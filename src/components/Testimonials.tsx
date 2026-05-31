@@ -6,8 +6,8 @@ const Testimonials = () => {
     <section id="testimonials" className="py-16 md:py-20 bg-card">
       <div className="container mx-auto px-6 text-center">
         <motion.h2
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 30, filter: 'blur(6px)' }}
+          whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
           className="font-display text-3xl md:text-4xl mb-6"
@@ -15,8 +15,8 @@ const Testimonials = () => {
           Real <span className="italic text-gradient-gold">results</span>, real people
         </motion.h2>
         <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 20, filter: 'blur(6px)' }}
+          whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.1 }}
           className="font-body text-muted-foreground max-w-lg mx-auto mb-10"
@@ -27,8 +27,8 @@ const Testimonials = () => {
           href="https://www.linkedin.com/in/thespeechcoach"
           target="_blank"
           rel="noopener noreferrer"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 20, filter: 'blur(6px)' }}
+          whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
           className="inline-flex items-center gap-2 bg-primary text-primary-foreground border border-transparent hover:bg-background hover:text-primary hover:border-primary transition-all px-8 py-3 rounded-full font-body text-sm glow-gold"

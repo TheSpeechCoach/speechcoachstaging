@@ -7,8 +7,8 @@ const CoachSection = () => {
       <div className="container mx-auto px-6">
         <div className="max-w-3xl">
           <motion.h2
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 30, filter: 'blur(6px)' }}
+            whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
             className="font-display text-3xl md:text-4xl mb-8"
@@ -16,8 +16,8 @@ const CoachSection = () => {
             The <span className="italic text-gradient-gold">Coach</span>
           </motion.h2>
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 20, filter: 'blur(6px)' }}
+            whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.15 }}
           >
