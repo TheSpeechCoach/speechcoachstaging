@@ -200,7 +200,7 @@ const ServicePage = ({
       {extraBlocks.map((block, i) => (
         <section key={i} className="py-16 md:py-20 px-6 border-t border-border">
           <div className="container mx-auto max-w-4xl">
-            <motion.h2 {...fadeUp} className="font-display text-2xl md:text-4xl font-bold mb-6">
+            <motion.h2 {...fadeUp} className="font-display text-2xl md:text-4xl font-bold mb-6 text-center">
               {block.heading}
             </motion.h2>
             {block.intro && (
@@ -209,7 +209,7 @@ const ServicePage = ({
               </motion.p>
             )}
             {block.items.length > 0 && (
-              <ul className="grid md:grid-cols-2 gap-4">
+              <ul className="grid md:grid-cols-2 gap-6">
                 {block.items.map((item, j) => (
                   <motion.li
                     key={j}
