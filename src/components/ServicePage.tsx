@@ -1,11 +1,14 @@
 import { Helmet } from "react-helmet-async";
 import { ReactNode, useRef } from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { Check, ArrowRight } from "lucide-react";
 import SiteNav from "./SiteNav";
 import SiteFooter from "./SiteFooter";
 import StickyMobileCTA from "./StickyMobileCTA";
 import useFitHeroText from "@/hooks/useFitHeroText";
+
+const MotionLink = motion(Link);
 
 
 export interface ContentBlock {
