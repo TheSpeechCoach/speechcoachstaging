@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
+import { staggerContainer, revealItem } from "@/lib/motion";
 
 const audiences = [
   {
@@ -52,14 +53,17 @@ const WhoWeWorkWith = () => {
           A snapshot of the people whose work depends on how they speak. The full picture spans dozens of professions and sectors.
         </motion.p>
 
-        <div className="space-y-0">
+        <motion.div
+          className="space-y-0"
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-10%" }}
+        >
           {audiences.map((a, i) => (
             <motion.div
               key={i}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: i * 0.08 }}
+              variants={revealItem}
               className="border-t border-border py-8 md:py-10 grid md:grid-cols-3 gap-4 md:gap-8 items-start"
             >
               <h3 className="font-display text-xl md:text-2xl font-semibold">{a.title}</h3>
