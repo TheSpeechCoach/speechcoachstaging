@@ -100,7 +100,7 @@ const Services = () => {
               <Link
                 key={i}
                 to={`/areas-of-expertise#${skill.id}`}
-                className="block bg-card border border-border rounded-lg px-4 py-3 font-body text-sm text-muted-foreground hover:text-primary hover:border-primary/60 transition-colors cursor-pointer"
+                className="block bg-card border border-border rounded-lg px-4 py-3 font-body text-sm text-muted-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors cursor-pointer"
               >
                 {skill.label}
               </Link>
