@@ -32,8 +32,8 @@ const CredentialsSection = () => {
           Trusted by
         </motion.h2>
       </div>
-      <div className="relative w-full">
-        <div className="flex gap-16 animate-[marquee_40s_linear_infinite] w-max">
+      <div className="relative w-full [mask-image:linear-gradient(to_right,transparent,#000_8%,#000_92%,transparent)] [-webkit-mask-image:linear-gradient(to_right,transparent,#000_8%,#000_92%,transparent)]">
+        <div className="flex gap-16 animate-[marquee_40s_linear_infinite] w-max hover:[animation-play-state:paused] motion-reduce:animate-none">
           {loop.map((src, i) => (
             <div key={i} className="flex items-center justify-center h-16 md:h-20 px-4 shrink-0">
               <img
