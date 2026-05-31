@@ -31,7 +31,7 @@ const Testimonials = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="inline-flex items-center gap-2 bg-primary text-primary-foreground hover:bg-primary/80 transition-all px-8 py-3 rounded-full font-body text-sm glow-gold"
+          className="inline-flex items-center gap-2 bg-primary text-primary-foreground hover:bg-background hover:text-primary transition-all px-8 py-3 rounded-full font-body text-sm glow-gold"
         >
           <Linkedin className="w-4 h-4" />
           View Testimonials on LinkedIn
