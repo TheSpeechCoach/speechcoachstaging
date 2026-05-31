@@ -36,7 +36,7 @@ const CTASection = () => {
         >
           <Link
             to="/book-now"
-            className="inline-block bg-primary text-primary-foreground hover:bg-primary/90 transition-all px-10 py-4 rounded-full font-body text-sm tracking-wide glow-gold"
+            className="inline-block bg-primary text-primary-foreground hover:bg-primary/80 transition-all px-10 py-4 rounded-full font-body text-sm tracking-wide glow-gold"
           >
             Book Now
           </Link>

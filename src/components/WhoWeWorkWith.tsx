@@ -74,7 +74,7 @@ const WhoWeWorkWith = () => {
         <div className="mt-8 text-center">
           <Link
             to="/who-we-work-with"
-            className="inline-flex items-center gap-2 bg-primary text-primary-foreground hover:bg-primary/90 transition-all px-8 py-4 rounded-full font-body text-sm font-medium glow-gold"
+            className="inline-flex items-center gap-2 bg-primary text-primary-foreground hover:bg-primary/80 transition-all px-8 py-4 rounded-full font-body text-sm font-medium glow-gold"
           >
             See everyone we work with
             <ArrowRight className="w-4 h-4" />
