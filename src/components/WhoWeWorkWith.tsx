@@ -73,7 +73,7 @@ const WhoWeWorkWith = () => {
             </motion.div>
           ))}
           <div className="border-t border-border" />
-        </div>
+        </motion.div>
 
         <div className="mt-8 text-center">
           <Link
