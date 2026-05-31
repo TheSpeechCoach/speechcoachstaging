@@ -47,6 +47,7 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsAndConditions from "./pages/TermsAndConditions";
 import ScrollToTop from "./components/ScrollToTop";
 import ScrollToTopButton from "./components/ScrollToTopButton";
+import SmoothScroll from "./components/SmoothScroll";
 
 const queryClient = new QueryClient();
 
@@ -55,6 +56,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
+      <SmoothScroll />
       <ScrollToTop />
       <ScrollToTopButton />
       <Routes>

@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
+import { getLenis } from "./SmoothScroll";
 
 const HEADER_OFFSET = 80;
 const HASH_POLL_INTERVAL = 50;
@@ -27,11 +28,16 @@ const ScrollToTop = () => {
         attempts += 1;
         const el = document.getElementById(id);
         if (el) {
-          const top = Math.max(
-            0,
-            el.getBoundingClientRect().top + window.scrollY - HEADER_OFFSET
-          );
-          window.scrollTo({ top, left: 0, behavior: "smooth" });
+          const lenis = getLenis();
+          if (lenis) {
+            lenis.scrollTo(el, { offset: -HEADER_OFFSET });
+          } else {
+            const top = Math.max(
+              0,
+              el.getBoundingClientRect().top + window.scrollY - HEADER_OFFSET
+            );
+            window.scrollTo({ top, left: 0, behavior: "smooth" });
+          }
           clearPending();
           return;
         }
@@ -56,7 +62,12 @@ const ScrollToTop = () => {
       return;
     }
     clearPending();
-    window.scrollTo(0, 0);
+    const lenis = getLenis();
+    if (lenis) {
+      lenis.scrollTo(0, { immediate: true });
+    } else {
+      window.scrollTo(0, 0);
+    }
   }, [pathname, hash, key, scrollToHash, clearPending]);
 
   // Same-page hash changes (URL hash mutated without router state change).
