@@ -158,7 +158,7 @@ const BookNow = () => {
               <div className="pt-2">
                 <button
                   type="submit"
-                  className="inline-flex items-center gap-2 bg-primary text-primary-foreground hover:bg-background hover:text-primary transition-all px-8 py-3 rounded-full font-body text-sm font-medium glow-gold"
+                  className="inline-flex items-center gap-2 bg-primary text-primary-foreground border border-transparent hover:bg-background hover:text-primary hover:border-primary transition-all px-8 py-3 rounded-full font-body text-sm font-medium glow-gold"
                 >
                   Request a Consultation
                   <ArrowRight className="w-4 h-4" />
