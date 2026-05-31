@@ -15,8 +15,8 @@ const FitSection = () => {
     <section className="py-16 md:py-20">
       <div className="container mx-auto px-6">
         <motion.h2
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 30, filter: 'blur(6px)' }}
+          whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
           className="font-display text-3xl md:text-4xl mb-8 md:mb-10"
@@ -52,8 +52,8 @@ const FitSection = () => {
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 20, filter: 'blur(6px)' }}
+          whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4 }}
           className="mt-8 text-center"
