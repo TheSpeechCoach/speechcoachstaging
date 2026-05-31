@@ -14,7 +14,7 @@ const ChildrensCoaching = () => (
     postProblems={
       <section className="py-16 md:py-20 px-6 border-t border-border">
         <div className="container mx-auto max-w-3xl">
-          <div className="rounded-2xl border border-primary/30 bg-card/40 p-8 md:p-10 space-y-4 glow-gold">
+          <div className="rounded-xl border border-border bg-card p-8 md:p-10 space-y-4">
             <p className="font-display text-xl md:text-2xl text-primary">
               We teach children: 'How to Talk'.
             </p>
