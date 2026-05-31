@@ -56,7 +56,7 @@ const CPDSection = () => {
             <motion.div
               key={i}
               variants={revealItem}
-              className="bg-card border border-border rounded-lg p-6 md:p-8 flex flex-col"
+              className="bg-card border border-border rounded-lg p-6 md:p-8 flex flex-col hover:border-primary/60 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/10"
             >
               <p className="font-body text-xs uppercase tracking-wider text-primary mb-2">{course.subtitle}</p>
               <h3 className="font-display text-xl font-semibold mb-3">{course.title}</h3>

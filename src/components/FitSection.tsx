@@ -36,7 +36,7 @@ const FitSection = () => {
             <motion.div
               key={i}
               variants={revealItem}
-              className="flex gap-4 items-start bg-card border border-border rounded-xl p-8"
+              className="flex gap-4 items-start bg-card border border-border rounded-xl p-8 hover:border-primary/60 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/10"
             >
               <span className="text-primary font-display text-2xl font-bold mt-[-2px]">
                 {String(i + 1).padStart(2, "0")}
