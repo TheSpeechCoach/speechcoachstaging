@@ -1,11 +1,14 @@
 import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import SiteNav from "@/components/SiteNav";
 import SiteFooter from "@/components/SiteFooter";
 import StickyMobileCTA from "@/components/StickyMobileCTA";
 import { areasOfExpertise } from "@/data/areasOfExpertise";
 import CTASection from "@/components/CTASection";
+
+const MotionLink = motion(Link);
 
 const fadeUp = {
   initial: { opacity: 0, y: 30 },
