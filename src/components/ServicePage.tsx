@@ -168,7 +168,7 @@ const ServicePage = ({
               <motion.li
                 key={i}
                 variants={revealItem}
-                className="flex gap-4 p-6 md:p-8 rounded-xl border border-border bg-background/40 hover:border-primary/60 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/10"
+                className="flex gap-4 p-6 md:p-8 rounded-xl border border-border bg-background/40 hover:border-primary/60 transition-all duration-300 hover:shadow-xl hover:shadow-primary/10"
               >
                 <span className="text-primary font-display text-lg leading-none mt-1">—</span>
                 <span className="font-body text-foreground/90">{p}</span>

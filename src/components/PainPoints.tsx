@@ -46,7 +46,7 @@ const PainPoints = () => {
             <motion.div
               key={i}
               variants={revealItem}
-              className="bg-card border border-border rounded-xl p-6 md:p-8 hover:border-primary/60 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/10"
+              className="bg-card border border-border rounded-xl p-6 md:p-8 hover:border-primary/60 transition-all duration-300 hover:shadow-xl hover:shadow-primary/10"
             >
               <p className="font-body text-lg">
                 <span className="font-semibold text-foreground">{point.bold}</span>{" "}
