@@ -9,8 +9,8 @@ const BroadcastMedia = () => (
         Broadcast & Media Coaching for <span className="italic text-gradient-gold">Professionals Who Need to Land It.</span>
       </>
     }
-    subheading="Studio-condition media training for executives, founders, spokespeople and senior public figures — built for the broadcast environment you actually operate in."
-    intro="Broadcast and podcast media reward and punish the same thing: presence. The microphone hears every hesitation, every filler, every dropped end-of-sentence. The camera reads every flicker of eye contact and every breath in the wrong place. Most professionals who appear well in the room do not appear well on broadcast — not because they lack ability, but because nobody trained them for the medium. The mechanics respond to coached reps."
+    subheading="Media training for executives, founders, spokespeople and senior public figures — built for the broadcast environment you actually operate in."
+    intro="Broadcast is its own discipline. The camera and microphone catch what a meeting room forgives — the hesitation, the filler, the breath in the wrong place — which is why people who are impressive in person can fall flat on air. It's rarely about ability; it's about being trained for the medium. That's what we coach."
     problems={[
       "You're going on Today, Newsnight, Sky or a major podcast and you want to land it",
       "Previous footage of you does not match the version of you you intend",
@@ -30,14 +30,6 @@ const BroadcastMedia = () => (
       "Self-shot video framing, hook and close",
       "Voice, breath and pace specific to broadcast conditions",
       "Crisis and reactive media readiness",
-    ]}
-    extraBlocks={[
-      {
-        heading: "Case snapshot",
-        intro:
-          "The CEO of a mid-cap consumer business, called on Today the morning after a difficult set of half-year results, had ninety minutes' notice and a hostile presenter. One pre-session by video the night before: three bridging lines, two soundbites, the discipline of finishing every answer with the message rather than the defence. The clip that travelled was the executive's line — not the question. The Chair's note afterwards used the word 'professional'. The work was three hours total.",
-        items: [],
-      },
     ]}
     closingHeading="Footage you would willingly publish."
     closing="Broadcast-ready coaching for the interview, the podcast and the camera in front of you. Book a Consultation."
