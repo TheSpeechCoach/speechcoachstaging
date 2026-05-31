@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
+import Marquee from "@/components/Marquee";
 import StatsStrip from "@/components/StatsStrip";
 import CredentialsSection from "@/components/CredentialsSection";
 import PainPoints from "@/components/PainPoints";
@@ -31,6 +32,7 @@ const Index = () => {
       <MethodologySection />
       <Services />
       <WhoWeWorkWith />
+      <section className='py-8 md:py-10 border-y border-border'><Marquee items={['Presence','Clarity','Authority','Confidence','Influence','Gravitas','Impact','Composure','Conviction','Charisma','Fluency','Poise']} /></section>
       <CPDSection />
       <Testimonials />
       <CoachSection />
