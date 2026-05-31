@@ -20,7 +20,7 @@ const steps = [
 
 const MethodologySection = () => {
   return (
-    <section id="methodology" className="py-16 md:py-20 bg-card">
+    <section id="how-it-works" className="py-16 md:py-20 bg-card">
       <div className="container mx-auto px-6">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
@@ -29,7 +29,7 @@ const MethodologySection = () => {
           transition={{ duration: 0.6 }}
           className="font-display text-3xl md:text-4xl mb-4"
         >
-          Our <span className="italic text-gradient-gold">methodology</span>
+          How It <span className="italic text-gradient-gold">Works</span>
         </motion.h2>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -38,7 +38,7 @@ const MethodologySection = () => {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="font-body text-muted-foreground max-w-xl mb-8 md:mb-10"
         >
-          An integrated and evidence-informed approach drawing on techniques from communication science, performance training, and clinical voice practice.
+          Every engagement follows a clear, structured path — from initial assessment to embedded, lasting results.
         </motion.p>
 
         <div className="grid md:grid-cols-3 gap-6">
