@@ -53,7 +53,7 @@ const MethodologySection = () => {
             <motion.div
               key={i}
               variants={revealItem}
-              className="bg-background border border-border rounded-xl p-8"
+              className="bg-background border border-border rounded-xl p-8 hover:border-primary/60 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/10"
             >
               <span className="text-primary font-display text-3xl font-bold">{step.number}</span>
               <h3 className="font-display text-xl font-semibold mt-4 mb-3">{step.title}</h3>
