@@ -55,14 +55,12 @@ const FitSection = () => {
           className="mt-8 text-center"
         >
           <p className="font-display text-xl mb-6 text-muted-foreground">If the answer is yes</p>
-          <a
-            href="https://www.thespeech.coach/book-now/"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            to="/book-now"
             className="inline-block bg-primary text-primary-foreground hover:bg-primary/90 transition-all px-8 py-3 rounded-full font-body text-sm glow-gold"
           >
             Let's talk
-          </a>
+          </Link>
         </motion.div>
       </div>
     </section>
