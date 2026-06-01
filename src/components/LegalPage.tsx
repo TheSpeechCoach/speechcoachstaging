@@ -15,8 +15,10 @@ interface LegalPageProps {
 const LegalPage = ({ title, markdownContent, metaTitle, metaDescription, slug }: LegalPageProps) => {
   const canonical = `https://www.thespeech.coach/${slug}`;
 
-  // Strip a leading top-level # heading since the hero already shows the title.
-  const content = markdownContent.replace(/^\s*#\s+.*\n+/, "");
+  // Strip the preamble (title/version block) before the first top-level heading,
+  // since the hero already shows the title.
+  const firstH1 = markdownContent.search(/^#\s+/m);
+  const content = firstH1 >= 0 ? markdownContent.slice(firstH1) : markdownContent;
 
   return (
     <div className="min-h-screen bg-background flex flex-col">
