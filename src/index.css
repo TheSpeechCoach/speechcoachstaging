@@ -90,3 +90,41 @@
     border-color: hsl(40 80% 55% / 0.3);
   }
 }
+
+/* Legal page: render single-cell markdown tables as highlighted notice callouts */
+.legal-prose table:has(thead tr:only-child th:only-child):not(:has(tbody tr)) {
+  display: block;
+  border: none;
+  border-left: 4px solid hsl(var(--primary));
+  background: hsl(var(--primary) / 0.08);
+  border-radius: 0.5rem;
+  padding: 1.25rem 1.5rem;
+  margin: 2rem 0;
+  box-shadow: 0 0 30px -10px hsl(var(--primary) / 0.2);
+}
+.legal-prose table:has(thead tr:only-child th:only-child):not(:has(tbody tr)) thead,
+.legal-prose table:has(thead tr:only-child th:only-child):not(:has(tbody tr)) tr {
+  display: block;
+  background: transparent;
+  border: none;
+}
+.legal-prose table:has(thead tr:only-child th:only-child):not(:has(tbody tr)) th {
+  display: block;
+  border: none;
+  background: transparent;
+  padding: 0;
+  text-align: left;
+  font-weight: 400;
+  color: hsl(var(--foreground));
+  font-size: 1rem;
+  line-height: 1.7;
+}
+.legal-prose table:has(thead tr:only-child th:only-child):not(:has(tbody tr)) th strong {
+  display: block;
+  color: hsl(var(--primary));
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 1.05rem;
+  letter-spacing: 0.02em;
+  margin-bottom: 0.5rem;
+}
