@@ -1,0 +1,13 @@
+{
+  "name": "The Speech Coach",
+  "short_name": "Speech Coach",
+  "description": "Expert speech, voice and communication coaching for professionals, executives and leaders.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0a0a",
+  "theme_color": "#0a0a0a",
+  "icons": [
+    { "src": "/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" },
+    { "src": "/favicon.ico", "sizes": "256x256", "type": "image/x-icon" }
+  ]
+}

@@ -1,17 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://www.thespeech.coach/</loc><priority>1.0</priority></url>
-  <url><loc>https://www.thespeech.coach/public-speaking-coaching</loc><priority>0.9</priority></url>
-  <url><loc>https://www.thespeech.coach/elocution-voice-coaching</loc><priority>0.9</priority></url>
   <url><loc>https://www.thespeech.coach/accent-coaching</loc><priority>0.9</priority></url>
-  <url><loc>https://www.thespeech.coach/executive-corporate-coaching</loc><priority>0.9</priority></url>
-  <url><loc>https://www.thespeech.coach/presentation-skills-coaching</loc><priority>0.9</priority></url>
-  <url><loc>https://www.thespeech.coach/communication-coaching</loc><priority>0.9</priority></url>
-  <url><loc>https://www.thespeech.coach/online-coaching</loc><priority>0.8</priority></url>
-  <url><loc>https://www.thespeech.coach/team-workshops</loc><priority>0.8</priority></url>
-  <url><loc>https://www.thespeech.coach/speech-coaching-children</loc><priority>0.8</priority></url>
+  <url><loc>https://www.thespeech.coach/areas-of-expertise</loc><priority>0.8</priority></url>
+  <url><loc>https://www.thespeech.coach/book-now</loc><priority>0.7</priority></url>
   <url><loc>https://www.thespeech.coach/broadcast-media-coaching</loc><priority>0.8</priority></url>
+  <url><loc>https://www.thespeech.coach/communication-coaching</loc><priority>0.9</priority></url>
+  <url><loc>https://www.thespeech.coach/elocution-voice-coaching</loc><priority>0.9</priority></url>
+  <url><loc>https://www.thespeech.coach/executive-corporate-coaching</loc><priority>0.9</priority></url>
+  <url><loc>https://www.thespeech.coach/interview-coaching</loc><priority>0.8</priority></url>
+  <url><loc>https://www.thespeech.coach/keynote-conference-coaching</loc><priority>0.8</priority></url>
+  <url><loc>https://www.thespeech.coach/leadership-communication-coaching</loc><priority>0.8</priority></url>
+  <url><loc>https://www.thespeech.coach/media-training</loc><priority>0.8</priority></url>
+  <url><loc>https://www.thespeech.coach/negotiation-coaching</loc><priority>0.8</priority></url>
+  <url><loc>https://www.thespeech.coach/online-coaching</loc><priority>0.8</priority></url>
+  <url><loc>https://www.thespeech.coach/pitch-coaching</loc><priority>0.8</priority></url>
+  <url><loc>https://www.thespeech.coach/presentation-skills-coaching</loc><priority>0.9</priority></url>
   <url><loc>https://www.thespeech.coach/pricing</loc><priority>0.7</priority></url>
   <url><loc>https://www.thespeech.coach/privacy-policy</loc><priority>0.3</priority></url>
+  <url><loc>https://www.thespeech.coach/public-speaking-coaching</loc><priority>0.9</priority></url>
+  <url><loc>https://www.thespeech.coach/sales-presentation-coaching</loc><priority>0.8</priority></url>
+  <url><loc>https://www.thespeech.coach/speech-coaching-charities</loc><priority>0.8</priority></url>
+  <url><loc>https://www.thespeech.coach/speech-coaching-children</loc><priority>0.8</priority></url>
+  <url><loc>https://www.thespeech.coach/speech-coaching-content-creators</loc><priority>0.8</priority></url>
+  <url><loc>https://www.thespeech.coach/speech-coaching-crypto</loc><priority>0.8</priority></url>
+  <url><loc>https://www.thespeech.coach/speech-coaching-founders</loc><priority>0.8</priority></url>
+  <url><loc>https://www.thespeech.coach/speech-coaching-government</loc><priority>0.8</priority></url>
+  <url><loc>https://www.thespeech.coach/speech-coaching-hospitality</loc><priority>0.8</priority></url>
+  <url><loc>https://www.thespeech.coach/speech-coaching-lawyers</loc><priority>0.8</priority></url>
+  <url><loc>https://www.thespeech.coach/speech-coaching-leaders</loc><priority>0.8</priority></url>
+  <url><loc>https://www.thespeech.coach/speech-coaching-medical</loc><priority>0.8</priority></url>
+  <url><loc>https://www.thespeech.coach/speech-coaching-professionals</loc><priority>0.8</priority></url>
+  <url><loc>https://www.thespeech.coach/speech-coaching-teachers</loc><priority>0.8</priority></url>
+  <url><loc>https://www.thespeech.coach/speech-coaching-united-nations</loc><priority>0.8</priority></url>
+  <url><loc>https://www.thespeech.coach/stammering-fluency-coaching</loc><priority>0.8</priority></url>
+  <url><loc>https://www.thespeech.coach/team-workshops</loc><priority>0.8</priority></url>
   <url><loc>https://www.thespeech.coach/terms-and-conditions</loc><priority>0.3</priority></url>
+  <url><loc>https://www.thespeech.coach/voice-coaching</loc><priority>0.8</priority></url>
+  <url><loc>https://www.thespeech.coach/wedding-speech-coaching</loc><priority>0.8</priority></url>
+  <url><loc>https://www.thespeech.coach/who-we-work-with</loc><priority>0.8</priority></url>
 </urlset>

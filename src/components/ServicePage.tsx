@@ -1,7 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { ReactNode, useRef } from "react";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Check, ArrowRight } from "lucide-react";
 import SiteNav from "./SiteNav";
 import SiteFooter from "./SiteFooter";
@@ -90,11 +90,19 @@ const ServicePage = ({
   closing,
   ctaLabel = "Book a Consultation",
 }: ServicePageProps) => {
+  const { pathname } = useLocation();
+  const canonical = `https://www.thespeech.coach${pathname}`;
   return (
     <main className="bg-background text-foreground min-h-screen">
       <Helmet>
         <title>{metaTitle}</title>
         <meta name="description" content={metaDescription} />
+        <link rel="canonical" href={canonical} />
+        <meta property="og:title" content={metaTitle} />
+        <meta property="og:description" content={metaDescription} />
+        <meta property="og:url" content={canonical} />
+        <meta name="twitter:title" content={metaTitle} />
+        <meta name="twitter:description" content={metaDescription} />
       </Helmet>
 
       <SiteNav />

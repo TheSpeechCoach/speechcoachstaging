@@ -66,6 +66,7 @@ const Pricing = () => (
         name="description"
         content="Find out about speech coaching prices, packages and how sessions work. Answers to the most common questions about working with The Speech Coach."
       />
+      <link rel="canonical" href="https://www.thespeech.coach/pricing" />
     </Helmet>
 
     <SiteNav />

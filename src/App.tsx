@@ -48,6 +48,7 @@ import TermsAndConditions from "./pages/TermsAndConditions";
 import ScrollToTop from "./components/ScrollToTop";
 import ScrollToTopButton from "./components/ScrollToTopButton";
 import SmoothScroll from "./components/SmoothScroll";
+import CookieConsent from "./components/CookieConsent";
 
 const queryClient = new QueryClient();
 
@@ -59,6 +60,7 @@ const App = () => (
       <SmoothScroll />
       <ScrollToTop />
       <ScrollToTopButton />
+      <CookieConsent />
       <Routes>
         <Route path="/" element={<Index />} />
         <Route path="/public-speaking-coaching" element={<PublicSpeaking />} />

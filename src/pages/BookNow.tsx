@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet-async";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
@@ -19,12 +20,36 @@ const inputClass =
 const labelClass =
   "block font-body text-sm text-muted-foreground mb-2";
 
+/**
+ * Formspree form ID. Set VITE_FORMSPREE_ID in your environment, OR replace the
+ * fallback string below with your real ID (the part after /f/ in your Formspree
+ * endpoint, e.g. "xanbqkpl"). Create the form at https://formspree.io.
+ */
+const FORMSPREE_ID =
+  (import.meta.env.VITE_FORMSPREE_ID as string | undefined) || "YOUR_FORMSPREE_ID";
+
 const BookNow = () => {
   const navigate = useNavigate();
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    navigate("/thank-you");
+    setError(false);
+    setSubmitting(true);
+    const data = Object.fromEntries(new FormData(e.currentTarget).entries());
+    try {
+      const res = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+        method: "POST",
+        headers: { Accept: "application/json", "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+      if (!res.ok) throw new Error("Submission failed");
+      navigate("/thank-you");
+    } catch {
+      setError(true);
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -35,6 +60,7 @@ const BookNow = () => {
           name="description"
           content="Book a consultation with The Speech Coach. Tell us what you're working towards and we'll be in touch within 24 hours."
         />
+        <link rel="canonical" href="https://www.thespeech.coach/book-now" />
       </Helmet>
 
       <SiteNav />
@@ -158,11 +184,25 @@ const BookNow = () => {
               <div className="pt-2">
                 <button
                   type="submit"
-                  className="inline-flex items-center gap-2 bg-primary text-primary-foreground border border-transparent hover:bg-background hover:text-primary hover:border-primary transition-all px-8 py-3 rounded-full font-body text-sm font-medium glow-gold"
+                  disabled={submitting}
+                  className="inline-flex items-center gap-2 bg-primary text-primary-foreground border border-transparent hover:bg-background hover:text-primary hover:border-primary transition-all px-8 py-3 rounded-full font-body text-sm font-medium glow-gold disabled:opacity-60 disabled:cursor-not-allowed"
                 >
-                  Request a Consultation
-                  <ArrowRight className="w-4 h-4" />
+                  {submitting ? "Sending…" : "Request a Consultation"}
+                  {!submitting && <ArrowRight className="w-4 h-4" />}
                 </button>
+                {error && (
+                  <p className="mt-4 font-body text-sm text-muted-foreground">
+                    Something went wrong sending your message. Please try again, or email us
+                    directly at{" "}
+                    <a
+                      href="mailto:info@thespeech.coach"
+                      className="text-primary underline underline-offset-2"
+                    >
+                      info@thespeech.coach
+                    </a>
+                    .
+                  </p>
+                )}
               </div>
             </form>
           </motion.div>

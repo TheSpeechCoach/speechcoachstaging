@@ -8,14 +8,36 @@
     <meta name="description" content="Expert speech coaching for professionals, executives and leaders. Bespoke 1:1 coaching online worldwide and in London." />
     <meta name="author" content="The Speech Coach" />
     <link rel="canonical" href="https://www.thespeech.coach" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="theme-color" content="#0a0a0a" />
+    <script>
+      // Staging hygiene: prevent indexing of non-production hosts (e.g. *.lovable.app).
+      // Production (www.thespeech.coach) remains fully indexable.
+      (function () {
+        var h = location.hostname;
+        if (h !== "www.thespeech.coach" && h !== "thespeech.coach") {
+          var m = document.createElement("meta");
+          m.name = "robots";
+          m.content = "noindex, nofollow";
+          document.head.appendChild(m);
+        }
+      })();
+    </script>
     <meta property="og:type" content="website" />
     <meta property="og:title" content="The Speech Coach | Speech, Voice & Communication Coaching" />
     <meta property="og:description" content="Expert speech coaching for professionals, executives and leaders. Bespoke 1:1 coaching for public speaking, voice, elocution, accent and communication. Online worldwide and in London." />
     <meta property="og:url" content="https://www.thespeech.coach" />
     <meta property="og:site_name" content="The Speech Coach" />
+    <meta property="og:image" content="https://www.thespeech.coach/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="The Speech Coach" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="The Speech Coach | Speech, Voice & Communication Coaching" />
     <meta name="twitter:description" content="Expert speech coaching for professionals, executives and leaders. Bespoke 1:1 coaching for public speaking, voice, elocution, accent and communication. Online worldwide and in London." />
+    <meta name="twitter:image" content="https://www.thespeech.coach/og-image.png" />
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",

@@ -26,7 +26,7 @@ const AreasOfExpertise = () => {
           name="description"
           content="The full range of speech, voice and communication skills we coach — from public speaking and presence to accent, voice, storytelling and broadcast performance."
         />
-        <link rel="canonical" href="https://speechcoachstaging.lovable.app/areas-of-expertise" />
+        <link rel="canonical" href="https://www.thespeech.coach/areas-of-expertise" />
       </Helmet>
 
       <SiteNav />

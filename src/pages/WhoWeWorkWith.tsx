@@ -74,6 +74,7 @@ const WhoWeWorkWithPage = () => (
         name="description"
         content="The Speech Coach works with leaders, founders, professionals, broadcasters and public-sector figures whose work depends on how they speak. Explore every audience we serve."
       />
+      <link rel="canonical" href="https://www.thespeech.coach/who-we-work-with" />
     </Helmet>
 
     <SiteNav />

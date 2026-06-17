@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Linkedin, Youtube, Instagram, Phone, Mail } from "lucide-react";
+import { COOKIE_SETTINGS_EVENT } from "./CookieConsent";
 
 const TikTokIcon = ({ className }: { className?: string }) => (
   <svg className={className} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -33,7 +34,7 @@ const SiteFooter = () => {
         <div className="grid md:grid-cols-3 gap-12 mb-12">
           <div>
             <Link to="/" className="flex items-center gap-3 font-display text-3xl tracking-tight">
-              <img src="/White.png" alt="" className="h-10 w-auto" />
+              <img src="/White.png" alt="The Speech Coach" className="h-10 w-auto" />
               <span className="font-display text-foreground flex items-baseline leading-none gap-2">
                 <span className="font-bold">The</span>
                 <span className="italic text-gradient-gold">Speech</span>
@@ -100,6 +101,14 @@ const SiteFooter = () => {
           <Link to="/terms-and-conditions" className="text-sm text-muted-foreground hover:text-primary transition-colors">
             Terms &amp; Conditions
           </Link>
+          <span className="text-muted-foreground mx-2">•</span>
+          <button
+            type="button"
+            onClick={() => window.dispatchEvent(new Event(COOKIE_SETTINGS_EVENT))}
+            className="text-sm text-muted-foreground hover:text-primary transition-colors"
+          >
+            Cookie settings
+          </button>
         </div>
 
         {/* Row C — disclaimer + copyright */}
