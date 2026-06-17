@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
  * Until a real ID is set, no analytics are loaded.
  */
 const GA_MEASUREMENT_ID =
-  (import.meta.env.VITE_GA_MEASUREMENT_ID as string | undefined) || "G-XXXXXXXXXX";
+  (import.meta.env.VITE_GA_MEASUREMENT_ID as string | undefined) || "G-MX6DK6M6PC";
 
 const CONSENT_KEY = "tsc-cookie-consent";
 const PROD_HOSTS = ["www.thespeech.coach", "thespeech.coach"];
