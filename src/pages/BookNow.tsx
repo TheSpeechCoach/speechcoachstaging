@@ -101,6 +101,17 @@ const BookNow = () => {
             className="bg-card border border-border rounded-xl p-8 md:p-10"
           >
             <form onSubmit={handleSubmit} className="space-y-6">
+              {/* Sets the subject line of the email that lands in your inbox */}
+              <input type="hidden" name="_subject" value="New enquiry from thespeech.coach" />
+              {/* Honeypot: hidden from real people, but bots fill it in — then it's discarded as spam */}
+              <input
+                type="text"
+                name="_gotcha"
+                tabIndex={-1}
+                autoComplete="off"
+                aria-hidden="true"
+                style={{ display: "none" }}
+              />
               <div>
                 <label htmlFor="fullName" className={labelClass}>
                   Full name
@@ -155,7 +166,7 @@ const BookNow = () => {
                 <label htmlFor="focus" className={labelClass}>
                   What would you like to work on?
                 </label>
-                <select id="focus" name="focus" className={inputClass} defaultValue="">
+                <select id="focus" name="focus" required className={inputClass} defaultValue="">
                   <option value="" disabled>
                     Please select…
                   </option>
@@ -179,6 +190,27 @@ const BookNow = () => {
                   rows={4}
                   className={inputClass}
                 />
+              </div>
+
+              <div className="flex items-start gap-3">
+                <input
+                  id="consent"
+                  name="consent"
+                  type="checkbox"
+                  required
+                  className="mt-1 accent-primary"
+                />
+                <label htmlFor="consent" className="font-body text-sm text-muted-foreground">
+                  I'm happy for The Speech Coach to use the details above to respond to my
+                  enquiry, as described in the{" "}
+                  <a
+                    href="/privacy-policy"
+                    className="text-primary underline underline-offset-2"
+                  >
+                    Privacy Policy
+                  </a>
+                  .
+                </label>
               </div>
 
               <div className="pt-2">
